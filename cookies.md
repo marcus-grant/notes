@@ -21,7 +21,7 @@ tags: #www,#cookies,#web,#infosec
 * More permanent *cookies* have their lifespan set on a defined expiration date & time.
   * Once that predetermined time passes, they are deleted from browser and the server will no longer accept it.
 * To forcefully remove a *cookie*, or *pop*'ing it you should set the cookie attribute `max_age` to 0.
-  * In [[flask|Flask]] this gets managed by using the `make_response` & `set_cookie` function.
+  * In [flask](flask.md) this gets managed by using the `make_response` & `set_cookie` function.
 
 ```python
 @app.route('/delete-cookie/')
@@ -30,6 +30,12 @@ def delete_cookie():
   res.set_cookie('foo', 'bar', max_age=0)
   return res
 ```
+
+## Cookies in various Web Frameworks
+
+### Flask
+
+See [Cookies in Flask](flask.md#cookies-in-flask) for a detailed explanation of how to do this in flask
 
 ## References
 
