@@ -30,3 +30,12 @@ def delete_cookie():
   res.set_cookie('foo', 'bar', max_age=0)
   return res
 ```
+
+## References
+
+* [HTML.COM: Ultimate Guide on Cookies][cookies-guide]
+* [MDN: Using HTTP Cookies][mdn-cookies]
+
+<!-- hidden references -->
+[cookies-guide]: https://html.com/resources/cookies-ultimate-guide/ "HTML.COM: Ultimate Guide on Cookies"
+[mdn-cookies]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies "MDN: Using HTTP Cookies"
