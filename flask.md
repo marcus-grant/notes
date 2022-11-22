@@ -1,5 +1,5 @@
 ---
-tags: [#flask,#server,#backend,#python,#py,#http]
+tags: #flask,#server,#backend,#python,#py,#http
 ---
 # Flask
 

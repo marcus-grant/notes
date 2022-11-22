@@ -16,6 +16,7 @@
 
 # Template used to generate a note's filename, without extension.
 #filename = "{{id}}"
+filename = ""
 
 # The file extension used for the notes.
 #extension = "md"
