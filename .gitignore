@@ -1,3 +1,10 @@
+# My additions
+.DS_Store
+*.DS_Store
+**/.DS_Store
+
+
+# Templated Stuff for NodeJS
 # Logs
 logs
 *.log
