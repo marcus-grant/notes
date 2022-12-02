@@ -23,6 +23,19 @@ have put together some [recommendations][howto-notetaking] on those three phases
 Also there's another [note](notetaking.md) on notetaking effectively,
 including the information presented in University of B.C.'s article.
 
+### Chat with your Learning Facilitators
+
+Regardless of best efforts,
+there's often times when we are just stumped.
+That's where you should connect with our Learning Facilitators,
+**and early**.
+Attend office hours frequently,
+when possible,
+both for information reinforcement and to ask your questions.
+Submit support tickets to ask those questions and get additional guidance.
+You'll find instructions on how to submit support tickets in your
+[Orientation Week Module](pcde-orientation.md).
+
 ## References
 
 * [MIT xPRO Emeritus Certification Programs Homepage][mit-xpro]
