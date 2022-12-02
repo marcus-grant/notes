@@ -139,3 +139,70 @@ extraneous information to the lecture is already covered by that previous knowle
 * Use [abbreviations and truncations][notes-abbreviations] & [shortands][notes-shorthands]
   * Abbreviations & shorthands help keeping pace with the lecture
   * Software automations like [Zettelkasten tools](zk-tools.md)
+  * And several other [text expansion methods](text-expansion.md)
+
+## Things to Do After Lectures
+
+This is especially important when using typing methods like
+the [Zettelkasten Method](zk.md).
+Reinforce the learning by reviewing the notes after class.
+Here's how to more effectively remember what was learned.
+
+### Summarize Notes and Revise Them
+
+Reconsult the posted materials/recordings and notes to cover anything missed
+*while the topic is still fresh in mind that something was missed*.
+Further strengthen the understanding by
+adding related terms and concepts from other sources.
+
+When employing the Zettelkasten Method with software,
+make sure to frequently visit the topic's page or document made during
+the [build phase](zk-deploy.md#the-build-phase-overview).
+
+### Re-Organize Your Notes in the Style Tested In
+
+* For [multiple-choice exams][multiple-choice-tests]
+  * Focus on the specific details
+  * Use buillet points
+  * Turn bullet points into flash card like systems
+* For [more writing or essay focused exams][essay-exams-guide]
+  * Synthesize the notes
+  * Really focus on the context
+  * Contrast parts of the content
+
+>**Pro Tip:** If the class allows cheat sheets during exams,
+>it might be a good idea to get a head start now.
+>Especially using notetaking [software to generate cheat sheets](zk-deploy.md)
+
+### Clarify Any Questions - ASAP
+
+Possibly most importantly,
+get questions you have before,
+during and after lectures asked and hopefully answered as early as possible.
+
+## Longer After the Lecture
+
+Go back and revise the notes by
+checking [grammar and spelling](zk-deploy.md#spelling--grammar-checks).
+Re-organize notes by the [Zettelkasten Method](zk.md) by
+making each topic atomic and
+properly linked and backlinked to related topics.
+This will make review much more effective and searchable for future reference.
+
+## References
+
+* This document is referenced in the [Data Engineering Course Overview](pcde-course-overview.md)
+* [University of British Columbia: How to take rock-solid notes for online lectures][howto-notetaking-ubc]
+* [When the Best Way to Take Notes is by Hand][bbc-notes-by-hand]
+* [Notetaking Abbreviations Guide by Adelaide University][notes-abbreviations]
+* [How to Write 225 Words Per Minute with a Pen][notes-shorthands]
+* [How to Tackle Multiple Choice Tests (by University of British Columbia)][multiple-choice-tests]
+* [How to Tackle Essay-Based Exams (by the University of British Columbia)][essay-exams-guide]
+
+<!-- Hidden Reference Links Below Here -->
+[howto-notetaking-ubc]: https://students.ubc.ca/ubclife/take-rock-solid-notes-online-lectures "University of British Columbia: How to take rock-solid notes for online lectures"
+[bbc-notes-by-hand]: https://www.bbc.com/future/article/20191122-when-the-best-way-to-take-notes-is-by-hand "When the Best Way to Take Notes is by Hand"
+[notes-abbreviations]: https://www.adelaide.edu.au/writingcentre/sites/default/files/docs/learningguide-notetakingabbreviations.pdf "Notetaking Abbreviations Guide by Adelaide University"
+[notes-shorthands]: https://www.theatlantic.com/technology/archive/2014/06/yeah-i-still-use-shorthand-and-a-smartpen/373281/ "How to Write 225 Words Per Minute with a Pen"
+[multiple-choice-tests]: https://students.ubc.ca/ubclife/tackle-multiple-choice-tests "How to Tackle Multiple Choice Tests (by University of British Columbia)"
+[essay-exams-guide]: https://students.ubc.ca/ubclife/tackle-essay-based-exams "How to Tackle Essay-Based Exams (by the University of British Columbia)"

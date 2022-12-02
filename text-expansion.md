@@ -52,3 +52,21 @@ Even ones to convey [complex emotions][list-emoticons-wiki].
 It's also possible to write custom software that handles this in different ways.
 This will mainly focus on how to do this during the
 [build/deploy/review phase](zk-deploy.md#the-build-phase) of
+[the Zettelkasten Method](zk.md) where
+custom [middleware scripts](zk-text-expansion.md) expand shorthand text to
+their intended meaning.
+
+## References
+
+* [Notetaking Abbreviations Guide by Adelaide University][notes-abbreviations]
+* [How to Write 225 Words Per Minute with a Pen][notes-shorthands]
+* [How to Type Faster on iPhone with Built-In Text Expansion][ios-text-expansion-ai]
+* [Texting Abbreviations: HTH! (by IONOS)][txting-abbrs-ionos]
+* [List of Emoticons (from Wikipedia, the free encyclopedia)][list-emoticons-wiki]
+
+<!-- Hidden Reference Links Below Here -->
+[notes-abbreviations]: https://www.adelaide.edu.au/writingcentre/sites/default/files/docs/learningguide-notetakingabbreviations.pdf "Notetaking Abbreviations Guide by Adelaide University"
+[notes-shorthands]: https://www.theatlantic.com/technology/archive/2014/06/yeah-i-still-use-shorthand-and-a-smartpen/373281/ "How to Write 225 Words Per Minute with a Pen"
+[ios-text-expansion-ai]: https://appleinsider.com/articles/21/03/08/how-to-type-faster-on-iphone-with-built-in-text-expansion "How to Type Faster on iPhone with Built-In Text Expansion"
+[txting-abbrs-ionos]: https://www.ionos.com/digitalguide/online-marketing/social-media/texting-abbreviations/ "Texting Abbreviations: HTH! (by IONOS)"
+[list-emoticons-wiki]: https://en.wikipedia.org/wiki/List_of_emoticons "List of Emoticons (from Wikipedia, the free encyclopedia)"

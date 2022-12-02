@@ -34,3 +34,17 @@ Breaking with the suggestion above where
 we should keep shorthands within the original note documents,
 one option is to use an OS feature for [text expansion](text-expansion.md).
 
+## Checking Grammar
+
+There's both editor tools, usually Language Server Protocol servers
+that will analyze static code, like markdown.
+The [Zettelkasten Tools Notes](zk-tools.md#checking-grammar) has more details.
+
+## References
+
+* [Notetaking Abbreviations Guide by Adelaide University][notes-abbreviations]
+* [How to Write 225 Words Per Minute with a Pen][notes-shorthands]
+
+<!-- Hidden Reference Links Below Here -->
+[notes-abbreviations]: https://www.adelaide.edu.au/writingcentre/sites/default/files/docs/learningguide-notetakingabbreviations.pdf "Notetaking Abbreviations Guide by Adelaide University"
+[notes-shorthands]: https://www.theatlantic.com/technology/archive/2014/06/yeah-i-still-use-shorthand-and-a-smartpen/373281/ "How to Write 225 Words Per Minute with a Pen"

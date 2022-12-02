@@ -36,9 +36,39 @@ Submit support tickets to ask those questions and get additional guidance.
 You'll find instructions on how to submit support tickets in your
 [Orientation Week Module](pcde-orientation.md).
 
+### Connect with your Fellow Learners
+
+Just because you are viewing course material on your own,
+doesn't mean that you're the only one persuing this certificate.
+Use [Slack][pcde-slack] to connect with others,
+ask questions, and get some help from your peers.
+They may have the same difficulties as you or
+might have some great tips that will make the topics click.
+
+The moral of the story here is that
+the more you can interact with course content in multiple ways,
+through effective note-taking, review and connecting with others,
+the more you'll be able to get the concepts down and
+get the most success from the course.
+
+## Some Time Management Recommendations
+
+If taking the course in a well structured way, it should be taking about ~15 hours a week.
+This is minimum recommendation and
+you may find yourself spending more than 20 hours per week some weeks.
+Integrating this time into your schedule will require disciplined time management.
+[Here are some tips] on how you can help manage your time while in the program.
+Remember though with previous knowledge from previous cohort that is now deferred,
+shoot for 10 hours a week.
+More than that and help might be needed earlier.
+
 ## References
 
 * [MIT xPRO Emeritus Certification Programs Homepage][mit-xpro]
+* [University of British Columbia: How to take rock-solid notes for online lectures][howto-notetaking]
+* [MIT PCDE Pro Slack Channel][pcde-slack]
 
 <!-- Hidden Reference Links Below Here -->
 [mit-xpro]: https://emeritus.org/universities/mit-xpro/ "MIT xPRO Emeritus Certification Programs Homepage"
+[howto-notetaking]: https://students.ubc.ca/ubclife/take-rock-solid-notes-online-lectures "University of British Columbia: How to take rock-solid notes for online lectures"
+[pcde-slack]: https://app.slack.com/client/T044GN4M0H4/C044P89NH3M/thread/C044LK4E9L5-1665686480.669439 "MIT PCDE Pro Slack Channel"
