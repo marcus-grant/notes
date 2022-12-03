@@ -1,6 +1,6 @@
 ---
 created: 2022-12-02T15:00:00
-tags: [learning,pcde,data,syllabus]
+tags: [learning,pcde,data,syllabus,notetaking,productivity,time,mgmt]
 ---
 # PCDE Course Overview
 
@@ -57,7 +57,7 @@ If taking the course in a well structured way, it should be taking about ~15 hou
 This is minimum recommendation and
 you may find yourself spending more than 20 hours per week some weeks.
 Integrating this time into your schedule will require disciplined time management.
-[Here are some tips] on how you can help manage your time while in the program.
+Here are some more in depth tips on [managing time](time-management.md) while in the program.
 Remember though with previous knowledge from previous cohort that is now deferred,
 shoot for 10 hours a week.
 More than that and help might be needed earlier.
