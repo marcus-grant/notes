@@ -20,3 +20,4 @@ MongoDB is a widely used open source *document* database. In fact, you will be t
 Python can be used in database applications. MongoDB is one of the most popular NoSQL database tools. In this mini-lesson, you will learn about how to use MongoDB to create databases.
 
 For more details check out the [MongoDB Using Python](mongodb-using-python.md).
+
