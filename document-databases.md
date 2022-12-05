@@ -1,5 +1,5 @@
 ---
-tags: [#db,#document,#nosql,#mongodb,#backend,#data]
+tags: [db,document,nosql,mongodb,backend,data]
 ---
 # Document Databases
 

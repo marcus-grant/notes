@@ -1,5 +1,5 @@
 ---
-tags: [#python,#mongodb,#backend,#db,#driver,#data]
+tags: [python,mongodb,backend,db,driver,data]
 ---
 # Control MongoDB Using Python
 
