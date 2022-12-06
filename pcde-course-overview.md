@@ -68,7 +68,12 @@ More than that and help might be needed earlier.
 * [University of British Columbia: How to take rock-solid notes for online lectures][howto-notetaking]
 * [MIT PCDE Pro Slack Channel][pcde-slack]
 
+### Notes Links
+
+* [Introduction to Python Notes][intro-py-zk]
+
 <!-- Hidden Reference Links Below Here -->
 [mit-xpro]: https://emeritus.org/universities/mit-xpro/ "MIT xPRO Emeritus Certification Programs Homepage"
 [howto-notetaking]: https://students.ubc.ca/ubclife/take-rock-solid-notes-online-lectures "University of British Columbia: How to take rock-solid notes for online lectures"
 [pcde-slack]: https://app.slack.com/client/T044GN4M0H4/C044P89NH3M/thread/C044LK4E9L5-1665686480.669439 "MIT PCDE Pro Slack Channel"
+[intro-py-zk]: ./intro-python.md "Introduction to Python Notes"
