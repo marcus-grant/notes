@@ -1,4 +1,7 @@
 {
+    "write-good.write-good-config": {
+        "adverb": false,
+    },
     "cSpell.enableFiletypes": [
         "markdown"
     ],
