@@ -14,9 +14,9 @@ for name in names:
 
 The `for-in` structure above loops through each item in a collection and
 returns the individual item in the `name` variable given between `for` and `in`.
-The same thing can be done by substituting any collection or
-iterable given in place of `names` at the end,
-including the `range` function call which gives a number range.
+Substituting any collection or iterable given in place of `names`
+achieves the same result.
+This can include the `range` functino call which instead gives a number range.
 
 ```python
 for num in range(1, 10):
@@ -34,7 +34,7 @@ is given from 1 to one step below the second number, in this case 9, 10 is exclu
 If you're going to read a file with lines reperesenting an entry,
 `open` is the primary function to use.
 In this example from [Advent of Code][aoc22-day4] there are lines of input given.
-Each line represents a pair of ranges that need to be processed.
+Each line is a pair of number ranges in need of processing.
 
 ```txt
 2-4,6-8
