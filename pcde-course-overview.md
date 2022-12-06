@@ -13,7 +13,7 @@ the basics of [database design](databases.md).
 
 ### Interacting with Lectures
 
-It is important to take notes on the content released each week.
+It's important to take notes on the content released each week.
 Good note taking can even save time on doing activities and assignments,
 as the information needed for some of them will often be within good notes taken.
 
@@ -25,10 +25,10 @@ including the information presented in University of B.C.'s article.
 
 ### Chat with your Learning Facilitators
 
-Regardless of best efforts,
-there's often times when we are just stumped.
-That's where you should connect with our Learning Facilitators,
-**and early**.
+There are times we're simply stumped,
+regardless of our best efforts.
+That's why modules should be gone through early in the week,
+with ample time to reach out to learning facilitators and peers.
 Attend office hours frequently,
 when possible,
 both for information reinforcement and to ask your questions.
