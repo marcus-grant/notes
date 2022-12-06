@@ -83,6 +83,27 @@ including any newline characters indicating the end of the line.
 It will probably be necessary to `split()` any whitespace,
 including any newline characters out, otherwise they end up in the results.
 
+## Get Multiple Numbers from String
+
+To extract the numbers from a string,
+**in order**,
+this list comprehension should suffice.
+
+```python
+txt = "h3110 23 cat 444.44 rabbit 11 2 dog"
+print([int(s) for s in txt.split() if s.isdigit()])
+# output: [23, 11, 2]
+```
+
+The `for s in txt.split()` sets up a loop to
+get every whitespace separated substring.
+Any other split delimiter could be used instead as its first argument.
+Then, the `if s.isdigit()` will determine if the substring has a number.
+Finally, the `int(s)` turns it into a number,
+`float` could be used as well.
+When the list comprehension is done,
+the list `[23, 11, 2]` should be returned.
+
 ## References
 
 * [Advent of Code 2022, day 4][aoc22-day4]
