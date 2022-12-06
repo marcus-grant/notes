@@ -116,7 +116,8 @@ multiword-tags = false
 # bat is a great tool to render Markdown document with syntax highlighting.
 #https://github.com/sharkdp/bat
 #fzf-preview = "bat -p --color always {-1}"
-
+fzf-preview = "zk list --quiet --format full --limit 1 {-1}"
+fzf-line = "{{style 'title' title}} {{style 'understate' body}} {{style 'understate' (json metadata)}}"
 
 # LSP
 #
