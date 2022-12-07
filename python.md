@@ -104,10 +104,16 @@ Finally, the `int(s)` turns it into a number,
 When the list comprehension is done,
 the list `[23, 11, 2]` should be returned.
 
+## Type Checking/Annotation
+
+For more information check out [this handy guide][type-check-guide-rp]
+
 ## References
 
 * [Advent of Code 2022, day 4][aoc22-day4]
+* [Python Type Checking Guide (from RealPython by Geir Arne Hjelle)][type-check-guide-rp]
 
 <!-- Hidden References -->
 [aoc22-day4]: https://adventofcode.com/2022/day/4 "Advent of Code 2022, day 4"
+[type-check-guide-rp]: https://realpython.com/python-type-checking/ "Python Type Checking Guide (from RealPython by Geir Arne Hjelle)"
 
