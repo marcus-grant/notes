@@ -27,12 +27,12 @@ including the information presented in University of B.C.'s article.
 
 There are times we're simply stumped,
 regardless of our best efforts.
-That's why modules should be gone through early in the week,
+It's best to go through the modules as early as possible,
 with ample time to reach out to learning facilitators and peers.
 Attend office hours frequently,
 when possible,
 both for information reinforcement and to ask your questions.
-Submit support tickets to ask those questions and get additional guidance.
+Submit support tickets to ask those questions and get extra guidance.
 You'll find instructions on how to submit support tickets in your
 [Orientation Week Module](pcde-orientation.md).
 
@@ -46,7 +46,7 @@ They may have the same difficulties as you or
 might have some great tips that will make the topics click.
 
 The moral of the story here is that
-the more you can interact with course content in multiple ways,
+the more you can interact with course content in many ways,
 through effective note-taking, review and connecting with others,
 the more you'll be able to get the concepts down and
 get the most success from the course.
@@ -54,13 +54,13 @@ get the most success from the course.
 ## Some Time Management Recommendations
 
 If taking the course in a well structured way, it should be taking about ~15 hours a week.
-This is minimum recommendation and
+This is a minimal recommendation and
 you may find yourself spending more than 20 hours per week some weeks.
 Integrating this time into your schedule will require disciplined time management.
 Here are some more in depth tips on [managing time](time-management.md) while in the program.
 Remember though with previous knowledge from previous cohort that is now deferred,
 shoot for 10 hours a week.
-More than that and help might be needed earlier.
+If more time is necessary for each week it's important to seek help earlier.
 
 ## Course Outline
 
