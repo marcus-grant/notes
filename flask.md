@@ -24,15 +24,29 @@ if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
 ```
 
-Note the structure of `app.py` above. There's a decorator `@app.route('SOMEROUTE')` the specifie a route relative to where the server is run. The function that follows, in this case `index()` then gets called whenever the root of the server is reached as an HTTP endpoint. The function inside is expected to return a scalar value like text, html string or an HTTP object when an endpoint is reached.
+Note the structure of `app.py` above.
+The decorator `@app.route('SOMEROUTE')`
+defines the route relative to the server's base URL.
+The function that follows,
+in this case `index()`,
+then gets called whenever its HTTP endpoint gets a request at its decorator relative route.
+In this case that is the root of the server.
+Which will then respond with an HTTP response which could have custom headers,
+HTML, JSON, or whatever other content is valid for an HTTP response.
 
 ### Responding with HTML
 
-To handle HTML, templating is generally recommended, but static HTML file can also be served. To do this create an HTML file `index.html` in the project root of the flask server, like where `app.py` was placed. Then in `app.py` change `index` to return `render_template('index.html')`.
+To handle HTML,
+templating is generally recommended,
+but it's possible to serve static HTML files as strings as well.
+To do this create an HTML file `index.html` in the project root of the flask server,
+like where `app.py` is.
+Then in `app.py` change `index` to return `render_template('index.html')`.
 
 ## Debugging Flask Servers
 
-It can get complicated debugging flask servers. For VSCode include the snippet below in the `__main__` section:
+It can get complicated debugging flask servers.
+For VSCode include the snippet below in the `__main__` section:
 
 ```python
 if __name__ == "__main__":
@@ -68,11 +82,18 @@ Then create a `launch.json` file in the debugger like this:
 }
 ```
 
-Now it will debug the file in which the run-debug is clicked on while open.
+Now it will debug the file when clicking the `run-debug` button,
+while that file is open.
 
 ## Cookies in Flask
 
-Using flask's `route` decorator you get `request` objects to inspect the request. To get cookies from the request simply use `request.cookies.get('COOKIE_NAME_OR_KEY')` to access it. In the below example is a book server that will either show the books if the session cookie proving a login is available, or it will go to a register page.
+Using flask's `route` decorator you get `request` objects to inspect the request.
+To get cookies from the request simply use
+`request.cookies.get('COOKIE_NAME_OR_KEY')` to access it.
+In the below example is
+a book server that will either
+show the books if the session cookie proving a login is available,
+or it will go to a register page.
 
 ```python
 @app.route("/books", methods=["GET"])
@@ -84,7 +105,8 @@ def getBooks():
         return render_template("register.html")
 ```
 
-Below is a basic cookie adding, displaying and removing app that shows the basics of what Flask can do in adding, accessing, and removing cookies.
+Below is a basic cookie adding, removing and retrieving;
+displaying and removing cookies shows the basics of what Flask can do with cookies.
 
 ```python
 from flask import Flask, request
