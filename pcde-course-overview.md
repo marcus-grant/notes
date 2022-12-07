@@ -145,10 +145,19 @@ More than that and help might be needed earlier.
 
 ### Notes Links
 
+* [Notetacking Strategies][notetaking-zk]
+* [Notetaking Strategies for Lectures][notes-lec-zk]
+* [Time Management Strategies Notes][time-mgmt-zk]
+* [Time Blocking Strategies Notes][time-block-zk]
 * [Introduction to Python Notes][intro-py-zk]
+* [Introduction to Python][intro-py-zk]
 
 <!-- Hidden Reference Links Below Here -->
 [mit-xpro]: https://emeritus.org/universities/mit-xpro/ "MIT xPRO Emeritus Certification Programs Homepage"
 [howto-notetaking]: https://students.ubc.ca/ubclife/take-rock-solid-notes-online-lectures "University of British Columbia: How to take rock-solid notes for online lectures"
 [pcde-slack]: https://app.slack.com/client/T044GN4M0H4/C044P89NH3M/thread/C044LK4E9L5-1665686480.669439 "MIT PCDE Pro Slack Channel"
 [intro-py-zk]: ./intro-python.md "Introduction to Python Notes"
+[notetaking-zk]: ./notetaking.md "Notetacking Strategies"
+[notes-lec-zk]: ./notes-lectures.md "Notetaking Strategies for Lectures"
+[time-mgmt-zk]: ./time-management.md "Time Management Strategies"
+[time-block-zk]: ./time-blocking.md "Time Blocking Strategies Notes"
