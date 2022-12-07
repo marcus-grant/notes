@@ -62,6 +62,81 @@ Remember though with previous knowledge from previous cohort that is now deferre
 shoot for 10 hours a week.
 More than that and help might be needed earlier.
 
+## Course Outline
+
+[Here is the outline copy](https://classroom.emeritus.org/courses/1412/pages/course-outline-professional-certificate-in-data-engineering?module_item_id=342389):
+[Here are the due dates for each module outlined](https://classroom.emeritus.org/courses/1412/pages/course-calendar-professional-certificate-in-data-engineering?module_item_id=342390)
+
+### Module 0: Course Orientation
+
+#### Notes Links
+
+* [Notetacking Strategies][notetaking-zk]
+* [Notetaking Strategies for Lectures][notes-lec-zk]
+* [Time Management Strategies Notes][time-mgmt-zk]
+* [Time Blocking Strategies Notes][time-block-zk]
+
+#### Key Activites
+
+* Course Introduction
+* Learning Platform Overview
+* Introduce Yourself
+* Course Agreement
+* Install Tools Needed for Modules 1-3
+
+### Module 1: Introduction to Python
+
+#### Notes Links
+
+* [Introduction to Python][intro-py-zk]
+
+#### Learning Outcomes
+
+* **Starts:** 2022-12-07
+* **Due:** 2022-12-14
+* Compare Python basic data types and operators.
+* Create basic Python data types in a coding environment.
+* Identify lists, tuples, sets, and dictionaries in Python.
+* Create Python lists, tuples, sets, and dictionaries in a coding environment.
+* Use indexing and slicing in Python.
+* Interpret memory allocation for Python objects.
+* Define loops and conditionals in a Python coding environment.
+* Integrate loops and conditionals in a Python coding environment.
+* Define Python functions and variable scope.
+* Use Python functions in a coding environment.
+* Interpret Python classes.
+* Read and write files in Python.
+
+#### Key Activities
+
+* Discussions
+* Activities
+* Knowledge Checks
+* Coding Assignment
+
+### Module 2: Introduction to NumPy
+
+#### Learning Outcomes
+
+* Create NumPy arrays, functions, and multidimensional arrays.
+* Define NumPy arrays, functions, and multidimensional arrays.
+* Interpret NumPy memory allocation.
+* Describe basic probability concepts.
+* Explain the connection between histograms and probability densities.
+* Differentiate between discrete and continuous distributions.
+* Define probability density functions and probability distribution functions.
+* Create discrete and continuous distributions.
+* Define Matplotlib graphs.
+* Visualize data using Matplotlib graphs.
+* Interpret data using Matplotlib graphs.
+
+#### Key Activities
+
+* Discussions
+* Activities
+* Knowledge Checks
+* Coding Assignment
+
 ## References
 
 * [MIT xPRO Emeritus Certification Programs Homepage][mit-xpro]
