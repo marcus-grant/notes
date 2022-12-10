@@ -130,6 +130,15 @@ If more time is necessary for each week it's important to seek help earlier.
 * Visualize data using Matplotlib graphs.
 * Interpret data using Matplotlib graphs.
 
+### Module X: Intro to SQL
+
+<!-- TODO: Include these links in the notes to setup MySQL Workbench -->
+* [SQL Tutorial - Full Database Course for Beginners (from FreeCodeCamp)](https://www.youtube.com/watch?v=HXV3zeQKqGY&t=2s&ab_channel=freeCodeCamp.org)
+* [Workbench Files (from mysql.com)](https://www.mysql.com/products/workbench/)
+* [MySQL Workbench Tutorial (on Youtube)](https://www.youtube.com/watch?v=X_umYKqKaF0&ab_channel=MySQL)
+* [MySQL Workbench Video Walkthrough (by Telusko on Youtube)](https://www.youtube.com/watch?v=-RrfsIPy4uE&list=PLsyeobzWxl7oJca2fwLyKbDwlKUDPl3RE&index=3&ab_channel=Telusko)
+
+
 #### Key Activities
 
 * Discussions
