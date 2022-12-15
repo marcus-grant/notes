@@ -1,5 +1,5 @@
 ---
-creted: 2022-12-07T20:53:01Z
+created: 2022-12-07T20:53:01Z
 tags: [python,software,dev,compsci,collection,data-structures,data]
 ---
 # Python Collections
@@ -36,12 +36,11 @@ for index, value in enumerate(a):
 
 ## Looping Over Dictionary key:value Pairs
 
-Enumerating a Dictionary is largely the same, but syntactically different.
+Enumerating a Dictionary is functionally the same, but syntactically different.
 First,
 the Dictionary method `items()`
-is needed to return an iterator for the dictionary.
+is necessary to return an iterator for the dictionary.
 This iterator returns a tuple of every key and associated value in the dictionary.
-
 
 ```python
 c = {0:1, 1:2, 2:3}
@@ -49,7 +48,7 @@ for key, value in c.items():
     print(f"key: {key}, value: {value}")
 ```
 
-Alternatively the `keys()` method in dictionaries could be used instead.
+It's also possible to use the `keys()` method, a part of dictionaries, instead.
 This is an iterator that returns every key (in order) of the dictionary.
 Then you setup a loop that enumerates every value associated with said key.
 
@@ -62,8 +61,8 @@ for key in c.keys():
 
 ## List Out all the Words in this Sentence
 
-To seperate strings, the `split()` string method takes a delimiter string,
-which it then searches for and splits out the strings seperated by that string. 
+To separate strings, the `split()` string method takes a delimiter string,
+which it then searches for and splits out the strings separated by that string.
 
 ```python
 s = "There were many people at the theatre and the crowd cheered as the band started playing a slow waltz"
@@ -72,11 +71,12 @@ print(s.split()) # A list with every word in the sentence as an item
 
 ## How many Unique Words are There?
 
-Sets are great for any situation where uniqueness needs to be tested.
+One of the best ways to test for uniqueness of a collection,
+is to use another collection, sets.
 Every item placed into a set collection will get stored.
-However, it will not store any item more than once, meaning every item
+It will not store any item more than once, meaning every item
 within a set is unique.
-They are also useful for quickly being able to check if something has occured.
+They are also useful for quickly being able to check if something has occurred.
 Sets store values by hashing them which is a O(1) operation vs searching
 a list using a loop, an O(n) operation.
 
@@ -85,10 +85,10 @@ mySet = set(s)
 print(mySet)
 ```
 
-## Using Dictionaries to Indicate Frequency of Occurence
+## Using Dictionaries to Count Frequency of Occurrence
 
-Dictionaries can be used to store anything in a quickly searchable structure.
-This is great when the frequency of an item in a collection is needed.
+Dictionaries can store anything in a quickly searchable structure.
+This is great when representing the frequency of an item in a collection.
 Take the string `s` from above, there's some words that occur more than once.
 Counting this is best done with a dictionary.
 
@@ -123,12 +123,13 @@ print(A)
 
 ## Dictionary Comprehension
 
-Comprehensions are a feature of python where collections can be created inline.
+Comprehensions are a neat feature of python to create inline collections.
+These collection comprehensions are capable of defining complex list operations.
 To do this with dictionaries, within a curly bracket set,
 first include the mapping of each value you want.
 Then follow that by a looping statement, like `for key, value in c.items()`.
 This will then setting up the looping variables to use.
-And finally and optionally, a condition to filter out what values are used.
+And finally and optionally, a condition to filter out values.
 
 ```python
 c = {0:1, 1:2, 2:3}
@@ -138,7 +139,7 @@ print(d) # {1:14}
 
 ## List Comprehension
 
-The same is done with lists, but inside square brackets.
+The same comprehensions are possible with lists, but inside square brackets.
 Again, a comprehension consists of a mapping expression,
 iteration expression and optional conditional statement.
 
@@ -146,11 +147,6 @@ iteration expression and optional conditional statement.
 a = [1, 2, 3]
 r = [item*3 for item in a if item < 3]
 ```
-
-
-
-
-
 
 ## References
 
