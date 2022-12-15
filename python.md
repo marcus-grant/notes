@@ -108,7 +108,57 @@ the list `[23, 11, 2]` should be returned.
 
 For more information check out [this handy guide][type-check-guide-rp]
 
+## Common Libraries
+
+One of the best things about Python is not just it's large and
+practical Standard Library, but also the fact that it has
+one of the largest ecosystems of libraries around.
+Quickly, a *library* aka a *module* is a
+reusable collection of code made for specific tasks.
+It's possible to download such libraries using pip and
+incorporating this code for your purposes.
+
+### How to Import Libraries
+
+Generally, libraries get imported at the beginning of a peice of code.
+This helps avoid mistakes that make programs less time efficient.
+For example, by avoiding importing a module twice.
+
+```python
+import numpy
+```
+
+### Aliasing Libraries
+
+Another standard practice with importing libraries is *aliasing* it by
+using a shorter name.
+This makes code more readable and keeps the width of code files narrower.
+**Note** that the Python community has evolved some standard abbreviations for
+these aliases so pay attention to the ones they use in your own work.
+To alias a library, simply follow up the `import` statement with
+an `as` statement and then the alias for that library.
+
+```python
+import numpy as np
+```
+
+### NumPy
+
+[NumPy][zk-numpy], short for Numerical Python,
+is a library that adds support for multi-dimensional arrays, matrices and tensors.
+NumPy also offers a large collection of high-level mathematical functions,
+particularly in the fields of linear algebra, statistics and scientific computing.
+
 ## References
+
+### Note References
+
+* [NumPy Library Overview][zk-numpy]
+
+<!-- Hidden Reference Links Below Here -->
+[zk-numpy]: ./numpy.md "NumPy Library Overview"
+
+### Web/Article References
 
 * [Advent of Code 2022, day 4][aoc22-day4]
 * [Python Type Checking Guide (from RealPython by Geir Arne Hjelle)][type-check-guide-rp]
