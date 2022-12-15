@@ -39,7 +39,7 @@ You'll find instructions on how to submit support tickets in your
 ### Connect with your Fellow Learners
 
 Just because you are viewing course material on your own,
-doesn't mean that you're the only one persuing this certificate.
+doesn't mean that you're the only one pursuing this certificate.
 Use [Slack][pcde-slack] to connect with others,
 ask questions, and get some help from your peers.
 They may have the same difficulties as you or
@@ -71,12 +71,12 @@ If more time is necessary for each week it's important to seek help earlier.
 
 #### Notes Links
 
-* [Notetacking Strategies][notetaking-zk]
+* [Note-taking Strategies][notetaking-zk]
 * [Notetaking Strategies for Lectures][notes-lec-zk]
 * [Time Management Strategies Notes][time-mgmt-zk]
 * [Time Blocking Strategies Notes][time-block-zk]
 
-#### Key Activites
+#### Key Activities
 
 * Course Introduction
 * Learning Platform Overview
@@ -130,6 +130,18 @@ If more time is necessary for each week it's important to seek help earlier.
 * Visualize data using Matplotlib graphs.
 * Interpret data using Matplotlib graphs.
 
+### Module 3: Introduction to Pandas
+
+#### Learning Outcomes
+
+* Define pandas series and dataframes
+* Implement pandas series and dataframes
+* Perform data cleaning in pandas
+* Prepare data using one-hot encoding in pandas
+* Explain time and data functionality in pandas
+* Analyze data in pandas
+* Design dataframes in pandas
+
 ### Module X: Intro to SQL
 
 <!-- TODO: Include these links in the notes to setup MySQL Workbench -->
@@ -137,7 +149,6 @@ If more time is necessary for each week it's important to seek help earlier.
 * [Workbench Files (from mysql.com)](https://www.mysql.com/products/workbench/)
 * [MySQL Workbench Tutorial (on Youtube)](https://www.youtube.com/watch?v=X_umYKqKaF0&ab_channel=MySQL)
 * [MySQL Workbench Video Walkthrough (by Telusko on Youtube)](https://www.youtube.com/watch?v=-RrfsIPy4uE&list=PLsyeobzWxl7oJca2fwLyKbDwlKUDPl3RE&index=3&ab_channel=Telusko)
-
 
 #### Key Activities
 
@@ -154,7 +165,7 @@ If more time is necessary for each week it's important to seek help earlier.
 
 ### Notes Links
 
-* [Notetacking Strategies][notetaking-zk]
+* [Note-taking Strategies][notetaking-zk]
 * [Notetaking Strategies for Lectures][notes-lec-zk]
 * [Time Management Strategies Notes][time-mgmt-zk]
 * [Time Blocking Strategies Notes][time-block-zk]
@@ -166,7 +177,7 @@ If more time is necessary for each week it's important to seek help earlier.
 [howto-notetaking]: https://students.ubc.ca/ubclife/take-rock-solid-notes-online-lectures "University of British Columbia: How to take rock-solid notes for online lectures"
 [pcde-slack]: https://app.slack.com/client/T044GN4M0H4/C044P89NH3M/thread/C044LK4E9L5-1665686480.669439 "MIT PCDE Pro Slack Channel"
 [intro-py-zk]: ./intro-python.md "Introduction to Python Notes"
-[notetaking-zk]: ./notetaking.md "Notetacking Strategies"
+[notetaking-zk]: ./notetaking.md "Note-taking Strategies"
 [notes-lec-zk]: ./notes-lectures.md "Notetaking Strategies for Lectures"
 [time-mgmt-zk]: ./time-management.md "Time Management Strategies"
 [time-block-zk]: ./time-blocking.md "Time Blocking Strategies Notes"
