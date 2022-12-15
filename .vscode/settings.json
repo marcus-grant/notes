@@ -1,11 +1,24 @@
 {
     "write-good.write-good-config": {
         "adverb": false,
+        "whitelist": ["read-only", "enumerate", "Enumerate", "many", "allocate",
+        "implement", "demonstrate", "modify"],
+        "tooWordy": { "whitelist": ["enumerate", "Enumerate", "allocate"]},
+        "weasel": {"whitelist": ["many"]}
     },
     "cSpell.enableFiletypes": [
         "markdown"
     ],
     "cSpell.words": [
-        "ecomm"
+        "Akhil",
+        "Bhadwal",
+        "compsci",
+        "dataframes",
+        "ecomm",
+        "hackr",
+        "mgmt",
+        "ndarrays",
+        "Notetaking",
+        "Telusko"
     ]
 }
