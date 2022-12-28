@@ -2,7 +2,6 @@
 created: 2022-12-16T16:35:00
 tags: [game,dwarf,fortress,overview]
 ---
-# Dwarf Fortress
 
 ## Install on MacOS
 

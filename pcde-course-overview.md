@@ -171,6 +171,7 @@ If more time is necessary for each week it's important to seek help earlier.
 * [Time Blocking Strategies Notes][time-block-zk]
 * [Introduction to Python Notes][intro-py-zk]
 * [Introduction to Python][intro-py-zk]
+* [Mathematical Probability Overview][zk-probs]
 
 <!-- Hidden Reference Links Below Here -->
 [mit-xpro]: https://emeritus.org/universities/mit-xpro/ "MIT xPRO Emeritus Certification Programs Homepage"
@@ -181,3 +182,4 @@ If more time is necessary for each week it's important to seek help earlier.
 [notes-lec-zk]: ./notes-lectures.md "Notetaking Strategies for Lectures"
 [time-mgmt-zk]: ./time-management.md "Time Management Strategies"
 [time-block-zk]: ./time-blocking.md "Time Blocking Strategies Notes"
+[zk-probs]: ./probability.md "Mathematical Probability Overview"

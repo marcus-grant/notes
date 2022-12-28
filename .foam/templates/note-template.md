@@ -16,7 +16,16 @@ e.g. to easily fill fields
 
 For a full list of features see [the VS Code snippets page](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax).
 
-## To get started
+## References
 
-1. edit this file to create the shape new notes from this template will look like
-2. create a note from this template by running the `Foam: Create New Note From Template` command
+### Note Links
+
+<!-- Hidden Reference Links Below Here -->
+
+### Referenced By
+
+<!-- Hidden Reference Links Below Here -->
+
+### Web Links
+
+<!-- Hidden Reference Links Below Here -->

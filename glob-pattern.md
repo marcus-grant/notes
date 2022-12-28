@@ -30,14 +30,20 @@ From Wikipedia:
 
 In addition to matching filenames, globs are also used widely for matching arbitrary strings (wildcard matching). In this capacity a common interface is fnmatch.
 
+## Software Implementing or Deploying Glob Patterns
+
+* [mrmlnc/fast-glob][mrmlnc/fast-glob-gh]
+
 ## References
 
 ### Web References
 
 * [Glob (programming) (from Wikipedia, the free encyclopedia)][glob-wiki]
+* [fast-glob a fast and efficient glob library for Nodejs (from Github by mrmlnc)][mrmlnc/fast-glob-gh]
 
 <!-- Hidden References -->
 [glob-wiki]: https://en.wikipedia.org/wiki/Glob_(programming) "Glob (programming) (from Wikipedia, the free encyclopedia)"
+[mrmlnc/fast-glob-gh]: https://github.com/mrmlnc/fast-glob "fast-glob a fast and efficient glob library for Nodejs (from Github by mrmlnc)"
 
 ### Note References
 
@@ -46,10 +52,12 @@ In addition to matching filenames, globs are also used widely for matching arbit
 <!-- Hidden References -->
 [glob-wiki]: https://en.wikipedia.org/wiki/Glob_(programming) "Glob (programming) (from Wikipedia, the free encyclopedia)"
 
-#### Referenced by
+### Referenced by
 
 * [Part of Caddy][caddy-zk]
+* [Part of Gatsby][gatsby-zk]
 
 <!-- Hidden References -->
 [caddy-zk]: ./caddy.md "Part of Caddy"
+[gatsby-zk]: ./gatsby.md "Part of Gatsby"
 
