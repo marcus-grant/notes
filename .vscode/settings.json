@@ -1,11 +1,11 @@
 {
-    "write-good.write-good-config": {
-        "adverb": false,
-        "whitelist": ["read-only", "enumerate", "Enumerate", "many", "allocate",
-        "implement", "demonstrate", "modify", "purchase", "Purchase"],
-        "tooWordy": { "whitelist": ["enumerate", "Enumerate", "allocate", "Purchase", "purchase"]},
-        "weasel": {"whitelist": ["many"]}
-    },
+    // "write-good.write-good-config": {
+    //     "adverb": false,
+    //     "whitelist": ["read-only", "enumerate", "Enumerate", "many", "allocate",
+    //     "implement", "demonstrate", "modify", "purchase", "Purchase"],
+    //     "tooWordy": { "whitelist": ["enumerate", "Enumerate", "allocate", "Purchase", "purchase"]},
+    //     "weasel": {"whitelist": ["many"]}
+    // },
     "cSpell.enableFiletypes": [
         "markdown"
     ],
