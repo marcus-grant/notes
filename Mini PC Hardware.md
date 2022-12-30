@@ -1,5 +1,5 @@
 ---
-tags: #hardware, #minipc, #minisforum, #nuc, #homelab, #compute, #beelink, #asus
+tags: [hardware,minipc,minisforum,nuc,homelab,compute,beelink,asus]
 ---
 # Mini PC Hardware Overview
 
