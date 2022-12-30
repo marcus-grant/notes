@@ -1,7 +1,14 @@
 # My additions
+# MacOS
 .DS_Store
 *.DS_Store
 **/.DS_Store
+
+# ZK
+.zk/notebook.db
+
+
+# END of My additions
 
 
 # Templated Stuff for NodeJS
