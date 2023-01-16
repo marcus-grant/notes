@@ -1,5 +1,5 @@
 ---
-tags: [postgres,postgresql,pgsql,db,data,storage]
+tags: [postgresql,pgsql,db,data,storage]
 ---
 # PostgreSQL
 

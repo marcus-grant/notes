@@ -1,6 +1,6 @@
 ---
 created: 2022-12-27T16:34:00Z
-tags: [www,gatsby,js,ts,ssg,static,web]
+tags: [www, gatsby, js, ts, ssg, static, web]
 ---
 
 # Gatsby
@@ -203,7 +203,8 @@ createRemoteFileNode({
   // (i.e. the node linked to the new remote file node.
   parentNodeId,
 
-  // Gatsby's cache which the helper uses to check if the file has been downloaded already. It's passed to all Node APIs.
+  // Gatsby's cache which the helper uses to
+  // check if the file has been downloaded already. It's passed to all Node APIs.
   getCache,
 
   // The action used to create nodes
@@ -422,7 +423,6 @@ From [gatsby's article on GraphQL typegen][gatsby-graphql-typegen].
 >This makes it easier to use the Typescript annotation system to
 >do the rest.
 
-
 For more details please read
 [Gatsby's GraphQL typegen documentation][gatsby-docs-gql-typegen].
 
@@ -467,7 +467,7 @@ For this exmaple to work you'll have to have a `title` inside your
 ### GraphQL ES-Lint
 
 You can optionally use [graphql-eslint][graphql-eslint-gh]
-to lint GraphQL queries. It seamlessly integrates with the 
+to lint GraphQL queries. It seamlessly integrates with the
 `graphql.config.js` file created previously.
 To install it install all the dependencies using `npm`.
 
@@ -658,7 +658,338 @@ To get your blog pages set up,
 >see the tutorial on Gatsby’s data layer and Adding Markdown Pages.
 ***TODO*** Link these above line
 
+The process goes a bit like this:
 
+1. Add tags to your markdown files
+2. Write a query to get all tags for your posts/articles/notes/etc.
+3. Make a tags page template *(e.g. `/tags/{tag}`)*
+4. Modify `gatsby-node.js` to render pages using that template
+5. Make a tags index page (`/tags`) that renders a list of all tags
+6. *(optional)* Render tags inline with your blog posts
+
+### Add Tags to your Markdown Files
+
+***TODO*** Note take on frontmatter,
+maybe in a note about markdown,
+And link to it here.
+
+Use frontmatter to create a `tags` yaml key to a list of tags.
+
+```md
+---
+created: 2022-12-30T13:00:00Z
+tags: [animals, zoo, berlin]
+---
+
+I went to the Zoo today
+```
+
+The key-value fields inside the `---` lines are treated as metadata.
+This metadata can then later be used in various ways.
+The `[]` brackets create a list of string tags that we can now parse.
+
+### Write a Query to Get all Tags for your Posts
+
+Now with all of the fields available in the data layer,
+query it using `graphql`.
+All the available fields will be accessible through `frontmatter`.
+
+```graphql
+{
+  allMarkdownRemark {
+    group(field: { frontmatter: { tags: SELECT } }) {
+      tag: fieldValue
+      totalCount
+    }
+  }
+}
+```
+
+This query groups posts by `tags` and returns ea. tag w/
+the no. of posts as `totalCount`.
+Also, u could pull out more post data in ea. group if needed.
+To keep this example brief, we'll only use the tag name in ur tag pages.
+
+### Make a Tags Page Template (for `/tags/{tag}`)
+
+***TODO*** Write seperate notes on Adding markdown pages on this article.
+Then link that to the below sentence.
+
+If you followed the guide or ***adding markdown pages***,
+then this process should seem familiar:
+Make a tag page template,
+then use it in `createPages` in `gatsby-node.js` to
+generate individual pages for the tags in the files.
+
+1st, ul need to a tags template component file @ `src/templates/tags.js`:
+
+```jsx
+// ./src/templates/tags.js
+import React from 'react';
+import PropTypes from 'prop-types';
+
+// Components
+import { Link, graphql } from 'gatsby';
+
+const Tags = ({ pageContext, data }) => {
+  const { tag } = pageContext;
+  const { edges, totalCount } = data.allMarkdownRemark
+  const tagHeader = `${totalCount} post${
+    totalCount === 1 ? '' : 's'
+  } tagged with "${tag}"`
+
+  return (
+    <div>
+      <h1>{tagHeader}</h1>
+      <ul>
+        {edges.map(({ node }) => {
+          const { slug } = node.fields;
+          const { title } = node.frontmatter;
+          return (
+            <li key={slug}>
+              <Link to={slug}>{title}</Link>
+            </li>
+          );
+        })}
+      </ul>
+      {/*
+        This links to a page that doesn't exist yet.
+        You'll come back to it later!
+      */}
+      <Link to="/tags">All tags</Link>
+    </div>
+  );
+};
+
+Tags.propTypes = {
+  pageContext: PropTypes.shape({
+    tag: PropTypes.string.isRequired,
+  }),
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      totalCount: PropTypes.number.isRequired,
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            frontmatter: PropTypes.shape({
+              title: PropTypes.string.isRequired,
+            }),
+            fields: PropTypes.shape({
+              slug: PropTypes.string.isRequired,
+            }),
+          }),
+        }).isRequired
+      ),
+    })
+  })
+}
+
+export default Tags;
+
+export const pageQuery = graphql`
+  query($tag: String) {
+    allMarkdownRemark(
+      limit: 2000
+      sort: { frontmatter: { date: DESC }}
+      filter: { frontmatter: { tags: { in: [$tag] } } }
+    ) {
+      totalCount
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  }
+`;
+```
+
+>**Note**: `propTypes` are incl.d in this ex. to help u ensure ur
+>getting all the data needed in the component, &
+>to help serve as a guide while destructuring / using these props.
+
+### Modify `gatsby-node.js` to Render Pages using that Template
+
+***TODO*** Link the below into a associated ntoe
+Now you've got a template.
+Modifying the ***Adding Markdown Pages*** work,
+use `createPages` to generate post pages as well as tag pages.
+This example uses `lodash` to transform text to `camelCase`.
+It's a simple func so u can easily create your own,
+but for now just incl. it even though it adds tons of bulk.
+
+```js
+const path = require("path")
+const _ = require("lodash")
+
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  const { createPage } = actions
+
+  const blogPostTemplate = path.resolve("src/templates/blog.js")
+  const tagTemplate = path.resolve("src/templates/tags.js")
+
+  const result = await graphql(`
+    {
+      postsRemark: allMarkdownRemark(
+        sort: { frontmatter: { date: DESC }}
+        limit: 2000
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              tags
+            }
+          }
+        }
+      }
+      tagsGroup: allMarkdownRemark(limit: 2000) {
+        group(field: { frontmatter: { tags: SELECT }}) {
+          fieldValue
+        }
+      }
+    }
+  `)
+
+  // handle errors
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
+
+  const posts = result.data.postsRemark.edges
+
+  // Create post detail pages
+  posts.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: blogPostTemplate,
+    })
+  })
+
+  // Extract tag data from query
+  const tags = result.data.tagsGroup.group
+
+  // Make tag pages
+  tags.forEach(tag => {
+    createPage({
+      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+      component: tagTemplate,
+      context: {
+        tag: tag.fieldValue,
+      },
+    })
+  })
+}
+```
+
+#### Some Notes
+
+* This GraphQL query only looks for data you need to generate these pages.
+  * Anything else can be queried again lateer (and,
+you notice, u do this above in the tags template for the post title).
+* You have referenced two `allMarkdownRemark` fields in your query.
+  * To avoid name collision, you must [alias][graphql-aliasing]
+at least one of them.
+  * You alias both to make both more human-readable
+* While making tag pages, note you pass `tag.name` through into `context`.
+  * This value gets used in the `TagPage` query to limit the search to
+only posts tagged w/ the tag in the URL.
+
+### Make a Tags Index Page (`/tags`) that Renders a List of all of them
+
+Your `/tags` page will list out all tags,
+followed by the no. of posts w/ that tag.
+You can get the data w/ the 1st query you wrote earlier,
+that grps posts by tags:
+
+```jsx
+// src/pages/tags.js
+import React from "react"
+import PropTypes from "prop-types"
+
+// Utilities
+import kebabCase from "lodash/kebabCase"
+
+// Components
+import { Helmet } from "react-helmet"
+import { Link, graphql } from "gatsby"
+
+const TagsPage = ({
+  data: {
+    allMarkdownRemark: { group },
+    site: {
+      siteMetadata: { title },
+    },
+  },
+}) => (
+  <div>
+    <Helmet title={title} />
+    <div>
+      <h1>Tags</h1>
+      <ul>
+        {group.map(tag => (
+          <li key={tag.fieldValue}>
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              {tag.fieldValue} ({tag.totalCount})
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+)
+
+TagsPage.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      group: PropTypes.arrayOf(
+        PropTypes.shape({
+          fieldValue: PropTypes.string.isRequired,
+          totalCount: PropTypes.number.isRequired,
+        }).isRequired
+      ),
+    }),
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+      }),
+    }),
+  }),
+}
+
+export default TagsPage
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(limit: 2000) {
+      group(field: { frontmatter: { tags: SELECT }}) {
+        fieldValue
+        totalCount
+      }
+    }
+  }
+`
+```
+
+### (Optional) Render Tags inline with your Blog Posts
+
+Finally!
+Anywhere else you'd like to render ur tags,
+add them to the `frontmatter` section of your graphql query &
+access them in ur component like any other prop.
 
 ## Gatsby Git Source Plugin
 
@@ -670,7 +1001,9 @@ The plugin is also handy for aggregating content from disparate repositories.
 
 It *(shallow as in into cache)* clones the configured repo and
 puts the files and their contents into the graph as `File` nodes.
-From there, it's as if [gatsby-source-filesystem](./gatsby.md#Sourcing Markup from Filesystem) was used to poll files from the local filesystem.
+From there, it's as if
+[gatsby-source-filesystem](./gatsby.md#Sourcing Markup from Filesystem)
+was used to poll files from the local filesystem.
 
 The only difference is that the `File` nodes created by this plugin
 have `gitRemote` fields, which provide git based metadata.
@@ -761,6 +1094,11 @@ However, there's also some extra metadata about the git references to query.
 }
 ```
 
+## Miscellaneous
+
+* [Great starter blog example][gatsby-starter-lumen-gh] with
+some sweet ideas about how to handle the Gatsby API
+
 ## References
 
 ### Web Links
@@ -773,9 +1111,11 @@ However, there's also some extra metadata about the git references to query.
 * [Install Tailwind CSS with Gatsby (from TailwindCSS.com Documentation)][tailwind-gatsby-install]
 * [Gatsby Plugin gatsby-plugin-postcss (from gatsbyjs.com plugins)][gatsby-docs-postcss]
 * [Creating Tags Pages for Blog Posts (from gatsbyjs.com docs)][gatsby-tag-pages]
+* [GraphQL Reference: Aliasing (from GatsbyJS.com documentation)][graphql-aliasing]
 * [Gatsby Plugin gatsby-source-git (from gatsbyjs.com plugins)][gatsby-docs-source-git]
 * [Git-URL-Parse a high level git url parser for common git providers. (from Github by IonicaBizau)][git-url-parse]
 * [Gatsby Plugin gatsby-source-wordpress (from gatsbyjs.com plugins)][gatsby-docs-source-wordpress]
+* [alxshelepenok/gatsby-starter-lumen: A constantly evolving and thoughtful architecture for creating new static blogs (from Github by alxshelepenok)][gatsby-starter-lumen-gh]
 
 <!-- Hidden References -->
 [gatsby-docs-source-fs]: https://www.gatsbyjs.org/packages/gatsby-source-filesystem/ "Gatsby Plugin gatsby-source-filesystem (from gatsbyjs.com plugins)"
@@ -786,9 +1126,11 @@ However, there's also some extra metadata about the git references to query.
 [tailwind-gatsby-install]: https://tailwindcss.com/docs/guides/gatsby "Install Tailwind CSS with Gatsby (from TailwindCSS.com Documentation)"
 [gatsby-docs-postcss]: https://www.gatsbyjs.com/plugins/gatsby-plugin-postcss/ "Gatsby Plugin gatsby-plugin-postcss (from gatsbyjs.com plugins)"
 [gatsby-tag-pages]: https://www.gatsbyjs.com/docs/adding-tags-and-categories-to-blog-posts/ "Creating Tags Pages for Blog Posts (from gatsbyjs.com docs)"
+[graphql-aliasing]: https://www.gatsbyjs.com/docs/graphql-reference/#aliasing "GraphQL Reference: Aliasing (from GatsbyJS.com documentation)"
 [gatsby-docs-source-git]: https://www.gatsbyjs.com/plugins/gatsby-source-git/ "Gatsby Plugin gatsby-source-git (from gatsbyjs.com plugins)"
 [git-url-parse]: https://github.com/IonicaBizau/git-url-parse "Git-URL-Parse a high level git url parser for common git providers. (from Github by IonicaBizau)"
 [gatsby-docs-source-wordpress]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-wordpress "Gatsby Plugin gatsby-source-wordpress (from gatsbyjs.com plugins)"
+[gatsby-starter-lumen-gh]: https://github.com/alxshelepenok/gatsby-starter-lumen "alxshelepenok/gatsby-starter-lumen: A constantly evolving and thoughtful architecture for creating new static blogs (from Github by alxshelepenok)"
 
 ### Note Links
 
