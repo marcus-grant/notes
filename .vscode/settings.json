@@ -12,13 +12,47 @@
     "cSpell.words": [
         "Akhil",
         "Bhadwal",
+        "Buch",
+        "Callan",
+        "Codio",
         "compsci",
+        "Cramer",
         "dataframes",
+        "Davol",
+        "Dods",
+        "Dodsworth",
         "ecomm",
+        "Fulle",
         "hackr",
+        "Heckscher",
+        "Holz",
+        "Johnsn",
+        "Leverl",
         "mgmt",
         "ndarrays",
         "Notetaking",
-        "Telusko"
+        "Pecok",
+        "Rovel",
+        "Suya",
+        "Telusko",
+        "Thom",
+        "Truji",
+        "Trujil",
+        "Vaux"
+    ],
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "local",
+            "database": "education",
+            "username": "root",
+            "askForPassword": true
+        }
     ]
 }

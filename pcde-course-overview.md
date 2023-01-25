@@ -132,6 +132,8 @@ If more time is necessary for each week it's important to seek help earlier.
 
 ### Module 3: Introduction to Pandas
 
+* Covering Topic
+
 #### Learning Outcomes
 
 * Define pandas series and dataframes
@@ -142,13 +144,23 @@ If more time is necessary for each week it's important to seek help earlier.
 * Analyze data in pandas
 * Design dataframes in pandas
 
-### Module X: Intro to SQL
+### Module 4: Databases & Intro to SQL
 
-<!-- TODO: Include these links in the notes to setup MySQL Workbench -->
-* [SQL Tutorial - Full Database Course for Beginners (from FreeCodeCamp)](https://www.youtube.com/watch?v=HXV3zeQKqGY&t=2s&ab_channel=freeCodeCamp.org)
-* [Workbench Files (from mysql.com)](https://www.mysql.com/products/workbench/)
-* [MySQL Workbench Tutorial (on Youtube)](https://www.youtube.com/watch?v=X_umYKqKaF0&ab_channel=MySQL)
-* [MySQL Workbench Video Walkthrough (by Telusko on Youtube)](https://www.youtube.com/watch?v=-RrfsIPy4uE&list=PLsyeobzWxl7oJca2fwLyKbDwlKUDPl3RE&index=3&ab_channel=Telusko)
+* Notes on topic
+  * [Course materials](./pcde-module4-content.md)
+  * [Database design](./database-design.md)
+  * [SQL Notes (first half)](./sql.md)
+
+### Module 5: Databases with SQL Statements
+
+Due Date: January 25, 2023
+Available for late submission till: February 22, 2023
+
+#### Notes on Topic
+
+* [Course materials][pcde-module5-content-zk]
+* [SQL Notes (second half)][sql-zk]
+* [Logical Operators in SQL][sql-logical-ops-zk]
 
 #### Key Activities
 
@@ -156,6 +168,56 @@ If more time is necessary for each week it's important to seek help earlier.
 * Activities
 * Knowledge Checks
 * Coding Assignment
+
+#### Outcomes
+
+* Outline big data and database systems.
+* Design databases conceptually and formally.
+* Interpret database components.
+* Correlate databases.
+* Interpret cardinality and normalization of tables.
+* Design physical components of databases.
+* Define a database in a coding environment.
+* Manipulate a database in a coding environment.
+* Explain database data types and indexing.
+
+<!-- TODO: Include these links in the notes to setup MySQL Workbench -->
+* [SQL Tutorial - Full Database Course for Beginners (from FreeCodeCamp)](https://www.youtube.com/watch?v=HXV3zeQKqGY&t=2s&ab_channel=freeCodeCamp.org)
+* [Workbench Files (from mysql.com)](https://www.mysql.com/products/workbench/)
+* [MySQL Workbench Tutorial (on Youtube)](https://www.youtube.com/watch?v=X_umYKqKaF0&ab_channel=MySQL)
+* [MySQL Workbench Video Walkthrough (by Telusko on Youtube)](https://www.youtube.com/watch?v=-RrfsIPy4uE&list=PLsyeobzWxl7oJca2fwLyKbDwlKUDPl3RE&index=3&ab_channel=Telusko)
+
+### Module 6: Databases Analysis and the Client Server Interface
+
+Due Date: February 1, 2023
+Available for late submission till: February 22, 2023
+
+#### Notes on Topic
+
+* [Course materials][pcde-mod6-zk]
+* [SQL Notes][sql-zk]
+
+#### Key Activities
+
+* Discussions: 2
+* Activities: 5
+* Self Study Drag & Drop: 2
+* Knowledge Checks: 7
+* Coding Assignment: 1
+* Video Lectures: 25
+* Mini Lessons: 5
+* Estimated 17.5hrs to complete
+
+#### Outcomes
+
+* Write functional queries to explore a database.
+* Analyze the structure of a database.
+* Create visualizations of data using histograms in SQL.
+* Clean a dataset in SQL.
+* Handle date and time in SQL.
+* Define the client-server interface.
+* Read and write tables using a driver.
+* Discriminate between RDBMS and in-memory databases.
 
 ## References
 
@@ -172,6 +234,11 @@ If more time is necessary for each week it's important to seek help earlier.
 * [Introduction to Python Notes][intro-py-zk]
 * [Introduction to Python][intro-py-zk]
 * [Mathematical Probability Overview][zk-probs]
+* [PCDE Course Materials (Module 5)][pcde-module5-content-zk]
+* [SQL Overview][sql-zk]
+* [Logical Operators in SQL][sql-logical-ops-zk]
+* [Regular Expressions (RegEx)][regex-zk]
+* [PCDE Course Module 6: Database Analysis & the Client Server Interface][pcde-mod6-zk]
 
 <!-- Hidden Reference Links Below Here -->
 [mit-xpro]: https://emeritus.org/universities/mit-xpro/ "MIT xPRO Emeritus Certification Programs Homepage"
@@ -183,3 +250,8 @@ If more time is necessary for each week it's important to seek help earlier.
 [time-mgmt-zk]: ./time-management.md "Time Management Strategies"
 [time-block-zk]: ./time-blocking.md "Time Blocking Strategies Notes"
 [zk-probs]: ./probability.md "Mathematical Probability Overview"
+[pcde-module5-content-zk]: ./pcde-module5-content.md "PCDE Course Materials (Module 5)"
+[sql-zk]: ./sql.md "SQL Overview"
+[sql-logical-ops-zk]: ./sql-logical-operators.md "Logical Operators in SQL"
+[regex-zk]: ./regex.md "Regular Expressions (RegEx)"
+[pcde-mod6-zk]: ./pcde-module6-content.md "PCDE Course Module 6: Database Analysis & the Client Server Interface"

@@ -1,6 +1,6 @@
 ---
-created: 2022-12-16T16:35:00
-tags: [game,dwarf,fortress,overview]
+created: 2022-12-16T15:35:00Z
+tags: [game,dwarf,fortress,overview,install,mac,macos]
 ---
 
 ## Install on MacOS
