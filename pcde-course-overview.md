@@ -196,6 +196,7 @@ Available for late submission till: February 22, 2023
 
 * [Course materials][pcde-mod6-zk]
 * [SQL Notes][sql-zk]
+* [Exploratory Data Analysis (EDA) in SQL][sql-eda-zk]
 
 #### Key Activities
 
@@ -207,6 +208,10 @@ Available for late submission till: February 22, 2023
 * Video Lectures: 25
 * Mini Lessons: 5
 * Estimated 17.5hrs to complete
+
+##### Time Log
+
+* 23-01-26: 4.5hrs
 
 #### Outcomes
 
@@ -239,6 +244,7 @@ Available for late submission till: February 22, 2023
 * [Logical Operators in SQL][sql-logical-ops-zk]
 * [Regular Expressions (RegEx)][regex-zk]
 * [PCDE Course Module 6: Database Analysis & the Client Server Interface][pcde-mod6-zk]
+* [Exploratory Data Analysis in SQL][sql-eda-zk]
 
 <!-- Hidden Reference Links Below Here -->
 [mit-xpro]: https://emeritus.org/universities/mit-xpro/ "MIT xPRO Emeritus Certification Programs Homepage"
@@ -255,3 +261,4 @@ Available for late submission till: February 22, 2023
 [sql-logical-ops-zk]: ./sql-logical-operators.md "Logical Operators in SQL"
 [regex-zk]: ./regex.md "Regular Expressions (RegEx)"
 [pcde-mod6-zk]: ./pcde-module6-content.md "PCDE Course Module 6: Database Analysis & the Client Server Interface"
+[sql-eda-zk]: ./sql-eda.md "Exploratory Data Analysis in SQL"

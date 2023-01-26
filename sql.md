@@ -1223,9 +1223,49 @@ the value `NULL` is given.
 
 ## Module 6 of PCDE Starts Here
 
+### Overview
+
 Database Analysis involves a lot of SQL.
 Those notes belong below this section.
 **TODO**: this needs to be cleaned up into a more coherent organization of sections.
+
+>**NOTE**: From now on it is assumed we're using the
+>["Bad Sakila" database][pcde-mod6-bad-sakila-zk]
+
+## Exploring a Database
+
+Exploring a pre-existing database is a *big* part of *data analysis*.
+In fact it's so big it has a fancy name and acronym,
+**Exploratory Data Analysis** or **EDA**.
+
+Though it can be done with many frameworks, tools and programming languages,
+SQL being *the* language to query data,
+it makes most sense to perform *EDA* using SQL.
+
+There's a whole subject of performing [EDA with SQL][sql-eda-zk] that
+is worth looking into whenever it comes to exploring data using SQL.
+
+### Loading Schema & Data Files into Databases
+
+To load data & schema into a database:
+
+```sh
+export tmp_pass="yOuR-PaSsWorD"
+mysql -u root -p $tmp_pass -e DROP bad_sakila IF EXISTS; CREATE DATABASE bad_sakila
+mysql -u root -p $tmp_pass bad_sakila < bad-sakila-schema.sql
+mysql -u root -p $tmp_pass bad_sakila < bad-sakila-data.sql
+unset tmp_pass
+```
+
+Here we first create a temporary environment variable `tmp_pass` with
+our password given to the root of the database.
+Then we use that password and root user to login to
+the database to run two SQL statements:
+`DROP bad_sakila IF EXISTS` to remove the data & schema if it already exists,
+`CREATE DATABASE bad_sakila` to recreate a new database to restore state.
+Then we run two commands to load the schema then data files into the database.
+Finally, `unset` the `tmp_pass` variable to
+make sure your password isn't leaking.
 
 ### Further Reading
 
@@ -1258,6 +1298,8 @@ see [Regular Expressions][regex-zk] for more details.
 * [Database Design][db-design-zk]
 * [Logical Operators in SQL][sql-logic-ops-zk]
 * [Regular Expressions (RegEx)][regex-zk]
+* [PCDE Module 6 Content: Bad Sakila Database][pcde-mod6-bad-sakila-zk]
+* [Exploratory Data Analysis in SQL][sql-eda-zk]
 
 <!-- Hidden Reference Links Below Here -->
 [pcde-overview-zk]: ./pcde-course-overview.md "Professional Certification in Data Engineering Course Overview"
@@ -1265,6 +1307,8 @@ see [Regular Expressions][regex-zk] for more details.
 [db-design-zk]: ./database-design.md "Database Design"
 [sql-logic-ops-zk]: ./sql-logical-operators.md "Logical Operators in SQL"
 [regex-zk]: ./regex.md "Regular Expressions (RegEx)"
+[pcde-mod6-bad-sakila-zk]: ./pcde-module6-content.md#bad-sakila-database "PCDE Module 6 Content: Bad Sakila Database"
+[sql-eda-zk]: ./sql-eda.md "Exploratory Data Analysis in SQL"
 
 ### Referenced By
 
