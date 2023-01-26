@@ -25,10 +25,12 @@ From Wikipedia:
 > 2 characters followed by `.txt`.
 >
 > In addition to matching filenames,
-> globas are also used widely for matching arbitrary strings *(wildcard matching)*.
+> globs are also used widely for matching arbitrary strings *(wildcard matching)*.
 > In this capacity a common interface is `fnmatch`.
 
-In addition to matching filenames, globs are also used widely for matching arbitrary strings (wildcard matching). In this capacity a common interface is fnmatch.
+In addition to matching filenames,
+globs are also used widely for matching arbitrary strings (wildcard matching).
+In this capacity a common interface is fnmatch.
 
 ## Software Implementing or Deploying Glob Patterns
 
@@ -47,10 +49,7 @@ In addition to matching filenames, globs are also used widely for matching arbit
 
 ### Note References
 
-* [Glob (programming) (from Wikipedia, the free encyclopedia)][glob-wiki]
-
 <!-- Hidden References -->
-[glob-wiki]: https://en.wikipedia.org/wiki/Glob_(programming) "Glob (programming) (from Wikipedia, the free encyclopedia)"
 
 ### Referenced by
 
@@ -60,4 +59,3 @@ In addition to matching filenames, globs are also used widely for matching arbit
 <!-- Hidden References -->
 [caddy-zk]: ./caddy.md "Part of Caddy"
 [gatsby-zk]: ./gatsby.md "Part of Gatsby"
-
