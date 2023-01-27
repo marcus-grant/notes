@@ -1,5 +1,7 @@
 ---
 tags: [python,mongodb,backend,db,driver,data]
+created: 2022-12-05T10:08:05.765Z
+modified: 2022-12-05T10:08:05.765Z
 ---
 # Control MongoDB Using Python
 

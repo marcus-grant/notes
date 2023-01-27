@@ -1,6 +1,7 @@
 ---
-created: 2022-12-02T16:51:00
+created: 2022-12-02T15:50:40.133Z
 tags: [productivity,time,mgmt]
+modified: 2022-12-02T16:40:42.254Z
 ---
 # Time Management Skills Overview
 

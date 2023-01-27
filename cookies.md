@@ -1,5 +1,7 @@
 ---
-tags: #www,#cookies,#web,#infosec
+tags: null
+created: 2022-11-14T13:16:34.409Z
+modified: 2022-11-14T15:16:01.417Z
 ---
 # Cokies
 

@@ -1,6 +1,7 @@
 ---
-created: 2022-12-06T11:00:00
+created: 2022-12-06T10:00:01.579Z
 tags: [python,intro,dev,software,compsci,langs]
+modified: 2022-12-07T21:52:41.647Z
 ---
 # Introduction to Python
 

@@ -1,3 +1,7 @@
+---
+created: 2022-11-16T21:52:35.092Z
+modified: 2022-12-02T10:28:03.203Z
+---
 # Ansible Module in Bash
 
 Create custom Ansible modules using BASH & Linux shell.

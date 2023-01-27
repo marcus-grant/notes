@@ -1,5 +1,7 @@
 ---
 tags: [db,database,data,design,overview]
+created: 2022-12-02T09:52:31.002Z
+modified: 2022-12-03T09:46:47.384Z
 ---
 # Databases Overview
 

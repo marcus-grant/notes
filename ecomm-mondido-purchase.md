@@ -1,6 +1,7 @@
 ---
-created: 2022-12-06T14:39:48Z
+created: 2022-12-06T15:55:04.609Z
 tags: [mondido,ecomm,work,startup]
+modified: 2022-12-06T16:22:20.144Z
 ---
 # Notes on Ecomm Startup Purchasing of Mondido
 

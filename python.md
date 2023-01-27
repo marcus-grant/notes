@@ -1,6 +1,7 @@
 ---
-created: 2022-11-11T11:11:00
+created: 2022-12-05T16:17:20.340Z
 tags: [python,py,lang,programming]
+modified: 2022-12-14T14:36:01.854Z
 ---
 # Python
 

@@ -1,5 +1,7 @@
 ---
 tags: [postgresql,pgsql,db,data,storage]
+created: 2023-01-02T10:33:12.550Z
+modified: 2023-01-02T10:33:12.550Z
 ---
 # PostgreSQL
 

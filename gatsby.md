@@ -1,6 +1,7 @@
 ---
-created: 2022-12-27T16:34:00Z
-tags: [www, gatsby, js, ts, ssg, static, web]
+created: 2023-01-02T15:16:53.585Z
+tags: [www,gatsby,js,ts,ssg,static,web]
+modified: 2023-01-02T15:16:53.585Z
 ---
 
 # Gatsby

@@ -1,5 +1,7 @@
 ---
-tags: #cassandra, #db, #backend, #data
+tags: null
+created: 2022-11-16T10:41:40.277Z
+modified: 2022-11-16T12:49:30.354Z
 ---
 # Cassandra
 

@@ -1,5 +1,7 @@
 ---
-tags: #db, #database, #containers, #testing, #devops
+tags: null
+created: 2022-11-15T14:13:16.819Z
+modified: 2022-11-15T14:34:24.365Z
 ---
 # Database Containerization
 

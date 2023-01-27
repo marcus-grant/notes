@@ -1,6 +1,7 @@
 ---
-created: 2022-12-02T15:00:00
+created: 2022-12-02T09:39:07.160Z
 tags: [learning,pcde,data,syllabus,notetaking,productivity,time,mgmt]
+modified: 2023-01-26T12:53:27.262Z
 ---
 # PCDE Course Overview
 

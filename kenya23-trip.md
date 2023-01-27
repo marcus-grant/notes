@@ -1,6 +1,7 @@
 ---
-created: 2022-12-06T16:34:20Z
+created: 2022-12-06T16:35:54.679Z
 tags: [africa,kenya,trip,holiday,offsite,work,social,impact,aid,philanthropy]
+modified: 2022-12-06T16:35:54.680Z
 ---
 # Kenya Offsite Trip 2023
 

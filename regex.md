@@ -1,6 +1,6 @@
 ---
-created: 2023-01-25T10:18:45.000+01
-modified: 2023-01-25T10:18:45.000+01
+created: 2023-01-25T09:18:16.376Z
+modified: 2023-01-25T09:18:45.000Z
 tags: [regex,regular,expression,pattern,matching,pcde,module5,data,sql,query,programming]
 ---
 # Regular Expressions Overview (RegEx)

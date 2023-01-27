@@ -1,6 +1,7 @@
 ---
-created: 2022-12-02T16:20:00
-tags: [utils,zk,dev,learning,notes,productivity,automation,cicd] 
+created: 2022-12-02T13:34:27.197Z
+tags: [utils,zk,dev,learning,notes,productivity,automation,cicd]
+modified: 2022-12-02T17:12:18.617Z
 ---
 # Zettelkasten Deploy
 

@@ -1,6 +1,7 @@
 ---
-created: 2022-12-02T16:00:00
+created: 2022-12-02T12:51:19.043Z
 tags: [zk,utils,dev,foss,computers,notetaking,productivity,learning]
+modified: 2022-12-02T17:17:21.714Z
 ---
 # Zettelkasten Tools
 

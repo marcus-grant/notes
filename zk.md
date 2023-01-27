@@ -1,6 +1,7 @@
 ---
-created: 2022-12-02T15:40:00
+created: 2022-12-02T10:56:41.229Z
 tags: [zk,zettlekasten,notetaking,learning,productivity]
+modified: 2022-12-02T17:05:42.013Z
 ---
 # ZettleKasten Overview
 

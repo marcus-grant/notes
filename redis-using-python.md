@@ -1,5 +1,7 @@
 ---
-tags: [python, redis, db, key-value]
+tags: [python,redis,db,key-value]
+created: 2022-11-15T22:32:24.465Z
+modified: 2022-11-15T23:01:31.889Z
 ---
 # Redis Using Python Drivers
 

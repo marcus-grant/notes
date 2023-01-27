@@ -1,5 +1,7 @@
 ---
-tags: #data,#db,#devops,#relational,#document,#key-value,#backend
+tags: null
+created: 2022-11-15T21:54:59.839Z
+modified: 2022-11-15T21:54:59.839Z
 ---
 # Types of Databases
 

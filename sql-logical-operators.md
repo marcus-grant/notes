@@ -1,7 +1,7 @@
 ---
-created: 2023-01-24T16:53:22.000+01
-modified: 2023-01-24T16:53:22.000+01
-tags: [pcde, module5, data, sql, logic, boolean, database]
+created: 2023-01-24T15:53:13.895Z
+modified: 2023-01-24T15:53:22.000Z
+tags: [pcde,module5,data,sql,logic,boolean,database]
 ---
 # Logical Operations in SQL
 

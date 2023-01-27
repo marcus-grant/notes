@@ -1,5 +1,7 @@
 ---
 tags: [data,graph,node,edge,computers,structures,sql,db]
+created: 2022-11-26T09:59:39.436Z
+modified: 2022-11-26T09:59:39.436Z
 ---
 # Comparison of Implementations of Graph Data Structures
 

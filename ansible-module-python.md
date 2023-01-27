@@ -1,5 +1,7 @@
 ---
 tags: [ansible,python,module,yaml,devops]
+created: 2022-12-02T10:04:36.926Z
+modified: 2022-12-02T10:10:31.061Z
 ---
 # Developing Ansible Modules Using Python
 

@@ -1,6 +1,7 @@
 ---
-created: 2022-12-02T17:06:00
+created: 2022-12-02T16:06:32.392Z
 tags: [productivity,time,mgmt,pommodoro,blocking]
+modified: 2022-12-02T16:25:34.616Z
 ---
 # Time-Blocking Techniques Overview
 

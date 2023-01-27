@@ -1,5 +1,7 @@
 ---
 tags: [coreutils,linux,terminal,cli,gnu]
+created: 2022-11-16T22:50:07.438Z
+modified: 2022-11-16T22:50:07.438Z
 ---
 # CoreUtils
 

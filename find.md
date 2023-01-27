@@ -1,5 +1,7 @@
 ---
 tags: [find,terminal,gnu,coreutils,file,management]
+created: 2022-11-22T16:15:04.652Z
+modified: 2022-11-22T16:15:04.652Z
 ---
 # GNU Find - a Part of CoreUtil
 

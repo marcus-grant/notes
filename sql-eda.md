@@ -1,6 +1,6 @@
 ---
-created: 2023-01-26T11:09:02.000+01
-modified: 2023-01-26T11:09:02.000+01
+created: 2023-01-26T10:08:58.298Z
+modified: 2023-01-26T10:09:02.000Z
 tags: [data,sql,analysis,eda,database,science,computers,pcde,module6]
 ---
 # Exploratory Data Analysis in SQL

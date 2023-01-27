@@ -1,6 +1,7 @@
 ---
-created: 2022-12-02T15:59:00
+created: 2022-12-02T14:58:00.723Z
 tags: [cli,terminal,unix,computers,software,compsci,productivity,devops]
+modified: 2022-12-02T15:06:22.372Z
 ---
 # Command Line Interfaces (CLI) Overview
 

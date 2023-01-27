@@ -1,6 +1,7 @@
 ---
-created: 2022-12-11T16:16:00
+created: 2022-12-13T14:28:45.342Z
 tags: [caddy,devops,server,selfhost,web,proxy,reverse,ssl,certificate]
+modified: 2022-12-13T14:28:45.342Z
 ---
 # Caddy - The Ultimate Web Server
 
