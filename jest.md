@@ -1,7 +1,7 @@
 ---
-tags: [jest,test,javascript,typescript]
 created: 2023-01-13T15:28:00.725Z
 modified: 2023-01-13T15:28:00.725Z
+tags: [jest,test,javascript,typescript]
 ---
 # Jest
 

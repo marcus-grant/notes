@@ -1,7 +1,7 @@
 ---
 created: 2022-12-02T14:48:19.209Z
-tags: [unix,linux,terminal,cli,tui,gui,desktop,graphics,overview,devops,dev,computers,compsci]
 modified: 2022-12-02T15:07:35.218Z
+tags: [unix,linux,terminal,cli,tui,gui,desktop,graphics,overview,,computers]
 ---
 # Shell (Computers)
 

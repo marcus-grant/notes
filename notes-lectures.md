@@ -1,7 +1,7 @@
 ---
 created: 2022-12-02T12:30:39.673Z
-tags: [notetaking,lecture,zk,learning,productivity]
 modified: 2022-12-02T15:35:37.999Z
+tags: [notetaking,lecture,zk,learning,productivity]
 ---
 # Taking Effective Notes for Lectures
 

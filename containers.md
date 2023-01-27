@@ -1,7 +1,7 @@
 ---
-tags: null
 created: 2022-11-15T14:17:39.533Z
 modified: 2022-11-15T14:26:55.328Z
+tags: [containers,podman,docker,containerd,devops]
 ---
 # Containers
 

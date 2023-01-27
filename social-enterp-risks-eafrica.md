@@ -1,7 +1,7 @@
 ---
-tags: [finance,aid,philanthropy,kenya,tanzania,africa,social,enterprise]
 created: 2022-11-17T11:05:15.008Z
 modified: 2022-11-17T11:05:15.008Z
+tags: [finance,aid,philanthropy,kenya,tanzania,africa,social,enterprise]
 ---
 # Ongoing Problems with East African Humanitarian Finance
 

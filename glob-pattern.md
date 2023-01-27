@@ -1,7 +1,7 @@
 ---
 created: 2022-12-28T14:05:06.432Z
-tags: [unix,linux,devops,file,tree,posix,data,shell]
 modified: 2023-01-26T07:57:05.054Z
+tags: [unix,linux,devops,file,tree,posix,data,shell]
 ---
 # Glob Patterns
 

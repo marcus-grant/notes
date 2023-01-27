@@ -1,7 +1,7 @@
 ---
-tags: [db,document,nosql,mongodb,backend,data]
 created: 2022-12-05T14:22:49.623Z
 modified: 2022-12-05T14:22:49.623Z
+tags: [db,document,nosql,mongodb,backend,data]
 ---
 # Document Databases
 

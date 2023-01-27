@@ -1,7 +1,7 @@
 ---
 created: 2022-12-02T14:43:49.023Z
-tags: [neovim,vim,editors,utils,dev,productivity]
 modified: 2022-12-02T15:29:33.577Z
+tags: [neovim,vim,editors,utils,dev,productivity]
 ---
 # NeoVim
 

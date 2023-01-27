@@ -1,7 +1,7 @@
 ---
-tags: [ls,coreutils,gnu,linux,unix,terminal]
 created: 2022-11-22T16:12:31.702Z
 modified: 2022-11-22T16:12:31.702Z
+tags: [ls,coreutils,gnu,linux,unix,terminal]
 ---
 # GNU LS from CoreUtils
 

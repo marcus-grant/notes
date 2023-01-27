@@ -1,7 +1,7 @@
 ---
-tags: null
 created: 2022-11-15T18:08:55.571Z
 modified: 2022-12-07T16:51:19.235Z
+tags: [flask,server,backend,python,py,http]
 ---
 # Flask
 

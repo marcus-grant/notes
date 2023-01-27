@@ -1,7 +1,7 @@
 ---
-tags: [javascript,overview,language,software]
 created: 2023-01-26T13:02:04.293Z
 modified: 2023-01-26T13:02:04.293Z
+tags: [javascript,overview,language,software]
 ---
 # Javascript
 

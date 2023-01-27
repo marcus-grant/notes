@@ -1,7 +1,7 @@
 ---
-tags: [redis,key-value,db,data,backend,storage]
 created: 2022-11-15T21:58:27.124Z
 modified: 2022-11-15T21:58:27.125Z
+tags: [redis,key,value,database,memory,data,server,cache,storage]
 ---
 
 # Redis

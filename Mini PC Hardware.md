@@ -1,7 +1,7 @@
 ---
-tags: [hardware,minipc,minisforum,nuc,homelab,compute,beelink,asus]
 created: 2022-11-08T11:53:59.499Z
 modified: 2022-12-28T16:35:32.947Z
+tags: [minipc,hardware,minisforum,nuc,beelink,asus,homelab,computer]
 ---
 # Mini PC Hardware Overview
 

@@ -1,7 +1,7 @@
 ---
 created: 2022-12-02T10:38:31.261Z
-tags: [notes,notetaking,learning,zk]
 modified: 2022-12-02T17:04:18.174Z
+tags: [notes,notetaking,learning,zk]
 ---
 # Howto Take Effective Notes
 

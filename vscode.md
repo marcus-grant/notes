@@ -1,7 +1,7 @@
 ---
 created: 2022-12-02T14:35:19.211Z
-tags: [editors,vscode,overview,tips,utils,dev,productivity]
 modified: 2022-12-02T14:43:09.029Z
+tags: [vscode,editors,overview,tips,tool,dev,productivity]
 ---
 # VS Code
 

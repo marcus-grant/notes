@@ -1,7 +1,7 @@
 ---
-tags: null
+tags: [bash,langs,devops,terminal]
 created: 2022-11-01T16:15:34.247Z
-modified: 2022-11-01T16:17:39.785Z
+modified: 2023-01-27T11:35:18.285Z
 ---
 # BASH
 

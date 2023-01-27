@@ -1,9 +1,9 @@
 ---
-tags: [keyboard,mechanical,hardware,build,diy]
-author: Luke Miller
-source: 'https://www.lukemillermakes.com/2021/10/build-a-split-planck-keyboard/'
 created: 2022-11-16T14:29:34.143Z
 modified: 2022-11-16T14:29:34.143Z
+author: Luke Miller
+source: 'https://www.lukemillermakes.com/2021/10/build-a-split-planck-keyboard/'
+tags: [keyboard,mechanical,hardware,build,diy]
 ---
 # Build a split planck keyboard
 

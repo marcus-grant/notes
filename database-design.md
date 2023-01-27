@@ -1,7 +1,7 @@
 ---
-tags: [data,pcde,module4,database,design,architecture,computers,software,storage]
 created: 2022-12-02T09:58:13.870Z
 modified: 2023-01-17T16:22:38.302Z
+tags: [data,pcde,module4,database,design,architecture,computers,software,storage]
 ---
 # Database Design
 

@@ -1,7 +1,7 @@
 ---
 created: 2022-12-02T15:50:40.133Z
-tags: [productivity,time,mgmt]
 modified: 2022-12-02T16:40:42.254Z
+tags: [productivity,time,manage,workflow]
 ---
 # Time Management Skills Overview
 

@@ -1,7 +1,7 @@
 ---
-tags: null
 created: 2022-11-01T17:37:09.062Z
 modified: 2022-11-14T13:43:41.966Z
+tags: [mit,data,engineer,module11]
 ---
 # Proffesional Certification Data Engineering - Module 11: Client Server Architecture
 

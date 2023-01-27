@@ -1,7 +1,7 @@
 ---
-tags: null
+tags: [foss,devops,overview,software,selfhost]
 created: 2022-11-08T13:54:17.523Z
-modified: 2022-11-08T14:03:57.775Z
+modified: 2023-01-27T11:35:46.046Z
 ---
 # FOSS Software Overview
 

@@ -1,7 +1,7 @@
 ---
-tags: [sql,database,data,backend,overview,pcde,module4,module5]
 created: 2022-11-24T16:36:35.662Z
 modified: 2023-01-26T10:38:05.795Z
+tags: [sql,database,data,backend,overview,pcde,module4,module5]
 ---
 # Overview of SQL
 

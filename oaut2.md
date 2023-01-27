@@ -1,7 +1,7 @@
 ---
-tags: null
 created: 2022-11-14T19:44:30.368Z
 modified: 2022-11-14T20:02:30.449Z
+tags: [oauth,infosec,crypto,web,authorize]
 ---
 # Oauth2
 

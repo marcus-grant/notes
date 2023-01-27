@@ -1,7 +1,7 @@
 ---
 created: 2022-12-02T13:00:56.960Z
-tags: [computers,software,writing,notetaking,os,utils]
 modified: 2022-12-02T17:17:59.207Z
+tags: [computers,software,writing,notetaking,os,utils]
 ---
 # Text Expansion Software
 

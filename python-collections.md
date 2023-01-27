@@ -1,7 +1,7 @@
 ---
 created: 2022-12-13T15:06:45.391Z
-tags: [python,software,dev,compsci,collection,data-structures,data]
 modified: 2022-12-14T14:09:37.857Z
+tags: [python,dev,software,collection,data,structures,computers]
 ---
 # Python Collections
 
