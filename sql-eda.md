@@ -114,6 +114,7 @@ Then we'll `GROUP BY 1` to group together
 the active and inactive customers seperately for a count.
 
 Because of this query we no know how many customers are active or inactive.
+However, this template can be used to discover just about any relation.
 
 ## Further Reading
 
