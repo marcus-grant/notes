@@ -411,7 +411,6 @@ or converter function to transform the input into an array.
 <!-- TODO: Get some more verifiable detail in here about loadtxt -->
 ```python
 def read_ints(in_str):
-
 ```
 
 ## References
