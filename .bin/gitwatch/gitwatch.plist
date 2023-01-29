@@ -8,7 +8,9 @@
     <array>
         <string>/opt/homebrew/bin/gitwatch</string>
         <string>-r</string>
-        <string>git@github.com:marcus-grant/notes</string>
+        <string>origin</string>
+        <string>-b</string>
+        <string>main</string>
         <string>-l</string>
         <string>64</string>
         <string>/Users/marcus/Documents/notes</string>
