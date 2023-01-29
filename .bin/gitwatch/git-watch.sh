@@ -26,6 +26,8 @@ if [ ! -z "${DIR_NOTE}" ]; then
 fi
 
 eval $_watch_bin \
-    -r git@github.com:marcus-grant/notes \
+    # -r git@github.com:marcus-grant/notes \
+    -r origin
+    -b main
     -l 64 \
     $DIR_NOTE
