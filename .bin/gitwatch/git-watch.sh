@@ -25,8 +25,9 @@ if [ ! -z "${DIR_NOTE}" ]; then
     export DIR_NOTE=$dir_note
 fi
 
-eval $_watch_bin \
-    -r origin \
-    -b main \
-    -l 32 \
+eval $_watch_bin    \
+    -r origin       \
+    -b main         \
+    -l 32           \
+    -L              \
     $DIR_NOTE
