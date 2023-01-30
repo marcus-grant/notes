@@ -13,6 +13,7 @@
         <string>main</string>
         <string>-l</string>
         <string>32</string>
+        <string>-L</string>
         <string>/Users/marcus/Documents/notes</string>
     </array>
     <key>EnvironmentVariables</key>

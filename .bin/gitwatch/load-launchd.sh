@@ -1,7 +1,7 @@
 #/bin/bash
 
 _service_name='com.github.gitwatch.note'
-_service_file="/Users/marcus/Library/LaunchAgents/${_service_name}"
+_service_file="/Users/marcus/Library/LaunchAgents/${_service_name}.plist"
 unload_flag=false
 script_path=''
 parent_dir=''

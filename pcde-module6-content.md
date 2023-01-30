@@ -2,6 +2,7 @@
 created: 2023-01-25T16:14:31.711Z
 modified: 2023-01-30T13:50:31.584Z
 tags: [pcde,module6,data,database,analysis,science,client,server,interface,computers,sql,programming]
+
 ---
 # PCDE Module 6 Content: Database Analysis & the Client Server Interface
 
