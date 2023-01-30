@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>com.github.gitwatch.notes</string>
+    <string>com.github.gitwatch.note</string>
     <key>ProgramArguments</key>
     <array>
         <string>/opt/homebrew/bin/gitwatch</string>
@@ -12,7 +12,7 @@
         <string>-b</string>
         <string>main</string>
         <string>-l</string>
-        <string>64</string>
+        <string>32</string>
         <string>/Users/marcus/Documents/notes</string>
     </array>
     <key>EnvironmentVariables</key>
