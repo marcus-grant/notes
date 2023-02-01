@@ -1,6 +1,6 @@
 ---
 created: 2022-12-14T14:16:16.995Z
-modified: 2023-01-29T17:32:52.121Z
+modified: 2023-02-01T16:11:18.547Z
 tags: [python,data,pcde,matrix,ndarray,array,compsci,numpy,collection]
 ---
 # NumPy
@@ -124,8 +124,8 @@ The *ndarray* methods, `vstack` and `hstack` respectively,
 will stack arrays in either dimension.
 
 ```python
-a = np.array([[1, 1], [2, 2]])
-b = np.array([[3, 3], [4, 4]]))
+a = np.array([ [1, 1], [2, 2]])
+b = np.array([ [3, 3], [4, 4]]))
 np.vstack((a, b))
 # array([[1, 1],
 #       [2, 2],
@@ -151,10 +151,13 @@ array([[ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12],
 If you wanted to split this array into 3 equal parts:
 
 ```python
->>> np.hsplit(x, 3)
-[array([[ 1,  2,  3,  4], [13, 14, 15, 16]]),
-  array([[ 5,  6,  7,  8],[17, 18, 19, 20]]),
-  array([[ 9, 10, 11, 12],[21, 22, 23, 24]])]
+np.hsplit(x, 3)
+```
+
+```txt
+[array([ [ 1,  2,  3,  4], [13, 14, 15, 16]]),
+  array([ [ 5,  6,  7,  8],[17, 18, 19, 20]]),
+  array([ [ 9, 10, 11, 12],[21, 22, 23, 24]])]
 ```
 
 But, there's a unique quality going on here, unique to *ndarrays*,
@@ -171,7 +174,7 @@ these **views** when assigned to another name will
 make changes to the original data when the new namespace makes alterations.
 
 ```python
->>> a = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+>>> a = np.array([ [1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
 >>> b1 = a[0, :]
 >>> b1
 array([1, 2, 3, 4])
@@ -361,7 +364,7 @@ it's just more useful in larger dimensions.
 There's the `extract` class function to `np`.
 
 ```python
->>> a = np.array([[1, 2, 3],[4, 5, 6]])
+>>> a = np.array([ [1, 2, 3],[4, 5, 6]])
 >>> b = np.where(a > 4, a)
 >>> b
 array([5, 6])
