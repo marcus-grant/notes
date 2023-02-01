@@ -7,6 +7,9 @@
 # ZK
 .zk/notebook.db
 
+# PCDE playgrounds
+.pcde
+
 
 # END of My additions
 
