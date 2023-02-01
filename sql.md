@@ -1,6 +1,6 @@
 ---
 created: 2022-11-24T16:36:35.662Z
-modified: 2023-01-26T10:38:05.795Z
+modified: 2023-01-31T17:19:57.882Z
 tags: [sql,database,data,backend,overview,pcde,module4,module5]
 ---
 # Overview of SQL
@@ -1269,6 +1269,36 @@ Then we run two commands to load the schema then data files into the database.
 Finally, `unset` the `tmp_pass` variable to
 make sure your password isn't leaking.
 
+## Visualizing Data in SQL
+
+SQL offers several ways to either aid in
+external programs not using SQL have grouped and organized data to visualize or
+to directly visualize the data using SQL itself.
+
+`GROUP BY` as used before to join and analyze relationships in data,
+can also be used along with other functions like `RPAD` to directly visualize data.
+For more details,
+see the [notes on visualizing data using SQL][sql-vis-zk]
+
+## Cleaning Data
+
+Cleaning data is one of the most important tasks to
+perform when working with data.
+It's of crucial importance to ensure the data in databases is consistent.
+There are
+[various techniques using SQL to clean data within a database][sql-clean-zk].
+
+## Date & Time
+
+One of the most common datatypes in SQL are related to **dates & time**.
+The most difficult part of working with them is to make sure the format
+is correct between all values.
+This can mean different formatting of date units like month or minute, etc.
+
+There's a lot to be learned about Dates & Times in SQL,
+to learn more,
+read about [Dates & Time in SQL][sql-date-zk]
+
 ### Further Reading
 
 This topic is expansive and nuanced,
@@ -1302,6 +1332,9 @@ see [Regular Expressions][regex-zk] for more details.
 * [Regular Expressions (RegEx)][regex-zk]
 * [PCDE Module 6 Content: Bad Sakila Database][pcde-mod6-bad-sakila-zk]
 * [Exploratory Data Analysis in SQL][sql-eda-zk]
+* [Visualizing Data in SQL][sql-vis-zk]
+* [Cleaning Data in SQL][sql-clean-zk]
+* [Dates & Time in SQL][sql-date-zk]
 
 <!-- Hidden Reference Links Below Here -->
 [pcde-overview-zk]: ./pcde-course-overview.md "Professional Certification in Data Engineering Course Overview"
@@ -1311,6 +1344,9 @@ see [Regular Expressions][regex-zk] for more details.
 [regex-zk]: ./regex.md "Regular Expressions (RegEx)"
 [pcde-mod6-bad-sakila-zk]: ./pcde-module6-content.md#bad-sakila-database "PCDE Module 6 Content: Bad Sakila Database"
 [sql-eda-zk]: ./sql-eda.md "Exploratory Data Analysis in SQL"
+[sql-vis-zk]: ./sql-visualize.md "Visualizing Data in SQL"
+[sql-clean-zk]: ./sql-cleaning.md "Cleaning Data in SQL"
+[sql-date-zk]: ./sql-date-time.md "Dates & Time in SQL"
 
 ### Referenced By
 
