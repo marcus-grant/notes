@@ -1,6 +1,6 @@
 ---
 created: 2022-12-02T09:39:07.160Z
-modified: 2023-01-26T12:53:27.262Z
+modified: 2023-02-01T16:29:22.284Z
 tags: [learning,pcde,data,syllabus,notetaking,productivity,time,mgmt]
 ---
 # PCDE Course Overview
@@ -198,6 +198,10 @@ Available for late submission till: February 22, 2023
 * [Course materials][pcde-mod6-zk]
 * [SQL Notes][sql-zk]
 * [Exploratory Data Analysis (EDA) in SQL][sql-eda-zk]
+* [Visualizing Data in SQL][sql-viz-zk]
+* [Cleaning Data in SQL][sql-clean-zk]
+* [Dates & Time in SQL][sql-date-zk]
+* [Client Server Architecture Overview][client-server-zk]
 
 #### Key Activities
 
@@ -225,6 +229,36 @@ Available for late submission till: February 22, 2023
 * Read and write tables using a driver.
 * Discriminate between RDBMS and in-memory databases.
 
+### Module 7: A Model to Predict Housing Prices
+
+Due Date: 1629 UTC February 8, 2023
+Available for late submission till: February 22, 2023
+
+#### Notes on Topic
+
+* [Module 7 materials][pcde-mod7-content-zk]
+* [Statistics using Python][stats-py-zk]
+
+#### Key Activities
+
+* Discussions: 4
+* Activities: 0
+* Self Study Drag & Drop: 0
+* Knowledge Checks: 3
+* Coding Assignment: 1 **(PROJECT)**
+* Video Lectures: 6 **LONG LECTURES**
+* Mini Lessons: 0
+* Estimated 18hrs to complete
+  * Divided by 7 days & 40% overshoot = 4hrs/day
+
+#### Outcomes
+
+* Describe how descriptive statistics are used in Python.
+* Explain central limit theorem and correlation.
+* Describe how to calculate a linear regression.
+* Write Markdown syntax.
+* Build a prediction model using linear regression.
+
 ## References
 
 * [MIT xPRO Emeritus Certification Programs Homepage][mit-xpro]
@@ -246,6 +280,12 @@ Available for late submission till: February 22, 2023
 * [Regular Expressions (RegEx)][regex-zk]
 * [PCDE Course Module 6: Database Analysis & the Client Server Interface][pcde-mod6-zk]
 * [Exploratory Data Analysis in SQL][sql-eda-zk]
+* [Visualizing Data in SQL][sql-viz-zk]
+* [Cleaning Data in SQL][sql-clean-zk]
+* [Dates & Time in SQL][sql-date-zk]
+* [Client Server Architecture Overview][client-server-zk]
+* [PCDE Course Module 7 Content: Model to Predict Housing Prices][pcde-mod7-content-zk]
+* [Statistics Using Python][stats-py-zk]
 
 <!-- Hidden Reference Links Below Here -->
 [mit-xpro]: https://emeritus.org/universities/mit-xpro/ "MIT xPRO Emeritus Certification Programs Homepage"
@@ -263,3 +303,9 @@ Available for late submission till: February 22, 2023
 [regex-zk]: ./regex.md "Regular Expressions (RegEx)"
 [pcde-mod6-zk]: ./pcde-module6-content.md "PCDE Course Module 6: Database Analysis & the Client Server Interface"
 [sql-eda-zk]: ./sql-eda.md "Exploratory Data Analysis in SQL"
+[sql-viz-zk]: ./sql-visualize.md "Visualizing Data in SQL"
+[sql-clean-zk]: ./sql-cleaning.md "Cleaning Data in SQL"
+[sql-date-zk]: ./sql-date-time.md "Dates & Time in SQL"
+[client-server-zk]: ./client-server.md "Client Server Architecture Overview"
+[pcde-mod7-content-zk]: ./pcde-module7-content.md "PCDE Course Module 7 Content: Model to Predict Housing Prices"
+[stats-py-zk]: ./statistics-python.md "Statistics Using Python"

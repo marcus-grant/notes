@@ -1,6 +1,6 @@
 ---
 created: 2022-12-05T16:17:20.340Z
-modified: 2022-12-14T14:36:01.854Z
+modified: 2023-02-01T16:39:53.188Z
 tags: [python,py,lang,programming,overview]
 ---
 # Python
@@ -47,7 +47,6 @@ Each line is a pair of number ranges in need of processing.
 ```
 
 To read each line in the range, do something like this:
-
 
 ```python
 try:
@@ -150,14 +149,23 @@ is a library that adds support for multi-dimensional arrays, matrices and tensor
 NumPy also offers a large collection of high-level mathematical functions,
 particularly in the fields of linear algebra, statistics and scientific computing.
 
+## Statistics in Python
+
+Python over the years has become *one of* the preferred ways that we analyze data.
+Statistics is of course one of the primary ways that we look at data,
+and python is full of modules that can make this easier on us.
+In [the notes on statistics using python][stats-py-zk]
+
 ## References
 
 ### Note References
 
 * [NumPy Library Overview][zk-numpy]
+* [Statistics Using Python][stats-py-zk]
 
 <!-- Hidden Reference Links Below Here -->
 [zk-numpy]: ./numpy.md "NumPy Library Overview"
+[stats-py-zk]: ./statistics-python.md "Statistics Using Python"
 
 ### Web/Article References
 
@@ -167,4 +175,3 @@ particularly in the fields of linear algebra, statistics and scientific computin
 <!-- Hidden References -->
 [aoc22-day4]: https://adventofcode.com/2022/day/4 "Advent of Code 2022, day 4"
 [type-check-guide-rp]: https://realpython.com/python-type-checking/ "Python Type Checking Guide (from RealPython by Geir Arne Hjelle)"
-
