@@ -1,7 +1,7 @@
 ---
 created: 2023-01-26T10:08:58.298Z
-modified: 2023-01-29T17:05:31.927Z
-tags: [data,sql,analysis,eda,database,science,computers,pcde,module6]
+modified: 2023-01-31T17:22:50.403Z
+tags: [data,sql,analysis,eda,pivot,table,summary,database,science,computers,pcde,module6]
 ---
 # Exploratory Data Analysis in SQL
 
@@ -34,7 +34,6 @@ Then we run two commands to load the schema then data files into the database.
 Finally, `unset` the `tmp_pass` variable to
 make sure your password isn't leaking.
 
-
 ### SHOW TABLE/DATABASE STATUS
 
 There's a query that shows the status of a table and
@@ -57,7 +56,7 @@ We would count the rows of the table `film`.
 SELECT COUNT(*) FROM film;
 ```
 
-### Exploring the Relationship between Tables Using Joins 
+### Exploring the Relationship between Tables Using Joins
 
 We can do more than that we can bring together *join tables* of related tables.
 Remember a many to many relation has a intermediary table of
@@ -115,6 +114,66 @@ the active and inactive customers seperately for a count.
 
 Because of this query we no know how many customers are active or inactive.
 However, this template can be used to discover just about any relation.
+
+## Pivot Tables
+
+Pivot is a fancy sounding term.
+Although all it really means is a summary of the data that
+you have within your dataset.
+So whenever you're applying to your data sums, counts, averages, min or max,
+you are creating a pivot table.
+
+So to make this more concrete let's look at an example.
+Imagine you have a dataset that includes
+all payments made by your customers,
+with each payment that's a separate row in your table.
+Now,
+we could pivot,
+or that is summarize the data by finding the payments per month.
+So let's go ahead an write that query.
+
+```sql
+SELECT * FROM payment;
+```
+
+We will be using the table of `payments` and
+let's take a look at what that table looks like again.
+There's `payment_id`, `customer_id` & the amount that is paid.
+So let's start our query:
+
+```sql
+SELECT
+    MONTH(payment_date) AS month,
+    SUM(amount)
+FROM payment
+WHERE YEAR(payment_date) = 2005
+GROUP BY month;
+```
+
+We'll start off by selecting the payment date,
+and from that we will be extracting the month.
+We will then sum those amounts.
+Again,
+that was a field of our table,
+the table being the payment table.
+Then we will make a restriction,
+in this case we will only be taking a look at year 2005.
+If you look at the data you'll see why,
+as most the data is from 2005.
+The last thing we will do is to aggregate by the month.
+
+|month|SUM(amount)|
+|-----|-----------|
+|5    |4824.43    |
+|6    |9631.88    |
+|7    |28373.89   |
+|8    |24072.13   |
+
+As you can see above,
+we have created a summary of the data that we have in the table.
+We have created a *pivot table*.
+You can see the outputs for month in
+that summarized table.
 
 ## Further Reading
 
