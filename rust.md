@@ -1,6 +1,6 @@
 ---
 created: 2022-12-10T13:30:28.835Z
-modified: 2023-02-02T13:55:28.961Z
+modified: 2023-02-02T13:42:56.956Z
 tags: [rust,lang,software,dev,overview]
 ---
 # Rust
@@ -13,6 +13,9 @@ tags: [rust,lang,software,dev,overview]
 * [Considering Rust (from YouTube by Jon Gjengset)][consider-rust-yt]
   * Great talk by Jon Gjengset
   * Gets you the basic ideas of Rust's capabilities
+* [rustlings: Small exercizes to get started reading & writing rust code (from GitHub by rust-lang)][rustlings-gh]
+  * Great byte sized exercizes to learn rust
+  * Do these once a week or something
 
 ## Collections
 
@@ -65,9 +68,11 @@ since it's found and `unwrap`ed it can access the name `Karen`.
 
 * [Writing a NES Emulator in Rust (from bugzmanov.github.io/nes_ebook/)][nes-emu-rust]
 * [Considering Rust (from YouTube by Jon Gjengset)][consider-rust-yt]
+* [rustlings: Small exercizes to get started reading & writing rust code (from GitHub by rust-lang)][rustlings-gh]
 * [Rust Documentation: Module std::collections][rust-docs-collections]
 
 <!-- Hidden References -->
 [rust-docs-collections]: https://doc.rust-lang.org/std/collections/ "Rust Documentation: Module std::collections"
 [consider-rust-yt]: https://www.youtube.com/watch?v=DnT-LUQgc7s "Considering Rust (from YouTube by Jon Gjengset)"
 [nes-emu-rust]: https://bugzmanov.github.io/nes_ebook/chapter_1.html "Writing a NES Emulator in Rust (from bugzmanov.github.io/nes_ebook/)"
+[rustlings-gh]: https://github.com/rust-lang/rustlings "rustlings: Small exercizes to get started reading & writing rust code (from GitHub by rust-lang)"
