@@ -1,12 +1,17 @@
 ---
 created: 2022-12-10T13:30:28.835Z
-modified: 2022-12-10T13:30:28.835Z
+modified: 2023-02-02T13:42:56.956Z
 tags: [rust,lang,software,dev,overview]
 ---
 # Rust
 
+## Learning Resources
+
+* [Writing a NES Emulator in Rust (from bugzmanov.github.io/nes_ebook/)][nes-emu-rust]
+
 ## Collections
 
+Hello World!
 
 ## Iteration
 
@@ -56,8 +61,10 @@ since it's found and `unwrap`ed it can access the name `Karen`.
 
 ### Web References
 
+* [Writing a NES Emulator in Rust (from bugzmanov.github.io/nes_ebook/)][nes-emu-rust]
 * [Rust Documentation: Module std::collections][rust-docs-collections]
-
 <!-- Hidden References -->
 [rust-docs-collections]: https://doc.rust-lang.org/std/collections/ "Rust Documentation: Module std::collections"
+[nes-emu-rust]: https://bugzmanov.github.io/nes_ebook/chapter_1.html "Writing a NES Emulator in Rust (from bugzmanov.github.io/nes_ebook/)"
+
 

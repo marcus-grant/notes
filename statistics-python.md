@@ -1,6 +1,6 @@
 ---
 created: 2023-02-01T16:23:54.310Z
-modified: 2023-02-02T11:16:23.936Z
+modified: 2023-02-02T13:46:39.941Z
 tags: [python,statistics,probability,math,data,analysis,science,pcde,module7]
 ---
 # Statistics in Python
@@ -12,7 +12,7 @@ data scientists today analyze data using statistical methods.
 This will go over some of the [python][py-zk] specific details in
 how we analyze statistics on a dataset.
 
->Note: A lot of these topics should be covered more subtantively in
+>Note: A lot of these topics should be covered more substantively in
 >a *statistics* or [*probability*][prob-zk] note.
 
 ### Topics
@@ -104,7 +104,7 @@ Let's take a random sample of five within that population:
 ```
 
 This produces a *mean* of `6.4` & *variance* of `3.4`.
-That's quite differenct from the *mean* of 5 and
+That's quite different from the *mean* of 5 and
 *variance* of `8.2` that the population had.
 This clear when examining the numbers,
 the minimum is `4`, the maximum is `9`,
@@ -177,9 +177,13 @@ $\mu = 2, \sigma^2 = 10.33$
 
 Sample: $(0, 2)$
 
-$\mu_x = 1, \sigma^2 (uncorrected) = \frac{(x_1 - \bar{x})^2 + (x_2 - \bar{x})^2}{N} = \frac{(1+1)}{2} = 1$
+$\mu_x = 1$,
+$\sigma^2 (uncorrected) = \frac{(x_1 - \bar{x})^2 + (x_2 - \bar{x})^2}{N}$
+$= \frac{(1+1)}{2} = 1$
 
-$\mu_x = 1, \sigma^2 (corrected) = \frac{(x_1 - \bar{x})^2 + (x_2 - \bar{x})^2}{n-1} = \frac{(1+1)}{1} = 2$
+$\mu_x = 1$,
+$\sigma^2 (corrected) = \frac{(x_1 - \bar{x})^2 + (x_2 - \bar{x})^2}{n-1}$
+$= \frac{(1+1)}{1} = 2$
 
 Because of the smaller possibilities presented by a sample,
 getting the *variance* of the sample is biased towards smaller numbers than
@@ -199,7 +203,8 @@ but it could be any cardinal number to correct for particularly small samples.
 ### Caveats
 
 There are three caveats to *Bessel's Correction*:
-  1. It does not yield an unbiased emstimator of *standard deviation*
+
+  1. It does not yield an unbiased estimator of *standard deviation*
   2. The corrected estimator usually has higher *mean squared error*
       * Higher than typical uncorrected mean estimators
   3. It is only necessary when the population mean is unknown
