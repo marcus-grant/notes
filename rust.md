@@ -1,6 +1,6 @@
 ---
 created: 2022-12-10T13:30:28.835Z
-modified: 2023-02-02T13:53:13.520Z
+modified: 2023-02-02T13:42:56.956Z
 tags: [rust,lang,software,dev,overview]
 ---
 # Rust
@@ -11,6 +11,8 @@ tags: [rust,lang,software,dev,overview]
   * Write a NES emulator using Rust!
   * Fantastic intermediate rust overview with a focus on systems programming
 * [Considering Rust (from YouTube by Jon Gjengset)][consider-rust-yt]
+  * Great talk by Jon Gjengset
+  * Gets you the basic ideas of Rust's capabilities
 
 ## Collections
 
@@ -19,7 +21,7 @@ Hello World!
 ## Iteration
 
 The `iter()` function generates an iterator trait to
-iterate a collection of valuues by reference.
+iterate a collection of values by reference.
 This includes arrays, vectors, slices, etc.
 The function will return an iterator of type `T`,
 where T is the reference type of the elements of the collection.
