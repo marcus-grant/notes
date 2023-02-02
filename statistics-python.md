@@ -1,6 +1,6 @@
 ---
 created: 2023-02-01T16:23:54.310Z
-modified: 2023-02-01T17:38:30.463Z
+modified: 2023-02-02T11:16:23.936Z
 tags: [python,statistics,probability,math,data,analysis,science,pcde,module7]
 ---
 # Statistics in Python
@@ -39,7 +39,8 @@ But we still need to try to *infer* the statistics that apply to
 the whole population.
 
 ```mermaid
-graph TD
+flowchart TD
+direction LR
     A[Population fa:fa-people-group]
     A --> |Sampling fa:fa-magnifying-glass| B[Sample fa:fa-person]
     A --> |Inference fa:fa-thought-bubble| B
@@ -160,9 +161,130 @@ Notice how when the `ddof` or
 the *delta degrees of freedom* changes from 0 to 1,
 The variance suddenly changes from `6.64` to `8.3`.
 
-Statisticians realized this disparity and formalized it as *Bessel's correction*.
+### Sources of Bias
+
+Statisticians realized this disparity and formalized it as **Bessel's correction**.
 To read a bit more about it,
 here's [Wikipedia's Article about Bessel's Correction][bessel-correction-wiki].
+Essentially when taking a sample from a population,
+the *variance* can differ from the *population variance* immensely.
+Let's look at the extreme case.
+Here's a population.
+
+$(0, 0, 0, 1, 2, 9)$
+
+$\mu = 2, \sigma^2 = 10.33$
+
+Sample: $(0, 2)$
+
+$\mu_x = 1, \sigma^2 (uncorrected) = \frac{(x_1 - \bar{x})^2 + (x_2 - \bar{x})^2}{N} = \frac{(1+1)}{2} = 1$
+
+$\mu_x = 1, \sigma^2 (corrected) = \frac{(x_1 - \bar{x})^2 + (x_2 - \bar{x})^2}{n-1} = \frac{(1+1)}{1} = 2$
+
+Because of the smaller possibilities presented by a sample,
+getting the *variance* of the sample is biased towards smaller numbers than
+what is expected for any given sample.
+When samples are larger and closer to the population size,
+these unbiased correctors are less necessary.
+
+The unbiased corrector could however be any number known as a *degree of freedom*.
+In coding languages this is often referred to as the `ddof`,
+or *designated degree of freedom*.
+The usual *variance* calculation where the denominator is $N$,
+has a *degree of freedom* of 0.
+The typical *unbiased corrector* we use in
+*Bessel's Correction* is 1,
+but it could be any cardinal number to correct for particularly small samples.
+
+### Caveats
+
+There are three caveats to *Bessel's Correction*:
+  1. It does not yield an unbiased emstimator of *standard deviation*
+  2. The corrected estimator usually has higher *mean squared error*
+      * Higher than typical uncorrected mean estimators
+  3. It is only necessary when the population mean is unknown
+      * Corrected estimators are only necessary when population mean unknown
+      * Because different scaling factors can be chosen to minimize *MSE*
+
+### Using Python to Demonstrate Variance Bias
+
+Here we'll demonstrate this effect using python, numpy, scipy & matplotlib.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import norm
+np.random.seed(1337)
+
+Npts = 200
+diffMean = []
+diffVariance = []
+bestMean = []
+bestVar = []
+p = np.random.uniform(0, 100, Npts)
+pmean = p.mean()
+pvar = np.var(p)
+N = 100
+
+for i in range(N):
+    sample = np.random.choice(p, 50)# choose sample from pop.
+    smean - sample.mean()           # sample mean
+    svar = np.var(sample, ddof=0)   # sample variance
+                                    # ddof 0 or 1 means div by N or N-1
+                                                                       
+    diffMean.append(pmean-smean)    # mean diff sample & pop.
+    bestMean.append(np.sum(diffMean) / len(diffMean))# accumulate & avg.
+    diffVariance.append(pvar-svar)  # var diff between sample & pop.
+    bestVar.append(np.sum(diffVariance) / len(diffVariance))# acc. & avg
+
+# plot results
+plt.scatter(range(N), bestMean, color='b', label='Mean Error')
+plt.ylabel('Error')
+plt.scatter(range(N), bestVar, color='g', label='Variance Error')
+plt.legend(loc='upper right')
+print(pmean, pvar)
+
+```
+
+A random uniform population, `p`, is created from 0 to 100 of `Npts = 100` points.
+A *population mean & variance* is calculated, `pmean` & `pvar`, respectively.
+Then 100 different random `sample`s of that population are taken by looping.
+Each sample has their *sample mean & variance* calculated `smean`, `svar`,
+with a *degree of freedom* or `ddof` of 0.
+
+As more samples are having their *mean & variance* calculated,
+`diffMean` is a list that gets appended with the differences between
+*population mean* & *sample mean*.
+This is effectively the error between *sample mean* & *population mean*.
+Then the `bestMean` is a running average of
+the *population* & *sample means'* difference.
+The same is then done for the difference & average difference between
+*population variance* & *sample variance*.
+And finally `matplotlib` or `plt` is used to plot the average error over time.
+
+![sample-mean-var-error-ddof0](2023-02-02-12-04-01.png)
+
+Notice that sample mean error is quite steady,
+even at the first few samples taken.
+Also, the difference between
+*population variance* & *sample variance*
+changes significantly as more random samples are evaluated,
+but it does eventually converge around 20.
+Now, change the `ddof=0` to `ddof=1` and see what happens.
+
+![sample-mean-var-error-ddof1](2023-02-02-12-05-05.png)
+
+With *Bessel's Correction* and a *degree of freedom* of 1,
+suddenly the error converges faster, and actually gets close to 0.
+
+### Summary
+
+* Population variance and mean assumes perfect knowledge of whole population
+* Sample variance & mean is imperfect and will always have some error
+* Sample mean is often much closer to population mean
+* Sample variance often needs to be corrected and is biased
+* Bessel's correction of N - 1 is often much closer to population variance
+  * It however distorts sample mean from population mean
 
 ## References
 
