@@ -8,6 +8,9 @@ tags: [rust,lang,software,dev,overview]
 ## Learning Resources
 
 * [Writing a NES Emulator in Rust (from bugzmanov.github.io/nes_ebook/)][nes-emu-rust]
+  * Write a NES emulator using Rust!
+  * Fantastic intermediate rust overview with a focus on systems programming
+* [Considering Rust (from YouTube by Jon Gjengset)][consider-rust-yt]
 
 ## Collections
 
@@ -54,17 +57,15 @@ since it's found and `unwrap`ed it can access the name `Karen`.
 
 ### Note References
 
-* [Rust: Collections][self-collection]
-
 <!-- Hidden References -->
-[self-collect]: ./rust.md#Collections "Rust: Collections"
 
 ### Web References
 
 * [Writing a NES Emulator in Rust (from bugzmanov.github.io/nes_ebook/)][nes-emu-rust]
+* [Considering Rust (from YouTube by Jon Gjengset)][consider-rust-yt]
 * [Rust Documentation: Module std::collections][rust-docs-collections]
+
 <!-- Hidden References -->
 [rust-docs-collections]: https://doc.rust-lang.org/std/collections/ "Rust Documentation: Module std::collections"
+[consider-rust-yt]: https://www.youtube.com/watch?v=DnT-LUQgc7s "Considering Rust (from YouTube by Jon Gjengset)"
 [nes-emu-rust]: https://bugzmanov.github.io/nes_ebook/chapter_1.html "Writing a NES Emulator in Rust (from bugzmanov.github.io/nes_ebook/)"
-
-
