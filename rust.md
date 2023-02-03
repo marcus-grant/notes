@@ -1,12 +1,14 @@
 ---
 created: 2022-12-10T13:30:28.835Z
-modified: 2023-02-02T13:42:56.956Z
+modified: 2023-02-02T14:01:39.635Z
 tags: [rust,lang,software,dev,overview]
 ---
 # Rust
 
 ## Learning Resources
 
+* [The Rust Programming Language (THE Rust Reference/Learning Book)][rustlang-book]
+[rustlang-book]: https://doc.rust-lang.org/stable/book/ "The Rust Programming Language (THE Rust Reference/Learning Book)"
 * [Writing a NES Emulator in Rust (from bugzmanov.github.io/nes_ebook/)][nes-emu-rust]
   * Write a NES emulator using Rust!
   * Fantastic intermediate rust overview with a focus on systems programming
@@ -66,12 +68,14 @@ since it's found and `unwrap`ed it can access the name `Karen`.
 
 ### Web References
 
+* [The Rust Programming Language (THE Rust Reference/Learning Book)][rustlang-book]
 * [Writing a NES Emulator in Rust (from bugzmanov.github.io/nes_ebook/)][nes-emu-rust]
 * [Considering Rust (from YouTube by Jon Gjengset)][consider-rust-yt]
 * [rustlings: Small exercizes to get started reading & writing rust code (from GitHub by rust-lang)][rustlings-gh]
 * [Rust Documentation: Module std::collections][rust-docs-collections]
 
 <!-- Hidden References -->
+[rustlang-book]: https://doc.rust-lang.org/stable/book/ "The Rust Programming Language (THE Rust Reference/Learning Book)"
 [rust-docs-collections]: https://doc.rust-lang.org/std/collections/ "Rust Documentation: Module std::collections"
 [consider-rust-yt]: https://www.youtube.com/watch?v=DnT-LUQgc7s "Considering Rust (from YouTube by Jon Gjengset)"
 [nes-emu-rust]: https://bugzmanov.github.io/nes_ebook/chapter_1.html "Writing a NES Emulator in Rust (from bugzmanov.github.io/nes_ebook/)"
