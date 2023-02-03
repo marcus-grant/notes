@@ -1,6 +1,6 @@
 ---
 created: 2022-12-10T13:30:28.835Z
-modified: 2023-02-02T14:01:39.635Z
+modified: 2023-02-03T09:46:54.899Z
 tags: [rust,lang,software,dev,overview]
 ---
 # Rust
