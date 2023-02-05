@@ -9,6 +9,7 @@ tags: [python,statistics,probability,math,data,analysis,science,pcde,module7]
 
 (**THIS IS TESTING AUTOMATED CHANGES**)
 FOOBAR 123
+Come on please use this version of the repository FFS!!!
 
 Python is one of the main ways that data engineers &
 data scientists today analyze data using statistical methods.
