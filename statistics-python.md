@@ -7,6 +7,8 @@ tags: [python,statistics,probability,math,data,analysis,science,pcde,module7]
 
 ## Introduction
 
+### TESTING OF AUTOMATIC BUILDS!!!!
+
 Python is one of the main ways that data engineers &
 data scientists today analyze data using statistical methods.
 This will go over some of the [python][py-zk] specific details in
