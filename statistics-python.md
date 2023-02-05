@@ -1,13 +1,13 @@
 ---
 created: 2023-02-01T16:23:54.310Z
-modified: 2023-02-05T15:16:03.029Z
+modified: 2023-02-03T12:59:19.395Z
 tags: [python,statistics,probability,math,data,analysis,science,pcde,module7]
 ---
 # Statistics in Python
 
 ## Introduction
 
-### TESTING OF AUTOMATIC BUILDS!!!!
+(**THIS IS TESTING AUTOMATED CHANGES**)
 
 Python is one of the main ways that data engineers &
 data scientists today analyze data using statistical methods.
