@@ -8,6 +8,7 @@ tags: [python,statistics,probability,math,data,analysis,science,pcde,module7]
 ## Introduction
 
 (**THIS IS TESTING AUTOMATED CHANGES**)
+FOOBAR 123
 
 Python is one of the main ways that data engineers &
 data scientists today analyze data using statistical methods.
