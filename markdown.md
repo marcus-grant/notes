@@ -1,6 +1,6 @@
 ---
-created: 2023-02-06T14:48:15.000+01
-modified: 2023-02-06T14:48:15.000+01
+created: 2023-02-06T13:48:03.342Z
+modified: 2023-02-06T14:48:13.309Z
 tags: [markdown,markup,language,write,rich,text,md,pcde,module7]
 ---
 # Markdown

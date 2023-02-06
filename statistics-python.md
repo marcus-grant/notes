@@ -1,6 +1,6 @@
 ---
 created: 2023-02-01T16:23:54.310Z
-modified: 2023-02-03T12:59:19.395Z
+modified: 2023-02-06T16:47:02.673Z
 tags: [python,statistics,probability,math,data,analysis,science,pcde,module7]
 ---
 # Statistics in Python
