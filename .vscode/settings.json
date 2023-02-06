@@ -20,6 +20,8 @@
         "Buch",
         "bugzmanov",
         "Callan",
+        "calmean",
+        "calvar",
         "CARREY",
         "Codio",
         "compsci",
@@ -73,7 +75,8 @@
         "Trujil",
         "Vaux",
         "VIVIEN",
-        "WITHERSPOON"
+        "WITHERSPOON",
+        "zettelkasten"
     ],
     "sqltools.connections": [
         {

@@ -7,10 +7,6 @@ tags: [python,statistics,probability,math,data,analysis,science,pcde,module7]
 
 ## Introduction
 
-(**THIS IS TESTING AUTOMATED CHANGES**)
-FOOBAR 123
-Come on please use this version of the repository FFS!!!
-
 Python is one of the main ways that data engineers &
 data scientists today analyze data using statistical methods.
 This will go over some of the [python][py-zk] specific details in
@@ -269,7 +265,7 @@ Then the `bestMean` is a running average of
 the *population* & *sample means'* difference.
 The same is then done for the difference & average difference between
 *population variance* & *sample variance*.
-And finally `matplotlib` or `plt` is used to plot the average error over time.
+And finally `matplotlib` or `plt` is used to *plot* the average error over time.
 
 ![sample-mean-var-error-ddof0](2023-02-02-12-04-01.png)
 
@@ -327,7 +323,7 @@ Things to note:
 * When there's mean error in the sample,
   * the shift that occurs when calculating *variance* affects its error as well
 
-Here is some code that calculates & plots *variance* from any given mean.
+Here is some code that calculates & *plots* *variance* from any given mean.
 We will try and show how *variance* is affected by the mean.
 [NumPy][numpy-zk] automatically calculates the mean from the given sample.
 Because of this we need to create our own function to compute *variance*,
@@ -492,18 +488,18 @@ Then the square of that deviation.
 Finally,
 we did a boolean condition to see if the standard deviation is larger than the deviation.
 
-|   | blood pressure | deviation from mean | square deviation | within std |
-|--:|---------------:|--------------------:|-----------------:|-----------:|
-| 0 |             76 |                 4.7 |            22.09 |       True |
-| 1 |             64 |                -7.3 |            53.29 |      False |
-| 2 |             62 |                -9.3 |            86.49 |      False |
-| 3 |             81 |                 9.7 |            94.09 |      False |
-| 4 |             70 |                -1.3 |             1.69 |       True |
-| 5 |             72 |                 0.7 |             0.49 |       True |
-| 6 |             81 |                 9.7 |            94.09 |      False |
-| 7 |             63 |                -8.3 |            68.89 |      False |
-| 8 |             67 |                -4.3 |            18.49 |       True |
-| 9 |             77 |                 5.7 |            32.49 |       True |
+|     | blood pressure | deviation from mean | square deviation | within std |
+| --: | -------------: | ------------------: | ---------------: | ---------: |
+|   0 |             76 |                 4.7 |            22.09 |       True |
+|   1 |             64 |                -7.3 |            53.29 |      False |
+|   2 |             62 |                -9.3 |            86.49 |      False |
+|   3 |             81 |                 9.7 |            94.09 |      False |
+|   4 |             70 |                -1.3 |             1.69 |       True |
+|   5 |             72 |                 0.7 |             0.49 |       True |
+|   6 |             81 |                 9.7 |            94.09 |      False |
+|   7 |             63 |                -8.3 |            68.89 |      False |
+|   8 |             67 |                -4.3 |            18.49 |       True |
+|   9 |             77 |                 5.7 |            32.49 |       True |
 
 #### How many Measurements Are within Standard Deviation?
 
@@ -512,7 +508,7 @@ Looking at the final column,
 
 #### Graphing the Result
 
-Let's plot the result using `matplotlib`.
+Let's *plot* the result using `matplotlib`.
 We'll use the `axvline` function to define vertical lines.
 One red one for the *mean* location.
 Two green lines for the single *standard deviation from mean*.
@@ -614,7 +610,7 @@ However,
 this is about as good a normal distribution as can be expected.
 
 It's hard to compare two histograms without them being together.
-Plot the two previous histograms so they're side by side.
+*Plot* the two previous histograms so they're side by side.
 Again, we'll use the same basic code as before,
 but the axis will need to get pulled out.
 
@@ -641,7 +637,7 @@ plt.show()
 ```
 
 Also,
-don't forget to put the plots together again,
+don't forget to put the *plots* together again,
 after defining them as `ax[0]` and `ax[1]`,
 by using the `plt.tight_layout()` then `plt.show()` functions.
 What we get is pretty telling.
@@ -663,11 +659,341 @@ The primary problem here is that there just isn't very much data.
 >not draw too many conclusions when analyzing it.
 >Small samples exhibit non standard behaviors more easily.
 
-#### Further Reading
+## Correlation & Covariance
+
+### Basic Theory
+
+We talk about data being **correlated** when blah
+***TODO FILL IN THIS SECTION WITH THEORY & INCL. LINKS LIKE WIKIPEDIA***
+
+**Covariance** is the measure of the relationship between two variables.
+As in, if one variable increases, the other variable increases or decreases.
+It is the measure of how much one variables changes in relation to the other.
+
+### Equation of Correlation
+
+The basic equation of correlation is this:
+
+$r = \frac{\sum_n(x_n * y_n)}{N}$
+
+You multiply the sample's *x* & *y* variables,
+then you sum them, and finally divide by the number of samples.
+
+We need to do some more nuanced work here though.
+
+#### Covariance & Correlation Coefficients
+
+##### Mean or Expected Value
+
+$\mu_x = \frac{\sum_n x_n}{N}$
+
+$\mu_y = \frac{\sum_n y_n}{N}$
+
+##### Transformed/Shifted Coordinates
+
+$X = x - \mu_x$
+
+$Y = y - \mu_y$
+
+#### Covariance Equation
+
+Using these values calculated before,
+for covariance we can define it by `cov(x,y)` like we do below.
+
+$cov(x,y) = \frac{\sum_n x_n * y_n}{N}$
+
+#### Problem of Scale
+
+When we calculate all these covariance in different contexts a problem arises.
+We might be dealing with variable *x* that is of a very small set of values.
+Perhaps *x* is the number of rooms in a piece of real estate.
+Then *y* might be a very large scale set of numbers,
+perhaps the price of said real estate which could be in the 100ks or many millions.
+There's a problem of scale here that we need to fix for this metric to be useful.
+
+#### Pearson Correlation Coefficient
+
+$r = \frac{1}{N}\sum_n \frac{X_n}{\sigma_x}*\frac{y_n}{\sigma_y}$
+$=\frac{1}{N} \frac{\sum_n x_n*y_n}{\sigma_x*\sigma_y}$
+$=\frac{\sum_n x_n*y_n}{\sqrt{((\sum_n x_n*x_n)*(\sum_n y_n*y_n))}}$
+
+Where $\sigma_x$ is:
+
+$\sigma_x = \sqrt{\frac{\sum(x - \mu_x)*(x - \mu_x)}{N}} = \sqrt{\frac{\sum(X*X)}{N}}$
+
+This will ensure the value of covariance is always between positive & negative 1.
+
+### Correlation & Covariance in Python
+
+***TODO INCLUDE NOTES USING PEARSON CALCULATION FROM NOTEBOOK***
+
+## Central Limit Theorem
+
+Say we have a box of tickets.
+Each ticket will have only a `0` or `1` value.
+We randomly pick a sample of these tickets.
+Without knowing the underlying statistics of
+these tickets it's not a bad guess to assume there will be
+roughly uniform amounts in the sample.
+But we just don't know enough about the statistics here to
+make that assumption in any sound way.
+
+### Experiment: The Central Limit Theorem
+
+Create a sample by drawing M tickets,
+one at a time.
+
+If M is 8 we will perform 8 trials for each ticket drawing.
+Then the value is recorded and the ticket is put back into the population to
+not distort the underlying population.
+
+Eventually you get an array of `[1, 0, 0, 1, 1, 0, 1, 0]`.
+We now have a single trial of `M = 8`.
+Then let's do some basic statistics on this trial.
+
+$\mu_s = \frac{\sum X}{M} = \frac{4}{8} = 0.5$
+
+$\sigma^2_{unbiased sample} = \frac{\sum(x - \mu_x)^2}{M - 1} = \frac{2}{7} = 0.29$
+
+Remember, small samples need the *Bessel Correction* to
+get the unbiased variance.
+This differs a good bit from the population variance, not the mean.
+
+* Mean = $\frac{\sum X}{M} = \frac{4}{8} = 0.5$
+* Population variance = $\frac{\sum(x - \mu_x)^2}{M} = \frac{2}{8} = 0.25$
+
+### Abraham de Moivre Expirement
+
+***ADD NOTES WITH REFERENCES TO THIS TOPIC***
+
+>Unbiased variance is related to population variance
+
+$S^2 = \frac{\sigma^2}{M}$
+
+Remember S here is the *Sample* variance and $\sigma^2$ is the population variance.
+
+By doing lots of trials the variance starts shrinking towards
+reaching the population variance.
+
+### The Actual Central Limit Theorem
+
+The more statistical trials you perform,
+the closer to the normal distribution you get.
+Doesn't matter what the underlying statistics of the population is.
+
+## Exercise: Drinks Data Correlation
+
+***TODO** Put this data csv into your bin or s3
+
+We are given a CSV of drinks here **TODO** link the data here
+Make some generalizations about drinks preferences by countries.
+
+```python
+# Drinks exercise
+# In Asia is wine or spirits best correlated with beer consumption?
+# Is it the same in North America?
+import pandas as pd
+import numpy as np
+drinks = pd.read_csv('http://bit.ly/drinksbycountry')
+drinks.head()
+```
+
+|     | country | beer_servings | spirit_servings | wine_servings | total_ls_alcohol | continent |
+| --- | ------- | ------------- | --------------- | ------------- | ---------------- | --------- |
+| 0   | Afghan  | 0             | 0               | 0             | 0.0              | Asia      |
+| 1   | Albania | 89            | 132             | 54            | 4.9              | Europe    |
+| 2   | Algeria | 25            | 0               | 14            | 0.7              | Africa    |
+| 3   | Andorra | 245           | 138             | 312           | 12.4             | Europe    |
+| 4   | Angola  | 217           | 57              | 45            | 5.9              | Africa    |
+
+Now we see what the table looks like.
+Let's start by analyzing the correlations.
+Start with Asia.
+
+```python
+asia = drinks.loc[drinks['continent'] == 'Asia']
+asia.head()
+asia.corr()
+```
+
+Use `loc` on `drinks` dataframe.
+Then within the `loc` specify the column `continents` should be equal to `Asia`.
+Finally it's as simple as using `pandas.DataFrame.corr` to get correlation.
+
+|                          | beer_servings | spirit_servings | wine_servings | total_ls_of_alcohol |
+| ------------------------ | ------------- | --------------- | ------------- | ------------------- |
+| beer_servings            | 1.000000      | 0.694426        | 0.437488      | 0.899253            |
+| spirit_servings          | 0.694426      | 1.000000        | 0.225150      | 0.772893            |
+| wine_servings            | 0.437488      | 0.225150        | 1.000000      | 0.533320            |
+| total_ls_of_pure_alcohol | 0.899253      | 0.772893        | 0.533320      | 1.000000            |
+
+Yup it seems asia is most correlated with beer when
+you look at how much beer is correlated with total amount of alcohol consumed.
+
+### Further Reading
 
 I put my
 [Jupyter Notebook for this Exercise in a Github Gist][gist-blood-sample-vs-random-normal].
 You can see everything done in one place perhaps more easily there.
+
+## Making Predictions with Linear Regression
+
+### What is Linear Regression?
+
+Linear regression is a machine learning algorithm that
+is used to predict values within a continuous range
+*(i.e. stocks' price & height)*
+rather than classifying them into
+categories *(i.e. male or female)*.
+
+The values that you want to predict are the dependent variable(s).
+The predictions can be made using one or more independent variables.
+
+There are two types of linear regression: simple & multiple.
+
+### Simple Linear Regression
+
+Simple linear regression is the most basic form of linear regression.
+Its mathematical formulation is based on the traditional equation of the line:
+
+$$y = mx + b$$
+
+Where $x$ is the independent variable,
+$y$ is the dependent variable,
+$m$ is the slope,
+$b$ is the intercept with the $y$-axis.
+In the context of a linear regression,
+$x$ represents the input variable that
+is used to make the prediction,
+whereas $y$ represents the prediction.
+Additionally, in the context of machine learning,
+$m$ is the weight and
+$b$ is the bias.
+
+One of the most important assumptions of
+linear regression is that the data has a linear relationship.
+However, in the real world,
+data is often not perfectly linear,
+but rather it will be in the form of a cluster of data points on a scatter *plot*.
+The goals of linear regression are to compute the line of best fit that
+describes the linear properties of the data and to
+determine how well this line fits the data in cluster of points.
+
+### Simple Linear Regression by Hand
+
+To understand the concepts above,
+let's try to compute the result for a linear regression example.
+
+Let's consider the dataset below:
+
+| Income in USD | Happiness Score |
+| ------------- | --------------- |
+| 0             | 0.25            |
+| 10            | 0.30            |
+| 20            | 0.33            |
+| 30            | 0.47            |
+| 40            | 0.53            |
+| 50            | 0.68            |
+| 60            | 0.72            |
+
+You can *plot* the data above in Python as
+a scatter plot using the [seaborn *library*][py-pandas-zk],
+a Python *library* for data visualization.
+The Seaborn *library* is widely used in data science as
+it integrates well with pandas data structures,
+such as *series* & *dataframes*.
+It also has much nicer defaults for
+the matplotlib library it wraps the functionality of.
+
+To install seaborn, run the following command in your terminal.
+
+```sh
+pip install seaborn
+```
+
+![seaborn-linear-reg-plot](2023-02-06-14-05-49.png)
+
+From the *plot* above,
+you can observe that the data follows a linear pattern.
+Thus, as an example,
+you can use linear regression to
+make an accurate prediction of the actual happiness score for
+an income equal to 30.
+
+Given the data points above,
+you can compute the line of best fit that will help you to
+make your prediction.
+From the equation of the line below,
+you can see that the line of least squares has two components:
+the slow, $m$,
+and intercept $b$.
+The equations for $m$ and $b$ are given by:
+
+$$m = \frac{n \sum xy - \sum x \sum y}{n \sum x^2 - (\sum x)^2}$$
+
+In the equation above,
+the symbol $\sum$ represents a summation.
+The table below contains computations for all the summations needed to
+compute coefficients $m$ & $b$.
+
+| Income in USD(x) | Happiness(y) | xy        | x^2        | y^2        |
+| ---------------- | ------------ | --------- | ---------- | ---------- |
+| 10               | 0.25         | 2.5       | 100        | 0.0625     |
+| 20               | 0.30         | 6.0       | 400        | 0.09       |
+| 30               | 0.33         | 9.9       | 900        | 0.1089     |
+| 40               | 0.47         | 18.8      | 1600       | 0.2209     |
+| 50               | 0.53         | 26.5      | 2500       | 0.2809     |
+| 60               | 0.68         | 40.8      | 3600       | 0.4624     |
+| 70               | 0.72         | 50.4      | 4900       | 0.5184     |
+|                  |              |           |            |            |
+| $\sum x$         | $\sum y$     | $\sum xy$ | $\sum x^2$ | $\sum y^2$ |
+| 270              | 3.03         | 152.4     | 13900      | 1.6815     |
+
+Now it is a simple matter of plugging your values into
+the equation for $m$ & $b$.
+$n$ is the number of values in the dataset,
+which in this case 7.
+
+$$m = \frac{n \sum xy - \sum x \sum y}{n \sum x^2 - (\sum x)^2} = $$
+$$\frac{7(152.4) - (270)(3.03)}{7(13900)-270^2} = \frac{248.7}{24400} = 0.01$$
+
+$$b = \frac{\sum y - m \sum x}{n} = \frac{3.03 - (0.01)(270)}{7} = \frac{0.33}{7} = 0.047$$
+
+So for this dataset,
+the line of best fit has the equation:
+
+$$y - 0.01x + 0.047$$
+
+Now, to predict the happiness score for the value 30,
+you can just substitute 30 for and compute the prediction.
+
+$$y_{30} = 0.01 * 30 + 0.047 = 0.347$$
+
+The result,
+although not that different from the one you had initially with the data,
+represents a much more accurate result for the happiness score.
+
+Now that you have seen how simple linear regression works,
+let's have a look at the multiple linear regression.
+
+### Multiple Linear Regression
+
+Multiple linear regression can be viewed as a natural extension of simple linear regression.
+The main difference is that now multiple sets of data are used to make the prediction.
+
+Thus, the equation for multiple linear regression becomes:
+
+$$y = m_1x_1 + m_2x_2 + \ldots + m_nx_n + b$$
+
+Where $x_1,x_2,\dots,x_n$ represent the data points of
+all the independent variables used to make the prediction,
+$m_1,m_2,\ldots,m_n$ are the weights,
+and $b$ is the bias.
+
+A practical application for multiple linear regression would be, for example,
+to predict the price of a house (the dependant variable) based on multiple factors,
+such as the number of bedrooms, the square footage, and the distance to downtown.
+All of these variables represent the independent variables.
 
 ## References
 
@@ -687,10 +1013,12 @@ You can see everything done in one place perhaps more easily there.
 * [Probability][prob-zk]
 * [NumPy][numpy-zk]
 * [Python][py-zk]
+* [Python Library Pandas][py-pandas-zk]
 
 <!-- Hidden References -->
 [prob-zk]: ./probability.md "Probability Overview"
 [numpy-zk]: ./numpy.md "NumPy Overview"
+[py-pandas-zk]: ./python-pandas.md "Python Library Pandas"
 
 ### Referenced By
 

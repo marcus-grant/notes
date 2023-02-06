@@ -238,6 +238,7 @@ Available for late submission till: February 22, 2023
 
 * [Module 7 materials][pcde-mod7-content-zk]
 * [Statistics using Python][stats-py-zk]
+* [Markdown][md-zk]
 
 #### Key Activities
 
@@ -286,6 +287,8 @@ Available for late submission till: February 22, 2023
 * [Client Server Architecture Overview][client-server-zk]
 * [PCDE Course Module 7 Content: Model to Predict Housing Prices][pcde-mod7-content-zk]
 * [Statistics Using Python][stats-py-zk]
+* [Markdown][md-zk]
+* [Predicting Housing Prices through Linear Regression & Python][predict-house-price-zk]
 
 <!-- Hidden Reference Links Below Here -->
 [mit-xpro]: https://emeritus.org/universities/mit-xpro/ "MIT xPRO Emeritus Certification Programs Homepage"
@@ -309,3 +312,5 @@ Available for late submission till: February 22, 2023
 [client-server-zk]: ./client-server.md "Client Server Architecture Overview"
 [pcde-mod7-content-zk]: ./pcde-module7-content.md "PCDE Course Module 7 Content: Model to Predict Housing Prices"
 [stats-py-zk]: ./statistics-python.md "Statistics Using Python"
+[md-zk]: ./markdown.md "Markdown"
+[predict-house-price-zk]: ./predict-house-prices.md "Predicting Housing Prices through Linear Regression & Python"
