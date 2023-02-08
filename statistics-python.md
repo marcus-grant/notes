@@ -1,6 +1,6 @@
 ---
 created: 2023-02-01T16:23:54.310Z
-modified: 2023-02-06T16:47:02.673Z
+modified: 2023-02-06T20:52:50.160Z
 tags: [python,statistics,probability,math,data,analysis,science,pcde,module7]
 ---
 # Statistics in Python
@@ -994,6 +994,55 @@ A practical application for multiple linear regression would be, for example,
 to predict the price of a house (the dependant variable) based on multiple factors,
 such as the number of bedrooms, the square footage, and the distance to downtown.
 All of these variables represent the independent variables.
+
+### Example of Using both Numerical & Categorical Data
+
+Taken from a query from you know who.
+
+```python
+import pandas as pd
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.linear_model import LinearRegression
+
+# Load the sample housing data
+data = {
+    'square_feet': [1500, 1700, 1900, 1700, 1300],
+    'type': ['apartment', 'apartment', 'house', 'house', 'apartment'],
+    'price': [100000, 120000, 150000, 145000, 90000]
+}
+df = pd.DataFrame(data)
+
+# Define the column transformer to handle the categorical and numerical columns separately
+categories = ['type']
+ct = ColumnTransformer(
+    transformers=[
+        ('encoder', OneHotEncoder(), categories)
+    ],
+    remainder='passthrough'
+)
+
+# Create the pipeline with the column transformer and a linear regression model
+pipeline = Pipeline([
+    ('transformer', ct),
+    ('scaler', StandardScaler()),
+    ('regressor', LinearRegression())
+])
+
+# Split the data into training and test sets
+X = df.drop('price', axis=1)
+y = df['price']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Fit the model to the training data
+pipeline.fit(X_train, y_train)
+
+# Evaluate the model on the test data
+score = pipeline.score(X_test, y_test)
+print("Test score: ", score)
+
+```
 
 ## References
 

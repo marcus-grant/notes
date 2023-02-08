@@ -1,6 +1,6 @@
 ---
 created: 2022-12-02T09:39:07.160Z
-modified: 2023-02-06T16:00:57.762Z
+modified: 2023-02-08T16:49:02.941Z
 tags: [learning,pcde,data,syllabus,notetaking,productivity,time,mgmt]
 ---
 # PCDE Course Overview
@@ -260,6 +260,35 @@ Available for late submission till: February 22, 2023
 * Write Markdown syntax.
 * Build a prediction model using linear regression.
 
+### Module 8: ETL, Analysis, Visualization
+
+Due Date: 4:29 PM UTC February 15, 2023
+Available for late submission till: February 22, 2023
+
+#### Notes on Topic
+
+* [Module 7 materials][pcde-mod7-content-zk]
+
+#### Key Activities
+
+* Discussions: 4
+* Activities: 0
+* Self Study Drag & Drop: 0
+* Knowledge Checks: 3
+* Coding Assignment: 1 **(PROJECT)**
+* Video Lectures: 6 **LONG LECTURES**
+* Mini Lessons: 0
+* Estimated 18hrs to complete
+  * Divided by 7 days & 40% overshoot = 4hrs/day
+
+#### Outcomes
+
+* Describe how descriptive statistics are used in Python.
+* Explain central limit theorem and correlation.
+* Describe how to calculate a linear regression.
+* Write Markdown syntax.
+* Build a prediction model using linear regression.
+
 ## References
 
 * [MIT xPRO Emeritus Certification Programs Homepage][mit-xpro]
@@ -289,6 +318,7 @@ Available for late submission till: February 22, 2023
 * [Statistics Using Python][stats-py-zk]
 * [Markdown][md-zk]
 * [Predicting Housing Prices through Linear Regression & Python][predict-house-price-zk]
+* [PCDE Course Module 8 Content: ETL, Analysis and Visualization][pcde-mod8-zk]
 
 <!-- Hidden Reference Links Below Here -->
 [mit-xpro]: https://emeritus.org/universities/mit-xpro/ "MIT xPRO Emeritus Certification Programs Homepage"
@@ -314,3 +344,4 @@ Available for late submission till: February 22, 2023
 [stats-py-zk]: ./statistics-python.md "Statistics Using Python"
 [md-zk]: ./markdown.md "Markdown"
 [predict-house-price-zk]: ./predict-house-prices.md "Predicting Housing Prices through Linear Regression & Python"
+[pcde-mod8-zk]: ./pcde-module8-content.md "PCDE Course Module 8 Content: ETL, Analysis and Visualization"
