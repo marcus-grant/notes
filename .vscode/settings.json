@@ -6,6 +6,7 @@
     //     "tooWordy": { "whitelist": ["enumerate", "Enumerate", "allocate", "Purchase", "purchase"]},
     //     "weasel": {"whitelist": ["many"]}
     // },
+    "editor.rulers": [80, 100, 120],
     "cSpell.enableFiletypes": [
         "markdown"
     ],
