@@ -1,6 +1,6 @@
 ---
 created: 2022-12-14T14:16:16.995Z
-modified: 2023-02-01T16:11:18.547Z
+modified: 2023-02-16T16:27:29.207Z
 tags: [python,data,pcde,matrix,ndarray,array,compsci,numpy,collection]
 ---
 # NumPy
