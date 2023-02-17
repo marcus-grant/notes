@@ -13,7 +13,7 @@ particularly in the fields of linear algebra, statistics and scientific computin
 
 ## Import
 
-To [import][zk-python-libs] numpy, simply do the regular `import` statement of the library `numpy`,
+To [import][py-libs-zk] numpy, simply do the regular `import` statement of the library `numpy`,
 but it's customary to *alias* it as `np` so use the `as` expression to alias it `np`.
 
 ```python
@@ -416,21 +416,82 @@ or converter function to transform the input into an array.
 def read_ints(in_str):
 ```
 
+## 2D Probability & Frequency in NumPy
+
+### Underlying Distribution of an Unknown Population
+
+Imagine a bag of marbles with numbers.
+You pull out a few marbles in this sequence.
+"5, 5, 6, 4, 5".
+You might think that all the numbers are under the number 10.
+That might not be true,
+but that is essentially determining the underlying statistics and
+propbabilities of a population based on a sample population.
+
+### Tools for Determining the Underlying Distribution
+
+Numpy allows us to generate distributions.
+Histograms allow us to understand what the data looks like in
+the underlying population.
+
+NumPy has a function `np.random.choice` that allows us to
+randomly generate a random sample from a given 1-D array.
+Its first argument is the array from which to choose,
+it could also be a range like `np.arange(10)`.
+Then the second argument is the number of samples to choose.
+
+```python
+# Data as sampling from an unseen population
+# Choose at random from 0 through 9
+import numpy as np
+import matplotlib.pyplot as plt
+# np.random.seed(69)
+
+a = np.random.choice(np.arange(0, 10), 100)
+print(a)
+# Output:
+# array([3, 0, 1, 1, 3, 1, 5, 2, 1, 3, 9, 8, 8, 6, 8, 5, 3, 5, 8, 7, 2, 9,
+#        3, 9, 2, 1, 4, 3, 3, 0, 9, 2, 9, 4, 6, 4, 9, 0, 1, 7, 7, 9, 1, 1,
+#        6, 9, 2, 5, 3, 5, 1, 6, 6, 1, 1, 3, 4, 0, 0, 7, 3, 5, 4, 1, 9, 3,
+#        3, 8, 0, 7, 3, 0, 6, 4, 9, 9, 6, 5, 1, 5, 2, 4, 0, 9, 8, 6, 0, 1,
+#        5, 8, 9, 9, 4, 7, 8, 7, 9, 8, 9, 4])
+plt.hist(a, bins=10)
+```
+
+Here you see you get a random set of
+numbers from 0 to 9 defined by `np.arange(0, 10)`.
+Note that they are each *independent* trials.
+
+But how do we make sense of the distribution?
+We may want to know the probability of a number being drawn.
+Or maybe we want to know the frequency of each number being drawn.
+
+That's where histograms come in.
+Using [matplotlib's hist function][matplotlib-hist-zk],
+like above you get this histogram plot.
+
+![Basic-histogram](2023-02-16-17-01-18.png)
+
+For more information on histograms, using [python][py-zk],
+see the [section on histograms using matplotlib][matplotlib-hist-zk].
+
 ## References
 
 ### Note Links
 
-* [Python Overview][zk-python]
-* [Python Libraries Basics][zk-python-libs]
+* [Python Overview][py-zk]
+* [Python Libraries Basics][py-libs-zk]
+* [Matplotlib: Python Plotting Library][matplotlib-hist-zk]
 
 <!-- Hidden Reference Links Below Here -->
-[zk-python]: ./python.md "Python Overview"
-[zk-python-libs]: ./python.md#how-to-import-libraries "Python Libraries Basics"
+[py-zk]: ./python.md "Python Overview"
+[py-libs-zk]: ./python.md#how-to-import-libraries "Python Libraries Basics"
+[matplotlib-hist-zk]: ./matplotlib.md#histograms "Matplotlib: Python Plotting Library"
 
 ### Linked by Notes
 
+* [Python Overview][py-zk]
 * [Professional Certification for Data Engineering Course Overview][pcde-overview]
-* [Python Overview][zk-python]
 
 <!-- Hidden Reference Links Below Here -->
 [pcde-overview]: ./pcde-overview.md "Professional Certification for Data Engineering Course Overview"
@@ -441,9 +502,11 @@ def read_ints(in_str):
 * [NumPy: The Absolute Basics for Beginners (from numpy.org documentation)][numpy-docs-basics]
 * [NumPy: Teh N-Dimensional array (from numpy.org documentation)][numpy-docs-ndarray]
 * [Numpy Docs: numpy.loadtxt (from numpy.org documentation)][numpy-docs-loadtxt]
+* [Probability Density Function (from probabilitycourse.com)][intro-prob-density]
 
 <!-- Hidden Reference Links Below Here -->
 [numpy-docs]: https://numpy.org/doc/stable/reference/index.html "NumPy Documentation Index (from numpy.org)"
 [numpy-docs-basics]: https://numpy.org/doc/stable/user/absolute_beginners.html "NumPy: The Absolute Basics for Beginners (from numpy.org documentation)"
 [numpy-docs-ndarray]: https://numpy.org/doc/stable/reference/arrays.ndarray.html "NumPy: Teh N-Dimensional array (from numpy.org documentation)"
 [numpy-docs-loadtxt]: https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html "Numpy Docs: numpy.loadtxt (from numpy.org documentation)"
+[intro-prob-density]: https://www.probabilitycourse.com/chapter4/4_1_1_pdf.php "Probability Density Function (from probabilitycourse.com)"
