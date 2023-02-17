@@ -1,6 +1,6 @@
 ---
 created: 2023-02-17T14:42:48.640Z
-modified: 2023-02-17T17:46:05.791Z
+modified: 2023-02-17T15:30:23.661Z
 tags: [pandas,python,data,analysis,dataframe,data,frame,library,structure,table,sql,pcde,module3]
 ---
 # Pandas: Python Data Analysis Library
@@ -457,6 +457,88 @@ The resulting *dataframe* is this nice table:
 >So the order of the columns in the resulting *dataframe* is not guaranteed.
 >It's possible to specify the order of the columns by
 >passing a list of column names to the `columns` parameter.
+
+## Cleaning Data
+
+### Cleaning up NaNs
+
+When dealing with datasets,
+it's common to have missing values.
+One way to represent missing values is with `NaN` (not a number).
+This can take different meanings depending on the context,
+but is generally different from nullish values like `None`.
+
+Say we create some random data and insert some `NaN` values.
+
+```python
+import numpy as np
+import pandas as pd
+cols = list('ABCD')
+np.random.seed(seed=1)
+myArray = np.random.ranf(size=(5, 4))
+myArray[2, 3] = np.nan
+myArray[3, 2] = np.nan
+df = pd.DataFrame(myArray, columns=cols)
+df
+```
+
+This results in the following *dataframe*:
+
+|   |        A |        B |        C |        D |
+|--:|---------:|---------:|---------:|---------:|
+| 0 | 0.417022 | 0.720324 | 0.000114 | 0.302333 |
+| 1 | 0.146756 | 0.092339 | 0.186260 | 0.345561 |
+| 2 | 0.396767 | 0.538817 | 0.419195 |      NaN |
+| 3 | 0.204452 | 0.878117 |      NaN | 0.670468 |
+| 4 | 0.417305 | 0.558690 | 0.140387 | 0.198101 |
+
+There are several ways of dealing with these missing values,
+besides just leaving them in and dealing with the missing data later.
+
+### Dropping NaNs
+
+First is to simply drop an axis (row or column) that contains a `NaN` value.
+
+```python
+df.dropna(axis=1, inplace=True)
+```
+
+This results in this *dataframe*, but now the two columns with `NaN` values are gone.
+
+|   |        A |        B |
+|--:|---------:|---------:|
+| 0 | 0.417022 | 0.720324 |
+| 1 | 0.146756 | 0.092339 |
+| 2 | 0.396767 | 0.538817 |
+| 3 | 0.204452 | 0.878117 |
+| 4 | 0.417305 | 0.558690 |
+
+The `axis` parameter specifies whether to drop rows (0) or columns (1).
+The `inplace` parameter specifies whether to
+modify the *dataframe* in place or return a new *dataframe*.
+
+### Filling in Missing Values
+
+An alternative to dropping the `NaN` values is to fill them in with some other value.
+This can be done with the `fillna` method.
+
+```python
+df.fillna(value=0)
+```
+
+The value parameter specifies what value to fill in the `NaN` values with.
+In this case it is 0 which gets cast to a float.
+
+|   |        A |        B |        C |        D |
+|--:|---------:|---------:|---------:|---------:|
+| 0 | 0.417022 | 0.720324 | 0.000114 | 0.302333 |
+| 1 | 0.146756 | 0.092339 | 0.186260 | 0.345561 |
+| 2 | 0.396767 | 0.538817 | 0.419195 | 0.000000 |
+| 3 | 0.204452 | 0.878117 | 0.000000 | 0.670468 |
+| 4 | 0.417305 | 0.558690 | 0.140387 | 0.198101 |
+
+Again, the `inplace` parameter specifies whether to
+modify the *dataframe* in place or return a new *dataframe* as a view.
 
 #### Further Reading
 
