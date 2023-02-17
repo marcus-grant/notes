@@ -1,6 +1,6 @@
 ---
 created: 2022-12-02T09:39:07.160Z
-modified: 2023-02-17T10:21:59.823Z
+modified: 2023-02-17T14:45:56.693Z
 tags: [learning,pcde,data,syllabus,notetaking,productivity,time,mgmt]
 ---
 # PCDE Course Overview
@@ -142,8 +142,6 @@ If more time is necessary for each week it's important to seek help earlier.
 
 ### Module 3: Introduction to Pandas
 
-* Covering Topic
-
 #### Learning Outcomes
 
 * Define pandas series and dataframes
@@ -153,6 +151,11 @@ If more time is necessary for each week it's important to seek help earlier.
 * Explain time and data functionality in pandas
 * Analyze data in pandas
 * Design dataframes in pandas
+
+#### Note Links
+
+* [PCDE Course: Module 3 Content][pcde-mod3-content-zk]
+* [Pandas: Python Data Analysis Library][pandas-zk]
 
 ### Module 4: Databases & Intro to SQL
 
@@ -317,6 +320,8 @@ Available for late submission till: February 22, 2023
 * [NumPy: Numerical Python Library][numpy-zk]
 * [Matplotlib: Python Plotting Library][matplotlib-zk]
 * [Normal Distribution][normal-dist-zk]
+* [PCDE COurse: Module 3 Content][pcde-mod3-content-zk]
+* [Pandas: Python Dataframes & Data Manipulation][pandas-zk]
 * [PCDE Course Materials (Module 5)][pcde-module5-content-zk]
 * [SQL Overview][sql-zk]
 * [Logical Operators in SQL][sql-logical-ops-zk]
@@ -343,10 +348,12 @@ Available for late submission till: February 22, 2023
 [time-mgmt-zk]: ./time-management.md "Time Management Strategies"
 [time-block-zk]: ./time-blocking.md "Time Blocking Strategies Notes"
 [pcde-mod2-content-zk]: ./pcde-module2-content.md "PCDE Course: Module 2 Content"
+[pandas-zk]: ./pandas.md "Pandas: Python Dataframes & Data Manipulation"
 [zk-probs]: ./probability.md "Mathematical Probability Overview"
 [numpy-zk]: ./numpy.md "NumPy: Numerical Python Library"
 [matplotlib-zk]: ./matplotlib.md "Matplotlib: Python Plotting Library"
 [normal-dist-zk]: ./normal-distribution.md "Normal Distribution"
+[pcde-mod3-content-zk]: ./pcde-module3-content.md "PCDE COurse: Module 3 Content"
 [pcde-module5-content-zk]: ./pcde-module5-content.md "PCDE Course Materials (Module 5)"
 [sql-zk]: ./sql.md "SQL Overview"
 [sql-logical-ops-zk]: ./sql-logical-operators.md "Logical Operators in SQL"

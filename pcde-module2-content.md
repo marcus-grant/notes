@@ -1,6 +1,6 @@
 ---
 created: 2023-02-15T20:56:09.436Z
-modified: 2023-02-17T08:54:44.771Z
+modified: 2023-02-17T14:20:47.502Z
 tags: [python,numpy,statistics,probability,math,matplotlib,distribution,pcde,module2,data,visual]
 ---
 # PCDE Course Module 2 Content
