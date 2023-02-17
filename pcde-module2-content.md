@@ -108,6 +108,14 @@ similar heights representing 1 000 outcomes between 0 and 10
   * You get a density with bins with very different heights representing
 1 000 outcomes between 0 and 9
 
+## Mini Lesson 2.7: Basics of Matplotlib
+
+Mostly uses notes from [MatplotLib: Python Plotting Library][py-matplotlib-zk].
+
+## Mini-Lesson 2.8: Types of Matplotlib Plots
+
+Notes are covered in [MatplotLib: Python Plotting Library][py-matplotlib-zk].
+
 ## Notes Links
 
 * [NumPy: Numerical Python][py-numpy-zk]
