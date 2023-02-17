@@ -1,6 +1,6 @@
 ---
 created: 2022-12-02T09:39:07.160Z
-modified: 2023-02-08T16:49:02.941Z
+modified: 2023-02-17T10:21:59.823Z
 tags: [learning,pcde,data,syllabus,notetaking,productivity,time,mgmt]
 ---
 # PCDE Course Overview
@@ -116,6 +116,15 @@ If more time is necessary for each week it's important to seek help earlier.
 * Coding Assignment
 
 ### Module 2: Introduction to NumPy
+
+#### Notes on Topic
+
+* [Module 2 materials][pcde-mod2-content-zk]
+* [Probability Theory][zk-probs]
+* [Normal Distribution][normal-dist-zk]
+* [NumPy][numpy-zk]
+* [Matplotlib][matplotlib-zk]
+
 
 #### Learning Outcomes
 
@@ -303,7 +312,11 @@ Available for late submission till: February 22, 2023
 * [Time Blocking Strategies Notes][time-block-zk]
 * [Introduction to Python Notes][intro-py-zk]
 * [Introduction to Python][intro-py-zk]
+* [PCDE Course: Module 2 Content][pcde-mod2-content-zk]
 * [Mathematical Probability Overview][zk-probs]
+* [NumPy: Numerical Python Library][numpy-zk]
+* [Matplotlib: Python Plotting Library][matplotlib-zk]
+* [Normal Distribution][normal-dist-zk]
 * [PCDE Course Materials (Module 5)][pcde-module5-content-zk]
 * [SQL Overview][sql-zk]
 * [Logical Operators in SQL][sql-logical-ops-zk]
@@ -329,7 +342,11 @@ Available for late submission till: February 22, 2023
 [notes-lec-zk]: ./notes-lectures.md "Notetaking Strategies for Lectures"
 [time-mgmt-zk]: ./time-management.md "Time Management Strategies"
 [time-block-zk]: ./time-blocking.md "Time Blocking Strategies Notes"
+[pcde-mod2-content-zk]: ./pcde-module2-content.md "PCDE Course: Module 2 Content"
 [zk-probs]: ./probability.md "Mathematical Probability Overview"
+[numpy-zk]: ./numpy.md "NumPy: Numerical Python Library"
+[matplotlib-zk]: ./matplotlib.md "Matplotlib: Python Plotting Library"
+[normal-dist-zk]: ./normal-distribution.md "Normal Distribution"
 [pcde-module5-content-zk]: ./pcde-module5-content.md "PCDE Course Materials (Module 5)"
 [sql-zk]: ./sql.md "SQL Overview"
 [sql-logical-ops-zk]: ./sql-logical-operators.md "Logical Operators in SQL"
