@@ -1,6 +1,6 @@
 ---
 created: 2022-12-02T09:39:07.160Z
-modified: 2023-02-17T14:45:56.693Z
+modified: 2023-02-17T10:21:59.823Z
 tags: [learning,pcde,data,syllabus,notetaking,productivity,time,mgmt]
 ---
 # PCDE Course Overview
@@ -124,7 +124,6 @@ If more time is necessary for each week it's important to seek help earlier.
 * [Normal Distribution][normal-dist-zk]
 * [NumPy][numpy-zk]
 * [Matplotlib][matplotlib-zk]
-
 
 #### Learning Outcomes
 
