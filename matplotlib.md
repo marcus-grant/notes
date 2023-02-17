@@ -1,6 +1,6 @@
 ---
 created: 2023-02-15T21:01:11.682Z
-modified: 2023-02-16T17:16:28.407Z
+modified: 2023-02-17T13:44:24.346Z
 tags: [matplotlib,python,plot,visual,graphic,histogram,bin,scatter,pcde,module2,data]
 ---
 # Matplotlib: Python Plotting Library

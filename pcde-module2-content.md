@@ -116,6 +116,50 @@ Mostly uses notes from [MatplotLib: Python Plotting Library][py-matplotlib-zk].
 
 Notes are covered in [MatplotLib: Python Plotting Library][py-matplotlib-zk].
 
+## Knowledge Check 2.4: Plotting and Interpreting Data Using Matplotlib
+
+* Which command is used in Matplotlib to create subplots?
+  * plt.subplotting()
+  * plt.Subplots()
+  * plt.subplots() **(Correct)**
+  * plt.sub_plots()
+* Which command is used in Matplotlib to create a title for an axes object?
+  * ax.set_title() **(Correct)**
+  * ax.title() **(INCORRECT)**
+  * ax.SetTitle()
+  * ax.add_title()
+* Which of the following is not a possible argument for the Matplotlib plot() function?
+  * width **(Correct)**
+  * marker
+  * c
+  * label
+* Which of the following is true?
+  * Legends are automatically generated in Matplotlib
+  * A legend can be created using syntax plt.legend() **(Correct)**
+  * A legend can only display information about a limited amount of data
+  * The display position of a legend in a plot cannot be changed
+* Which of the following is not an element of a Matplotlib plot?
+  * Origin **(Correct)**
+  * Axis
+  * Grid **(INCORRECT)**
+  * Axes
+* Which of the following is true?
+  * Python plots can be created in numpy
+  * "Axis" and "axes" are synonyms in matplotlib
+  * Spines are lines denoting the area boundraries **(Correct)**
+  * Matplotlib is a programming language
+* Which of the following is true?
+  * A histogram will not change when the number of bins is changed
+  * Histograms can be created using the plt.histogram() function
+  * Histograms are used to display statistical information **(Correct)**
+  * Histograms are used to represent categorical values
+* Which of the following is false?
+  * A scatter plot always shows a correlation between two variables **(Correct)**
+  * Bar plots are used to show the relationship between different types of variables
+    * **(INCORRECT)**
+  * You can only display one set of data on a figure
+  * Line plots can be created using the plt.plot() command
+
 ## Notes Links
 
 * [NumPy: Numerical Python][py-numpy-zk]
