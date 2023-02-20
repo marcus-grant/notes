@@ -1,6 +1,6 @@
 ---
 created: 2023-02-17T14:42:48.640Z
-modified: 2023-02-20T10:56:48.897Z
+modified: 2023-02-17T15:30:23.661Z
 tags: [pandas,python,data,analysis,dataframe,data,frame,library,structure,table,sql,pcde,module3]
 ---
 # Pandas: Python Data Analysis Library
@@ -227,6 +227,10 @@ the `orient='index'` parameter is used again to indicate that the index is the k
 It's also important to note that because there is no pandas object yet,
 the `read_json()` method is called from the abstract `pd` module,
 not a method of a pandas object like a `Series` or `DataFrame`.
+
+#### Further Reading
+
+* [Pandas: How to Read and Write Files][pandas-rw-files-realpy]
 
 ## DataFrame
 
@@ -658,9 +662,26 @@ Where:
   * `-HH:MM` is a negative offset from UTC
   * So `+01:00` is one hour ahead of UTC, and is also Central European Time (CET)
 
-#### Further Reading
+### Date & Time Index
 
-* [Pandas: How to Read and Write Files][pandas-rw-files-realpy]
+To work with time containing data,
+we may need to create a `DatetimeIndex` object.
+This is a special type of index that is used to index data by time.
+It is a special type of index because it can be used to index data
+by a time range, and not just a single time.
+
+```python
+import pandas as pd
+import numpy as np
+myArray = np.array([1, 2, 3, 4, 5, 6, 7])
+mySeries = pd.Series(myArray)
+mySeries.index = pd.date_range(start='1/1/19', periods=7)
+mySeries.index.dayofweek
+# Output: Int64Index([6, 0, 1, 2, 3, 4, 5], dtype='int64')
+```
+
+Note that with `dayofweek` we can get the day of the week
+0 indexed, where 0 is Monday and 6 is Sunday.
 
 ## References
 

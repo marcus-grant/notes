@@ -1,6 +1,6 @@
 ---
 created: 2023-02-17T14:38:39.862Z
-modified: 2023-02-17T17:39:38.820Z
+modified: 2023-02-20T11:03:17.276Z
 tags: [pcde,module3,content,pandas,python,data]
 ---
 # PCDE Course: Module 3 Content
@@ -97,7 +97,15 @@ although the data across multiple columns can be of
 all the values in a single column must store data of
 the **(same)** type.
 
+## Knowledge Check 3.5: Time and Date Functionality in Pandas
 
+* Q1: When did the Unix epoch start?
+  * 1970-01-01 **(CORRECT)**
+* Q2: What is the correct pandas syntax if you want to generate a series with
+index all the days of the week May 5, 1989?
+  * pd.date_range(start=`5/5/1989`, periods=7) **(CORRECT)**
+* Q3: What is the default value for the freq argument in the pd.date_range function?
+  * 1 day **(CORRECT)**
 
 ## References
 
