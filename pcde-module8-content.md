@@ -18,7 +18,7 @@ What are the key considerations in each step of ETL?
 What are the key advantages of having an integrated ETL process in your Python code?
 
 ### Response
- 
+
 #### Why is ETL Important?
 
 ETL, or **E**xtract, **T**ransform, **L**oad,
@@ -74,7 +74,6 @@ periodically updating data with fresh updates from its sources
   * Python is effectively built through standardization
   * This leads to a culture of making highly portable code
   * As a result it works on more data sources and sinks than just about anything
-
 
 ## References
 
