@@ -161,12 +161,9 @@ If more time is necessary for each week it's important to seek help earlier.
 * Notes on topic
   * [Course materials](./pcde-module4-content.md)
   * [Database design](./database-design.md)
-  * [SQL Notes (first half)](./sql.md)
+  * [SQL Notes](./sql.md)
 
 ### Module 5: Databases with SQL Statements
-
-Due Date: January 25, 2023
-Available for late submission till: February 22, 2023
 
 #### Notes on Topic
 
@@ -200,9 +197,6 @@ Available for late submission till: February 22, 2023
 * [MySQL Workbench Video Walkthrough (by Telusko on Youtube)](https://www.youtube.com/watch?v=-RrfsIPy4uE&list=PLsyeobzWxl7oJca2fwLyKbDwlKUDPl3RE&index=3&ab_channel=Telusko)
 
 ### Module 6: Databases Analysis and the Client Server Interface
-
-Due Date: February 1, 2023
-Available for late submission till: February 22, 2023
 
 #### Notes on Topic
 

@@ -488,13 +488,13 @@ df
 
 This results in the following *dataframe*:
 
-|   |        A |        B |        C |        D |
-|--:|---------:|---------:|---------:|---------:|
-| 0 | 0.417022 | 0.720324 | 0.000114 | 0.302333 |
-| 1 | 0.146756 | 0.092339 | 0.186260 | 0.345561 |
-| 2 | 0.396767 | 0.538817 | 0.419195 |      NaN |
-| 3 | 0.204452 | 0.878117 |      NaN | 0.670468 |
-| 4 | 0.417305 | 0.558690 | 0.140387 | 0.198101 |
+|     |        A |        B |        C |        D |
+| --: | -------: | -------: | -------: | -------: |
+|   0 | 0.417022 | 0.720324 | 0.000114 | 0.302333 |
+|   1 | 0.146756 | 0.092339 | 0.186260 | 0.345561 |
+|   2 | 0.396767 | 0.538817 | 0.419195 |      NaN |
+|   3 | 0.204452 | 0.878117 |      NaN | 0.670468 |
+|   4 | 0.417305 | 0.558690 | 0.140387 | 0.198101 |
 
 There are several ways of dealing with these missing values,
 besides just leaving them in and dealing with the missing data later.
@@ -509,13 +509,13 @@ df.dropna(axis=1, inplace=True)
 
 This results in this *dataframe*, but now the two columns with `NaN` values are gone.
 
-|   |        A |        B |
-|--:|---------:|---------:|
-| 0 | 0.417022 | 0.720324 |
-| 1 | 0.146756 | 0.092339 |
-| 2 | 0.396767 | 0.538817 |
-| 3 | 0.204452 | 0.878117 |
-| 4 | 0.417305 | 0.558690 |
+|     |        A |        B |
+| --: | -------: | -------: |
+|   0 | 0.417022 | 0.720324 |
+|   1 | 0.146756 | 0.092339 |
+|   2 | 0.396767 | 0.538817 |
+|   3 | 0.204452 | 0.878117 |
+|   4 | 0.417305 | 0.558690 |
 
 The `axis` parameter specifies whether to drop rows (0) or columns (1).
 The `inplace` parameter specifies whether to
@@ -533,13 +533,13 @@ df.fillna(value=0)
 The value parameter specifies what value to fill in the `NaN` values with.
 In this case it is 0 which gets cast to a float.
 
-|   |        A |        B |        C |        D |
-|--:|---------:|---------:|---------:|---------:|
-| 0 | 0.417022 | 0.720324 | 0.000114 | 0.302333 |
-| 1 | 0.146756 | 0.092339 | 0.186260 | 0.345561 |
-| 2 | 0.396767 | 0.538817 | 0.419195 | 0.000000 |
-| 3 | 0.204452 | 0.878117 | 0.000000 | 0.670468 |
-| 4 | 0.417305 | 0.558690 | 0.140387 | 0.198101 |
+|     |        A |        B |        C |        D |
+| --: | -------: | -------: | -------: | -------: |
+|   0 | 0.417022 | 0.720324 | 0.000114 | 0.302333 |
+|   1 | 0.146756 | 0.092339 | 0.186260 | 0.345561 |
+|   2 | 0.396767 | 0.538817 | 0.419195 | 0.000000 |
+|   3 | 0.204452 | 0.878117 | 0.000000 | 0.670468 |
+|   4 | 0.417305 | 0.558690 | 0.140387 | 0.198101 |
 
 Again, the `inplace` parameter specifies whether to
 modify the *dataframe* in place or return a new *dataframe* as a view.
@@ -584,12 +584,12 @@ df
 
 Which gets us this *dataframe*:
 
-|   | fruit   |   count |   price |
-|--:|:--------|--------:|--------:|
-| 0 | Apple   |       3 |     0.5 |
-| 1 | Pear    |       2 |    0.75 |
-| 2 | Orange  |       4 |     1.2 |
-| 3 | Banana  |       1 |    0.65 |
+|     | fruit  | count | price |
+| --: | :----- | ----: | ----: |
+|   0 | Apple  |     3 |   0.5 |
+|   1 | Pear   |     2 |  0.75 |
+|   2 | Orange |     4 |   1.2 |
+|   3 | Banana |     1 |  0.65 |
 
 Now if we must perform numerical analysis on the fruit,
 they need to be *one-hot* encoded.
@@ -603,12 +603,12 @@ df
 
 Which gets us this *dataframe*:
 
-|   |   count |   price |   Apple |   Banana |   Orange |   Pear |
-|--:|--------:|--------:|--------:|---------:|---------:|-------:|
-| 0 |       3 |     0.5 |       1 |        0 |        0 |      0 |
-| 1 |       2 |    0.75 |       0 |        0 |        0 |      1 |
-| 2 |       4 |     1.2 |       0 |        0 |        1 |      0 |
-| 3 |       1 |    0.65 |       0 |        1 |        0 |      0 |
+|     | count | price | Apple | Banana | Orange | Pear |
+| --: | ----: | ----: | ----: | -----: | -----: | ---: |
+|   0 |     3 |   0.5 |     1 |      0 |      0 |    0 |
+|   1 |     2 |  0.75 |     0 |      0 |      0 |    1 |
+|   2 |     4 |   1.2 |     0 |      0 |      1 |    0 |
+|   3 |     1 |  0.65 |     0 |      1 |      0 |    0 |
 
 Now the fruit types are encoded as numbers and
 it should be easier to see how the encoding works.
@@ -683,6 +683,166 @@ mySeries.index.dayofweek
 Note that with `dayofweek` we can get the day of the week
 0 indexed, where 0 is Monday and 6 is Sunday.
 
+## PLACEHOLDER FOR ACCESS VIA LOC ILOC AND INDEXING
+
+## PLACEHOLDER FOR PIVOTS
+
+## Join Dataframes
+
+### Why Join Dataframes?
+
+In many real world applications,
+data is presented to you in separate but related structures.
+Depending on your needs,
+*pandas* provides two ways of combining *dataframes*: *unions* & *joins*.
+
+### Union
+
+With the union,
+you can append the columns of one *dataframe* to the other.
+The *union* can be achieved with the `concat` method.
+
+Suppose you have two *dataframes*: `df1` and `df2`.
+
+```python
+df1 = pd.DataFrame({'student_id': ['S1234', 'S4321'], 'name': ['Daniel', 'John']})
+df2 = pd.DataFrame({'student_id': ['S3333', 'S4444'], 'name': ['Mary', 'Jane']})
+```
+
+Which produces these two tables:
+
+|     | student_id | name   |
+| --- | ---------- | ------ |
+| 0   | S1234      | Daniel |
+| 1   | S4321      | John   |
+
+|     | student_id | name |
+| --- | ---------- | ---- |
+| 0   | S3333      | Mary |
+| 1   | S4444      | Jane |
+
+Since the columns of the two *dataframes* are the same,
+we can use the `concat` method to combine, put them into a *union*.
+
+```python
+df = pd.concat([df1, df2]).reset_index(drop=True)
+```
+
+Which produces this table:
+
+|     | student_id | name   |
+| --- | ---------- | ------ |
+| 0   | S1234      | Daniel |
+| 1   | S4321      | John   |
+| 2   | S3333      | Mary   |
+| 3   | S4444      | Jane   |
+
+The `reset_index` method is used to reset the index of the *dataframe*.
+The *index* in the resulting *dataframe* is now a new index with both *dataframes*,
+but with the indexing redone in some order.
+
+### Join
+
+Sometimes,
+you may want to combine columns in different *dataframes* that contain common values.
+This technique is called *joining*, and is done with the `merge` method.
+
+When performing a *join*,
+the columns containing the common values are called *join keys*.
+
+The *join* concept explored here is similar to [how joins are done in SQL][sql-zk].
+
+There are four different types of *joins*: *inner*, *outer*, *left*, and *right*.
+Here they will be explained in detail.
+
+#### Inner Join
+
+An *inner join* combines two *dataframes* by matching the *join keys*.
+Usually, *inner joins* are the default type of *join*.
+Take for example the previous student *dataframes*.
+If you wanted to combine another dataframe containing last names,
+with a *join key* of `student_id`,
+you would use an *inner join*.
+
+```python
+df3 = pd.DataFrame({'student_id': ['S1234', 'S4321'], 'last_name': ['Smith', 'Doe']})
+df = pd.merge(df, df3, on='student_id')
+```
+
+which results in this table:
+
+|     | student_id | name   | last_name |
+| --- | ---------- | ------ | --------- |
+| 0   | S1234      | Daniel | Smith     |
+| 1   | S4321      | John   | Doe       |
+
+>**Note:** That inner joins are only done on data matching the join keys.
+>So the students 'Mary' & 'Jane' are not included in the resulting *dataframe*,
+>because they do not have a *join key* in `df3`.
+
+#### Outer Join
+
+An *outer join* combines two *dataframes* by matching the *join keys*,
+**but** it also includes all the data from both *dataframes*.
+This means that often the resulting *dataframe* will have *nullish* values in
+the case where there are columns from one dataframe not present in the other.
+
+```python
+df4 = pd.merge(df2, df3, how='outer', on='student_id')
+# Remember df2 is Mary & Jane, df3 is John & Daniel with a last name column
+df4
+```
+
+which results in this table:
+
+|     | student_id | name   | last_name |
+| --- | ---------- | ------ | --------- |
+| 0   | S3333      | Mary   | NaN       |
+| 1   | S4444      | Jane   | NaN       |
+| 2   | S1234      | Daniel | Smith     |
+| 3   | S4321      | John   | Doe       |
+
+#### Left Join
+
+A *left join* combines two *dataframes* by matching the *join keys*,
+**but** it also includes all the data from the *left* *dataframe*.
+This means that often the resulting *dataframe* will have *nullish* values in
+the case where there are columns from the *right* dataframe not present in the *left*.
+
+```python
+df5 = pd.merge(df2, df3, how='left', on='student_id')
+# Remember df2 is Mary & Jane, df3 is John & Daniel with a last name column
+df5
+```
+
+which results in this table:
+
+|     | student_id | name   | last_name |
+| --- | ---------- | ------ | --------- |
+| 0   | S3333      | Mary   | NaN       |
+| 1   | S4444      | Jane   | NaN       |
+
+#### Right Join
+
+A *right join* combines two *dataframes* by matching the *join keys*,
+**but** it also includes all the data from the *right* *dataframe*.
+This means that often the resulting *dataframe* will have *nullish* values in
+the case where there are columns from the *left* dataframe not present in the *right*.
+
+```python
+df6 = pd.merge(df2, df3, how='right', on='student_id')
+# Remember df2 is Mary & Jane, df3 is John & Daniel with a last name column
+df6
+```
+
+which results in this table:
+
+|     | student_id | name   | last_name |
+| --- | ---------- | ------ | --------- |
+| 0   | S1234      | Daniel | Smith     |
+| 1   | S4321      | John   | Doe       |
+
+
 ## References
 
 ### Web Links
@@ -732,6 +892,8 @@ Note that with `dayofweek` we can get the day of the week
 * [JSON: JavaScript Object Notation][json-zk]
 * [HTML: HyperText Markup Language][html-zk]
 * [ISO 8601 Date & Time Format Standard][iso8601-zk]
+* [SQL][sql-zk]
+
 <!-- Hidden References -->
 [py-zk]: ./python.md "Python Programming Language"
 [numpy-zk]: ./numpy.md "NumPy"
@@ -739,3 +901,4 @@ Note that with `dayofweek` we can get the day of the week
 [json-zk]: ./json.md "JSON: JavaScript Object Notation"
 [html-zk]: ./html.md "HTML: HyperText Markup Language"
 [iso8601-zk]: ./.pcde/mod3/iso8601.md "ISO 8601 Date & Time Format Standard"
+[sql-zk]: ./sql.md "SQL"
