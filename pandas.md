@@ -1,6 +1,6 @@
 ---
 created: 2023-02-17T14:42:48.640Z
-modified: 2023-02-17T15:30:23.661Z
+modified: 2023-02-20T10:56:48.897Z
 tags: [pandas,python,data,analysis,dataframe,data,frame,library,structure,table,sql,pcde,module3]
 ---
 # Pandas: Python Data Analysis Library
@@ -540,6 +540,124 @@ In this case it is 0 which gets cast to a float.
 Again, the `inplace` parameter specifies whether to
 modify the *dataframe* in place or return a new *dataframe* as a view.
 
+### Categorical Data
+
+Another common type of data is **categorical** data, or **ordinal** data.
+This is any type of data that isn't inherently numeric.
+Think of a label or a category like a kind of fruit,
+an apple, pear or orange.
+What is the numeric value of an apple?
+
+### Encoding Categorical Data
+
+Although there isn't an inherent numeric value to a category,
+it is possible to encode the categories as numbers and
+sometimes those numbers can be meaningful in numerical analysis.
+
+**One-hot encoding** is a common way to encode categorical data.
+The phrase "one-hot" comes from the fact that
+only one of the categories is "hot" or "on" at a time.
+Conversely, one can *one-cool* encode the data,
+where only one of the categories is "cool" or "off" at a time.
+Typicall *one-hot* gets used more often than *one-cool*,
+because it tends to make more sense in most contexts.
+
+Within *pandas* there's a `get_dummies` method that can be used to
+one-hot encode categorical data. Let's demonstrate this first by
+creating a dataframe about `fruit` types and their price and stock.
+
+```python
+import pandas as pd
+import numpy as np
+df_dict = {
+    'fruit': ['Apple', 'Pear', 'Orange', 'Banana'],
+    'count': [3, 2, 4, 1],
+    'price': [0.5, 0.75, 1.2, 0.65]
+}
+df = pd.DataFrame(df_dict)
+df
+```
+
+Which gets us this *dataframe*:
+
+|   | fruit   |   count |   price |
+|--:|:--------|--------:|--------:|
+| 0 | Apple   |       3 |     0.5 |
+| 1 | Pear    |       2 |    0.75 |
+| 2 | Orange  |       4 |     1.2 |
+| 3 | Banana  |       1 |    0.65 |
+
+Now if we must perform numerical analysis on the fruit,
+they need to be *one-hot* encoded.
+Using the `get_dummies` method, we can do this.
+
+```python
+df = (pd.get_dummies(df, columns=['fruit'])
+        .rename(columns=lambda x: x.replace('fruit_', '')))
+df
+```
+
+Which gets us this *dataframe*:
+
+|   |   count |   price |   Apple |   Banana |   Orange |   Pear |
+|--:|--------:|--------:|--------:|---------:|---------:|-------:|
+| 0 |       3 |     0.5 |       1 |        0 |        0 |      0 |
+| 1 |       2 |    0.75 |       0 |        0 |        0 |      1 |
+| 2 |       4 |     1.2 |       0 |        0 |        1 |      0 |
+| 3 |       1 |    0.65 |       0 |        1 |        0 |      0 |
+
+Now the fruit types are encoded as numbers and
+it should be easier to see how the encoding works.
+A column is made for each possible value of the category.
+And only one of the columns is "hot" or "on" at a time.
+
+The rest of the code in the previous snippet,
+is just about renaming the columns to make them more readable using `rename`.
+By default pandas `get_dummies` method will prefix the column names
+with the original column name and an underscore.
+
+## Time & Date
+
+Time & Dates are a common type of data that is used many contexts within pandas.
+Their nature means that different handling is required to make them useful.
+
+### Epoch Time
+
+The first important concept to know is of the epoch time.
+The epoch time is the number of seconds since January 1st, 1970.
+This is the time that is used by computers to keep track of time.
+When you see a date printed on a computer,
+it is typically the calculated number of years, months, days, hours, etc since the epoch.
+
+### UTC
+
+The epoch time is also known as **UTC** or **Coordinated Universal Time**.
+UTC is the time that is used by the world to keep track of time.
+It is a single standardised time that is used by all countries,
+and their different time zones are offset from UTC.
+
+### ISO 8601
+
+The standard format for dates and times is [**ISO 8601**][iso8601-zk].
+This is a standardised way of representing dates and times.
+It is a string of numbers and letters that can be parsed by computers.
+
+To put it simply, the format is `YYYY-MM-DDTHH:MM:SSZ`.
+Where:
+
+* `YYYY` is the year
+* `MM` is the month
+* `DD` is the day
+* `HH` is the hour
+* `MM` is the minute
+* `SS` is the second
+  * `SS` can be a decimal number so `SS.SSS` is also valid
+* `Z` is the timezone offset
+  * `Z` is UTC
+  * `+HH:MM` is a positive offset from UTC
+  * `-HH:MM` is a negative offset from UTC
+  * So `+01:00` is one hour ahead of UTC, and is also Central European Time (CET)
+
 #### Further Reading
 
 * [Pandas: How to Read and Write Files][pandas-rw-files-realpy]
@@ -563,6 +681,8 @@ modify the *dataframe* in place or return a new *dataframe* as a view.
 * [to_excel (from pandas.pydata.org documentation)][pandas-excel-write]
 * [to_sql (from pandas.pydata.org documentation)][pandas-sql-write]
 * [pandas IO tool (from pandas.pydata.org documentation)][pandas-io-tool]
+* [ISO 8601 (from Wikipedia, the free encyclopedia)][iso8601-wiki]
+* [Time & Date in Pandas (from pandas.pydata.org)][date-time-pandas]
 
 <!-- Hidden References -->
 [pandas-wiki]: https://en.wikipedia.org/wiki/Pandas_(software) "Pandas (Software)(from Wikipedia, the free encyclopedia)"
@@ -580,6 +700,8 @@ modify the *dataframe* in place or return a new *dataframe* as a view.
 [pandas-sql-write]: https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html#io-excel-writer "to_sql (from pandas.pydata.org documentation)"
 [pandas-io-tool]: https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html "pandas IO tool (from pandas.pydata.org documentation)"
 [pandas-excel-write]: https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html#io-excel-writer "to_excel (from pandas.pydata.org documentation)"
+[iso8601-wiki]: https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 (from Wikipedia, the free encyclopedia)"
+[date-time-pandas]: https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html "Time & Date in Pandas (from pandas.pydata.org)"
 
 ### Note Links
 
@@ -588,10 +710,11 @@ modify the *dataframe* in place or return a new *dataframe* as a view.
 * [Data Structure][data-struct-zk]
 * [JSON: JavaScript Object Notation][json-zk]
 * [HTML: HyperText Markup Language][html-zk]
-
+* [ISO 8601 Date & Time Format Standard][iso8601-zk]
 <!-- Hidden References -->
 [py-zk]: ./python.md "Python Programming Language"
 [numpy-zk]: ./numpy.md "NumPy"
 [data-struct-zk]: ./data-structure.md "Data Structure"
 [json-zk]: ./json.md "JSON: JavaScript Object Notation"
 [html-zk]: ./html.md "HTML: HyperText Markup Language"
+[iso8601-zk]: ./.pcde/mod3/iso8601.md "ISO 8601 Date & Time Format Standard"
