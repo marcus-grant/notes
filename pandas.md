@@ -1,6 +1,6 @@
 ---
 created: 2023-02-17T14:42:48.640Z
-modified: 2023-02-17T15:30:23.661Z
+modified: 2023-02-20T15:14:17.463Z
 tags: [pandas,python,data,analysis,dataframe,data,frame,library,structure,table,sql,pcde,module3]
 ---
 # Pandas: Python Data Analysis Library
