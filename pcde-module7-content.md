@@ -1,6 +1,6 @@
 ---
 created: 2023-02-01T16:14:24.799Z
-modified: 2023-02-06T16:45:44.124Z
+modified: 2023-02-23T08:57:29.535Z
 tags: [pcde,module7,content,knowledge,check,quiz,activity,assignment,project,discussion,self-study,python,statistics,data,model,analysis]
 ---
 # PCDE Module 7 Content: A Model to Predict Housing Prices
@@ -391,8 +391,8 @@ cover the rest of this.
 [stats-py-zk]: ./statistics-python.md "Statistics Using Python"
 [stats-py-ex-normal-sample-zk]: ./statistics-python.md#Exercise:-Normal-Distribution-from-Sample "Statistics Using Python: Normal Distribution from Sample"
 [py-zk]: ./python.md "Python"
-[py-pd-zk]: ./python-pandas.md "Python: Pandas"
-[py-seaborn-zk]: ./python-seaborn.md "Seaborn: Wrapper to Python's MatplotLib"
+[py-pd-zk]: ./pandas.md "Python: Pandas"
+[py-seaborn-zk]: ./seaborn.md "Seaborn: Wrapper to Python's MatplotLib"
 [md-zk]: ./markdown.md "Markdown"
 [pcde-mod7-7-2]: ./pcde-module7-content.md#Mini-Lesson-7-2---Markdown-Syntax "PCDE Course Module 7 Mini Lesson 7.2 Markdown"
 [predict-house-price-zk]: ./predict-house-prices.md "Predicting Housing Prices through Linear Regression Using Python"

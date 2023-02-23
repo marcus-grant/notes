@@ -1,11 +1,15 @@
 ---
 created: 2022-12-05T10:08:05.765Z
-modified: 2022-12-05T10:08:05.765Z
+modified: 2023-02-23T09:00:52.032Z
 tags: [python,mongodb,backend,db,driver,data]
 ---
 # Control MongoDB Using Python
 
-It's possible to create server logic within python directly interecting with [MongoDB](document-databases.md) servers. First, a driver is needed. In python this MongoDB driver package is known as `pymongo`. Install it using pip like this:
+It's possible to create server logic within python directly interecting with
+[MongoDB](document-databases.md) servers.
+First, a driver is needed.
+In python this MongoDB driver package is known as `pymongo`.
+Install it using pip like this:
 
 ```sh
 pip3 install pymongo
@@ -13,7 +17,9 @@ pip3 install pymongo
 
 ## Creating a Database Using MongoDB
 
-To create a database in MongoDB start by creating a Python file. Then add an import statement for `pymongo`, instantiate a `MongoClient` class and select a database using that client.
+To create a database in MongoDB start by creating a Python file.
+Then add an import statement for `pymongo`,
+instantiate a `MongoClient` class and select a database using that client.
 
 ```python
 import pymongo
@@ -27,9 +33,13 @@ mydb = myclient['mydatabase']
 print(myclient.list_database_names())
 ```
 
-In MongoDB tables are called *collections*. To create a *collection* in MongoDB, use the database object created previously and specify the name of the *collection* to create.
+In MongoDB tables are called *collections*.
+To create a *collection* in MongoDB,
+use the database object created previously and
+specify the name of the *collection* to create.
 
-The code below shows how to create a *collection* named `customers` in the `mydatabase` database defined above.
+The code below shows how to create a *collection* named `customers` in
+the `mydatabase` database defined above.
 
 ```python
 import pymongo
@@ -38,15 +48,19 @@ mydb = myclient['mydatabase']
 mycol = mydb["customers"]
 ```
 
-You can check whether a *collection* exists in a database by listing all *collections*. To do so add the following line to your python script.
+You can check whether a *collection* exists in a database by listing all *collections*.
+To do so add the following line to your python script.
 
 ```python
 print(mydb.list_collection_names())
 ```
 
-In MongoDB, records are called *documents*. To insert a *document* into a *collection*, you can use the `insert_one()` method.
+In MongoDB, records are called *documents*.
+To insert a *document* into a *collection*, you can use the `insert_one()` method.
 
-The first parameter of the `insert_one()` method is a *dictionary* containing the names and values of each field in the *document* that you want to insert. See the example below:
+The first parameter of the `insert_one()` method is a *dictionary* containing
+the names and values of each field in the *document* that you want to insert.
+See the example below:
 
 ```python
 import pymongo
@@ -75,7 +89,10 @@ print(x.inserted_ids)
 
 ## References
 
-MongoDB is a powerful tool that you can use to create databases using Python code. For more examples visit the  [PyMongo Tutorial Page][pymongo-tutorial]. For the official documentation, visit [PyMongo API Reference Page][pymongo-api-ref]
+MongoDB is a powerful tool that you can use to create databases using Python code.
+For more examples visit the  [PyMongo Tutorial Page][pymongo-tutorial].
+For the official documentation,
+visit [PyMongo API Reference Page][pymongo-api-ref]
 
 * [PyMongo Tutorial Page][pymongo-tutorial]
 * [PyMongo API Reference Page][pymongo-api-ref]

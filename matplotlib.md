@@ -1,6 +1,6 @@
 ---
 created: 2023-02-15T21:01:11.682Z
-modified: 2023-02-17T13:44:24.346Z
+modified: 2023-02-23T08:59:02.837Z
 tags: [matplotlib,python,plot,visual,graphic,histogram,bin,scatter,pcde,module2,data]
 ---
 # Matplotlib: Python Plotting Library
@@ -30,6 +30,7 @@ Then import the module using the following command:
 ```python
 import matplotlib.pyplot as plt
 ```
+
 or if you want the whole library:
 
 ```python
