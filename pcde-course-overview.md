@@ -1,9 +1,11 @@
 ---
 created: 2022-12-02T09:39:07.160Z
-modified: 2023-02-23T09:01:14.433Z
+modified: 2023-02-23T10:09:24.675Z
 tags: [learning,pcde,data,syllabus,notetaking,productivity,time,mgmt]
 ---
 # PCDE Course Overview
+
+## Introduction
 
 This is a course where [MIT's xPro program][mit-xpro] will prepare you for a
 certification in the professional skills required in Data Engineering.
@@ -296,32 +298,35 @@ Available for late submission till: February 22, 2023
 
 ### Module 9: GitHub & Advanced Python
 
-Due Date: 4:29 PM UTC February 15, 2023
-Available for late submission till: February 22, 2023
-
 #### Notes on Topic
 
-* [Module 7 materials][pcde-mod7-content-zk]
+* [Module 9 Materials][pcde-mod9-zk]
+* [VS Code][vscode-zk]
+* [Git][git-zk]
+* [GitHub][github-zk]
+* [Python: Classes][py-classes-zk]
+* [Python: Advanced Functions][py-adv-func-zk]
+* [Python: Decorators][py-decorators-zk]
+* [Python: Wrappers][py-wrappers-zk]
 
 #### Key Activities
 
-* Discussions: 4
-* Activities: 0
-* Self Study Drag & Drop: 0
-* Knowledge Checks: 3
-* Coding Assignment: 1 **(PROJECT)**
-* Video Lectures: 6 **LONG LECTURES**
+* Discussions: 1
+* Activities: 6
+* Self Study: 2
+* Knowledge Checks: 4
+* Coding Assignment: 1
+* Video Lectures: 90 minutes
 * Mini Lessons: 0
-* Estimated 18hrs to complete
-  * Divided by 7 days & 40% overshoot = 4hrs/day
 
 #### Outcomes
 
-* Describe how descriptive statistics are used in Python.
-* Explain central limit theorem and correlation.
-* Describe how to calculate a linear regression.
-* Write Markdown syntax.
-* Build a prediction model using linear regression.
+* Debug Python code.
+* Use GitHub for version control.
+* Create a portfolio using GitHub Pages.
+* Implement Python *classes*.
+* Write code using *advanced Python functions*.
+* Utilize Python *decorators* and *wrappers*.
 
 ## References
 
@@ -359,6 +364,14 @@ Available for late submission till: February 22, 2023
 * [Markdown][md-zk]
 * [Predicting Housing Prices through Linear Regression & Python][predict-house-price-zk]
 * [PCDE Course Module 8 Content: ETL, Analysis and Visualization][pcde-mod8-zk]
+* [PCDE Course: Module 9 Content][pcde-mod9-zk]
+* [VS Code][vscode-zk]
+* [Git][git-zk]
+* [GitHub][github-zk]
+* [Python: Classes][py-classes-zk]
+* [Python: Advanced Functions][py-adv-func-zk]
+* [Python: Decorators][py-decorators-zk]
+* [Python: Wrappers][py-wrappers-zk]
 
 <!-- Hidden Reference Links Below Here -->
 [mit-xpro]: https://emeritus.org/universities/mit-xpro/ "MIT xPRO Emeritus Certification Programs Homepage"
@@ -391,3 +404,11 @@ Available for late submission till: February 22, 2023
 [md-zk]: ./markdown.md "Markdown"
 [predict-house-price-zk]: ./predict-house-prices.md "Predicting Housing Prices through Linear Regression & Python"
 [pcde-mod8-zk]: ./pcde-module8-content.md "PCDE Course Module 8 Content: ETL, Analysis and Visualization"
+[pcde-mod9-zk]: ./pcde-module9-content.md "PCDE Course: Module 9 Content"
+[vscode-zk]: ./vscode.md "VS Code"
+[git-zk]: ./git.md "Git"
+[github-zk]: ./github.md "GitHub"
+[py-classes-zk]: ./python#Classes "Python: Classes"
+[py-adv-func-zk]: ./python#Advanced-Functions "Python: Advanced Functions"
+[py-decorators-zk]: ./python#Decorators "Python: Decorators"
+[py-wrappers-zk]: ./python#Wrappers "Python: Wrappers"

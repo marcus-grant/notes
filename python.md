@@ -1,6 +1,6 @@
 ---
 created: 2022-12-05T16:17:20.340Z
-modified: 2023-02-01T16:39:53.188Z
+modified: 2023-02-23T10:06:27.361Z
 tags: [python,py,lang,programming,overview]
 ---
 # Python
@@ -17,7 +17,7 @@ The `for-in` structure above loops through each item in a collection and
 returns the individual item in the `name` variable given between `for` and `in`.
 Substituting any collection or iterable given in place of `names`
 achieves the same result.
-This can include the `range` functino call which instead gives a number range.
+This can include the `range` function call which instead gives a number range.
 
 ```python
 for num in range(1, 10):
@@ -32,7 +32,7 @@ is given from 1 to one step below the second number, in this case 9, 10 is exclu
 
 ## Read Lines of File
 
-If you're going to read a file with lines reperesenting an entry,
+If you're going to read a file with lines representing an entry,
 `open` is the primary function to use.
 In this example from [Advent of Code][aoc22-day4] there are lines of input given.
 Each line is a pair of number ranges in need of processing.
@@ -59,7 +59,7 @@ try:
 except IOError as e:
     print(f"ShipAssignment file open error:\n{e}")
 except:
-    print("Unkown Error during file ShipAssignment opening!")
+    print("Unknown Error during file ShipAssignment opening!")
 finally:
     self.assignments = assignments
     file.close()
@@ -104,6 +104,22 @@ Finally, the `int(s)` turns it into a number,
 When the list comprehension is done,
 the list `[23, 11, 2]` should be returned.
 
+## Classes
+
+***TODO***
+
+## Advanced Functions
+
+***TODO***
+
+## Decorators
+
+***TODO***
+
+## Wrappers
+
+***TODO***
+
 ## Type Checking/Annotation
 
 For more information check out [this handy guide][type-check-guide-rp]
@@ -120,7 +136,7 @@ incorporating this code for your purposes.
 
 ### How to Import Libraries
 
-Generally, libraries get imported at the beginning of a peice of code.
+Generally, libraries get imported at the beginning of a piece of code.
 This helps avoid mistakes that make programs less time efficient.
 For example, by avoiding importing a module twice.
 
