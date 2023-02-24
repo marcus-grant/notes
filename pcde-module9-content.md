@@ -1,12 +1,13 @@
 ---
 created: 2023-02-23T09:11:16.774Z
-modified: 2023-02-24T09:09:41.512Z
+modified: 2023-02-24T11:34:19.316Z
 tags: [pcde,module9,content,git,github,python,portfolio,pages,class,decorator,wrapper]
-foo: bar
 ---
 # PCDE Course: Module 9 Content
 
 ## Associated Notes
+
+***DELETEME:*** This is a test of the deploy workflow!
 
 * [VSCode][vscode-zk]
 * [Git][git-zk]
