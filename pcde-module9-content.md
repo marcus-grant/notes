@@ -1,14 +1,14 @@
 ---
 created: 2023-02-23T09:11:16.774Z
-modified: 2023-02-24T11:36:27.141Z
+modified: 2023-02-24T13:30:28.044Z
 tags: [pcde,module9,content,git,github,python,portfolio,pages,class,decorator,wrapper]
 ---
 # PCDE Course: Module 9 Content
 
 ## Associated Notes
 
-***DELETEME:*** This is a test of the deploy workflow!
-***DELETEME:*** This is ANOTHER test!
+**DELETEME:** This is a test of the deploy workflow!
+**DELETEME:** This is ANOTHER test!
 
 * [VSCode][vscode-zk]
 * [Git][git-zk]
