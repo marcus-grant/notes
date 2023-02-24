@@ -5,6 +5,8 @@ tags: [learning,pcde,data,syllabus,notetaking,productivity,time,mgmt]
 ---
 # PCDE Course Overview
 
+**DELETEME** Test diff for deploy
+
 ## Introduction
 
 This is a course where [MIT's xPro program][mit-xpro] will prepare you for a
