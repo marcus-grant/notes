@@ -1,6 +1,6 @@
 ---
 created: 2023-02-23T09:11:16.774Z
-modified: 2023-02-24T14:00:54.807Z
+modified: 2023-02-27T13:53:07.000Z
 tags: [pcde,module9,content,git,github,python,portfolio,pages,class,decorator,wrapper]
 ---
 # PCDE Course: Module 9 Content
@@ -221,11 +221,93 @@ def factorial(n):
 print(factorial(3)) #should print 6
 ```
 
+## Discussion 9.1: The Debugging Process
+
+Have you debugged any programs before?
+From what you have learned in this module so far,
+what is the purpose of debugging,
+and how do you feel that it may be useful to you in future work?
+What would be a good strategy to find bugs quickly in
+your program using the debugging process?
+
+In your post,
+answer the questions above and include an example of Python code that
+contains at least two syntax errors.
+Explain which steps you would consider taking to debug your code and fix the errors.
+
+Discussion Prompt:
+
+Read the statements posted by your peers. Engage with them by responding with
+thoughtful comments and questions to deepen the discussion.
+
+**Suggested Time**: 45 minutes
+
+**Suggested Length**: 250 words
+
+This is a required activity and will count toward course completion.
+
+## Knowledge Check 9.1: GitHub Basics
+
+* Q1: Which command can be used to copy a repository to your account in GitHub?
+  * fork **(Correct)**
+* Q2: Which repo name command can be used to
+download a repo from your account to your local machine?
+  * clone **(Correct)**
+* Q3: Suppose you made changes on your local repo and you want to copy them to your GitHub repo.
+Which repo name command would you use to do this?
+  * push **(Correct)**
+* Q4: Which key needs to be added to the online GitHub account to enable secure access to the repo?
+  * Public SSH key **(Correct)**
+* Q5: Suppose you delete a file by mistake locally.
+Which command can be used to retrieve the code again from the remote repo?
+  * pull **(Correct)**
+* Q6: When setting up git locally and on GitHub, one step is to generate ssh keys and
+register them with GitHub.
+Where do you register the keys?
+  * Git Agent **(Correct)**
+* Q7: If changes are made locally and you'd like to review names of modified files,
+which command can be used to do this?
+  * git status **(Correct)**
+* Q8: Which extension needs to be loaded into VS Code to publish a repo to GitHub?
+  * GitHub Extensino **(WRONG)**
+  * GitHib Pull Requests and Issues **(Correct)**
+
+## Activity 9.1: Using GitHub
+
+In this activity,
+you will be required to download the Jupyter Notebook file `MIT.ipynb` on
+your local machine and demonstrate your understanding of GitHub and its commands.
+
+To complete the activity, perform the following steps:
+
+1. Using your personal GitHub account, create a repository named `PCDE-Activity 9.1`.
+2. Clone your repository to your local computer and add the Jupyter Notebook to it.
+3. Push the file to the remote repository.
+4. Open your local instance of Jupyter Notebook and edit the `MIT.ipynb` file to
+remove any errors.
+There are three obvious mistakes in the file.
+Make sure you fix them all.
+Add any additional file you may need to your repository to ensure that
+the content of the Notebook renders as expected.
+5. Commit and push your changes to the remote repository and ensure that
+everything works as expected.
+6. Optional: If you want to experiment further, select the `README.md` file in
+your remote repository and try to edit it so
+it displays `Repository for Activity 9.1` as a Markdown header.
+7. Ensure that your repository is set to be public so
+your Learning Facilitator can mark your submission.
+Instructions about how to do so can be found at this link:
+[How to Make a GitHub Repository Public][github-repo-mgmt].
+Submit the website URL to your GitHub repository.
+
 ## References
 
 ### Web Links
 
+* [Managing your Repositories' Settings & Features (from GitHub Documentation)][github-repo-mgmt]
+
 <!-- Hidden References -->
+[github-repo-mgmt]: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility "Managing your Repositories' Settings & Features (from GitHub Documentation)"
 
 ### Note Links
 
