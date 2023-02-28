@@ -1,6 +1,6 @@
 ---
 created: 2022-12-05T16:17:20.340Z
-modified: 2023-02-23T10:06:27.361Z
+modified: 2023-02-28T15:57:39.070Z
 tags: [python,py,lang,programming,overview]
 ---
 # Python
@@ -106,7 +106,66 @@ the list `[23, 11, 2]` should be returned.
 
 ## Classes
 
-***TODO***
+### Basics
+
+A Python **class** is a template for creating new object types.
+To do so, use they *keyword* `class` followed by the name of the class and a colon.
+
+```python
+class Contact:
+    a = 5
+
+my_contact = Contact()
+```
+
+The variable `a` is a class variable set to 5.
+Creating an object of this **class** is done by calling the class name as a function.
+This is known as a **constructor** and each class can have one.
+Calling the **constructor** for `Contact` and
+assigning it to the variable `my_contact` creates an object of the class `Contact`.
+Then to access the class variable `a` of the object `my_contact` do this:
+
+```python
+print(my_contact.a)
+# Ouput: 5
+```
+
+This was a very basic class, let's update it to be more complex.
+
+```python
+class Contact:
+    def __init__(self, name, email):
+        self.name = name
+        self.email = email
+    
+    def shout(self):
+        print(self.name)
+
+p1 = Contact("Mary", "mary@mit.edu")
+p1.shout() # Output: Mary
+```
+
+Pay attention to the `__init__` function.
+The underscore characters typically indicate a special function in Python.
+The underscores are also known as *dunder* or *double underscore*.
+The **constructor** function that gets called to
+create a `Contact` object is actually calling the `__init__` function to
+set up the members of the object before the reference to that object is returned.
+
+The `self` parameter is a reference to the object itself.
+The `__init__` function must always have `self` as its first parameter.
+Python will automatically pass the reference to the object as the first argument.
+This allows us to assign values to the object's members using the dot operator.
+Which we do by taking the `name` and `email` parameters and assigning them to
+the `name` and `email` members of the object.
+
+The `shout` function is known as a **method**,
+or a function that is a member of a class.
+They should always have `self` as their first parameter just as the **constructor**.
+Because they are members of a class,
+they can access the specific properties of the object they are called on.
+Which is why when `p1.shout()` is called,
+the `self.name` member of the object `p1`, or `Mary` gets printed.
 
 ## Advanced Functions
 

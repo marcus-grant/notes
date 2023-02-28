@@ -1,14 +1,11 @@
 ---
 created: 2023-02-23T09:11:16.774Z
-modified: 2023-02-27T13:53:07.000Z
+modified: 2023-02-28T16:01:04.023Z
 tags: [pcde,module9,content,git,github,python,portfolio,pages,class,decorator,wrapper]
 ---
 # PCDE Course: Module 9 Content
 
 ## Associated Notes
-
-<!-- **DELETEME:** This is a test of the deploy workflow! -->
-<!-- **DELETEME:** This is ANOTHER test! -->
 
 * [VSCode][vscode-zk]
 * [Git][git-zk]
@@ -300,6 +297,62 @@ Instructions about how to do so can be found at this link:
 [How to Make a GitHub Repository Public][github-repo-mgmt].
 Submit the website URL to your GitHub repository.
 
+## Mini-Lesson 9.3: Setting Up Your GitHub Account for GitHub Pages
+
+Most of this is covered in
+[the GitHub Pages section of the GitHub notes][github-pages-zk].
+
+## Activity 9.2: GitHub Portfolio
+
+In this activity,
+you will be required to upload the content of
+the repository “PCDE-Activity 9.1” that you created in Activity 9.1 to GitHub Pages.
+
+To complete the activity, perform the following steps:
+
+1. Following the steps in Mini-Lesson 9.3,
+set up your GitHub account for GitHub Pages.
+At the end of this step, in your remote GitHub profile,
+you should have a repository named `<your_username.github.io>`.
+2. Ensure that your local copy of
+the “`PCDE-Activity 9.1`” repository is up to date on your local machine.
+You can do so by
+navigating to your local repository using your Terminal window (for Mac users) or
+Git Bash (for Windows users) and typing `git pull`.
+3. Select the `README.md` file in your remote repository and
+edit it so it displays “`Repository for Activities 9.1 and 9.2`” as a Markdown header.
+4. Navigate to “`Settings`” and
+enable the “PCDE-Activity 9.1” repository to be published on GitHub Pages,
+as demonstrated in Video 9.7.
+To accomplish this step,
+ensure that you select the main or root branch and select “`Save`”.
+5. Open a new browser window and verify that you can navigate to
+the following URL: `https://<your_username>.github.io/PCDE-Activity-9.1`.
+You may need to refresh the page to see the changes.
+6. Navigate to your remote GitHub repository,
+`your_username.github.io`, and edit the README.md file by
+adding the URL of the “PCDE-Activity 9.1” repository.
+7. Submit the website URL to your GitHub Pages repository.
+
+### Additional Details:
+
+* Submission instructions: Submit the website URL to your GitHub Pages repository.
+* Estimated time: 60 min
+
+*This is a required activity and counts toward course completion.*
+
+## Knowledge Check 9.2: Python Classes
+
+* Q1: Which keyword can be used to create a class in Python?
+  * class **(Correct)**
+* Q2: How is a constructor defined inside a class in Python?
+  * `def __init__(self, ...)` **(Correct)**
+* Q3: Suppose there is a class called Employee that has a name and salary attribute.
+If emp1 is created as an object of Employee, how would you access the name attribute?
+  * `emp1.name` **(Correct)**
+* Q4: What does the self keyword represent in Python?
+  * The instance of a class **(Correct)**
+
 ## References
 
 ### Web Links
@@ -314,6 +367,7 @@ Submit the website URL to your GitHub repository.
 * [VS Code][vscode-zk]
 * [Git][git-zk]
 * [GitHub][github-zk]
+* [GitHub: Pages][github-pages-zk]
 * [Python: Classes][py-classes-zk]
 * [Python: Advanced Functions][py-adv-func-zk]
 * [Python: Decorators][py-decorators-zk]
@@ -323,6 +377,7 @@ Submit the website URL to your GitHub repository.
 [vscode-zk]: ./vscode.md "VS Code"
 [git-zk]: ./git.md "Git"
 [github-zk]: ./github.md "GitHub"
+[github-pages-zk]: ./github.md#Pages "GitHub: Pages"
 [py-classes-zk]: ./python#Classes "Python: Classes"
 [py-adv-func-zk]: ./python#Advanced-Functions "Python: Advanced Functions"
 [py-decorators-zk]: ./python#Decorators "Python: Decorators"
