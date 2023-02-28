@@ -1,6 +1,6 @@
 ---
 created: 2022-12-05T16:17:20.340Z
-modified: 2023-02-28T15:57:39.070Z
+modified: 2023-02-28T17:53:23.827Z
 tags: [python,py,lang,programming,overview]
 ---
 # Python
@@ -127,7 +127,7 @@ Then to access the class variable `a` of the object `my_contact` do this:
 
 ```python
 print(my_contact.a)
-# Ouput: 5
+# Output: 5
 ```
 
 This was a very basic class, let's update it to be more complex.
@@ -167,9 +167,150 @@ they can access the specific properties of the object they are called on.
 Which is why when `p1.shout()` is called,
 the `self.name` member of the object `p1`, or `Mary` gets printed.
 
-## Advanced Functions
+## Unpacking Operator
 
-***TODO***
+The **unpacking operator** `*` can be used to unpack a list or tuple.
+Also known as the *destructure operator*.
+It will take the elements of a list or tuple and
+assign them to the variables on the left of the operator as if
+they are individual variables.
+Let's look at what happens without the unpacking operator.
+
+```python
+a = [1, 2, 3]
+print(a) # Output: [1, 2, 3]
+```
+
+As expected, the list `[1, 2, 3]` is printed.
+If you want to **unpack** the list into individual variables,
+you can use the `*` operator ahead of the collection variable.
+
+```python
+a = [1, 2, 3]
+b, c, d = *a # Each element of a is assigned to b, c respectively
+print(*a) # Output: 1 2 3
+```
+
+Where this is useful is when you want a single part of the collection.
+Say you want only the first part,
+you can manually destructure the first part and then have a destructure operation
+assign the rest of the list to a variable.
+
+```python
+a = [1, 2, 3]
+X, *rest = a # X gets the first element, rest gets the rest
+print(X) # Output: 1
+print(rest) # Output: [2, 3]
+```
+
+It's also useful to combine elements of two collections into a single collection.
+
+```python
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = [*a, *b] # Combine the elements of a and b into a single list
+print(c) # Output: [1, 2, 3, 4, 5, 6]
+```
+
+This will *destructure* the elements of `a` and `b` and when assigned as
+the first and last parts of the list respectively,
+the elements in `a` are put before the elements in `b`.
+
+>**NOTE:** the *unpacking operator* ***only*** *destructure*  to lists.
+>If you have a tuple to *destructure*,
+>the rest of the elements will be a list.
+
+```python
+a = (1, 2, 3)
+X, *rest = a # X gets the first element, rest gets the rest as a list
+print(X) # Output: 1
+print(rest) # Output: [2, 3]
+```
+
+## Advanced Function Arguments
+
+### Unnamed Arguments
+
+**Unnamed arguments** are arguments that are passed to a function without a name.
+This is the typical way to pass arguments to a function and
+has already been covered.
+**Unnamed arguments** are also known as *positional arguments*.
+*Positional* because the arguments are referenced by
+their position in the function call.
+They have a name within the function,
+but that name is not used when calling the function.
+
+```python
+def add(a, b):
+    return a + b
+print(add(1, 2)) # Output: 3
+```
+
+As should be clear already,
+`add` adds the two *positional arguments* `1` and `2` and returns `3`.
+If we wanted to reorder them or refer to the arguments by *name*,
+we use **named arguments**.
+
+### Arbitrary Arguments
+
+Using the `*args` **unpacking operator**,
+we can pass any generic number of arguments to a function.
+These are not *keyword arguments*,
+but rather arbitrary arguments that get handled according to the function logic.
+
+```python
+def add(*args):
+    total = 0
+    for arg in args:
+        total += arg
+    return total
+print(add(1, 2, 3, 4, 5)) # Output: 15
+```
+
+As you can see,
+the number of arguments passed to `add` is arbitrary.
+The **unpacking operator** in the typical `*args` syntax,
+which is a convention and not a requirement,
+will take the arguments and put them into a list.
+Then the loop just goes through all of them and adds them together.
+
+Like *unnamed arguments*, or *positional arguments*,
+these are positional as well,
+but are treated as an arbitrary list of them when called.
+This is also different from just passing a list to the function,
+because you're still calling the function with commas separating the arguments.
+
+## Named Arguments
+
+**Named arguments** or **keyword arguments** are arguments that
+are passed to a function with a name.
+By convention, these are known as `kwargs` or `**kwargs`.
+Note the double **unpacking operator** `**` in the syntax.
+This syntax is there to deal with the *dictionary like nature* of **keyword arguments**.
+They're *named* so dealing with them is a bit like working with dictionaries.
+
+```python
+def add(*args, **kwargs):
+    total = 0
+    for arg in args:
+        total += arg
+    for key, value in kwargs.items():
+        total += value
+    return total
+print(add(1, 2, 3, 4, 5, a=6, b=7, c=8)) # Output: 36
+```
+
+You pass arbitrary named arguments using the `key=value` syntax inside
+the function call parantheses.
+The **unpacking operator** `**kwargs` will take the arguments as if
+they were dictionary key value pairs.
+So calling `kwargs.items()` will return a list of tuples,
+where the first element is the key and the second element is the value.
+This allows us to iterate through them and include them in the total.
+
+Also note you can have both **unnamed arguments** and
+**named arguments** together in the same function call.
+By convention, **unnamed arguments** or `*args` are always listed first.
 
 ## Decorators
 

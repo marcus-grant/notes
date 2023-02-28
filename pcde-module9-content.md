@@ -1,6 +1,6 @@
 ---
 created: 2023-02-23T09:11:16.774Z
-modified: 2023-02-28T16:01:04.023Z
+modified: 2023-02-28T18:01:57.566Z
 tags: [pcde,module9,content,git,github,python,portfolio,pages,class,decorator,wrapper]
 ---
 # PCDE Course: Module 9 Content
@@ -352,6 +352,45 @@ If emp1 is created as an object of Employee, how would you access the name attri
   * `emp1.name` **(Correct)**
 * Q4: What does the self keyword represent in Python?
   * The instance of a class **(Correct)**
+
+## Knowledge Check 9.3: Python Advanced Functions
+
+* Q1: Which of the following symbols represents the unpacking operator in Python?
+  * `*` **(Correct)**
+* Q2: Suppose you have a list, employees, with their names.
+How would you print the names of the employees in
+the list independently using the unpacking operator?
+  * `print(*employees)` **(Correct)**
+* Q3: Suppose you have two lists list1 and list2.
+How would you create list3, which contains the elements of list1 and list2?
+  * `list3 = [*list1, *list2]` **(Correct)**
+* Q4: Suppose there is a function that is defined as `def multiply(*args)` with
+some function body.
+How many arguments do you need to pass when calling this function?
+  * Any number of arguments **(Correct)**
+* Q5: What is the output of this code snippet?
+
+```python
+def add(*args):
+  result = 0
+  for x in args:
+    result = result + x
+  return result
+print(add(30,15,10,5))
+```
+
+* Q5 (Answer): 60 **(Correct)**
+* Q6: Kwargs are used to pass named arguments to a function.
+What is the format of the data that they store?
+  * key-value pairs **(Correct)**
+* Q7: Which of the following statements is correct when
+applying a for loop to access data in kwargs?
+  * `for k, v in kwargs.items():` **(Correct)**
+* Q8: Can you pass unnamed arguments into a function in Python?
+  * Yes **(Correct)**
+* Q9: Which of the following statements is correct?
+  * `args` is used to pass unnamed arguments into a function and
+`kwargs` is used to pass named arguments into a function. **(Correct)**
 
 ## References
 
