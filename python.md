@@ -1,6 +1,6 @@
 ---
 created: 2022-12-05T16:17:20.340Z
-modified: 2023-02-28T17:53:23.827Z
+modified: 2023-03-01T16:31:49.426Z
 tags: [python,py,lang,programming,overview]
 ---
 # Python
@@ -301,7 +301,7 @@ print(add(1, 2, 3, 4, 5, a=6, b=7, c=8)) # Output: 36
 ```
 
 You pass arbitrary named arguments using the `key=value` syntax inside
-the function call parantheses.
+the function call parentheses.
 The **unpacking operator** `**kwargs` will take the arguments as if
 they were dictionary key value pairs.
 So calling `kwargs.items()` will return a list of tuples,
@@ -312,13 +312,188 @@ Also note you can have both **unnamed arguments** and
 **named arguments** together in the same function call.
 By convention, **unnamed arguments** or `*args` are always listed first.
 
-## Decorators
+### Further Reading
 
-***TODO***
+Real Python has a [great article][real-py-args-kwargs]
+covering all of the different ways to pass arguments to functions.
 
-## Wrappers
+## Closure
 
-***TODO***
+### Wrappers
+
+Functions that **wrap** other functions are called **decorators**.
+To demonstrate why you might want to *wrap* a function using a **decorator**,
+let's see an example without **decorators**.
+
+```python
+def hello():
+    return "Hello World!"
+
+print(hello()) # Output: Hello World!
+```
+
+Simple function,
+it merely returns the string `"Hello World!"`.
+Let's say you wanted to expand on the functionality of this function.
+
+```python
+def wrapper(func):
+    greeting = "Wrapper says "
+    return f"{greeting} {func()}!!!"
+
+print(wrapper(hello)) # Output: Wrapper says Hello World!!!!
+```
+
+The `wrapper` function takes a function as an argument and
+returns a template string with the function call of the function passed in.
+So the result of the print statement is the string `"Wrapper says Hello World!!!!"`.
+
+### Decorators
+
+**Decorators** are a bit more elegant than *wrappers*.
+**Decorators** are functions that take a function as an argument,
+and return a function.
+Let's try this example.
+
+```python
+def hello():
+    return "Hello World!"
+
+def my_deco(func):
+    def wrapper():
+        greeting = "Wrapper says "
+        return f"{greeting} {func()}!!!"
+    return wrapper
+
+my_hello = my_deco(hello)
+print(my_hello()) # Output: Wrapper says Hello World!!!!
+```
+
+It might be hard to see the elegance of this approach,
+but it's a bit more concise and easier to read when you know what's going on.
+The `my_deco` function takes a function as an argument,
+and returns a function.
+The returned function is the `wrapper` function.
+
+The `wrapper` function takes no arguments,
+but is within the scope of the `my_deco` function so it can access the `func` argument.
+The `wrapper` function returns a string with the `func` argument called.
+The `my_deco` function returns the `wrapper` function.
+
+The `my_hello` variable is assigned the return value of the `my_deco` function when
+it's called with the `hello` function as an argument.
+The resulting function `my_hello` is then called and prints the string
+`"Wrapper says Hello World!!!!"`.
+
+>**Note** that the `wrapper` *wrapper* function is not called directly.
+>Rather it gets defined and returned by the `my_deco` function with
+>all of the scope of the `my_deco` function **enclosed** in it.
+>**Closures** are a bit beyond the scope of this tutorial,
+>but they expand on **decorators** and **wrappers** in a really useful way.
+
+To further illustrate how **decorators** add functionality to functions,
+let's try another example, this time with the *arbitrary* *named* and
+*unnamed arguments* from before.
+
+```python
+def add(*args, **kwargs):
+    result = 0
+    for arg in args:
+        result += arg
+    for k, v in kwargs.items():
+        result += v
+    return result
+
+def my_deco(func):
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
+        return f'my decorated result: {result}!!!'
+    return wrapper
+
+my_add = my_deco(add)
+print(my_add(1, 2, 3, a=4, b=5, c=6)) # Output: my decorated result: 21!!!
+```
+
+We pass in arbitrary *unnamed* and *named* arguments to the `add` function,
+just like before by using the conventional `*args` and `**kwargs` and *unpacking* syntax.
+Again, the `my_deco` function takes a function as an argument,
+and returns a function.
+But this time the returned function is the `wrapper` function that
+takes arbitrary *unnamed* and *named* arguments as well.
+The `wrapper` function however still returns a template string with
+the result of calling the `func` argument with the *unnamed* and *named* arguments.
+
+>**Note** it's important to stress this,
+>the `wrapper` function is still within the scope of the `my_deco` function,
+>and it is merely being defined and returned, **not called**.
+
+When `my_add` gets assigned,
+`my_deco` is **decorating** the `add` function with the `wrapper` function.
+In this case it's the `add` function that
+takes *arbitrary named & unnamed arguments* that's being **decorated**.
+So when `my_add` is called with *arbitrary* *unnamed* and *named arguments*,
+those arguments get passed to the `add` function which adds them together,
+then the **decorating** `wrapper` function returns the template string
+`my decorated result: 21!!!` with `21` being the result of the `add` function.
+
+### Decoration Syntax
+
+There's an even more elegant way to **decorate** functions.
+The `@` symbol, along with a function signature,
+is used to **decorate** whatever function is below it.
+Let's rework the previous example to show how much cleaner the code is:
+
+```python
+def my_deco(func):
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
+        return f'my decorated result: {result}!!!'
+    return wrapper
+
+@my_deco
+def add(*args, **kwargs):
+    result = 0
+    for arg in args:
+        result += arg
+    for k, v in kwargs.items():
+        result += v
+    return result
+
+print(add(1, 2, 3, a=4, b=5, c=6)) # Output: my decorated result: 21!!!
+```
+
+This does exactly the same thing as the previous example,
+but it's much cleaner and easier to read.
+The `@my_deco` when **decorating** the `add` function,
+will pass the function below the `@my_deco` as an argument to the `my_deco` function.
+Then the same process is done for any calls of the `add` function later.
+
+### TODO: Write about Why this Example Works
+
+```python
+def add_values(*args):
+    result = 0
+    for val in args:
+        result = result + val
+    return result
+
+ans5a = None
+ans5b = None
+
+def my_add_values(fn, *args):
+    result = f"Added decoration: {fn}"
+    return result
+
+
+# YOUR CODE HERE
+ans5a = my_add_values(add_values(1,2,3,4,5,6,7,8,9,10))
+ans5b = my_add_values(add_values(40, 60, 70, 100))
+print(f"ans5a: {ans5a}\nans5b: {ans5b}")
+```
+
+### Closure
+
+***TODO:!***
 
 ## Type Checking/Annotation
 
@@ -377,10 +552,12 @@ In [the notes on statistics using python][stats-py-zk]
 ### Note References
 
 * [NumPy Library Overview][zk-numpy]
+* [Python args and kwargs: Demystified][real-py-args-kwargs]
 * [Statistics Using Python][stats-py-zk]
 
 <!-- Hidden Reference Links Below Here -->
 [zk-numpy]: ./numpy.md "NumPy Library Overview"
+[real-py-args-kwargs]: https://realpython.com/python-kwargs-and-args/#conclusion "Python args and kwargs: Demystified"
 [stats-py-zk]: ./statistics-python.md "Statistics Using Python"
 
 ### Web/Article References

@@ -1,6 +1,6 @@
 ---
 created: 2023-02-23T09:08:32.091Z
-modified: 2023-02-27T13:15:50.443Z
+modified: 2023-03-01T16:31:40.573Z
 tags: [git,github,gitlab,forge,forgejo,codeberg,version,control,software,repository,pcde,module9]
 ---
 # Git
@@ -27,7 +27,7 @@ And this applies to repository servers as well.
 You could keep a personal git server at home,
 and push your changes to it,
 and then merge that code with a company git server,
-seperating the repository concerns.
+separating the repository concerns.
 One repository could be for development changes,
 another could be the main production code.
 

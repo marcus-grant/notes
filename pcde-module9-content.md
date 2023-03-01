@@ -1,6 +1,6 @@
 ---
 created: 2023-02-23T09:11:16.774Z
-modified: 2023-02-28T18:01:57.566Z
+modified: 2023-03-01T16:30:22.183Z
 tags: [pcde,module9,content,git,github,python,portfolio,pages,class,decorator,wrapper]
 ---
 # PCDE Course: Module 9 Content
@@ -391,6 +391,38 @@ applying a for loop to access data in kwargs?
 * Q9: Which of the following statements is correct?
   * `args` is used to pass unnamed arguments into a function and
 `kwargs` is used to pass named arguments into a function. **(Correct)**
+
+## Knowledge Check 9.4: Python Decorators and Wrappers
+
+* Q1: What is a wrapper function in python?
+  * When a function calls another function inside itself,
+the calling function is called a wrapper function. **(Correct)**
+* Q2: What is the output of the following code snippet?
+
+```python
+def hi():
+  return 'hi there!'
+def wrapper(fun):
+  text = 'hi from wrapper function'
+  return f'{fun()} {text}!!!'
+print(wrapper(hi))
+```
+
+* Q2A: `hi there! hi from wrapper function!!!` **(Correct)**
+* Q3: What would be the output of the following code snippet?
+
+```python
+def hello():
+    return 'hi there!'
+  def wrapper(fun):
+    return f'{fun()} {`hi again`}!!!'
+print(wrapper(hello))
+```
+
+* Q3A: `hi there! hi again!!!` **(Correct)**
+* Q4: Which statement can be used to end the execution of a function and
+pass control back to the calling function?
+  * `return` **(Correct)**
 
 ## References
 

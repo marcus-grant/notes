@@ -1,7 +1,7 @@
 ---
 created: 2023-02-23T09:13:34.013Z
-modified: 2023-02-28T14:21:02.357Z
-tags: [github,git,version,control,software,repository,collaberate,pcde,module9]
+modified: 2023-03-01T16:31:39.036Z
+tags: [github,git,version,control,software,repository,collaborate,pcde,module9]
 ---
 # GitHub
 
@@ -105,7 +105,7 @@ To do so, navigate to your GitHub accounts and create a new repository:
 Name your repository.
 Be aware that, in this case,
 the name of the repository has to be very specific.
-It's going to be: `<your_useraname.github.io>`.
+It's going to be: `<your_username.github.io>`.
 Set the repository to be public,
 select the option to add a `README.md` file and, finally, select "Create Repository".
 
