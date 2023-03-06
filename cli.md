@@ -1,7 +1,7 @@
 ---
 created: 2022-12-02T14:58:00.723Z
-modified: 2022-12-02T15:06:22.372Z
-tags: [cli,terminal,unix,computers,software,compsci,productivity,devops]
+modified: 2023-03-06T10:03:19.336Z
+tags: [cli,terminal,unix,linux,shell,computers,software,compsci,productivity,devops]
 ---
 # Command Line Interfaces (CLI) Overview
 
@@ -24,7 +24,25 @@ emulates hardware terminals of old.
 Now terminals are normally just applications that give
 a *CLI* to an operating system's [shell][shell-wiki].
 
+## File Management
+
+One of the most common ways to use a CLI is to both navigate and manage files.
+There are a few common commands that nearly always gets used to do this.
+
+* `ls` - **L**i**s**t files in the current directory.
+* `cd` - **C**hange **d**irectory.
+* `mkdir` - **M**a**k**e **dir**ectory.
+* `rm` - **R**e**m**ove file or directory.
+* `mv` - **M**o**v**e file or directory.
+* `cp` - **C**o**p**y file or directory.
+* `touch` - Create a new file.
+* `cat` - **Cat**enate files and print on the standard output.
+
+These are all part of the [GNU CoreUtil][coreutils-zk] suite of tools.
+
 ## References
+
+### Web Links
 
 * [Command Line Interface (from Wikipedia, the online encyclopedia)][cli-wiki]
 * [Shell (Computing) (from Wikipedia, the free encyclopedia)][shell-wiki]
@@ -34,3 +52,10 @@ a *CLI* to an operating system's [shell][shell-wiki].
 [cli-wiki]: https://en.wikipedia.org/wiki/Command-line_interface "Command Line Interface (from Wikipedia, the online encyclopedia)"
 [shell-wiki]: https://en.wikipedia.org/wiki/Shell_%28computing%29 "Shell (Computing) (from Wikipedia, the free encyclopedia)"
 [os-wiki]: https://en.wikipedia.org/wiki/Operating_system "Operating System (from Wikipedia, the free encyclopedia)"
+
+### Note Links
+
+* [GNU CoreUtil][coreutils-zk]
+
+<!-- Hidden Reference Links Below Here -->
+[coreutils-zk]: ./coreutils.md "GNU CoreUtil"
