@@ -1,6 +1,6 @@
 ---
 created: 2022-11-16T22:50:07.438Z
-modified: 2023-03-06T10:06:12.041Z
+modified: 2023-03-07T10:12:37.532Z
 tags: [core,util,linux,terminal,shell,cli,gnu,computer,software,pcde,module10]
 ---
 # CoreUtils

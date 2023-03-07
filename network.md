@@ -1,11 +1,6 @@
 ---
-<<<<<<< HEAD
 created: 2023-03-06T10:43:49.354Z
-modified: 2023-03-06T14:06:31.406Z
-=======
-created: 2023-03-06T11:43:52.000+01
-modified: 2023-03-06T11:43:52.000+01
->>>>>>> 824fd3fec524b946296d10fdb1b66a54e57879a4
+modified: 2023-03-06T18:03:28.956Z
 tags: [network,computer,protocol,ip,http,ssh,ftp,webdav,pcde,module10]
 ---
 # Computer Networks

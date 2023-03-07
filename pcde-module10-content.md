@@ -1,6 +1,6 @@
 ---
 created: 2023-03-06T10:06:48.722Z
-modified: 2023-03-06T17:57:52.862Z
+modified: 2023-03-07T10:31:09.199Z
 tags: [network,http,web,computer,software,postman,api,cli,pcde,module10]
 ---
 # PCDE Course: Module 10 Content
@@ -117,6 +117,130 @@ and you really need to know what you're doing to secure them.
   * If you're not careful, you can expose your host machine to the internet
 and even expose the other containers to each other.
 
+## Knowledge Check 10.3: Docker
+
+* Q1: What is Docker Hub?
+  * **(Correct)**: A *registry* of Docker images.
+* Q2: What is a Dockerfile?
+  * **(Correct)**: A text file that contains instructions for building a Docker image.
+  * *a.k.a. a blueprint*
+* Q3: Where do Docker *images* typically run?
+  * **(Correct)**: *containers*
+* Q4: Which command can be used to *push* a Docker image to Docker Hub?
+  * **(Correct)**: `docker push [IMAGE]`
+* Q5: What kind of architecture does Docker use?
+  * **(WRONG)**: layered architecture
+  * **(Correct)**: client-server architecture
+
+## Activity 10.1: Creating a Docker Image
+
+In this activity, you will be using Visual Studio (VS) Code to create an image for
+a web application that displays `Hello World - my first Docker Image!`.
+Make sure to install the Docker extension for VS Code.
+
+Prior to beginning this activity,
+be sure to review the submission instructions below to
+ensure that you collect the required screenshots as
+you progress through the activity.
+
+To complete the activity, perform the following steps:
+
+Download the following starter file to your local machine:
+Assignment 10.1 - Docker Image.zip.
+The zip file contains the initial code for this activity.
+Open the folder in Visual Studio Code:
+
+Prior to beginning this activity,
+be sure to review the submission instructions below to
+ensure that you collect the required screenshots as
+you progress through the activity.
+
+### Instructions
+
+To complete the activity, perform the following steps:
+
+#### 1. Download the following starter file to your local machine
+
+* ***TODO:*** Add link to starter file and store it somewhere in
+a permanent archive that is accessible
+
+#### 2. Open the folder in Visual Studio Code
+
+#### 3. Add a file called `Dockerfile` & copy these contents to the file
+
+```dockerfile
+FROM node:12.16.3
+
+WORKDIR /code
+
+ENV PORT 80
+
+COPY package.json /code/package.json
+
+RUN npm install
+
+COPY . /code/
+
+CMD [ "node", "src/server.js"]
+```
+
+* Make sure to add the Dockerfile in the folder `Assignment 10.1 - Docker Image` and
+save it after editing it.
+
+#### 4. Now you are ready to start creating an image of this web application
+
+* You will need to go to the command line to run the Docker commands to create an image.
+* In [VS Code][vscode-zk], navigate to the terminal
+* Then select `New Terminal` from the dropdown menu
+
+#### 5. Run the command from the prompt to create an image
+
+* This command should be in the same directory where you downloaded the starter file.
+
+```sh
+docker build --tag hello-world .
+```
+
+* The space at the end of the `docker build command and the `.` means
+the current directory.
+
+#### 6. View the Docker image
+
+* You should now have created a Docker image for the `Hello World` application.
+* To view the Docker image, run the following command:
+
+```sh
+docker images
+```
+
+#### 7. Execute the run command to start the container
+
+* Now you can run your image
+* Execute the following command to start the container:
+
+```sh
+docker run -p 8080:80 --name hello -d hello-world
+```
+
+* **Note**: For a detailed description of each command, run `--help` on the command.
+
+#### 8. Verify the application and container are working
+
+* Open your browser and navigate to `http://localhost:8080`
+* `Hello World - my first Docker Image!` should be displayed in the browser.
+
+### Submission Instructions
+
+The submission for this activity should be a word document that
+contains the following screenshots, each labeled for the step it represents:
+
+1. Dockerfile added to the `Activity 10.1 - Docker Image` folder
+2. Screenshot of running the `docker build` command
+3. Screenshot of running the `docker images` command
+4. Screenshot of running the `docker run` command to run the image in the container
+5. Screenshot of a web browser to show that you have navigated to the URL of
+`http://localhost:8080` and the `Hello World - my first Docker Image!` message is displayed
+
 ## References
 
 ### Web Links
@@ -132,6 +256,7 @@ and even expose the other containers to each other.
 * [HTTP Headers][http-headers-zk]
 * [Software Containers][container-zk]
 * [Docker][docker-zk]
+* [VS Code][vscode-zk]
 
 <!-- Hidden References -->
 [cli-zk]: ./cli.md "CLI: Command Line Interface"
@@ -141,3 +266,4 @@ and even expose the other containers to each other.
 [http-headers-zk]: ./http-headers.md "HTTP Headers"
 [container-zk]: ./container.md "Software Containers"
 [docker-zk]: ./docker.md "Docker"
+[vscode-zk]: ./vscode.md "VS Code"

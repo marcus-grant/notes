@@ -1,11 +1,6 @@
 ---
-<<<<<<< HEAD
 created: 2023-03-06T16:24:25.136Z
-modified: 2023-03-06T17:57:39.058Z
-=======
-created: 2023-03-06T17:24:28.000+01
-modified: 2023-03-06T17:24:28.000+01
->>>>>>> 824fd3fec524b946296d10fdb1b66a54e57879a4
+modified: 2023-03-06T18:04:41.782Z
 tags: [os,operating,system,software,computer,process,memory,input,output]
 ---
 # Operating System
