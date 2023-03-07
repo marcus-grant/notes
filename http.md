@@ -1,6 +1,6 @@
 ---
 created: 2023-03-06T14:09:42.000Z
-modified: 2023-03-07T10:12:03.075Z
+modified: 2023-03-07T11:20:10.498Z
 tags: [http,web,protocol,network,computer,pcde,module10]
 ---
 # HTTP(S) Protocol
@@ -78,7 +78,6 @@ then by its value (without line breaks).
   * The request contains bad syntax or cannot be fulfilled
 * `5XX` (Server Error)
   * The server failed to fulfill an apparently valid request
-
 
 ## References
 

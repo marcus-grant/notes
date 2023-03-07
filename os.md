@@ -1,6 +1,6 @@
 ---
 created: 2023-03-06T16:24:25.136Z
-modified: 2023-03-06T18:04:41.782Z
+modified: 2023-03-07T10:38:21.991Z
 tags: [os,operating,system,software,computer,process,memory,input,output]
 ---
 # Operating System

@@ -1,6 +1,6 @@
 ---
 created: 2023-03-07T09:37:47.997Z
-modified: 2023-03-07T09:45:15.912Z
+modified: 2023-03-07T10:38:21.991Z
 tags: [tar,archive,data,compression,computer,software,gnu,linux,unix,cli]
 ---
 # Tar (Tape Archive)

@@ -1,6 +1,6 @@
 ---
 created: 2023-03-06T15:20:44.030Z
-modified: 2023-03-07T09:02:11.262Z
+modified: 2023-03-07T10:38:21.987Z
 tags: [container,docker,podman,virtual,cluster,devops,pcde,computer,pcde,module10]
 ---
 # Containers: Software Containerization

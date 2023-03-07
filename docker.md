@@ -1,6 +1,6 @@
 ---
 created: 2023-03-06T15:36:53.072Z
-modified: 2023-03-07T10:16:38.159Z
+modified: 2023-03-07T13:58:02.253Z
 tags: [docker,container,devops,virtual,computer,pcde,module10]
 ---
 # Docker
@@ -90,6 +90,46 @@ Docker is one of the most common software platforms used to create and run *cont
 * `CMD args` - set the default command
 * `ENV name value` - set an environment variable
 
+## Docker-Compose
+
+The `docker-compose` utility is used to manage multiple containers together.
+Very often we need to run multiple containers together to make an application work.
+And they need very specific configurations to work together,
+especially in terms of file systems and networking.
+
+The `docker-compose.yml` file is used to configure the containers.
+As the `.yml` extension suggests, it is written in [YAML][yaml-zk] format.
+
+All `services` are defined in the `docker-compose.yml` file as named dictionaries.
+Then each keyed service can have many different kinds of docker configurations.
+`image`, is the only required configuration and it's the docker image of that service.
+Other common configuration keys are `build`, `command`, `environment`, `ports` and more.
+
+### Example
+
+```yaml
+version: '3.4'
+services:
+  expressrestaurantswagger:
+    image: jrwtango/expressrestaurantswagger
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - "3000:3000"
+```
+
+This starts a container from the `jrwtango/expressrestaurantswagger` image.
+The `build` configuration is used to build the image from
+the `Dockerfile` in the current directory.
+To specify `environment` variables, we use the `environment` configuration.
+The `NODE_ENV` variable is set to `development` to specify the environment for node.
+Finally `ports` is used to map the container's port `3000` to the host's port `3000`.
+When running `docker-compose up`, the container will be started and the application
+will be available at `http://localhost:3000`.
+
 ## References
 
 ### Web Links
@@ -119,9 +159,11 @@ Docker is one of the most common software platforms used to create and run *cont
 * [JSON][json-zk]
 * [Tar (Tape Archive)][tar-zk]
 * [HTTP: Hypertext Transfer Protocol][http-zk]
+* [YAML (YAML Ain't another Markup Language)][yaml-zk]
 
 <!-- Hidden References -->
 [container-zk]: ./container.md "Software Containers"
 [json-zk]: ./json.md "JSON"
 [tar-zk]: ./tar.md "Tar (Tape Archive)"
 [http-zk]: ./http.md "HTTP: Hypertext Transfer Protocol"
+[yaml-zk]: ./yaml.md "YAML (YAML Ain't another Markup Language)"

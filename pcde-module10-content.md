@@ -1,6 +1,6 @@
 ---
 created: 2023-03-06T10:06:48.722Z
-modified: 2023-03-07T10:31:09.199Z
+modified: 2023-03-07T15:56:54.150Z
 tags: [network,http,web,computer,software,postman,api,cli,pcde,module10]
 ---
 # PCDE Course: Module 10 Content
@@ -201,7 +201,7 @@ save it after editing it.
 docker build --tag hello-world .
 ```
 
-* The space at the end of the `docker build command and the `.` means
+* The space at the end of the `docker build command and the`.` means
 the current directory.
 
 #### 6. View the Docker image
@@ -241,11 +241,160 @@ contains the following screenshots, each labeled for the step it represents:
 5. Screenshot of a web browser to show that you have navigated to the URL of
 `http://localhost:8080` and the `Hello World - my first Docker Image!` message is displayed
 
+## Discussion 10.2: Swagger vs. Postman
+
+### Introduction
+
+In this module, you have learned about Swagger and Postman,
+two tools used for API management and communication.
+As you learned, Swagger is an interface documentation tool that
+facilitates API communication between machines.
+Postman is another popular tool that is used for API testing and
+communicating using HTTP requests.
+
+Consider that you are asked by your manager to recommend a tool to be used by
+your organization for API management and communication.
+Evaluate both tools, Swagger and Postman,
+to determine which tool you would recommend.
+
+Below are some additional resources for
+you to review to compare Swagger and Postman:
+
+* [Postman vs SwaggerHub][post-v-swagger-trustradius]
+* [What is the difference between postman & swagger?][diff-between-postman-swagger]
+* [Compare Postman and SwaggerHub][postman-swagger-compare-g2]
+
+You are encouraged to conduct additional research on your own to
+delve deeper into these tools and learn more about their uses.
+
+### Discussion Prompt
+
+Once you have explored both [Postman][postman-zk] and
+[Swagger][swagger-zk] in greater depth,
+craft an argument to your manager to
+describe which tool you would recommend for your organization to use.
+Be sure to describe your reasoning in detail.
+*What are the benefits of using the tool that you have recommended?*
+*Why did you choose it over the alternative?*
+
+Read the statements posted by your peers and
+consider their reasoning for choosing the tool that they selected.
+Engage with them by responding with
+thoughtful comments and questions to deepen the discussion.
+
+**Suggested Time:** 60 minutes
+
+**Suggested Length:** 200-250 words
+
+This is a required activity and will count toward course completion.
+
+### Discussion Contribution
+
+I've worked a lot with APIs in my current line of work,
+which is front end software engineering.
+It involves a lot of communication between the client (my work) and
+the servers that supply it with the data it needs to display and
+make interactive.
+That means I've used several API testing tools,
+including Postman and Swagger *(to a lesser degree)*.
+Personally, I find Postman much more useful for my needs,
+probably because I'm consuming APIs more than I'm creating them,
+as Swagger is a lot more focused on Documentation.
+So here are the reasons I'm recommending Postman.
+
+#### Postman is more intuitive
+
+I find Postman to be much more intuitive than Swagger.
+All the information I need is right there in the UI,
+making discoverability of its features easier.
+I will say though,
+you often don't need a lot of the features Postman provides,
+so it can feel a bit bloated at times navigating its UI.
+But for large teams that might be necessary.
+
+#### Collaboration
+
+As previously hinted,
+although Postman can have a very complex UI,
+it does contain most features you and a large team might need.
+You can store, save, document, and modify API calls,
+very easily between team members.
+
+#### Testing
+
+Postman is perhaps best when used to test an API.
+The UI offers many tools to test an API,
+including the ability to create automated tests for the API,
+and defining variables to alter the parameters of a request.
+
+#### Documentation
+
+Although Swagger is a better documentation tool,
+Postman does have some documentation features.
+You can export your API calls to various formats that can then be used to
+document your API.
+You can even have code snippets generated to make the API calls you need.
+
+## Knowledge Check 10.4: Localhost
+
+* Q1: Which of the following can be used to connect to your own computer for
+networking purposes?
+  * **(Correct)** `localhost`
+* Q2: What is the private IPv4 IP address that the localhost resolves to?
+  * **(Correct)** `127.0.0.1`
+* Q3: Which of the following is one of the uses of localhost?
+  * **(Correct)** Application testing
+* Q4: In the IP Address `127.0.0.1` which numbers are reserved by
+the TCP/IP for loopback?
+  * **(Correct)** 127
+* Q5: Wha tis the private IPv6 IP address that the localhost resolves to?
+  * **(Correct)** `::1`
+
+## Try-It Activity 10.1: Writing Requests in Postman
+
+### How can you use Postman to test your APIs?
+
+Postman allows for creating and modifying REST HTTP requests to
+be run against any endpoint on the internet, or local network.
+With easy UI elements for modifying things like headers,
+request line parameters, and payload body, this becomes a lot easier.
+Then its many ways to view the response in an easy to read format,
+it's easy to evaluate the response and make changes to the request.
+And accumulating various kinds of requests in their storage system,
+you can also come back later and verify that the API works as expected.
+
+### What are the advantages/disadvantages of using Postman for testing?
+
+It's a fairly comprehensive UI tool.
+That means there's less reading of documentation to make it do what you need it to.
+Doing this by the terminal or some scratch software you wrote is not as easy.
+And the way the UI is designed adding parameters, headers, tokens, etc.
+is a lot faster and easier than most other methods to test a REST API.
+
+Where Postman can get frustrating is just how complex the UI is.
+Sometimes you just need to make a simple request and get a simple response.
+All the steps involved in making a request in Postman can be a bit much.
+
+### What are some utilities in Postman that can help you in building and managing APIs?
+
+Postman allows creation of mock API servers to test functionality without
+an actually implemented API server.
+This can be great if you have some ideas for API endpoints but
+want to see in isolation how that behaves before spending a ton of time implementing it.
+Postman scripts also enables automation of API testing.
+
 ## References
 
 ### Web Links
 
+* [Postman vs. SwaggerHub (from TrustRadius.com)][post-v-swagger-trustradius]
+* [What is the difference between postman & swagger?][diff-between-postman-swagger]
+* [Compare Postman and SwaggerHub][postman-swagger-compare-g2]
+
 <!-- Hidden References -->
+[post-v-swagger-trustradius]: https://www.trustradius.com/compare-products/postman-vs-swaggerhub "Postman vs. SwaggerHub (from TrustRadius.com)"
+[diff-between-postman-swagger]: https://www.quora.com/What-is-the-difference-between-postman-and-swagger-tool "What is the difference between postman & swagger?"
+[postman-swagger-compare-g2]: https://www.g2.com/compare/postman-vs-swaggerhub "Compare Postman and SwaggerHub"
 
 ### Note Links
 
@@ -257,6 +406,8 @@ contains the following screenshots, each labeled for the step it represents:
 * [Software Containers][container-zk]
 * [Docker][docker-zk]
 * [VS Code][vscode-zk]
+* [Postman][postman-zk]
+* [Swagger][swagger-zk]
 
 <!-- Hidden References -->
 [cli-zk]: ./cli.md "CLI: Command Line Interface"
@@ -267,3 +418,5 @@ contains the following screenshots, each labeled for the step it represents:
 [container-zk]: ./container.md "Software Containers"
 [docker-zk]: ./docker.md "Docker"
 [vscode-zk]: ./vscode.md "VS Code"
+[postman-zk]: ./postman.md "Postman"
+[swagger-zk]: ./swagger.md "Swagger"
