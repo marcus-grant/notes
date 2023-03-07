@@ -1,6 +1,6 @@
 ---
-created: 2023-03-06T14:32:06.436Z
-modified: 2023-03-06T14:51:43.685Z
+created: 2023-03-06T15:32:14.000+01
+modified: 2023-03-06T15:32:14.000+01
 tags: [http,header,web,protocol,network,computer,pcde,module10]
 ---
 # HTTP Request and Response Headers Fields

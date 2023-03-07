@@ -1,6 +1,6 @@
 ---
-created: 2023-03-06T14:09:38.966Z
-modified: 2023-03-06T14:53:38.035Z
+created: 2023-03-06T15:09:42.000+01
+modified: 2023-03-06T15:09:42.000+01
 tags: [http,web,protocol,network,computer,pcde,module10]
 ---
 # HTTP(S) Protocol

@@ -1,6 +1,11 @@
 ---
+<<<<<<< HEAD
 created: 2023-03-06T15:20:44.030Z
 modified: 2023-03-06T17:32:07.524Z
+=======
+created: 2023-03-06T16:25:55.000+01
+modified: 2023-03-06T16:25:55.000+01
+>>>>>>> 824fd3fec524b946296d10fdb1b66a54e57879a4
 tags: [container,docker,podman,virtual,cluster,devops,pcde,computer,pcde,module10]
 ---
 # Containers: Software Containerization
