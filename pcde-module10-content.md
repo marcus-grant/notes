@@ -1,6 +1,6 @@
 ---
 created: 2023-03-06T10:06:48.722Z
-modified: 2023-03-07T15:56:54.150Z
+modified: 2023-03-08T16:11:27.059Z
 tags: [network,http,web,computer,software,postman,api,cli,pcde,module10]
 ---
 # PCDE Course: Module 10 Content
@@ -383,6 +383,121 @@ This can be great if you have some ideas for API endpoints but
 want to see in isolation how that behaves before spending a ton of time implementing it.
 Postman scripts also enables automation of API testing.
 
+## Discussion 10.3: Postman and Strapi
+
+### Introduction
+
+In this module, you have learned about some basic software engineering tools.
+Two of these important tools are Postman and Strapi.
+As you have learned, Postman is an application commonly used for API testing,
+creating HTTP requests, and debugging.
+Strapi is an efficient CMS that provides the framework for developers to
+build websites and integrate various tools for creative web development.
+
+Below are some additional resources for you to review to learn more about Postman:
+
+* [The Basics of Using Postman for API Testing][postman-basics-yt]
+* [Postman for Beginners][postman-beginner-yt]
+* [How to Debug in Postman][howto-debug-postman-yt]
+
+Below are some additional resources for you to review to learn more about Strapi:
+
+* [Strapi Overview][strapi-overview-yt]
+* [Exploring Strapi][strapi-explore-yt]
+* [How to Use Strapi][strapi-howto-yt]
+
+You are encouraged to conduct additional research on your own to
+delve deeper into these tools and learn more about their uses.
+
+### Discussion Prompt
+
+Once you have explored both Postman and Strapi in greater depth, for each tool:
+
+* Summarize your understanding of its practical application.
+* Provide some examples of how the tool can be used on the job as a data engineer.
+* In your own original analysis,
+discuss at least two pros of using the tool for a project.
+* In your own original analysis,
+discuss at least two cons of using the tool for a project.
+
+Read the statements posted by your peers.
+Engage with them by responding with thoughtful comments and
+questions to deepen the discussion.
+
+**Suggested Time**: 60 minutes
+
+**Suggested Length**: 200-250 words
+
+This is a required activity and will count toward course completion.
+
+### Discussion Entry
+
+#### Summarizing Postman & Strapi Practical Application
+
+Postman is a tool that allows you to create and send HTTP requests to any URL.
+It is used for API testing, debugging, documentation and collaboration workflows.
+Strapi is a headless CMS that allows you to create and manage content.
+The CMS can also generate data model entities and properties with
+corresponding API endpoints quickly and easily.
+
+Using Strapi you can quickly create a data-centric API for your project.
+Then using Postman you can test the API to make sure it works as expected.
+Putting the two together you can achieve a pretty pleasant data engineering workflow.
+
+#### Examples of Postman & Strapi on the Job
+
+As mentioned, Strapi provides a mature web framework to
+quickly build data-based APIs.
+Then using Postman you can quickly test and iterate the API to
+make sure it works as expected.
+
+#### Pros of Using Postman & Strapi
+
+##### Speed of Iteration
+
+As we've seen in our previous projects.
+Data engineering is all about iterating processes, designs and models.
+These tools allow for quick and lower cognitive load for iteration of the API.
+
+##### Ease of Use
+
+Both tools are easy to use and have a low learning curve.
+Meaning onboarding goes quickly,
+and mental stress on portions of development that don't require a lot of thought
+get reduced.
+
+#### Cons of Using Postman & Strapi
+
+##### Complexity
+
+Both tools are fairly complex.
+Although Postman's UI can be easy to use,
+using it to the fullest can take some time to get used to.
+Strapi is also fairly complex,
+getting a standard deployment of it up and running can require some effort.
+
+##### Fixed Workflows
+
+Strapi has some opinionated design choices.
+This is a double edged sword.
+While it means that you can get a lot done quickly,
+it also means that you can't do everything the way you might want to do it.
+Same goes for Postman, it has fairly specific workflows to work with HTTP requests.
+
+## Knowledge Check 10.5: Requests
+
+* Q1: What is Postman used for?
+  * **(Correct)** Postman allows you to create and send HTTP requests to any URL
+* Q2: Which of the following HTTP requests can be created and sent through Postman?
+  * **(Correct)** All of the above
+* Q3: What does the HTTP response `200` mean?
+  * **(Correct)** The request was successful
+* Q4: Which HTTP request would you use if you wanted to send some info to
+the server that is supposed to be added to the database on the backend?
+  * **(Correct)** `POST`
+* Q5: What is a headless content management system (CMS)?
+  * **(Correct)** A CMS that does not have a graphical user interface
+
 ## References
 
 ### Web Links
@@ -390,11 +505,23 @@ Postman scripts also enables automation of API testing.
 * [Postman vs. SwaggerHub (from TrustRadius.com)][post-v-swagger-trustradius]
 * [What is the difference between postman & swagger?][diff-between-postman-swagger]
 * [Compare Postman and SwaggerHub][postman-swagger-compare-g2]
+* [The Basics of Using Postman for API Testing][postman-basics-yt]
+* [Postman for Beginners][postman-beginner-yt]
+* [How to Debug in Postman][howto-debug-postman-yt]
+* [Strapi Overview][strapi-overview-yt]
+* [Exploring Strapi][strapi-explore-yt]
+* [How to Use Strapi][strapi-howto-yt]
 
 <!-- Hidden References -->
 [post-v-swagger-trustradius]: https://www.trustradius.com/compare-products/postman-vs-swaggerhub "Postman vs. SwaggerHub (from TrustRadius.com)"
 [diff-between-postman-swagger]: https://www.quora.com/What-is-the-difference-between-postman-and-swagger-tool "What is the difference between postman & swagger?"
 [postman-swagger-compare-g2]: https://www.g2.com/compare/postman-vs-swaggerhub "Compare Postman and SwaggerHub"
+[postman-basics-yt]: https://www.youtube.com/watch?v=t5n07Ybz7yI "The Basics of Using Postman for API Testing"
+[postman-beginner-yt]: https://youtu.be/E0f9DUEN_jI "Postman for Beginners"
+[howto-debug-postman-yt]: https://www.youtube.com/watch?v=ne1RsYcgkSY "How to Debug in Postman"
+[strapi-overview-yt]: https://www.youtube.com/watch?v=zd0_S_FPzKg "Strapi Overview"
+[strapi-explore-yt]: https://youtu.be/8_qwhfI5VxI "Exploring Strapi"
+[strapi-howto-yt]: https://youtu.be/hisau__LM-o "How to Use Strapi"
 
 ### Note Links
 

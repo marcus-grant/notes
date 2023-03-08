@@ -1,6 +1,6 @@
 ---
 created: 2022-12-02T09:39:07.160Z
-modified: 2023-02-24T14:04:40.079Z
+modified: 2023-03-08T16:11:30.170Z
 tags: [learning,pcde,data,syllabus,notetaking,productivity,time,mgmt]
 ---
 # PCDE Course Overview
@@ -330,6 +330,29 @@ Available for late submission till: February 22, 2023
 * Write code using *advanced Python functions*.
 * Utilize Python *decorators* and *wrappers*.
 
+### Module 10: Networks
+
+#### Outcomes
+
+* Learn about how computer networks work
+* HTTP
+* Postman
+* Strapi
+* API
+
+#### Notes on Topic
+
+* [CLI: Command Line Interface][cli-zk]
+* [GNU CoreUtils][coreutils-zk]
+* [Computer Networks][network-zk]
+* [HTTP: Hypertext Transport Protocol][http-zk]
+* [HTTP Headers][http-headers-zk]
+* [Software Containers][container-zk]
+* [Docker][docker-zk]
+* [VS Code][vscode-zk]
+* [Postman][postman-zk]
+* [Swagger][swagger-zk]
+
 ## References
 
 * [MIT xPRO Emeritus Certification Programs Homepage][mit-xpro]
@@ -374,6 +397,16 @@ Available for late submission till: February 22, 2023
 * [Python: Advanced Functions][py-adv-func-zk]
 * [Python: Decorators][py-decorators-zk]
 * [Python: Wrappers][py-wrappers-zk]
+* [CLI: Command Line Interface][cli-zk]
+* [GNU CoreUtils][coreutils-zk]
+* [Computer Networks][network-zk]
+* [HTTP: Hypertext Transport Protocol][http-zk]
+* [HTTP Headers][http-headers-zk]
+* [Software Containers][container-zk]
+* [Docker][docker-zk]
+* [VS Code][vscode-zk]
+* [Postman][postman-zk]
+* [Swagger][swagger-zk]
 
 <!-- Hidden Reference Links Below Here -->
 [mit-xpro]: https://emeritus.org/universities/mit-xpro/ "MIT xPRO Emeritus Certification Programs Homepage"
@@ -414,3 +447,12 @@ Available for late submission till: February 22, 2023
 [py-adv-func-zk]: ./python#Advanced-Functions "Python: Advanced Functions"
 [py-decorators-zk]: ./python#Decorators "Python: Decorators"
 [py-wrappers-zk]: ./python#Wrappers "Python: Wrappers"
+[cli-zk]: ./cli.md "CLI: Command Line Interface"
+[coreutils-zk]: ./coreutils.md "GNU CoreUtils"
+[network-zk]: ./network.md "Computer Networks"
+[http-zk]: ./http.md "HTTP: Hypertext Transport Protocol"
+[http-headers-zk]: ./http-headers.md "HTTP Headers"
+[container-zk]: ./container.md "Software Containers"
+[docker-zk]: ./docker.md "Docker"
+[postman-zk]: ./postman.md "Postman"
+[swagger-zk]: ./swagger.md "Swagger"

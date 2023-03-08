@@ -1,6 +1,6 @@
 ---
 created: 2023-03-07T14:15:58.715Z
-modified: 2023-03-07T15:24:29.757Z
+modified: 2023-03-08T16:11:25.024Z
 tags: [strapi,api,cms,headless,js,node,server,software,pcde,module10]
 ---
 # Strapi
@@ -54,8 +54,6 @@ services:
       MYSQL_USER: SOME_DB_USERNAME
       MYSQL_PASSWORD: SOME_DB_PASSWORD
 ```
-
-
 
 ## References
 
