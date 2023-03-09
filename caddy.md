@@ -39,13 +39,13 @@ always relative to the file the `import` appears in.
 
 Import all files in a folder within the same parent directory:
 
-```Caddyfile
+```markup
 import sites-enabled/*
 ```
 
 Import a snippet that sets CORS headers using an import argument:
 
-```Caddyfile
+```markup
 (cors) {
     @origin header Origin {args.0}
     header @origin Access-Control-Allow-Origin "{args.0}"
@@ -69,7 +69,7 @@ create symlinks inside `sites-available/` linking to those files.
 **Snippets** are special blocks defined by
 giving them a name surrounded in parenthesis.
 
-```Caddyfile
+```markup
 (redirect) {
     @http {
         protocol http
@@ -80,13 +80,14 @@ giving them a name surrounded in parenthesis.
 
 Then you can reuse this **snippet** anywhere by using the `import` directive:
 
-```Caddyfile
+```markup
 import redirect
 ```
 
 It's also possible to pass arguments to
 imported configurations & use them like so:
-```Caddyfile
+
+```markup
 (snippet) {
     respond "Yahaha! You found {args.0}!"
 }
