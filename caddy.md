@@ -10,7 +10,7 @@ tags: [caddy,devops,server,selfhost,web,proxy,reverse,ssl,certificate]
 
 ## Import
 
-[Import][caddy-doc-import]s will incl. [snippets][self-snips] or files,
+[Import][caddy-doc-imports]s will incl. [snippets][self-snips] or files,
 replacing this directive with the contents of the snippet or file.
 
 This directive is a special case:
