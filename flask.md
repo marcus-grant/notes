@@ -1,13 +1,22 @@
 ---
 created: 2022-11-15T18:08:55.571Z
-modified: 2022-12-07T16:51:19.235Z
+modified: 2023-03-12T17:39:33.746Z
 tags: [flask,server,backend,python,py,http]
 ---
 # Flask
 
 ## What is Flask?
 
-It's a web framework for python, packaging an HTTP server on the machine.
+It's a web framework for python,
+packaging an HTTP server on the machine.
+
+## Installing Flask
+
+```sh
+pip install flask
+# or for python3
+pip3 install flask
+```
 
 ## A Basic Flask Server
 
@@ -35,6 +44,11 @@ then gets called whenever its HTTP endpoint gets a request at its decorator rela
 In this case that is the root of the server.
 Which will then respond with an HTTP response which could have custom headers,
 HTML, JSON, or whatever other content is valid for an HTTP response.
+
+### Routes as Decorators
+
+Flask defines a `route` [decorator][py-deco-zk] that takes a string as an argument,
+which is the route relative to the server's base URL.
 
 ### Responding with HTML
 
@@ -142,3 +156,14 @@ def removeCookie():
     res.set_cookie('myFirstCookie', 'Hello World - my first cookie!', max_age=0)
     return res
 ```
+
+## References
+
+### Note Links
+
+* [Python: Decorators][py-deco-zk]
+* [Jinja (Template Engine)][jinja-zk]
+
+<!-- Hidden Reference Links Below Here -->
+[py-deco-zk]: ./python.md#Decorators "Python: Decorators"
+[jinja-zk]: ./jinja.md "Jinja (Template Engine)"

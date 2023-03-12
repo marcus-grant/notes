@@ -1,6 +1,6 @@
 ---
 created: 2022-12-02T09:39:07.160Z
-modified: 2023-03-08T16:11:30.170Z
+modified: 2023-03-12T17:21:22.085Z
 tags: [learning,pcde,data,syllabus,notetaking,productivity,time,mgmt]
 ---
 # PCDE Course Overview
@@ -352,6 +352,33 @@ Available for late submission till: February 22, 2023
 * [VS Code][vscode-zk]
 * [Postman][postman-zk]
 * [Swagger][swagger-zk]
+
+### Module 11: Client Server Architecture
+
+#### Outcomes
+
+In this module these topics will be covered:
+
+* Cookies & session cookies
+* How session cookies protect API (application programming interface) routes
+* How swagger can be used to detail an API
+* Developing a Swagger interface
+* Writing a [flask](./flask.md) Server
+* Handling security tokens
+  * Kerberos to understand the need of security tokens
+* PKI (public key infrastructure)
+  * Signing documents using private keys
+  * Passing public key into Github
+
+The most difficult part of this section is
+correctly generating secure tokens for authentication,
+getting it wrong can mean loss of access to data or
+worse leaking data by an attacker.
+
+
+#### Notes on Topic
+
+***FILL ME IN***
 
 ## References
 
