@@ -1,6 +1,6 @@
 ---
 created: 2022-12-02T09:39:07.160Z
-modified: 2023-03-12T17:21:22.085Z
+modified: 2023-03-13T20:20:03.607Z
 tags: [learning,pcde,data,syllabus,notetaking,productivity,time,mgmt]
 ---
 # PCDE Course Overview
@@ -374,7 +374,6 @@ The most difficult part of this section is
 correctly generating secure tokens for authentication,
 getting it wrong can mean loss of access to data or
 worse leaking data by an attacker.
-
 
 #### Notes on Topic
 
