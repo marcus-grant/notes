@@ -1,9 +1,9 @@
 ---
 created: 2022-11-14T13:16:34.409Z
-modified: 2023-03-13T20:20:16.952Z
+modified: 2023-03-15T16:31:45.986Z
 tags: [www,cookies,web,infosec]
 ---
-# Cokies
+# Cookies
 
 ## Cookies Basics
 
@@ -98,7 +98,9 @@ a detailed explanation of how to do this in flask
 
 ### Note Links
 
+* [Flask][flask-zk]
 * [Flask: Cookies in Flask][flask-cookies-zk]
 
 <!-- Hidden Reference Links Below Here -->
+[flask-zk]: ./flask.md "Flask"
 [flask-cookies-zk]: ./flask.md#cookies-in-flask "Flask: Cookies in Flask"

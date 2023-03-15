@@ -1,6 +1,6 @@
 ---
 created: 2022-12-02T09:39:07.160Z
-modified: 2023-03-13T20:20:03.607Z
+modified: 2023-03-15T16:40:46.428Z
 tags: [learning,pcde,data,syllabus,notetaking,productivity,time,mgmt]
 ---
 # PCDE Course Overview
@@ -355,6 +355,13 @@ Available for late submission till: February 22, 2023
 
 ### Module 11: Client Server Architecture
 
+#### Note Links
+
+* [Flask][flask-zk]
+* [Cookies][cookies-zk]
+* [OAuth2][oauth2-zk]
+* [Swagger][swagger-zk]
+
 #### Outcomes
 
 In this module these topics will be covered:
@@ -374,6 +381,23 @@ The most difficult part of this section is
 correctly generating secure tokens for authentication,
 getting it wrong can mean loss of access to data or
 worse leaking data by an attacker.
+
+### Module 12: Types of Databases & Database Containerization
+
+#### Due Data
+
+* Due Wednesday, March 22, 2023 at 4:29 PM UTC
+
+#### Note Links
+
+***TODO:*** *Copy over the links from the module content*.
+
+#### Outcomes
+
+* Describe applications of various types of databases.
+* Identify key concepts related to database containerization.
+* Update and delete data in different types of containerized databases.
+* Identify key concepts related to different types of databases.
 
 #### Notes on Topic
 
@@ -423,6 +447,7 @@ worse leaking data by an attacker.
 * [Python: Advanced Functions][py-adv-func-zk]
 * [Python: Decorators][py-decorators-zk]
 * [Python: Wrappers][py-wrappers-zk]
+* [PCDE Course: Module 10 Content][pcde-mod10-zk]
 * [CLI: Command Line Interface][cli-zk]
 * [GNU CoreUtils][coreutils-zk]
 * [Computer Networks][network-zk]
@@ -433,6 +458,11 @@ worse leaking data by an attacker.
 * [VS Code][vscode-zk]
 * [Postman][postman-zk]
 * [Swagger][swagger-zk]
+* [PCDE Course: Module 11 Content][pcde-mod11-zk]
+* [Flask][flask-zk]
+* [Cookies][cookies-zk]
+* [OAuth2][oauth2-zk]
+* [PCDE Course: Module 12 Content][pcde-mod12-zk]
 
 <!-- Hidden Reference Links Below Here -->
 [mit-xpro]: https://emeritus.org/universities/mit-xpro/ "MIT xPRO Emeritus Certification Programs Homepage"
@@ -476,9 +506,15 @@ worse leaking data by an attacker.
 [cli-zk]: ./cli.md "CLI: Command Line Interface"
 [coreutils-zk]: ./coreutils.md "GNU CoreUtils"
 [network-zk]: ./network.md "Computer Networks"
+[pcde-mod10-zk]: ./pcde-module10-content.md "PCDE Course: Module 10 Content"
 [http-zk]: ./http.md "HTTP: Hypertext Transport Protocol"
 [http-headers-zk]: ./http-headers.md "HTTP Headers"
 [container-zk]: ./container.md "Software Containers"
 [docker-zk]: ./docker.md "Docker"
 [postman-zk]: ./postman.md "Postman"
 [swagger-zk]: ./swagger.md "Swagger"
+[flask-zk]: ./flask.md "Flask"
+[pcde-mod11-zk]: ./pcde-module11-content.md "PCDE Course: Module 11 Content"
+[cookies-zk]: ./cookies.md "Cookies"
+[oauth2-zk]: ./oaut2.md "OAuth2"
+[pcde-mod12-zk]: ./pcde-module12-content.md "PCDE Course: Module 12 Content"

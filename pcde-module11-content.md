@@ -1,9 +1,9 @@
 ---
 created: 2022-11-01T17:37:09.062Z
-modified: 2023-03-13T20:19:58.393Z
+modified: 2023-03-15T16:31:50.092Z
 tags: [pcde,client,server,flask,python,api,swagger,cookies,data,engineer,module11]
 ---
-# Proffesional Certification Data Engineering - Module 11: Client Server Architecture
+# PCDE Course - Module 11: Client Server Architecture
 
 ## Discussion 11.1: The Role of Flask in Client–Server Architecture
 
@@ -244,13 +244,69 @@ Your browser should display `Cookie not found!`
 after pointing it to `http://localhost:88/removeCookie`,
 showing that the cookie has been removed.
 
+## Knowledge Check 11.2: APIs
+
+* Q1: What type of API does not exist?
+  * AVON **(Correct)**
+* Q2: What does REST refer to in the context of APIs?
+  * Representational State Transfer of Client-Server interface **(WRONG)**
+  * Representational State Transfer architecture style **(Correct)**
+* Q3: What is an optional principle of REST?
+  * Uniform Interface **(WRONG)**
+  * Layered System **(WRONG)**
+  * Cacheable **(WRONG)**
+  * Code on Demand **(Correct)**
+* Q4: What is Swagger?
+  * It defines a method of defining APIs **(Correct)**
+
+## Knowledge Check 11.3: Security and Encryption
+
+* Q1: What is Kerberos?
+  * Kerberos is a trusted third-party tool that provides authentication between
+client/server**(Correct)**
+* Q2: What's the difference between authentication and authorization?
+  * Authentication is the process of verifying the identity of a user,
+Authorization verifies the user's access to a resource **(Correct)**
+* Q3: What is Single Sign On (SSO)?
+  * SSO is a process that allows a user to log in once and
+access multiple applications **(Correct)**
+* Q4: What is OpenSSL?
+  * OpenSSL is a library used in communication to
+encrypt and decrypt messages for security purposes **(Correct)**
+* Q5: Which of the following keys does OpenSSL work with?
+  * Both private and public keys **(Correct)**
+* Q6: What is RSA?
+  * RSA is an encryption algorithm that uses public and private keys **(Correct)**
+* Q7: Which of the following is the correct syntax to
+generate a private RSA key using the OpenSSL library?
+  * `openssl genrsa -out private.pem [bits]` **(Correct)**
+* Q8: Which of the following libraries can be used to
+sign a document for security purposes in the communication process?
+  * OpenSSL **(Correct)**
+
+## Knowledge Check 11.4: OAuth2 and Okta
+
+* Q1: What is OAuth2?
+  * OAuth2 is an authorization protocol used to
+access services without specific credentials for those services **(Correct)**
+* Q2: Which of the following can be achieved using OAuth2?
+  * OAuth2 can help a user to log in on two unrelated websites **(Correct)**
+* Q3: What is the purpose of Okta?
+  * Okta enables users access various services & apps by a single login **(Correct)**
+* Q4: Which of the following is OAuth2 related to?
+  * Authorization **(Correct)**
+
 ## References
 
 ### Note Links
 
 * [Flask][flask-zk]
 * [Cookies][cookies-zk]
+* [OAuth2][oauth2-zk]
+* [Swagger][swagger-zk]
 
 <!-- Hidden Reference Links Below Here -->
 [flask-zk]: ./flask.md "Flask"
 [cookies-zk]: ./cookies.md "Cookies"
+[oauth2-zk]: ./oaut2.md "OAuth2"
+[swagger-zk]: ./swagger.md "Swagger"
