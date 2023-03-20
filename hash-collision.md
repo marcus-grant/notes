@@ -1,6 +1,6 @@
 ---
 created: 2023-03-15T21:52:54.230Z
-modified: 2023-03-15T22:38:47.527Z
+modified: 2023-03-17T12:51:22.848Z
 tags: [hash,collision,table,dictionary,key,value,data,structure,computer,science,algorithm]
 ---
 # Hash Collision
@@ -113,6 +113,11 @@ $$P(collision) \approx 1 - e^{\frac{-k^2}{2n}}$$
 Now, we can solve for k, given a desired probability of collision *(P)*:
 
 $$k \approx \sqrt{-2n * ln(1 - P)}$$
+
+Or if you want to solve for the minimum number of entries available *n* before
+reaching a specific probability of collision *(P)* with *k* entries:
+
+$$n \approx \frac{-k^2}{2ln(1 - P)}$$
 
 ## References
 
