@@ -1,6 +1,6 @@
 ---
 created: 2023-03-15T16:37:30.361Z
-modified: 2023-03-21T20:09:23.504Z
+modified: 2023-03-21T21:14:08.355Z
 tags: [pcde,module12,db,data,container,docker,mongodb,mysql,redis,document,key,value]
 ---
 # PCDE Module 12 Content
@@ -260,25 +260,140 @@ create databases using [Python][py-zk] code.
 ## Knowledge Check 12.2: Document, Key-Value, and Distributed Scalable Databases
 
 * Q1: Which of the following are advantages of document stores?
-    * All the above **(Correct)**
+  * All the above **(Correct)**
 * Q2: What kind of database is MongoDB?
-    * Document-based **(Correct)**
+  * Document-based **(Correct)**
 * Q3: What document format is used in MongoDB?
-    * JSON **(Correct)**
+  * JSON **(Correct)**
 * Q4: How does MongoDB provide fault tolerance?
-    * Keeps multiple copies of same data on different servers **(Correct)**
+  * Keeps multiple copies of same data on different servers **(Correct)**
 * Q5: What are tables called in MongoDB?
-    * Collections **(Correct)**
+  * Collections **(Correct)**
 * Q6: What is Redis?
-    * An in-memory, key-value data store **(Correct)**
+  * An in-memory, key-value data store **(Correct)**
 * Q7: What is the difference between keys in Redis & keys in dictionaries?
-    * In Redis keys are always strings, Python any datatype **(Correct)**
+  * In Redis keys are always strings, Python any datatype **(Correct)**
 * Q8: What does the `DEL` method do in Redis?
-    * It removes the specified key **(Correct)**
+  * It removes the specified key **(Correct)**
 * Q9: Which of the following is an advantage of the Cassandra database?
-    * It's highly scalable **(Correct)**
+  * It's highly scalable **(Correct)**
 * Q10: What are keyspace in Cassandra?
-    * A keyspace is like an RDBMS database **(Correct)**
+  * A keyspace is like an RDBMS database **(Correct)**
+
+## Discussion 12.2: Document, Key-Value, and Distributed Scalable Databases
+
+### Discussion 12.2 Prompt
+
+As you have seen, databases can be of different types depending on your needs.
+For example, you can have document, key-value, and distributed scalable databases.
+In this discussion, you will be asked to provide a short description of
+the differences, pros, and cons of these different types of databases.
+Additionally, you will be challenged to propose examples of
+how each database can be used.
+
+Make sure that you include the following in your post:
+
+Using your own words,
+include a description of what each of the three database types are:
+document, key-value, and distributed scalable databases.
+Focus on the differences, pros,
+and cons of these databases.
+Present a short case study for each of
+the three types of databases above using data that interests you,
+and explain why it would be a good decision to
+choose different databases depending on your data.
+
+### Discussion 12.2 Comment Prompt
+
+Read the statements posted by your peers.
+Engage with them by
+responding with thoughtful comments and questions to deepen the discussion.
+
+**Suggested Time:** 60 minutes
+
+**Suggested Length:** 300 words
+
+This is a required activity and will count toward course completion.
+
+### Discussion 12.2 Answer
+
+#### Document Databases
+
+Document databases are databases that store data in the form of documents.
+In the case of MongoDB, documents are stored in special kind of JSON format.
+This confers some unique advantages and disadvantages over relational databases.
+
+* **Advantages**
+  * Separate documents means that it's easier to scale horizontally.
+    * Because data is subdivided this way,
+splitting and syncing the data across servers becomes easier,
+thus scaling horizontally becomes easier.
+  * The flexible markup of documents makes it easier to store data without
+any overriding schema.
+    * That makes it easier to write software for the datastore.
+    * It also makes ingesting data from other sources easier.
+* **Disadvantages**
+  * Not great at modeling relationships between data.
+    * This is because the data is stored in separate documents.
+    * Queries become more complex as you often have to join data from
+different documents and unpredictable schemas.
+  * Not ACID compliant.
+    * This means that it's not transactional.
+    * Extra software necessary to ensure data integrity.
+* Use-cases
+  * Highly user-facing applications.
+    * Since it's easier to shard data by each user
+  * Situations where it's hard to know a schema in advance.
+  * Situations where it's hard to scale vertically anymore than you have.
+
+#### Key-Value Databases
+
+Key-value databases are databases that store data in the form of key-value pairs.
+Much like the dictionaries and hash tables that you have seen in programming languages.
+On the spectrum of complexity, key-value databases are the simplest.
+
+* **Advantages**
+  * Due to their simplicity, they are very fast.
+    * The nature of hash tables means all CRUD operations scale in constant time.
+    * Their simplicity also makes them ideal for in-memory storage (fast).
+  * Scale horizontally since keys are easy to shard across load balancers.
+  * They are very easy to use.
+    * Since they work similarly to dictionaries, they're easy to use.
+* **Disadvantages**
+  * Not great at modeling relationships between data.
+    * No schema, means there's no fixed relationship between keys.
+  * Not ACID compliant.
+  * Name-spacing is difficult.
+    * Because there's no schema, some way to uniquely namespace keys is needed.
+* Use-cases
+  * Caching for another kind of database.
+  * Session storage (login-sessions, shopping carts, etc.).
+
+#### Distributed Databases
+
+Distributed databases are built from the ground up to split and replicate data
+across multiple servers.
+This can even include splitting the workload across multiple data centers.
+This makes them ideal for large datasets and fault tolerance.
+
+* **Advantages**
+  * Fault tolerance.
+    * Keeps multiple copies of same data on different servers.
+    * If one server goes down, the data is still available.
+    * This can include geographically distributed servers.
+  * Scalability.
+    * Can scale horizontally by adding more servers.
+  * Better at handling larger datasets.
+    * Because of the way data is natively distributed across servers,
+it has built-in methods to ease larger data processing, think map, filter reduce.
+* **Disadvantages**
+  * Not ACID compliant.
+    * Sometimes they are but replication time can be slow.
+  * Complex to set up.
+    * Requires a lot of configuration and setup across many servers.
+* Use-cases
+  * Data lakes for offline analysis.
+  * Highly scalable applications.
 
 ## References
 
