@@ -1,12 +1,11 @@
 ---
 created: 2023-03-15T16:37:30.361Z
-modified: 2023-03-20T11:15:12.366Z
+modified: 2023-03-21T16:10:30.549Z
 tags: [pcde,module12,db,data,container,docker,mongodb,mysql,redis,document,key,value]
 ---
 # PCDE Module 12 Content
 
 ## Discussion 12.1: Use Cases for Relational Databases
-
 
 ### Discussion Prompt
 
@@ -117,20 +116,146 @@ where joins are inherently simplified.
 ## Knowledge Check 12.1: Containers
 
 * Q1: Which of the following have their own operating systems?
-    * Virtual Machines **(Correct)**
+  * Virtual Machines **(Correct)**
 * Q2: Which of the following options lists the correct order of
 steps required to run a MySQL database using containers on your machine?
-    * a. Install Docker on machine.
+  * a. Install Docker on machine.
 b. Download MySQL Docker image from Docker registry.
 c. Execute `docker run` command to start container using MySQL image.
 **(Correct)**
 * Q3: What is a container?
-    * Containers provide isolated environment with
+  * Containers provide isolated environment with
 share operating system & come with executable & libs as needed. **(Correct)**
 * Q4: Which of the functions can you perform on a running container?
-    * All the above **(Correct)**
+  * All the above **(Correct)**
 * Q5: What is the basic syntax to define a cursor in Python?
-    * `cursor.execute(query)` **(Correct)**
+  * `cursor.execute(query)` **(Correct)**
+
+## Mini Lesson 12.2: MongoDB
+
+### What Is MongoDB?
+
+MongoDB is a NoSQL database,
+which means that the data is not modeled in
+the tabular relationships used in relational databases.
+MongoDB is a *document-oriented* database that stores information in
+several *document* *collections*.
+A *document* *collection* in MongoDB would be the equivalent of
+a table in a relational database.
+MongoDB stores *documents*, the equivalent of MySQL records, in JSON format,
+and it does not need the structure or the schema of a relational database.
+
+*Documents* are organized into *collections* where they can be *queried*.
+Data that is frequently accessed together is stored in the same place so
+read operations are extremely fast because no joins are required.
+
+MongoDB knows how to coordinate multiple servers to store data.
+That makes MongoDB what is called a distributed database,
+which provides fault tolerance by keeping redundant copies of
+the same data in different servers,
+so a single server failure does not affect the application.
+MongoDB also scales across multiple servers to store data so,
+as data volume increases and performance requirements grow,
+you can just add more servers.
+
+MongoDB is a widely used open-source *document* database.
+In fact, you will be taking advantage of containers to run MongoDB in
+order to install it and then run it on your machine.
+
+### Creating a Database Using MongoDB
+
+Python can be used in database applications.
+MongoDB is one of the most popular NoSQL database tools.
+In this mini-lesson, you will learn about how to use MongoDB to create databases.
+
+As you saw in Video 12.6,
+the first thing you need to do in order to connect to
+MongoDB using a Python driver is to install it on your machine.
+To accomplish this run the following command in your Terminal window:
+
+```sh
+pip3 install pymongo
+```
+
+To create a database in MongoDB,
+start by creating a Python file in your code editor of choice (e.g., VS Code).
+
+Next, you need to create a MongoClient object,
+then specify a connection URL with the correct IP address and the name of
+the database you want to create. See the code below:
+
+```python
+import pymongo
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["mydatabase"]
+```
+
+To check whether a database exists by listing all databases in your system,
+you can run the following code:
+
+```python
+print(myclient.list_database_names())
+```
+
+In MongoDB, tables are called *collections*.
+To create a *collection* in MongoDB,
+use the database object you created previously and specify the name of
+the *collection* you want to create.
+
+The code below shows how to create a *collection* named customers in
+the `mydatabase` database defined above.
+
+```python
+import pymongo
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["mydatabase"]
+mycol = mydb["customers"]
+```
+
+You can check whether a *collection* exists in
+a database by listing all *collections*.
+To do so, add the following line to your Python script:
+
+```python
+print(mydb.list_collection_names())
+```
+
+In MongoDB, records are called *documents*.
+To insert a *document* into a *collection*, you can use the `insert_one()` method.
+
+The first parameter of
+the `insert_one()` method is a dictionary containing the name(s) and value(s) of
+each field in the *document* that you want to insert.
+See the example below:
+
+```python
+import pymongo
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["mydatabase"]
+mycol = mydb["customers"]
+mydict = { "name": "John", "address": "Highway 37" }
+x = mycol.insert_one(mydict)
+```
+
+To insert multiple *documents*,
+you will need to use the `insert_many()` method.
+
+```python
+import pymongo
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["mydatabase"]
+mycol = mydb["customers"]
+mylist = [
+  { "name": "Amy", "address": "Apple st 652"},
+  { "name": "Hannah", "address": "Mountain 21"},
+  { "name": "Michael", "address": "Valley 345"}
+]
+x = mycol.insert_many(mylist)
+print(x.inserted_ids)
+```
+
+MongoDB is a powerful tool that you can use to
+create databases using [Python][py-zk] code.
 
 ## References
 
@@ -140,4 +265,21 @@ share operating system & come with executable & libs as needed. **(Correct)**
 
 ### Note Links
 
+* [Python][py-zk]
+* [Types of Databases][db-types-zk]
+* [Relational Databases][relational-db-zk]
+* [Document Databases][doc-db-zk]
+* [MongoDB Using Python][mongo-py-zk]
+* [Key-Value Databases][key-value-db-zk]
+* [Distributed Databases][dist-db-zk]
+* [Cassandra (Distributed Database)][cassandra-zk]
+
 <!-- Hidden References -->
+[py-zk]: ./python.md "Python"
+[db-types-zk]: ./types-of-database.md "Types of Databases"
+[relational-db-zk]: ./relational-databases.md "Relational Databases"
+[doc-db-zk]: ./document-databases.md "Document Databases"
+[mongo-py-zk]: ./mongodb-using-python.md "MongoDB Using Python"
+[key-value-db-zk]: ./key-value-database.md "Key-Value Databases"
+[dist-db-zk]: ./distributed-databases.md "Distributed Databases"
+[cassandra-zk]: ./cassandra.md "Cassandra (Distributed Database)"
