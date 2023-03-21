@@ -1,6 +1,6 @@
 ---
 created: 2023-03-15T16:37:30.361Z
-modified: 2023-03-21T16:10:30.549Z
+modified: 2023-03-21T20:09:23.504Z
 tags: [pcde,module12,db,data,container,docker,mongodb,mysql,redis,document,key,value]
 ---
 # PCDE Module 12 Content
@@ -256,6 +256,29 @@ print(x.inserted_ids)
 
 MongoDB is a powerful tool that you can use to
 create databases using [Python][py-zk] code.
+
+## Knowledge Check 12.2: Document, Key-Value, and Distributed Scalable Databases
+
+* Q1: Which of the following are advantages of document stores?
+    * All the above **(Correct)**
+* Q2: What kind of database is MongoDB?
+    * Document-based **(Correct)**
+* Q3: What document format is used in MongoDB?
+    * JSON **(Correct)**
+* Q4: How does MongoDB provide fault tolerance?
+    * Keeps multiple copies of same data on different servers **(Correct)**
+* Q5: What are tables called in MongoDB?
+    * Collections **(Correct)**
+* Q6: What is Redis?
+    * An in-memory, key-value data store **(Correct)**
+* Q7: What is the difference between keys in Redis & keys in dictionaries?
+    * In Redis keys are always strings, Python any datatype **(Correct)**
+* Q8: What does the `DEL` method do in Redis?
+    * It removes the specified key **(Correct)**
+* Q9: Which of the following is an advantage of the Cassandra database?
+    * It's highly scalable **(Correct)**
+* Q10: What are keyspace in Cassandra?
+    * A keyspace is like an RDBMS database **(Correct)**
 
 ## References
 
