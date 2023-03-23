@@ -1,7 +1,7 @@
 ---
 created: 2022-11-15T21:58:27.124Z
-modified: 2023-03-21T14:52:45.144Z
-tags: [redis,key,value,database,memory,data,server,cache,storage]
+modified: 2023-03-23T14:25:23.102Z
+tags: [redis,key,value,database,memory,data,server,cache,storage,pcde,module12]
 ---
 
 # Redis

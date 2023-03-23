@@ -1,6 +1,6 @@
 ---
 created: 2022-12-02T09:39:07.160Z
-modified: 2023-03-15T16:40:46.428Z
+modified: 2023-03-23T14:24:59.096Z
 tags: [learning,pcde,data,syllabus,notetaking,productivity,time,mgmt]
 ---
 # PCDE Course Overview
@@ -71,6 +71,41 @@ If more time is necessary for each week it's important to seek help earlier.
 
 [Here is the outline copy](https://classroom.emeritus.org/courses/1412/pages/course-outline-professional-certificate-in-data-engineering?module_item_id=342389):
 [Here are the due dates for each module outlined](https://classroom.emeritus.org/courses/1412/pages/course-calendar-professional-certificate-in-data-engineering?module_item_id=342390)
+
+## Career Guidance
+
+### Preparing a Data Engineering Portfolio
+
+In this section, you will learn how to create a professional portfolio for
+the data engineering industry.
+This week, your learning facilitator will host the second in
+a series of mentorship workshops, designed to introduce you to
+the broader field of data engineering.
+The Industry Guidance mentorship workshop will discuss the following topics:
+
+* Developing an industry portfolio and share examples of successful portfolios
+* Incorporating your work from this program into your GitHub portfolio to share with prospective employers
+* How to approach industry-specific case interviews or technical evaluations
+
+Here are some additional resources to supplement this module’s workshop focus:
+
+* [Facebook, Inc. “Build optimized websites quickly, focus on your content.” Docusaurus. 2022. https://docusaurus.io/.][fb-build-optimal-sites-quick]
+* [GitHub. “Data-engineering-pipeline.” GitHub. https://github.com/topics/data-engineering-pipeline.][github-data-engineering-pipeline]
+* [Razevedo1994. “Data-engineering.” GitHub. https://github.com/razevedo1994/data-engineering.][github-razevedo-1994]
+* [Sspaeti. “Building a Data Engineering Project in 20 Minutes.” Sspaeti. 9 March 2021. https://sspaeti.com/blog/data-engineering-project-in-twenty-minutes/.][sspaeti-data-engineer-project-20min]
+* [Vanhack Admin. “How to Build a GitHub Portfolio & Get Noticed by Recruiters.” Vanhack. 14 Dec. 2021.][vanhack-github-portfolio]
+
+After you have read through some of these resources,
+consider the following in your discussion post:
+
+* How can you develop a strong industry portfolio?
+* What content you want to include in that portfolio?
+* How can you incorporate your work from this program into
+your GitHub portfolio to share with prospective employers?
+* How can you use your portfolio to assist you with
+industry-specific case interviews or technical evaluations?
+* Finally, find some examples online of strong data engineering portfolios and
+share them with your peers.
 
 ### Module 0: Course Orientation
 
@@ -390,7 +425,14 @@ worse leaking data by an attacker.
 
 #### Note Links
 
-***TODO:*** *Copy over the links from the module content*.
+* [Python][py-zk]
+* [Types of Databases][db-types-zk]
+* [Relational Databases][relational-db-zk]
+* [Document Databases][doc-db-zk]
+* [MongoDB Using Python][mongo-py-zk]
+* [Key-Value Databases][key-value-db-zk]
+* [Distributed Databases][dist-db-zk]
+* [Cassandra (Distributed Database)][cassandra-zk]
 
 #### Outcomes
 
@@ -399,15 +441,27 @@ worse leaking data by an attacker.
 * Update and delete data in different types of containerized databases.
 * Identify key concepts related to different types of databases.
 
-#### Notes on Topic
-
-***FILL ME IN***
-
 ## References
 
 * [MIT xPRO Emeritus Certification Programs Homepage][mit-xpro]
 * [University of British Columbia: How to take rock-solid notes for online lectures][howto-notetaking]
 * [MIT PCDE Pro Slack Channel][pcde-slack]
+
+### Web References
+
+* [Facebook, Inc. “Build optimized websites quickly, focus on your content.” Docusaurus. 2022. https://docusaurus.io/.][fb-build-optimal-sites-quick]
+* [GitHub. “Data-engineering-pipeline.” GitHub. https://github.com/topics/data-engineering-pipeline.][github-data-engineering-pipeline]
+* [Razevedo1994. “Data-engineering.” GitHub. https://github.com/razevedo1994/data-engineering.][github-razevedo-1994]
+* [Sspaeti. “Building a Data Engineering Project in 20 Minutes.” Sspaeti. 9 March 2021. https://sspaeti.com/blog/data-engineering-project-in-twenty-minutes/.][sspaeti-data-engineer-project-20min]
+* [Vanhack Admin. “How to Build a GitHub Portfolio & Get Noticed by Recruiters.” Vanhack. 14 Dec. 2021.][vanhack-github-portfolio]
+
+<!-- Hidden References -->
+
+[fb-build-optimal-sites-quick]: https://docusaurus.io/
+[github-data-engineering-pipeline]: https://github.com/topics/data-engineering-pipeline
+[github-razevedo-1994]: https://github.com/razevedo1994/data-engineering
+[sspaeti-data-engineer-project-20min]: https://sspaeti.com/blog/data-engineering-project-in-twenty-minutes/
+[vanhack-github-portfolio]: https://blog.vanhack.com/blog/how-to-build-a-github-portfolio-get-noticed-by-recruiters/
 
 ### Notes Links
 
@@ -463,6 +517,14 @@ worse leaking data by an attacker.
 * [Cookies][cookies-zk]
 * [OAuth2][oauth2-zk]
 * [PCDE Course: Module 12 Content][pcde-mod12-zk]
+* [Python][py-zk]
+* [Types of Databases][db-types-zk]
+* [Relational Databases][relational-db-zk]
+* [Document Databases][doc-db-zk]
+* [MongoDB Using Python][mongo-py-zk]
+* [Key-Value Databases][key-value-db-zk]
+* [Distributed Databases][dist-db-zk]
+* [Cassandra (Distributed Database)][cassandra-zk]
 
 <!-- Hidden Reference Links Below Here -->
 [mit-xpro]: https://emeritus.org/universities/mit-xpro/ "MIT xPRO Emeritus Certification Programs Homepage"
@@ -518,3 +580,11 @@ worse leaking data by an attacker.
 [cookies-zk]: ./cookies.md "Cookies"
 [oauth2-zk]: ./oaut2.md "OAuth2"
 [pcde-mod12-zk]: ./pcde-module12-content.md "PCDE Course: Module 12 Content"
+[py-zk]: ./python.md "Python"
+[db-types-zk]: ./types-of-database.md "Types of Databases"
+[relational-db-zk]: ./relational-databases.md "Relational Databases"
+[doc-db-zk]: ./document-databases.md "Document Databases"
+[mongo-py-zk]: ./mongodb-using-python.md "MongoDB Using Python"
+[key-value-db-zk]: ./key-value-database.md "Key-Value Databases"
+[dist-db-zk]: ./distributed-databases.md "Distributed Databases"
+[cassandra-zk]: ./cassandra.md "Cassandra (Distributed Database)"

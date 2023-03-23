@@ -1,6 +1,6 @@
 ---
 created: 2023-03-15T16:37:30.361Z
-modified: 2023-03-21T21:14:08.355Z
+modified: 2023-03-23T14:21:27.411Z
 tags: [pcde,module12,db,data,container,docker,mongodb,mysql,redis,document,key,value]
 ---
 # PCDE Module 12 Content
@@ -394,6 +394,91 @@ it has built-in methods to ease larger data processing, think map, filter reduce
 * Use-cases
   * Data lakes for offline analysis.
   * Highly scalable applications.
+
+## Discussion 12.3: Use Cases for Serverless Cloud Databases
+
+### Discussion Prompt
+
+As you have seen, Firebase is a serverless cloud database.
+Although it is one of the most famous and easy to use,
+it is not the only serverless cloud database offered by
+the data engineering community.
+In this discussion, you will be proposing an example of
+a use case of your choice using Firebase,
+and you will give a brief introduction about the other types of
+serverless cloud databases offered on the internet.
+
+Make sure that you include the following in your post:
+
+Using your own words,
+include a description of what a serverless cloud database is.
+Present a short case study using data that interests you and
+explain why it would be a good choice to write your data to Firebase,
+a serverless cloud database.
+
+After doing some research on the internet,
+choose a different serverless cloud database other than Firebase and
+give a brief description of how it works.
+Focus on the differences, pros, and cons of it compared to Firebase.
+For example,
+you could research the AWS Serverless Cloud Database or the Aurora Serverless
+(Links to an external site.) Cloud Database.
+
+### Comment Prompt
+
+Read the statements posted by your peers.
+Engage with them by responding with thoughtful comments and
+questions to deepen the discussion.
+
+**Suggested Time**: 60 minutes
+
+**Suggested Length**: 300 words
+
+This is a required activity and will count toward course completion
+
+### Discussion Answer
+
+#### Serverless Cloud Databases
+
+Serverless cloud databases, like any other form of serverless resources,
+is a database whose infrastructure, configuration, maintenance, scaling,
+and security are all managed by a third-party.
+To you the developer, it's just a set of APIs that you interact with.
+The end result is a database that you can write to and read from,
+but everything else is being handled behind the scenes.
+
+In my previous discussion post I discussed building a kind of content bin or
+URL shortener using relational database.
+Let's compare its implementation between Firebase the industry gold-standard and
+a serverless database I've had my cloud on Planetscale.
+
+#### Firebase
+
+Firebase is a serverless cloud database that is owned by Google.
+It's a document database that uses JSON to store data.
+Beyond just its serverless nature,
+it comes with a lot of benefits baked in.
+There's add-on features to ease development of authentication,
+real-time data syncing, analytics (it's Google after all), and more.
+
+In my use-case the primary disadvantage I can think of is that
+there is no way to define schemas with relationships which will complicate queries.
+However, it offers good pricing for small projects and
+a lot of features like authentication which can be useful.
+
+#### Alternatives to Firebase
+
+I've been interested in both Supabase and Planetscale for a while now.
+Since someone has already mentioned Supabase, I'll focus on Planetscale.
+The main difference between both and Firebase is that they are SQL databases.
+Planetscale is built on MySQL and a horizontal scaling architecture, Vitess.
+Supabase is based on PostgreSQL.
+What Planetscale offers that Firebase doesn't is the ability to define schemas
+and relationships between tables.
+To me that's a big deal because I can relate predictable data to each other.
+It also offers authentication, serverless functions, and object storage.
+The other big difference is it's built with open source tooling.
+Using Firebase locks you into the Google ecosystem.
 
 ## References
 

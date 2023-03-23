@@ -1,7 +1,7 @@
 ---
 created: 2022-11-15T22:32:24.465Z
-modified: 2023-03-21T14:38:44.635Z
-tags: [python,redis,db,key-value]
+modified: 2023-03-23T14:26:02.485Z
+tags: [python,redis,db,database,key,value,dictionary,pcde,module12]
 ---
 # Redis Using Python Drivers
 
@@ -38,7 +38,8 @@ like Python *dictionaries*.
 The main difference between [Redis][redis-zk] & [Python][py-zk] *dictionaries* are:
 
 * Redis *dictionaries* support a variety of *methods*, such as `GET`, `SEL` and `DEL`.
-* Python *dictionaries* don't support these *methods*, but instead use different ones such as...
+* Python *dictionaries* don't support these *methods*,
+but instead use different ones such as...
   * `copy()`, `clear()`, and `pop()`.
 * Redis *keys* are always *strings*. In Python, *keys* can be of any datatype
 

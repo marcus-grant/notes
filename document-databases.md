@@ -1,7 +1,7 @@
 ---
 created: 2022-12-05T14:22:49.623Z
-modified: 2023-03-21T10:37:44.316Z
-tags: [db,document,nosql,mongodb,backend,data]
+modified: 2023-03-23T14:22:52.425Z
+tags: [db,document,database,nosql,mongodb,backend,data,pcde,module12]
 ---
 # Document Databases
 

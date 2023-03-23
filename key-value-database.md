@@ -1,6 +1,6 @@
 ---
 created: 2023-03-21T14:14:58.331Z
-modified: 2023-03-21T14:38:14.732Z
+modified: 2023-03-23T14:22:16.677Z
 tags: [key,value,database,data,redis,dictionary,hash,map,pcde,module12]
 ---
 # Key-Value Databases
@@ -19,7 +19,7 @@ then you can retrieve the *value* by using the *key*.
 Redis is an in-memory, key-value store that works with tremendous speed.
 It is often used as a cache or a database specifically for more ephemeral data.
 Data such as user sessions, shopping carts, or other data that is not critical to
-the application but recieves a lot of traffic.
+the application but receives a lot of traffic.
 
 ### Redis Further Reading
 
