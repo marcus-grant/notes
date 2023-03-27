@@ -1,7 +1,7 @@
 ---
 created: 2022-11-15T18:08:55.571Z
-modified: 2023-03-12T17:39:33.746Z
-tags: [flask,server,backend,python,py,http]
+modified: 2023-03-27T11:02:55.590Z
+tags: [flask,server,backend,python,http]
 ---
 # Flask
 

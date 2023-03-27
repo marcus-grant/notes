@@ -1,7 +1,7 @@
 ---
 created: 2022-11-26T09:59:39.436Z
-modified: 2022-11-26T09:59:39.436Z
-tags: [data,graph,node,edge,computers,structures,sql,db]
+modified: 2023-03-27T11:21:20.479Z
+tags: [data,graph,node,edge,computers,structures,sql,database]
 ---
 # Comparison of Implementations of Graph Data Structures
 

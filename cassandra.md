@@ -1,7 +1,7 @@
 ---
 created: 2022-11-16T10:41:40.277Z
-modified: 2023-03-23T14:22:00.092Z
-tags: [cassandra,db,backend,data,distribute,parallel]
+modified: 2023-03-27T11:18:08.782Z
+tags: [cassandra,database,backend,data,distribute,parallel]
 ---
 # Cassandra
 

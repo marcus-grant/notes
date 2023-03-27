@@ -1,7 +1,7 @@
 ---
 created: 2022-12-05T10:41:11.817Z
-modified: 2022-12-05T10:41:11.817Z
-tags: [sideproject,python,dev,file,mgmt,index,sql,db]
+modified: 2023-03-27T11:20:24.171Z
+tags: [sideproject,python,dev,file,mgmt,index,sql,database]
 ---
 # File Indexing & Metadata Store Project Ideas
 

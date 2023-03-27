@@ -1,7 +1,7 @@
 ---
 created: 2022-12-27T16:42:30.854Z
-modified: 2022-12-27T16:42:30.854Z
-tags: [react,js,ts,web,client,gui,library,software,overview]
+modified: 2023-03-27T11:16:44.336Z
+tags: [react,javascript,typescript,web,client,gui,library,software,overview]
 ---
 
 # React

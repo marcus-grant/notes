@@ -1,7 +1,7 @@
 ---
 created: 2022-11-15T14:13:16.819Z
-modified: 2023-03-21T19:59:49.483Z
-tags: [db,database,containers,testing,devops]
+modified: 2023-03-27T11:20:49.450Z
+tags: [database,containers,testing,devops]
 ---
 # Database Containerization
 

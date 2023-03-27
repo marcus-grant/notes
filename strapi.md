@@ -1,7 +1,7 @@
 ---
 created: 2023-03-07T14:15:58.715Z
-modified: 2023-03-08T16:11:25.024Z
-tags: [strapi,api,cms,headless,js,node,server,software,pcde,module10]
+modified: 2023-03-27T11:14:52.516Z
+tags: [strapi,api,cms,headless,javascript,node,server,software,pcde,module10]
 ---
 # Strapi
 

@@ -1,7 +1,7 @@
 ---
 created: 2022-12-21T16:15:18.232Z
-modified: 2023-02-17T09:08:34.494Z
-tags: [math,pcde,stats,probability,overview]
+modified: 2023-03-27T11:12:42.689Z
+tags: [math,pcde,statistics,probability,overview]
 ---
 # Probability
 

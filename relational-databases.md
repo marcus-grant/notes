@@ -1,7 +1,7 @@
 ---
 created: 2022-11-15T13:55:04.498Z
-modified: 2023-03-19T20:10:07.033Z
-tags: [data,backend,storage,db,sql,relational,database]
+modified: 2023-03-27T11:20:14.156Z
+tags: [data,backend,storage,database,sql,relational]
 ---
 # Relational Databases
 

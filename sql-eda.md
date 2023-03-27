@@ -1,7 +1,7 @@
 ---
 created: 2023-01-26T10:08:58.298Z
-modified: 2023-01-31T17:22:50.403Z
-tags: [data,sql,analysis,eda,pivot,table,summary,database,science,computers,pcde,module6]
+modified: 2023-03-27T11:10:18.695Z
+tags: [data,sql,analysis,eda,pivot,table,database,science,computers,pcde,module6]
 ---
 # Exploratory Data Analysis in SQL
 

@@ -1,7 +1,7 @@
 ---
 created: 2023-03-12T17:32:40.986Z
-modified: 2023-03-12T17:46:56.427Z
-tags: [nunjucks,jinja,js,template,11ty,web,mozilla]
+modified: 2023-03-27T11:15:09.030Z
+tags: [nunjucks,jinja,javascript,template,11ty,web,mozilla]
 ---
 # Nunjucks (Template Engine)
 

@@ -1,7 +1,7 @@
 ---
 created: 2022-11-15T22:32:24.465Z
-modified: 2023-03-23T14:26:02.485Z
-tags: [python,redis,db,database,key,value,dictionary,pcde,module12]
+modified: 2023-03-27T11:19:39.086Z
+tags: [python,redis,database,key,value,dictionary,pcde,module12]
 ---
 # Redis Using Python Drivers
 

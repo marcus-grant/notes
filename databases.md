@@ -1,7 +1,7 @@
 ---
 created: 2022-12-02T09:52:31.002Z
-modified: 2022-12-03T09:46:47.384Z
-tags: [db,database,data,design,overview]
+modified: 2023-03-27T11:20:42.563Z
+tags: [database,data,design,overview]
 ---
 # Databases Overview
 

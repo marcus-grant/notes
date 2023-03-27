@@ -1,7 +1,7 @@
 ---
 created: 2023-01-02T15:16:53.585Z
-modified: 2023-01-02T15:16:53.585Z
-tags: [www,gatsby,js,ts,ssg,static,web]
+modified: 2023-03-27T11:16:02.716Z
+tags: [www,gatsby,javascript,typescript,ssg,static,web]
 ---
 
 # Gatsby

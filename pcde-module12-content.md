@@ -1,7 +1,7 @@
 ---
 created: 2023-03-15T16:37:30.361Z
-modified: 2023-03-23T14:21:27.411Z
-tags: [pcde,module12,db,data,container,docker,mongodb,mysql,redis,document,key,value]
+modified: 2023-03-27T11:18:46.023Z
+tags: [pcde,module12,database,data,container,docker,mongodb,mysql,redis,document,key,value]
 ---
 # PCDE Module 12 Content
 

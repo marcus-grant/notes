@@ -1,7 +1,7 @@
 ---
 created: 2022-12-05T16:17:20.340Z
-modified: 2023-03-01T16:31:49.426Z
-tags: [python,py,lang,programming,overview]
+modified: 2023-03-27T11:05:09.731Z
+tags: [python,lang,programming,overview]
 ---
 # Python
 
