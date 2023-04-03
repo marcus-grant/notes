@@ -1,6 +1,6 @@
 ---
 created: 2022-12-02T09:39:07.160Z
-modified: 2023-03-23T14:24:59.096Z
+modified: 2023-04-03T14:43:16.088Z
 tags: [learning,pcde,data,syllabus,notetaking,productivity,time,mgmt]
 ---
 # PCDE Course Overview
@@ -440,6 +440,25 @@ worse leaking data by an attacker.
 * Identify key concepts related to database containerization.
 * Update and delete data in different types of containerized databases.
 * Identify key concepts related to different types of databases.
+
+### Module 13: Change Data Capture (CDC)
+
+#### Due Data
+
+* Due Wednesday, April 5, 2023 at 4:29 PM UTC
+
+#### Note Links
+
+* INSERT HERE
+
+#### Outcomes
+
+* Identify key concepts of change data capture (CDC) systems.
+* Create and delete containers Python.
+* Implement time loops.
+* Identify applications of time loops.
+* Initialize database containers.
+* Perform CDC on a variety of containers.
 
 ## References
 

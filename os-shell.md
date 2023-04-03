@@ -1,7 +1,7 @@
 ---
 created: 2023-01-27T17:07:36.074Z
-modified: 2023-01-27T17:07:36.074Z
-tags: [unix,linux,terminal,cli,tui,gui,desktop,graphics,overview,null,computers]
+modified: 2023-04-03T13:24:19.617Z
+tags: [unix,linux,terminal,cli,tui,gui,desktop,graphics,overview,computers]
 ---
 # Shell (Computers)
 

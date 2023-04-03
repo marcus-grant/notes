@@ -1,6 +1,6 @@
 ---
 created: 2022-12-05T16:17:20.340Z
-modified: 2023-03-27T11:05:09.731Z
+modified: 2023-04-03T13:23:43.526Z
 tags: [python,lang,programming,overview]
 ---
 # Python
@@ -547,6 +547,16 @@ Statistics is of course one of the primary ways that we look at data,
 and python is full of modules that can make this easier on us.
 In [the notes on statistics using python][stats-py-zk]
 
+## Python Interaction with OS Shell
+
+Python as a scripting language with a huge ecosystem of libraries and
+built-in modules to deal with the OS,
+[its shell][shell-zk] and file system make it a great scripting language to
+automate tasks related to basically all things relating to the OS.
+
+For further reading, check out the notes on
+[Python Interaction with OS Shell][py-shell-zk].
+
 ## References
 
 ### Note References
@@ -554,11 +564,15 @@ In [the notes on statistics using python][stats-py-zk]
 * [NumPy Library Overview][zk-numpy]
 * [Python args and kwargs: Demystified][real-py-args-kwargs]
 * [Statistics Using Python][stats-py-zk]
+* [OS Shell][shell-zk]
+* [Python Interaction with OS Shell][py-shell-zk]
 
 <!-- Hidden Reference Links Below Here -->
 [zk-numpy]: ./numpy.md "NumPy Library Overview"
 [real-py-args-kwargs]: https://realpython.com/python-kwargs-and-args/#conclusion "Python args and kwargs: Demystified"
 [stats-py-zk]: ./statistics-python.md "Statistics Using Python"
+[py-shell-zk]: ./python-os-shell.md "Python Interaction with OS Shell"
+[shell-zk]: ./os-shell.md "OS Shell"
 
 ### Web/Article References
 
