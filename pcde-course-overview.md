@@ -1,6 +1,6 @@
 ---
 created: 2022-12-02T09:39:07.160Z
-modified: 2023-04-03T14:43:16.088Z
+modified: 2023-04-05T16:10:25.759Z
 tags: [learning,pcde,data,syllabus,notetaking,productivity,time,mgmt]
 ---
 # PCDE Course Overview
@@ -11,7 +11,7 @@ tags: [learning,pcde,data,syllabus,notetaking,productivity,time,mgmt]
 
 This is a course where [MIT's xPro program][mit-xpro] will prepare you for a
 certification in the professional skills required in Data Engineering.
-The course will go through topics in [Python programming](python.md),
+The course will go through topics in [Python programming][py-zk],
 the basics of [database design](databases.md).
 
 ## First Some Lessons About Good Note Taking
@@ -449,7 +449,30 @@ worse leaking data by an attacker.
 
 #### Note Links
 
-* INSERT HERE
+* [PCDE Module 13 Content][pcde-mod13-zk]
+* [Change Data Capture][cdc-zk]
+* [Python][py-zk]
+* [Python Interaction with OS Shell][py-shell-zk]
+
+#### Outcomes
+
+* Identify key concepts of change data capture (CDC) systems.
+* Create and delete containers Python.
+* Implement time loops.
+* Identify applications of time loops.
+* Initialize database containers.
+* Perform CDC on a variety of containers.
+
+### Module 14: Java & Debezium
+
+#### Due Data
+
+* Due Wednesday, April 12, 2023 at 4:29 PM UTC
+
+#### Note Links
+
+* [PCDE Module 14 Content][pcde-mod14-zk]
+* **INSERT REST HERE**
 
 #### Outcomes
 
@@ -544,12 +567,18 @@ worse leaking data by an attacker.
 * [Key-Value Databases][key-value-db-zk]
 * [Distributed Databases][dist-db-zk]
 * [Cassandra (Distributed Database)][cassandra-zk]
+* [PCDE Module 13 Content][pcde-mod13-zk]
+* [Change Data Capture][cdc-zk]
+* [Python][py-zk]
+* [Python Interaction with OS Shell][py-shell-zk]
+* [PCDE Module 14 Content][pcde-mod14-zk]
 
 <!-- Hidden Reference Links Below Here -->
 [mit-xpro]: https://emeritus.org/universities/mit-xpro/ "MIT xPRO Emeritus Certification Programs Homepage"
 [howto-notetaking]: https://students.ubc.ca/ubclife/take-rock-solid-notes-online-lectures "University of British Columbia: How to take rock-solid notes for online lectures"
 [pcde-slack]: https://app.slack.com/client/T044GN4M0H4/C044P89NH3M/thread/C044LK4E9L5-1665686480.669439 "MIT PCDE Pro Slack Channel"
 [intro-py-zk]: ./intro-python.md "Introduction to Python Notes"
+[py-zk]: ./python.md "Python"
 [notetaking-zk]: ./notetaking.md "Note-taking Strategies"
 [notes-lec-zk]: ./notes-lectures.md "Notetaking Strategies for Lectures"
 [time-mgmt-zk]: ./time-management.md "Time Management Strategies"
@@ -599,7 +628,6 @@ worse leaking data by an attacker.
 [cookies-zk]: ./cookies.md "Cookies"
 [oauth2-zk]: ./oaut2.md "OAuth2"
 [pcde-mod12-zk]: ./pcde-module12-content.md "PCDE Course: Module 12 Content"
-[py-zk]: ./python.md "Python"
 [db-types-zk]: ./types-of-database.md "Types of Databases"
 [relational-db-zk]: ./relational-databases.md "Relational Databases"
 [doc-db-zk]: ./document-databases.md "Document Databases"
@@ -607,3 +635,7 @@ worse leaking data by an attacker.
 [key-value-db-zk]: ./key-value-database.md "Key-Value Databases"
 [dist-db-zk]: ./distributed-databases.md "Distributed Databases"
 [cassandra-zk]: ./cassandra.md "Cassandra (Distributed Database)"
+[pcde-mod13-zk]: ./pcde-module13-content.md "PCDE Module 13 Content"
+[cdc-zk]: ./change-data-capture.md "Change Data Capture"
+[py-shell-zk]: ./python-os-shell.md "Python Interaction with OS Shell"
+[pcde-mod14-zk]: ./pcde-module14-content.md "PCDE Course: Module 14 Content"

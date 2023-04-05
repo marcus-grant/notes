@@ -1,6 +1,6 @@
 ---
 created: 2023-04-03T06:55:40.897Z
-modified: 2023-04-05T09:09:09.567Z
+modified: 2023-04-05T16:11:29.808Z
 tags: [pcde,cdc,change,data,capture,python,containers,module13,relational,database]
 ---
 # PCDE Module 13: Change Data Capture (CDC)
@@ -193,7 +193,6 @@ MongoDB, Cassandra, MySQL. Can this be achieved in Python?
   * `time` and `threading` **(Correct)**
 * Q4: What is the syntax to cancel a timer in Python?
   * `timer.cancel()` **(Correct)**
-
 
 ## References
 

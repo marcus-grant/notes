@@ -1,54 +1,64 @@
 ---
-- name: Computers
-  tags: ~
+- name: Science
+  tags: [science,Science]
   categories:
-  - name: Software
-    tags: [software,sw]
+  - name: Computers
+    tags: ~
     categories:
-    - name: Programming Languages
+    - name: Software
+      tags: [software,sw]
       categories:
-      - name: 'C/C++'
-        tags: [c,C,clang,'c++',cpp,gcc]
-      - name: 'C#'
-        tags: ['C#','c#',CSharp,Csharp,CS,cs]
-      - name: JavaScript
-        tags: [Javascript,JavaScript,javascript,JS,js]
+      - name: Programming Languages
         categories:
-        - name: TypeScript
-          tags: [TypeScript,Typescript,typescript,ts,TS]
-        - name: AssemblyScript
-          tags: [AssemblyScript,Assemblyscript,assemblyscript,AS,as]
-      - name: Rust
-        tags: [rust,Rust,rs,RS,cargo]
-    - name: Information Systems
-      tags: [IT,it]
-      categories:
-      - name: Databases
-        tags: [Database,Databases,DataBase,DataBase,db,DB]
-        categories:
-        - name: Relational Databases
-          tags: [relational,relational-database,relation]
+        - name: 'C/C++'
+          tags: [c,C,clang,'c++',cpp,gcc]
+        - name: 'C#'
+          tags: ['C#','c#',CSharp,Csharp,CS,cs]
+        - name: JavaScript
+          tags: [Javascript,JavaScript,javascript,JS,js]
           categories:
-          - name: SQL
-            tags: [sql,SQL]
-    - name: Operating System
-      tags: [operating-system,OperatingSystem,os,OS]
+          - name: TypeScript
+            tags: [TypeScript,Typescript,typescript,ts,TS]
+          - name: AssemblyScript
+            tags: [AssemblyScript,Assemblyscript,assemblyscript,AS,as]
+        - name: Rust
+          tags: [rust,Rust,rs,RS,cargo]
+      - name: Information Systems
+        tags: [IT,it]
+        categories:
+        - name: Databases
+          tags: [Database,Databases,DataBase,DataBase,db,DB]
+          categories:
+          - name: Relational Databases
+            tags: [relational,relational-database,relation]
+            categories:
+            - name: SQL
+              tags: [sql,SQL]
+      - name: Operating System
+        tags: [operating-system,OperatingSystem,os,OS]
+        categories:
+        - name: Linux
+          tags: [Linux,linux]
+        - name: MacOS
+          tags: [MacOS,macOS,Mac,mac,Macintosh,macintosh]
+        - name: Windows
+          tags: [Windows,windows,win,Win]
+    - name: Network
+      tags: [network,Network,net,Net]
       categories:
-      - name: Linux
-        tags: [Linux,linux]
-      - name: MacOS
-        tags: [MacOS,macOS,Mac,mac,Macintosh,macintosh]
-      - name: Windows
-        tags: [Windows,windows,win,Win]
-  - name: Network
-    tags: [network,Network,net,Net]
+      - name: Internet
+        tags: [internet,web,www,world-wide-web]
+      - name: Communication Protocols
+        tags: [protocol,protocols]
+        categories:
+        - name: HTTP
+          tags: [HTTP,HTTPS,http,https]
+        - name: SSH
+          tags: [SSH,ssh]
+  - name: Mathematics
+    tags: [math,Math,maths,Maths,mathematics,Mathematics]
     categories:
-    - name: Internet
-      tags: [internet,web,www,world-wide-web]
-    - name: Communication Protocols
-      tags: [protocol,protocols]
-      categories:
-      - name: HTTP
-        tags: [HTTP,HTTPS,http,https]
-      - name: SSH
-        tags: [SSH,ssh]
+    - name: Probability
+      tags: [probability,Probability,random,distribution,normal]
+    - name: Statistics
+      tags: [statistics,Statistics]
