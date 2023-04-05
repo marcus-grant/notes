@@ -1,6 +1,6 @@
 ---
 created: 2022-12-02T09:39:07.160Z
-modified: 2023-04-05T16:10:25.759Z
+modified: 2023-04-05T16:19:16.289Z
 tags: [learning,pcde,data,syllabus,notetaking,productivity,time,mgmt]
 ---
 # PCDE Course Overview
@@ -476,12 +476,15 @@ worse leaking data by an attacker.
 
 #### Outcomes
 
-* Identify key concepts of change data capture (CDC) systems.
-* Create and delete containers Python.
-* Implement time loops.
-* Identify applications of time loops.
-* Initialize database containers.
-* Perform CDC on a variety of containers.
+* Define elements of the Java programming language.
+* Write basic Java code.
+* Compare and contrast Java and Python.
+* Upload and download files to and from containers.
+* Develop a web application in Java.
+* Identify key characteristics of Java applications.
+* Set up a network for Debezium in Docker.
+* Connect a database to Debezium.
+* Identify key elements of Debezium.
 
 ## References
 
