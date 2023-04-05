@@ -1,6 +1,6 @@
 ---
 created: 2022-12-05T16:17:20.340Z
-modified: 2023-04-03T13:23:43.526Z
+modified: 2023-04-05T07:42:47.513Z
 tags: [python,lang,programming,overview]
 ---
 # Python
@@ -556,6 +556,39 @@ automate tasks related to basically all things relating to the OS.
 
 For further reading, check out the notes on
 [Python Interaction with OS Shell][py-shell-zk].
+
+## Timed Tasks
+
+### Time Module
+
+The `time` module is a built-in module that allows us to
+get current times and dates and perform actions based on time.
+
+```python
+import time
+from threading import Timer
+
+def task1():
+    print('Task 01')
+    time.sleep(2)
+
+def task2():
+    print('Task 02')
+    time.sleep(3)
+
+def timed_event_loop():
+    task1()
+    task2()
+    print(f'--- LOOP: ' + time.ctime() + ' ---')
+    Timer(5, timed_event_loop).start()
+
+timed_event_loop()
+```
+
+This example uses `threading` module's timer to sleep for 2 or 3 seconds.
+The `timed_event_loop` function is called every 5 seconds.
+Before that `task1` and `task2` are called who total 5 seconds of sleep time.
+With this the whole task loops every 10 seconds.
 
 ## References
 
