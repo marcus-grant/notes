@@ -1,6 +1,6 @@
 ---
 created: 2023-04-05T16:08:31.423Z
-modified: 2023-04-07T11:05:51.608Z
+modified: 2023-04-05T17:08:35.000Z
 tags: [pcde,content,module14,java,cdc,debezium,containers,data,database,change,capture]
 ---
 # PCDE Module 14 Content: Java & Debezium
@@ -74,7 +74,63 @@ This is a required activity and will count toward course completion.
 
 ### My Response
 
-Write something here.
+#### Project 1: Product Pre-Order Website
+
+For a website that is going to recieve a lot of traffic,
+the gut reaction might be to use the faster language ecosystem of Java.
+However, because this is only a pre-order website,
+that will not have high-traffic for long,
+my guess is that it might actually be cheaper to implement using Python.
+The reason for this is that developers are more expensive.
+Because the period of high traffic is probably going to be short,
+you may only need to over-provision servers to accept the traffic for a short time.
+That means it might actually be more expensive to
+pay for the extra development time to implement the website in Java.
+In Python, you just run more servers behind a load balancer and
+as the traffic reduces after the initial rush of pre-orders,
+you start to reduce the number of active servers and save some development costs.
+Very likely, the database system might be the bottleneck, in this case.
+
+#### Project 4: Online Chess
+
+Since the backend for this project is likely going to be relatively simple,
+but require of long-term scalability, I'm choosing Java.
+The extra development time to
+implement the backend in Java is probably going to be worth it.
+There isn't much extra complexity to this service,
+other than the chess-playing bots which can add a lot of CPU and memory usage.
+For that reason it seems worth it to make the backend faster and use less memory at
+the cost of more development time.
+
+## Knowledge Check 14.1: Data Types, Classes, Objects, and Packages in Java
+
+* Q1: Which of the programming languages below is more structured?
+  * Java **(Correct)**
+* Q2: Which command would you use to install a nano editor in your container?
+  * `apt install nano` **(Correct)**
+* Q3: Which command would you use to update the packages installed in
+your container through the command line?
+  * `apt-get update` **(Correct)**
+* Q4: Which of the following is correct about file names in Java?
+  * The file name must match the class name **(Correct)**
+* Q5: Which of the following is the basic I/O package in Java?
+  * `java.io` **(Correct)**
+* Q6: Which command would you use to
+compile a Java Program called hello_world.java?
+  * `javac hello_world.java` **(Correct)**
+* Q7: Which of the following files will be created after
+compiling a Java program hello_world.java?
+  * hello_world.class **(Correct)**
+* Q8: What is the command used to print the string `text` to the console in Java?
+  * `System.out.println("text");` **(Correct)**
+* Q9: What is an object in Java?
+  * An object is an instance of the class variable **(Correct)**
+* Q10: What is casting java?
+  * Casting is changing the data type of a variable **(Correct)**
+* Q11: Which of the following statements is true about packages?
+  * Packages allow a programmer to instantiate classes into
+objects within other classes **(Correct)**
+
 
 ## References
 
