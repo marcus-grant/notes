@@ -1,6 +1,6 @@
 ---
 created: 2023-04-05T16:08:31.423Z
-modified: 2023-04-05T17:08:35.000Z
+modified: 2023-04-11T19:22:54.320Z
 tags: [pcde,content,module14,java,cdc,debezium,containers,data,database,change,capture]
 ---
 # PCDE Module 14 Content: Java & Debezium
@@ -76,7 +76,7 @@ This is a required activity and will count toward course completion.
 
 #### Project 1: Product Pre-Order Website
 
-For a website that is going to recieve a lot of traffic,
+For a website that is going to receive a lot of traffic,
 the gut reaction might be to use the faster language ecosystem of Java.
 However, because this is only a pre-order website,
 that will not have high-traffic for long,
@@ -131,6 +131,29 @@ compiling a Java program hello_world.java?
   * Packages allow a programmer to instantiate classes into
 objects within other classes **(Correct)**
 
+## Knowledge Check 14.2: Java Applications
+
+* Q1: What is the correct syntax to copy a file from the host to a container?
+Assume file named `hello.txt` and the container name `container1`.
+  * `docker cp hello.txt container1:/home` **(Correct)**
+* Q2: Which of the following is correct about Spring?
+  * Spring is an application framework used to create Java applications **(Correct)**
+* Q3: What is the use of Spring Boot?
+  * Spring Boot makes it easy to create stand-alone Spring Applications **(Correct)**
+* Q4: What is change data capture (CDC)?
+  * CDC is a process that captures changes made in a database and
+replicates those changes to destination(s) **(Correct)**
+* Q5: What is the advantage of using periodic queries to capture changes in a database?
+  * Periodic queries are safer to use **(WRONG)**
+  * Periodic queries have low overhead on well-indexed databases **(Correct)**
+* Q6: What is the disadvantage of using transaction log processing for CDC?
+  * Hard to implement for every database **(Correct)**
+* Q7: Which of the following is required for production-grade CDC?
+  * All the above **(Correct)**
+* Q8: Which of the following is a CDC package?
+  * Debezium **(Correct)**
+* Q9: Which Python library is used to perform CDC using a Python program?
+  * pymysqlreplication **(Correct)**
 
 ## References
 
@@ -140,11 +163,15 @@ objects within other classes **(Correct)**
 
 ### Note Links
 
+* [Change Data Capture][cdc-zk]
 * [Java][java-zk]
 * [Debezium][debezium-zk]
 * [Python][py-zk]
+* [Java Spring][java-spring-zk]
 
 <!-- Hidden References -->
+[cdc-zk]: ./change-data-capture.md "Change Data Capture"
 [java-zk]: java.md "Java"
 [debezium-zk]: debezium.md "Debezium"
 [py-zk]: python.md "Python"
+[java-spring-zk]: ./java-spring.md "Java Spring"

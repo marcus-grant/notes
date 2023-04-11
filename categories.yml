@@ -10,21 +10,24 @@
       categories:
       - name: Programming Languages
         categories:
-        - name: 'C/C++'
-          tags: [c,C,clang,'c++',cpp,gcc]
-        - name: 'C#'
-          tags: ['C#','c#',CSharp,Csharp,CS,cs]
+        - {'name':'C/C++','tags':[c,C,clang,'c++',cpp,gcc]}
+        - {'name':'C#','tags':['C#','c#',CSharp,Csharp]}
+        - {'name':'Lua','tags':[lua,Lua,LUA]}
+        - {'name':'Java','tags':[java,Java,JAVA]}
+        - {'name':'Kotlin','tags':[kotlin,Kotlin,KOTLIN]}
+        - {'name':'PHP','tags':[php,PHP]}
+        - {'name':'Python','tags':[python,Python,PYTHON,py,Py]}
+        - {'name':'Ruby','tags':[ruby,Ruby,RUBY]}
+        - {'name':'Dart','tags':[dart,Dart,DART]}
+        - {'name':'Go','tags':[go,Go,GO,golang,Golang]}
+        - {'name':'Rust','tags':[rust,Rust,rs,RS,cargo]}
         - name: JavaScript
           tags: [Javascript,JavaScript,javascript,JS,js]
           categories:
-          - name: TypeScript
-            tags: [TypeScript,Typescript,typescript,ts,TS]
-          - name: AssemblyScript
-            tags: [AssemblyScript,Assemblyscript,assemblyscript,AS,as]
-        - name: Rust
-          tags: [rust,Rust,rs,RS,cargo]
+          - {'name':'TypeScript','tags':[typescript,TypeScript,TS,ts]}
+          - {'name':'AssemblyScript','tags':[assemblyscript,AssemblyScript,AS]}
       - name: Information Systems
-        tags: [IT,it]
+        tags: [IT,it,infosys,information-systems,information-system]
         categories:
         - name: Databases
           tags: [Database,Databases,DataBase,DataBase,db,DB]
@@ -32,33 +35,29 @@
           - name: Relational Databases
             tags: [relational,relational-database,relation]
             categories:
-            - name: SQL
-              tags: [sql,SQL]
+            - {'name': 'SQL', 'tags': [sql,SQL]}
       - name: Operating System
         tags: [operating-system,OperatingSystem,os,OS]
         categories:
-        - name: Linux
-          tags: [Linux,linux]
-        - name: MacOS
-          tags: [MacOS,macOS,Mac,mac,Macintosh,macintosh]
-        - name: Windows
-          tags: [Windows,windows,win,Win]
+        - {'name':'Linux','tags':[linux,Linux]}
+        - {'name':'MacOS','tags':[macos,MacOS,mac,Mac,macintosh,Macintosh]}
+        - {'name':'Windows','tags':[Windows,windows,win,Win]}
     - name: Network
       tags: [network,Network,net,Net]
       categories:
-      - name: Internet
-        tags: [internet,web,www,world-wide-web]
+      - {'name':'Internet','tags':[internet,Internet,INET,inet,web,Web,WWW,www,]}
       - name: Communication Protocols
         tags: [protocol,protocols]
         categories:
-        - name: HTTP
-          tags: [HTTP,HTTPS,http,https]
-        - name: SSH
-          tags: [SSH,ssh]
+        - {'name':'HTTP/HTTPS','tags':[http,https,HTTP,HTTPS]}
+        - {'name':'SSH','tags':[ssh,SSH]}
   - name: Mathematics
     tags: [math,Math,maths,Maths,mathematics,Mathematics]
     categories:
-    - name: Probability
-      tags: [probability,Probability,random,distribution,normal]
-    - name: Statistics
-      tags: [statistics,Statistics]
+    - {'name':'Probability','tags':[probability,Probability,random,distribution]}
+    - {'name':'Statistics','tags':[statistics,Statistics,stats,Stats]}
+- name: Productivity
+  categories:
+  - {'name':'Tasks','tags':[tasks,TASKS,Tasks]}
+  - {'name': 'Calendar','tags':[calendar,Calendar,CALENDAR,cal,Cal]}
+

@@ -1,6 +1,6 @@
 ---
 created: 2023-04-03T07:02:50.615Z
-modified: 2023-04-03T12:27:56.960Z
+modified: 2023-04-11T15:46:31.396Z
 tags: [change,data,capture,database,workflow,pcde,module13]
 ---
 # Change Data Capture (CDC)
@@ -248,14 +248,151 @@ each part of the system will be made into its own separate reusable component.
 * *Check for intended functionality*
   * Testing each component to make sure it works to a specification.
 
+## Event-Based Approach to CDC
+
+When creating a CDC system,
+you have to detect changes, capture them, then propagate them.
+There can be a lot of moving parts behind these seemingly simple three steps.
+Below is a summarizing diagram of this.
+
+```mermaid
+flowchart LR
+    S[State change] --> D
+    D[Database] --> |Query| D
+    D --> C[Client]
+    C --> 1[Notify]
+    C --> 2[Notify]
+    C --> 3[Notify]
+```
+
+A better approach can be the **event-driven** approach to CDC.
+Most data stores keeps a *transaction-log*, which can help with:
+
+* Recover from failure
+* Track changes
+
+And although this isn't necessarily what *transaction logs* are meant for
+these factors can be leveraged to
+create an **event-driven** architecture for *CDC*.
+
+Some advantages of this approach:
+
+* It captures all changes
+* Low overhead
+* It doesn't require database or application modifications
+
+But there are some disadvantages to keep in mind:
+
+* You might have to write an app from scratch for every type of database vendor
+
+That would be equally challenging in some cases.
+And you might want to have:
+
+* Message ordering guarantees:
+  * The order of changes must be preserved for accurate propagation.
+* Publication and Subscription:
+  * Asynchronous, pub/sub styles can change propagation to consumers.
+* Reliable and resilient delivery:
+  * Consistency of delivery is essential.
+* Message transformation support:
+  * Lightweight message transformations are needed.
+
+But if you can get away with that,
+this is a really nice way to go about it.
+
+### Practical Overview of Event-Driven CDC
+
+#### MySQL
+
+First start the container.
+
+```sh
+docker run -p 3306:3306 --name some-mysql -e MYSQL_ROOT_PASSWORD=root -d mysql
+```
+
+Then somehow run this SQL:
+
+```sql
+DROP DATABASE IF EXISTS `education`;
+CREATE DATABASE IF NOT EXISTS `education`;
+USE `education`;
+
+-- TABLE STUDENTS
+
+CREATE TABLE `students`
+(
+    `email` varchar(50),
+    `name` varchar(50),
+    `city` varchar(50),
+    PRIMARY KEY (`email`)
+);
+```
+
+Here we create a `students` table with `email` *(PK)*, `name`, `city` fields.
+
+You could also do this as part of this [Python driver script][py-zk] below.
+
+First install these:
+
+```sh
+pip install PyMSQL==0.10.1
+pip install mysql-replication==0.22
+```
+
+Then we can create a driver script to setup database replication for use with CDC.
+
+```python
+from pymysqlreplication import BinLogStreamReader
+
+MYSQL_SETTINGS = {
+  'host': '127.0.0.1',
+  'port': 3306,
+  'user': 'root',
+  'passwd' 'root',
+}
+
+def call_mysql():
+    # server_id is your slave identifier, it should be unique.
+    # set blocking to True if you want to block and wait for
+    # the next event at the end of the stream
+    stream = BinLogStreamReader(
+      connection_settings=MYSQL_SETTINGS,
+      server_id=3,
+      blocking=True)
+  
+    for binlogevent in stream:
+        binlogevent.dump()
+    
+    stream.close()
+```
+
+This script will connect to the MySQL database and start listening for changes.
+When a change is detected, it will print the change to the console.
+
+This is a whole step in a CDC system.
+Thanks to the community now we just configure and deploy the script and
+we now have an event-driven CDC system.
+
+Now let's add some data to the database.
+
+```sql
+INSERT INTO `education`.`students` (`email`, `name`, `city`) VALUES (
+  'peter@mit.edu', 'Peter Parker', 'Cambridge, MA'
+);
+```
+
 ## References
 
 ### Web Links
 
 * [Change Data Capture (CDC): What it is and How it Works][cdc-kutay]
+* [A Generic Change Data Capture Framework][dblog-netflix]
+* [Delta: A Data Synchronization and Enrichment Platform][dblog-netflix-sync]
 
 <!-- Hidden References -->
 [cdc-kutay]: https://www.striim.com/change-data-capture-cdc-what-it-is-and-how-it-works/ "Change Data Capture (CDC): What it is and How it Works"
+[dblog-netflix]: http://techblog.netflix.com/dblog-ageneric-change-data-capture-framework-69351fb9099b "A Generic Change Data Capture Framework"
+[dblog-netflix-sync]: http://techblog.netflix.com/delta-a-data-synchronization-and-enrichment-platform--e82c36a79aee "Delta: A Data Synchronization and Enrichment Platform"
 
 ### Note Links
 

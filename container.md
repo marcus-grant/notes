@@ -1,6 +1,6 @@
 ---
 created: 2023-03-06T15:20:44.030Z
-modified: 2023-03-07T10:38:21.987Z
+modified: 2023-04-11T19:22:48.979Z
 tags: [container,docker,podman,virtual,cluster,devops,pcde,computer,pcde,module10]
 ---
 # Containers: Software Containerization
@@ -57,6 +57,17 @@ Docker is still a popular choice for many organizations despite
 the rise of other containerization platforms that address some of the
 limitations of [**Docker**][docker-zk].
 
+## Networking
+
+**Containers** can be connected to each other and to the outside world.
+Most container runtimes have features to network **containers** together or
+through the host machine in *host-mode* by opening ports and
+mapping them to any container port.
+
+In docker, this is done with the `--network` flag.
+For more docker-specific networking information,
+see [Docker: Networking][docker-net-zk].
+
 ## References
 
 ### Web Links
@@ -67,7 +78,9 @@ limitations of [**Docker**][docker-zk].
 
 * [Docker][docker-zk]
 * [Operating System][os-zk]
+* [Docker: Networking][docker-net-zk]
 
 <!-- Hidden References -->
 [docker-zk]: ./docker.md "Docker"
 [os-zk]: ./os.md "Operating System"
+[docker-net-zk]: ./docker.md#docker-networking "Docker: Networking"

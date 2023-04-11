@@ -1,6 +1,6 @@
 ---
 created: 2023-03-06T15:36:53.072Z
-modified: 2023-03-07T13:58:02.253Z
+modified: 2023-04-11T19:19:16.193Z
 tags: [docker,container,devops,virtual,computer,pcde,module10]
 ---
 # Docker
@@ -18,6 +18,12 @@ Docker is one of the most common software platforms used to create and run *cont
 * If you need to use different OSs or kernels
 * If you have a lot of valuable data to store
 * If you are looking for an easily managed technology
+
+## Docker Networking
+
+Docker can be configured to use different networking modes.
+It can also be used to set up a network of containers where
+they can all communicate to each other based off of named networks.
 
 ## Commands
 
