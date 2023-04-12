@@ -1,6 +1,6 @@
 ---
 created: 2023-04-05T16:14:49.295Z
-modified: 2023-04-07T11:05:55.002Z
+modified: 2023-04-12T14:27:56.726Z
 tags: [java,program,language,overview,object,orientation,pcde,module14]
 ---
 # Java
@@ -358,7 +358,7 @@ the [shell of the container][shell-zk].
 This could include the [nano editor][nano-zk] or [vim editor][neovim-zk].
 Edit the container's `Dockerfile` to add the tools you need.
 
-```Dockerfile
+```dockerfile
 FROM openjdk:11-jdk-slim
 RUN apt-get update && apt-get install -y \
     nano \
