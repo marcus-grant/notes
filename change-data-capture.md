@@ -1,6 +1,6 @@
 ---
 created: 2023-04-03T07:02:50.615Z
-modified: 2023-04-11T15:46:31.396Z
+modified: 2023-04-12T14:10:00.773Z
 tags: [change,data,capture,database,workflow,pcde,module13]
 ---
 # Change Data Capture (CDC)
@@ -381,6 +381,11 @@ INSERT INTO `education`.`students` (`email`, `name`, `city`) VALUES (
 );
 ```
 
+## CDC Using Debezium
+
+[Debezium][debezium-zk] is a distributed platform for change data capture.
+To read more about it, read the [Debezium document][debezium-zk].
+
 ## References
 
 ### Web Links
@@ -407,6 +412,7 @@ INSERT INTO `education`.`students` (`email`, `name`, `city`) VALUES (
 * [Data Warehouse][data-warehouse-zk]
 * [Python][py-zk]
 * [SQL][sql-zk]
+* [Debezium][debezium-zk]
 
 <!-- Hidden References -->
 [dbs-zk]: ./databases.md "Types of Databases"
@@ -420,3 +426,4 @@ INSERT INTO `education`.`students` (`email`, `name`, `city`) VALUES (
 [data-warehouse-zk]: ./data-warehouse.md "Data Warehouse"
 [py-zk]: ./python.md "Python"
 [sql-zk]: ./sql.md "SQL"
+[debezium-zk]: ./debezium.md "Debezium"

@@ -1,12 +1,12 @@
 ---
 created: 2023-04-09T11:58:45.652Z
-modified: 2023-04-10T09:37:45.612Z
+modified: 2023-04-12T14:13:51.263Z
 tags: [java,web,framework,spring,api,pcde,module14]
 ---
 # Spring Boot (Java Web Framework)
 
-Spring is an application framework and Spring Boot is from the same ecosystem,
-but is focused on web applications.
+Spring is a [Java][java-zk] application framework and
+Spring Boot is from the same ecosystem, but is focused on web applications.
 
 ## Getting Started
 
@@ -43,6 +43,11 @@ In it you can change:
 
 ### Create Spring Boot Container
 
+#### Explanation of Spring Application Containerization
+
+It's possible to [containerize][container-zk] a Spring application.
+Here we'll show you how, among other platforms, to do it with [Docker][docker-zk].
+
 #### Command Line to Create Container
 
 ```sh
@@ -62,4 +67,11 @@ docker run -it --rm -p 8080:8080 --name javamaven maven:3.6.3-openjdk-11 bash
 
 ### Note Links
 
+* [Java][java-zk]
+* [Container (Software)][container-zk]
+* [Docker][docker-zk]
+
 <!-- Hidden References -->
+[java-zk]: java.md "Java"
+[container-zk]: container.md "Container (Software)"
+[docker-zk]: docker.md "Docker"

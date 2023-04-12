@@ -1,6 +1,6 @@
 ---
 created: 2023-04-05T16:08:31.423Z
-modified: 2023-04-11T19:22:54.320Z
+modified: 2023-04-12T14:08:19.116Z
 tags: [pcde,content,module14,java,cdc,debezium,containers,data,database,change,capture]
 ---
 # PCDE Module 14 Content: Java & Debezium
@@ -155,6 +155,25 @@ replicates those changes to destination(s) **(Correct)**
 * Q9: Which Python library is used to perform CDC using a Python program?
   * pymysqlreplication **(Correct)**
 
+## Knowledge Check 14.3: Debezium
+
+* Q1: What is Debezium?
+  * Debezium is an open-source distributed platform for CDC **(Correct)**
+* Q2: The CDC package for Debezium application is written in which language?
+  * Java **(Correct)**
+* Q3: How can 2 docker containers running on the same host see each other?
+  * By creating a Docker network and adding both containers to it **(Correct)**
+* Q4: What is the command used to create a docker network named `netlabel`?
+  * `docker network create netlabel` **(Correct)**
+* Q5: Which of the can be used to create a Docker image?
+  * Dockerfile **(Correct)**
+* Q6: How does Debezium interact with different types of databases?
+  * Debezium uses a **connector** for each database type **(Correct)**
+* Q7: Which of the following databases is compatible with Debezium?
+  * All the above **(Correct)**
+* Q8: Which of the following is not a connector capability of Debezium?
+  * Transforming (?) **(Correct)**
+
 ## References
 
 ### Web Links
@@ -168,6 +187,8 @@ replicates those changes to destination(s) **(Correct)**
 * [Debezium][debezium-zk]
 * [Python][py-zk]
 * [Java Spring][java-spring-zk]
+* [Docker][docker-zk]
+* [Nano Editor][nano-zk]
 
 <!-- Hidden References -->
 [cdc-zk]: ./change-data-capture.md "Change Data Capture"
@@ -175,3 +196,5 @@ replicates those changes to destination(s) **(Correct)**
 [debezium-zk]: debezium.md "Debezium"
 [py-zk]: python.md "Python"
 [java-spring-zk]: ./java-spring.md "Java Spring"
+[docker-zk]: docker.md "Docker"
+[nano-zk]: nano-editor.md "Nano Editor"

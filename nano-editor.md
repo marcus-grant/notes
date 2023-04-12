@@ -1,6 +1,6 @@
 ---
 created: 2023-04-06T08:35:07.537Z
-modified: 2023-04-11T12:36:51.435Z
+modified: 2023-04-12T13:54:01.404Z
 tags: [nano,editor,shell,cli,terminal,text,pcde,module14]
 ---
 # Nano Editor
@@ -41,7 +41,10 @@ After entering search mode, using `Alt+W` will search for the next occurrence of
 
 ### Web Links
 
+* [How to Use Nano Text Editor (from linuxize.com)][nano-linuxize]
+
 <!-- Hidden References -->
+[nano-linuxize]: https://linuxize.com/post/how-to-use-nano-text-editor/ "How to Use Nano Text Editor (from linuxize.com)"
 
 ### Note Links
 
