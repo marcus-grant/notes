@@ -1,15 +1,16 @@
 ---
 created: 2022-12-02T09:52:31.002Z
-modified: 2023-03-27T11:20:42.563Z
+modified: 2023-04-13T10:43:31.039Z
 tags: [database,data,design,overview]
 ---
 # Databases Overview
 
-Databases are any peice of software that manages and stores structured data of some kind.
-This can include either schema-less; such as
-[document-based databases](document-databases.md) and
-key-value based databases like [redis](redis.md) or,
-relational usually strictly schema'd data like [SQL based relational databases](relational-databases.md).
+Databases are any piece of software that manages and
+stores structured data of some kind.
+
+## Types of Databases
+
+There are several [database types](types-of-database.md),
 
 ## Design of Databases Overview
 
