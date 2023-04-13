@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T09:53:39.796Z
-modified: 2023-04-13T14:20:40.174Z
+modified: 2023-04-13T16:00:03.591Z
 tags: [pcde,module15,project,authorization,python,flask,web,dictionary,api]
 ---
 # PCDE Module 15 Course Content
@@ -118,6 +118,28 @@ please see the full descriptions of each project at the links below:
 Thinking Like a Data Scientist:
 Using Advanced Python Programming to Create Web Applications
 * Self-Study Flashcards: Module 15 Flashcards
+
+## Knowledge Check 15.1: Authorization Servers
+
+* Q1: When a user sends a login *request* to an authorization server,
+what kind of *token* is sent back to the user by the authorization server?
+  * JSON web *token* **(Correct)**
+* Q2: Which of the following is shared by
+the application server and authorization server?
+  * Secret key **(Correct)**
+* Q3: What does JWT stand for?
+  * JSON web *token* **(Correct)**
+* Q4: What kind of request does a user send to the application server during
+the authentication and authorization process?
+  * `POST` request with username and password **(WRONG)**
+  * `GET` request **(WRONG)**
+  * `HTTP GET` request with JWT **(Correct)**
+* Q5: Where is the JWT inserted within the `HTTP` request for authorization?
+  * `Authorization` header **(Correct)**
+* Q6: What is the term for the data within the JWT payload?
+  * *Claims* **(Correct)**
+* Q7: What fields is a serialized web token composed of?
+  * Header, payload, and signature **(Correct)**
 
 ## References
 

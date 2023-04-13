@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T12:37:51.414Z
-modified: 2023-04-13T13:57:35.546Z
+modified: 2023-04-13T16:15:53.833Z
 tags: [pcde,project,module15,jwt,auth,flask,web,api,python]
 ---
 
@@ -342,14 +342,56 @@ the app.py file along with their correct cover images in the "Books" tab.
 you can’t add a new book to your website using an account with
 only reader privileges.
 
+## Associated 15.2 Lecture
+
+### Project Guide
+
+In this mini project we're going to go through a number of tasks related to books.
+The goal is to match up images of books within a database.
+
+Then we're going to add some new useres with either `admin` or `reader` roles.
+
+Then we're going to extend the security so
+that only an `admin` an `/addbook` or `/addimage`.
+
+These are the starting users defined in a [Python][-py]
+[list of dictionaries][-py-collections].
+
+```python
+users = [
+    {'username': 'testuser', 'password': 'testuser', 'role': 'admin'},
+    {'username': 'John', 'password': 'John', 'role': 'reader'},
+    {'username': 'Anne', 'password': 'Anne', 'role': 'reader'},
+]
+```
+
+Here John and Anne are both `reader` users, defined by the `role` key.
+Then `testuser` is an `admin` user, also defined by the `role` key.
+The `admin` role will be allowed to do everything.
+While `reader` roles can only access pre-existing books or images.
+
+You could also add yourself as a user with the `admin` role.
+
+### Project Starting Code
+
+Here we'll start with some basic boilerplate to get started with the server.
+
+```python
+//TODO: Add changes lecturer describes
+```
+
 ## References
 
 ### Note Links
 
 * [PCDE Module 11 Course Contents][-pcde-mod11-content]
+* [Python][-py]
+* [Python: Collections][-py-collections]
 
 <!-- Hidden References -->
 [-pcde-mod11-content]: ./pcde-module11-content.md "PCDE Module 11 Course Contents"
+[-py]: python.md "Python"
+[-py-collections]: python-collections.md "Python Collections"
 
 ### Web References
 
