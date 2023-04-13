@@ -1,6 +1,6 @@
 ---
 created: 2022-11-15T18:08:55.571Z
-modified: 2023-03-27T11:02:55.590Z
+modified: 2023-04-13T16:17:55.034Z
 tags: [flask,server,backend,python,http]
 ---
 # Flask
@@ -104,7 +104,7 @@ while that file is open.
 ## Cookies in Flask
 
 Using flask's `route` decorator you get `request` objects to inspect the request.
-To get cookies from the request simply use
+To get [cookies][-cookie] from the request simply use
 `request.cookies.get('COOKIE_NAME_OR_KEY')` to access it.
 In the below example is
 a book server that will either
@@ -163,7 +163,10 @@ def removeCookie():
 
 * [Python: Decorators][py-deco-zk]
 * [Jinja (Template Engine)][jinja-zk]
+* [Cookie (HTTP)][-cookie]
 
 <!-- Hidden Reference Links Below Here -->
 [py-deco-zk]: ./python.md#Decorators "Python: Decorators"
 [jinja-zk]: ./jinja.md "Jinja (Template Engine)"
+[-cookie]: cookie.md "Cookie (HTTP)"
+

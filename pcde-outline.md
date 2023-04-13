@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T10:12:17.264Z
-modified: 2023-04-13T11:12:25.000Z
+modified: 2023-04-13T14:53:51.166Z
 tags: [pcde,course,outline,overview,data,learn]
 ---
 # PCDE Course Outline
@@ -561,7 +561,7 @@ Using Advanced Python Programming to Create Web Applications
 [swagger-zk]: ./swagger.md "Swagger"
 [flask-zk]: ./flask.md "Flask"
 [pcde-mod11-zk]: ./pcde-module11-content.md "PCDE Course: Module 11 Content"
-[cookies-zk]: ./cookies.md "Cookies"
+[cookies-zk]: ./cookie.md "Cookies"
 [oauth2-zk]: ./oaut2.md "OAuth2"
 [pcde-mod12-zk]: ./pcde-module12-content.md "PCDE Course: Module 12 Content"
 [db-types-zk]: ./types-of-database.md "Types of Databases"

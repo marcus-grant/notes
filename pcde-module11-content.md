@@ -1,6 +1,6 @@
 ---
 created: 2022-11-01T17:37:09.062Z
-modified: 2023-03-15T16:31:50.092Z
+modified: 2023-04-13T14:54:10.185Z
 tags: [pcde,client,server,flask,python,api,swagger,cookies,data,engineer,module11]
 ---
 # PCDE Course - Module 11: Client Server Architecture
@@ -307,6 +307,6 @@ access services without specific credentials for those services **(Correct)**
 
 <!-- Hidden Reference Links Below Here -->
 [flask-zk]: ./flask.md "Flask"
-[cookies-zk]: ./cookies.md "Cookies"
+[cookies-zk]: ./cookie.md "Cookies"
 [oauth2-zk]: ./oaut2.md "OAuth2"
 [swagger-zk]: ./swagger.md "Swagger"

@@ -1,9 +1,9 @@
 ---
 created: 2022-11-14T13:16:34.409Z
-modified: 2023-03-15T16:31:45.986Z
-tags: [www,cookies,web,infosec]
+modified: 2023-04-13T14:52:48.224Z
+tags: [www,cookie,web,infosec,security,http,api]
 ---
-# Cookies
+# Cookie (HTTP)
 
 ## Cookies Basics
 

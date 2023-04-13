@@ -1,6 +1,6 @@
 ---
 created: 2022-11-14T19:44:30.368Z
-modified: 2023-02-23T10:22:05.245Z
+modified: 2023-04-13T14:55:49.202Z
 tags: [oauth,infosec,crypto,web,authorize]
 ---
 # Oauth2
@@ -41,7 +41,7 @@ This simplifies access to software through a platform that is secure & reliable.
 ## API Token Management with Okta
 
 API tokens are used to authenticate requests to the Okta API
-just like HTTP [cookies](cookies.md) to authenticate requests.
+just like HTTP [cookies][-cookie] to authenticate requests.
 An API token is issued for a specific user and all requests with
 the token act on behalf of the user.
 API tokens are secrets and should be treated like passwords.
@@ -80,6 +80,15 @@ an HTTP request using the authorization header that's standard to
 HTTP requests using those 4 pieces of information.
 
 ## References
+
+### Note References
+
+* [Cookie (HTTP)][-cookie]
+
+<!-- hidden references -->
+[-cookie]: cookie.md "Cookie (HTTP)"
+
+### Web References
 
 * [Okta: Homepage][okta]
 * [OAuth2 Homepage][oauth2]
