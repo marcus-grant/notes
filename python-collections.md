@@ -1,7 +1,7 @@
 ---
 created: 2022-12-13T15:06:45.391Z
-modified: 2022-12-14T14:09:37.857Z
-tags: [python,dev,software,collection,data,structures,computers]
+modified: 2023-04-17T16:05:59.400Z
+tags: [python,dev,software,collection,data,structures,dictionary,redundant,list,comprehension]
 ---
 # Python Collections
 
@@ -148,6 +148,101 @@ iteration expression and optional conditional statement.
 a = [1, 2, 3]
 r = [item*3 for item in a if item < 3]
 ```
+
+## Redundant Dictionaries
+
+Sometimes we have dictionaries store some data that we want to query in different ways.
+This is well enough on small datasets, but as the dataset grows,
+querying different relations in the data gets time consuming.
+Take the `db` dictionary below:
+
+```python
+db = {'students': {1: 'Alice', 2: 'Bob', 3: 'Charlie'},
+    'psets': {1: 100, 2: 120, 3: 130},
+    'grades': {1: {1: 98, 2: 108, 3: 125}, 2: {3: 115}, 3: {3: 110}}}
+```
+
+This is a dictionary that
+stores information about students, psets (problem sets) and grades.
+Looking up grades by students or psets can take a lot of time in larger datasets.
+We improve query times by specifying **redundant** dictionaries.
+That is dictionaries that have repeated information, but in different ways.
+Below we use `studentsById` and `studentsByName` to store the same information,
+but ordered differently.
+In `gradesByStudent` and `gradesByPset` we store the same information,
+but ordered by different keys.
+
+```python
+def empty():
+    return {
+        'studentsById': {},
+        'studentsByName': {},
+        'psets': {},
+        'gradesByStudent': {},
+        'gradesByPset': {},
+    }
+
+db = empty()
+def get(dict, key):
+    if key in dict:
+        return dict[key]
+    else:
+        return None
+def add2(dict1, key1, key2, value):
+    if key1 not in dict1:
+        dict1[key1] = {}
+    dict1[key1][key2] = value
+
+def addStudent(db, student_id, student_name):
+    db['studentsById'][studentsByName'] = student_name
+    db['studentsByName'][student_name] = student_id
+
+def addPset(db, pset_id, pset_total_points):
+    db['psets'][pset_id] = pset_total_points
+
+def addGrade(db, student_id, pset_id, points):
+    add2(db['gradesByStudent'], student_id, pset_id, points)
+    add2(db['gradesByPset'], pset_id, student_id, points)
+
+print(db)
+
+addStudent(db, 1, 'Alice')
+addStudent(db, 2, 'Bob')
+addStudent(db, 3, 'Charlie')
+
+addPset(db, 1, 100)
+addPset(db, 2, 120)
+addPset(db, 3, 130)
+
+addGrade(db, 1, 1, 98)
+addGrade(db, 1, 2, 108)
+addGrade(db, 1, 3, 125)
+addGrade(db, 2, 3, 115)
+addGrade(db, 3, 3, 110)
+
+print(db)
+# output:
+# {'studentsById': {1: 'Alice', 2: 'Bob', 3: 'Charlie'},
+#  'studentsByName': {'Alice': 1, 'Bob': 2, 'Charlie': 3},
+#  'psets': {1: 100, 2: 120, 3: 130},
+#  'gradesByStudent': {1: {1: 98, 2: 108, 3: 125},
+#   2: {3: 115},
+#   3: {3: 110}},
+#  'gradesByPset': {1: {1: 98}, 2: {1: 108}, 3: {1: 125, 2: 115, 3: 110}}}
+```
+
+Now we can query the data in different ways.
+First we'll look at how to query grades by problem set using `getGradesOnPset`:
+
+```python
+def getGradesOnPset(db, pset_id):
+    return get(db['gradesByPset'], pset_id)
+print(getGradesOnPset(db, 3))
+# output: {1: 125, 2: 115, 3: 110}
+```
+
+Now we can look at problem sets without having complicated loops and function calls.
+
 
 ## References
 
