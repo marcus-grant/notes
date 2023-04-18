@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T10:12:17.264Z
-modified: 2023-04-13T14:53:51.166Z
+modified: 2023-04-18T14:29:49.060Z
 tags: [pcde,course,outline,overview,data,learn]
 ---
 # PCDE Course Outline
@@ -330,9 +330,9 @@ worse leaking data by an attacker.
 
 ### Note Links
 
-* [Python][py-zk]
+* [Python][-py]
 * [Types of Databases][db-types-zk]
-* [Relational Databases][relational-db-zk]
+* [Relational Databases][-db-relational]
 * [Document Databases][doc-db-zk]
 * [MongoDB Using Python][mongo-py-zk]
 * [Key-Value Databases][key-value-db-zk]
@@ -356,7 +356,7 @@ worse leaking data by an attacker.
 
 * [PCDE Module 13 Content][pcde-mod13-zk]
 * [Change Data Capture][cdc-zk]
-* [Python][py-zk]
+* [Python][-py]
 * [Python Interaction with OS Shell][py-shell-zk]
 
 ### Outcomes
@@ -380,7 +380,7 @@ worse leaking data by an attacker.
 * [Change Data Capture][cdc-zk]
 * [Java][java-zk]
 * [Debezium][debezium-zk]
-* [Python][py-zk]
+* [Python][-py]
 * [Java Spring][java-spring-zk]
 * [Docker][docker-zk]
 * [Nano Editor][nano-zk]
@@ -431,7 +431,11 @@ Using Advanced Python Programming to Create Web Applications
 ### Notes
 
 * [PCDE Module 15 Content][-pcde-mod15]
-***TODO INSERT LINKS FROM MOD15 DOC HERE***
+* [PCDE Project 15.1: Creating a Books Web App][-pcde-project-15-1]
+* [PCDE Project 15.2: Creating a Student Grades Database][-pcde-project-15-2]
+* [PCDE Project 15.3: Redundant Dictionaries in Python][-pcde-project-15-3]
+* [Python][-py]
+* [Python: Collections][-py-collections]
 
 ## References
 
@@ -471,7 +475,8 @@ Using Advanced Python Programming to Create Web Applications
 * [VS Code][vscode-zk]
 * [Git][git-zk]
 * [GitHub][github-zk]
-* [Python][py-zk]
+* [Python][-py]
+* [Python: Collections][-py-collections]
 * [Python: Classes][py-classes-zk]
 * [Python: Advanced Functions][py-adv-func-zk]
 * [Python: Decorators][py-decorators-zk]
@@ -493,7 +498,7 @@ Using Advanced Python Programming to Create Web Applications
 * [OAuth2][oauth2-zk]
 * [PCDE Course: Module 12 Content][pcde-mod12-zk]
 * [Types of Databases][db-types-zk]
-* [Relational Databases][relational-db-zk]
+* [Relational Databases][-db-relational]
 * [Document Databases][doc-db-zk]
 * [MongoDB Using Python][mongo-py-zk]
 * [Key-Value Databases][key-value-db-zk]
@@ -501,7 +506,6 @@ Using Advanced Python Programming to Create Web Applications
 * [Cassandra (Distributed Database)][cassandra-zk]
 * [PCDE Module 13 Content][pcde-mod13-zk]
 * [Change Data Capture][cdc-zk]
-* [Python][py-zk]
 * [Python Interaction with OS Shell][py-shell-zk]
 * [PCDE Module 14 Content][pcde-mod14-zk]
 * [Java][java-zk]
@@ -509,17 +513,21 @@ Using Advanced Python Programming to Create Web Applications
 * [Java Spring][java-spring-zk]
 * [Nano Editor][nano-zk]
 * [PCDE Module 15 Course Content][-pcde-mod15]
+* [PCDE Project 15.1: Creating a Books Web App][-pcde-project-15-1]
+* [PCDE Project 15.2: Creating a Student Grades Database][-pcde-project-15-2]
+* [PCDE Project 15.3: Redundant Dictionaries in Python][-pcde-project-15-3]
 
 <!-- Hidden Reference Links Below Here -->
 [-pcde-overview]: pcde-course-overview.md "PCDE Course Overview"
 [-pcde-orientation]: pcde-orientation.md "PCDE Course Orientation"
 [intro-py-zk]: ./intro-python.md "Introduction to Python Notes"
-[py-zk]: ./python.md "Python"
 [notetaking-zk]: ./notetaking.md "Note-taking Strategies"
 [notes-lec-zk]: ./notes-lectures.md "Notetaking Strategies for Lectures"
 [time-mgmt-zk]: ./time-management.md "Time Management Strategies"
 [time-block-zk]: ./time-blocking.md "Time Blocking Strategies Notes"
 [pcde-mod2-content-zk]: ./pcde-module2-content.md "PCDE Course: Module 2 Content"
+[-py]: python.md "Python"
+[-py-collections]: python-collections.md "Python Collections"
 [pandas-zk]: ./pandas.md "Pandas: Python Dataframes & Data Manipulation"
 [zk-probs]: ./probability.md "Mathematical Probability Overview"
 [numpy-zk]: ./numpy.md "NumPy: Numerical Python Library"
@@ -565,7 +573,7 @@ Using Advanced Python Programming to Create Web Applications
 [oauth2-zk]: ./oaut2.md "OAuth2"
 [pcde-mod12-zk]: ./pcde-module12-content.md "PCDE Course: Module 12 Content"
 [db-types-zk]: ./types-of-database.md "Types of Databases"
-[relational-db-zk]: ./relational-databases.md "Relational Databases"
+[-db-relational]: relational-databases.md "Relational Databases"
 [doc-db-zk]: ./document-databases.md "Document Databases"
 [mongo-py-zk]: ./mongodb-using-python.md "MongoDB Using Python"
 [key-value-db-zk]: ./key-value-database.md "Key-Value Databases"
@@ -580,3 +588,6 @@ Using Advanced Python Programming to Create Web Applications
 [java-spring-zk]: ./java-spring.md "Java Spring"
 [nano-zk]: nano-editor.md "Nano Editor"
 [-pcde-mod15]: pcde-module15-content.md "PCDE Course: Module 15 Content"
+[-pcde-project-15-1]: pcde-project-15-1.md "PCDE Project 15.1: Creating a Books Web App"
+[-pcde-project-15-2]: pcde-project-15-2.md "PCDE Project 15.2: Creating a Student Grades Database"
+[-pcde-project-15-3]: pcde-project-15-3.md "PCDE Project 15.3: Redundant Dictionaries in Python"

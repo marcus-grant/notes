@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T09:53:39.796Z
-modified: 2023-04-17T16:25:06.225Z
+modified: 2023-04-18T12:38:17.083Z
 tags: [pcde,module15,project,authorization,python,flask,web,dictionary,api]
 ---
 # PCDE Module 15 Course Content
@@ -140,6 +140,144 @@ the authentication and authorization process?
   * *Claims* **(Correct)**
 * Q7: What fields is a serialized web token composed of?
   * Header, payload, and signature **(Correct)**
+
+## Discussion 15.1: Applications of Authorization Servers
+
+### Discussion Prompt
+
+As you continue to learn how to
+develop web applications using Python programming fundamentals,
+it is important to understand how authorization servers work.
+
+Authentication and authorization are essential to application development.
+Authentication is the process of verifying who a user is,
+and authorization is the process of verifying what
+specific applications, files, and data a user has access to.
+The authorization server is the application for
+issuing the OAuth client tokens that
+allow access to the data on the resource server on behalf of the resource owner.
+
+For example, OpenID Connect is used to authenticate users with
+a web application.
+The application uses the ID token that is returned from
+the authorization server to know whether a user is authenticated and to
+obtain profile information about the user, such as their username or location.
+On the other hand, OAuth 2.0 is used to authorize user access to an API.
+In this case,
+an access token is used by the resource server to validate a user's level of
+authorization/access.
+
+Your response for this discussion will include two components:
+
+First, research a real-world application that works based on OpenID Connect.
+
+* Explain why you think it makes authentication more effective and secure.
+* Be sure to include at least three unique reasons that
+you feel OpenID Connect makes the authentication more secure.
+
+Next, research a real-world application that works based on OAuth 2.0.
+
+* Explain why you think it makes authorization more effective and secure.
+* Be sure to include at least three unique reasons that
+you feel OAuth makes the authorization more secure.
+
+Read the statements posted by your peers.
+Engage with them by responding with
+thoughtful comments and questions to deepen the discussion.
+
+**Suggested Time**: 60 minutes
+
+**Suggested Length**: 300 words
+
+This is a required activity and will count toward course completion.
+
+### My Response
+
+#### OpenID Connect
+
+OpenID Connect is a protocol that allows web developers to
+setup their own applications that require authentication without worrying about
+(*not as much anyways*) about implementing the best security practices for
+authenticating their users.
+Different providers like Google, Facebook, GitHub, etc. will
+provide identity services where your users can log in to your application via
+their existing accounts on those providers or thru a newly created one there.
+
+Why should we trust these providers?
+Well for starters,
+they are massive companies who stake their reputation and a lot of investment into
+the security of their services.
+Secondly,
+they have the resources to ensure their OpenID services are as secure as possible and
+that the account creation and login services are as secure as possible.
+While as data and web engineers we do learn the basics of security,
+it's no match for the skills and resources of these companies.
+These providers also have the resources to implement more secure identity services
+based on features like multi-factor authentication which makes it much harder to
+exploit the security of their services to hijack the accounts of their users.
+
+A real world example of an application that uses OpenID Connect is GitHub.
+By logging into GitHub with your GitHub account,
+I get access to a lot of other services tailored towards developers.
+For example,
+I use netlify to build and host my static websites.
+By identifying with GitHub,
+they can develop a ton of features that are tailored towards using GitHub.
+Not only as an identity provider, but also as a source of application data.
+For example,
+I can allow netlify to view some repositories holding my static websites' code.
+And because they not only identify me through GitHub but also have access to
+some of my repository data,
+they can automatically setup build and deployment pipelines for my websites.
+All I need to provide is the name of the repository and the branch I want to deploy.
+
+Security wise,
+because I secure GitHub with multi-factor authentication,
+and because GitHub has an enormous stake in their users' security,
+I can be reasonably assured that my account is secure.
+And that is not necessarily tied to the security of netlify's services.
+At least not the authentication part.
+
+#### OAuth 2.0
+
+OAuth 2.0 is a protocol that allows web developers to
+setup their own applications that require authorization with less concern for
+setting up ad-hoc authorization services that need security experts to maintain.
+This often goes hand in hand with authentication.
+After authenticating a user,
+you can use OAuth 2.0 to authorize them to access some of your application's data.
+
+Going back to the netlify example,
+After I am authenticated with GitHub,
+OAuth 2.0 allows me to authorize netlify to access some of my GitHub data.
+Which as described before,
+comes with some serious benefits in terms of convenience and security.
+That authorization process that GitHub provides means that again,
+I can authorize them to view some of my repositories' data.
+Which then gets used to
+much easier setup build and deployment pipelines for my websites.
+
+From a security perspective,
+here I am trusting GitHub with my account's authorization,
+but because OAuth2.0 also allows me to specify exactly what netlify can access,
+I can be assured that even if netlify's security practices are not as good as GitHub's,
+they will not be able to access any data that I do not explicitly authorize them to.
+
+#### Conclusion
+
+Tying it all together.
+With the examples shown,
+OpenID Connect and OAuth 2.0 are both protocols that allows developers to
+offload some of the security concerns of their applications when it comes to
+authentication and authorization.
+Instead of worrying about implementing the best security practices for
+authenticating and authorizing their users,
+you can instead offload some of that responsibility to a third party.
+And with that extra time saved,
+you can use some of the features of the protocol to
+make your application more secure,
+but also more convenient for your users by allowing them to
+share some information about the accounts that share the same identity.
 
 ## Knowledge Check 15.2: Relational Databases in Python
 

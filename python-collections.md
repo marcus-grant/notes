@@ -1,6 +1,6 @@
 ---
 created: 2022-12-13T15:06:45.391Z
-modified: 2023-04-18T12:05:40.438Z
+modified: 2023-04-18T12:14:05.861Z
 tags: [python,dev,software,collection,data,structures,dictionary,redundant,list,comprehension]
 ---
 # Python Collections
@@ -221,14 +221,18 @@ addGrade(db, 2, 3, 115)
 addGrade(db, 3, 3, 110)
 
 print(db)
-# output:
-# {'studentsById': {1: 'Alice', 2: 'Bob', 3: 'Charlie'},
-#  'studentsByName': {'Alice': 1, 'Bob': 2, 'Charlie': 3},
-#  'psets': {1: 100, 2: 120, 3: 130},
-#  'gradesByStudent': {1: {1: 98, 2: 108, 3: 125},
-#   2: {3: 115},
-#   3: {3: 110}},
-#  'gradesByPset': {1: {1: 98}, 2: {1: 108}, 3: {1: 125, 2: 115, 3: 110}}}
+```
+
+Running this code results in the following output:
+
+```txt
+{'studentsById': {1: 'Alice', 2: 'Bob', 3: 'Charlie'},
+ 'studentsByName': {'Alice': 1, 'Bob': 2, 'Charlie': 3},
+ 'psets': {1: 100, 2: 120, 3: 130},
+ 'gradesByStudent': {1: {1: 98, 2: 108, 3: 125},
+  2: {3: 115},
+  3: {3: 110}},
+ 'gradesByPset': {1: {1: 98}, 2: {1: 108}, 3: {1: 125, 2: 115, 3: 110}}}
 ```
 
 Now we can query the data in different ways.
