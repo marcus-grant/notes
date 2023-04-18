@@ -1,6 +1,6 @@
 ---
 created: 2022-12-13T15:06:45.391Z
-modified: 2023-04-17T16:05:59.400Z
+modified: 2023-04-18T12:05:40.438Z
 tags: [python,dev,software,collection,data,structures,dictionary,redundant,list,comprehension]
 ---
 # Python Collections
@@ -242,7 +242,6 @@ print(getGradesOnPset(db, 3))
 ```
 
 Now we can look at problem sets without having complicated loops and function calls.
-
 
 ## References
 
