@@ -1,6 +1,6 @@
 ---
 created: 2022-11-15T21:54:59.839Z
-modified: 2023-04-20T13:02:29.207Z
+modified: 2023-04-20T13:07:29.330Z
 tags: [database,data,devops,relational,document,key,value,server]
 ---
 # Types of Databases
@@ -11,7 +11,7 @@ Detailed in [Relational Databases](relational-database.md)
 
 ## Document Databases
 
-Detailed in [Document Databases](document-databases.md)
+Detailed in [Document Databases](document-database.md)
 
 ## Key-Value Databases
 
