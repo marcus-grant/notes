@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T09:53:39.796Z
-modified: 2023-04-18T12:38:17.083Z
+modified: 2023-04-20T13:01:37.312Z
 tags: [pcde,module15,project,authorization,python,flask,web,dictionary,api]
 ---
 # PCDE Module 15 Course Content
@@ -350,4 +350,5 @@ each type of data manipulation **(Correct)**
 [-pcde-project-15-3]: pcde-project-15-3.md "PCDE Project 15.3: Redundant Dictionaries in Python"
 [-py]: python.md "Python"
 [-py-collections]: python-collections.md "Python Collections"
-[-db-relational]: relational-databases.md "Relational Databases"
+[-db-relational]: relational-database.md "Relational Databases"
+

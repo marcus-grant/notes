@@ -1,6 +1,6 @@
 ---
 created: 2023-04-11T15:30:04.963Z
-modified: 2023-04-11T16:30:33.000Z
+modified: 2023-04-20T13:01:52.239Z
 tags: [mysql,mariadb,sql,relational,database,data,relational-database,pcde]
 ---
 # MySQL / MariaDB
@@ -80,7 +80,7 @@ The string types are:
 
 <!-- Hidden References -->
 [db-types-zk]: ./types-of-database.md "Types of Databases"
-[rel-db-zk]: ./relational-databases.md "Relational Databases"
+[rel-db-zk]: ./relational-database.md "Relational Databases"
 [sql-zk]: ./sql.md "Structured Query Language (SQL)"
 [foss-zk]: ./FOSS.md "Free and Open Source Software (FOSS)"
 
