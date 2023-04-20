@@ -1,6 +1,6 @@
 ---
 created: 2023-04-03T09:25:44.367Z
-modified: 2023-04-03T10:25:48.000Z
+modified: 2023-04-20T13:19:59.037Z
 tags: [data,warehouse,database,cdc,etl,system,pcde,module10,module13]
 ---
 # Data Warehouse
@@ -41,7 +41,7 @@ is frequently used as a data warehouse.
 
 <!-- Hidden References -->
 [cassandra-zk]: ./cassandra.md "Cassandra"
-[dist-db-zk]: ./distributed-databases.md "Distributed Databases"
+[dist-db-zk]: ./distributed-database.md "Distributed Databases"
 
 ### Footnotes
 

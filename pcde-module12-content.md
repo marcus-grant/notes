@@ -1,6 +1,6 @@
 ---
 created: 2023-03-15T16:37:30.361Z
-modified: 2023-04-20T13:07:03.162Z
+modified: 2023-04-20T13:20:26.413Z
 tags: [pcde,module12,database,data,container,docker,mongodb,mysql,redis,document,key,value]
 ---
 # PCDE Module 12 Content
@@ -504,5 +504,5 @@ Using Firebase locks you into the Google ecosystem.
 [doc-db-zk]: ./document-database.md "Document Databases"
 [mongo-py-zk]: ./mongodb-using-python.md "MongoDB Using Python"
 [key-value-db-zk]: ./key-value-database.md "Key-Value Databases"
-[dist-db-zk]: ./distributed-databases.md "Distributed Databases"
+[dist-db-zk]: ./distributed-database.md "Distributed Databases"
 [cassandra-zk]: ./cassandra.md "Cassandra (Distributed Database)"

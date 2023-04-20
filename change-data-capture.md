@@ -1,6 +1,6 @@
 ---
 created: 2023-04-03T07:02:50.615Z
-modified: 2023-04-20T13:06:42.366Z
+modified: 2023-04-20T13:20:37.555Z
 tags: [change,data,capture,database,workflow,pcde,module13]
 ---
 # Change Data Capture (CDC)
@@ -420,8 +420,8 @@ To read more about it, read the [Debezium document][debezium-zk].
 [doc-db-zk]: ./document-database.md "Document Databases"
 [mongodb-zk]: ./mongodb.md "MongoDB"
 [redis-zk]: ./redis.md "Redis"
-[kv-db-zk]: ./key-value-databases.md "Key-Value Databases"
-[dist-db-zk]: ./distributed-databases.md "Distributed Databases"
+[kv-db-zk]: ./key-value-database.md "Key-Value Databases"
+[dist-db-zk]: ./distributed-database.md "Distributed Databases"
 [cassandra-zk]: ./cassandra.md "Cassandra"
 [data-warehouse-zk]: ./data-warehouse.md "Data Warehouse"
 [py-zk]: ./python.md "Python"

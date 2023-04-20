@@ -1,6 +1,6 @@
 ---
 created: 2022-11-16T10:41:40.277Z
-modified: 2023-03-27T11:18:08.782Z
+modified: 2023-04-20T13:19:45.962Z
 tags: [cassandra,database,backend,data,distribute,parallel]
 ---
 # Cassandra
@@ -170,6 +170,6 @@ cqlsh:employees> select * from employee;
 
 <!-- Hidden References -->
 [db-types-zk]: ./types-of-database.md "Types of Databases"
-[dist-db-zk]: ./distributed-databases.md "Distributed Database"
+[dist-db-zk]: ./distributed-database.md "Distributed Database"
 [py-zk]: ./python.md "Python"
 [docker-zk]: ./docker.md "Docker"
