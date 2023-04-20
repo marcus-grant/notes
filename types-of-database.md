@@ -1,6 +1,6 @@
 ---
 created: 2022-11-15T21:54:59.839Z
-modified: 2023-04-20T13:24:17.128Z
+modified: 2023-04-20T13:27:33.718Z
 tags: [database,data,devops,relational,document,key,value,server]
 ---
 # Types of Databases
@@ -51,4 +51,3 @@ One such example is [Cassandra][-cassandra]
 [-dist-db]: distributed-database.md "Distributed Database"
 [-redis]: redis.md "Redis (Key-Value Database)"
 [-cassandra]: cassandra.md "Cassandra (Distributed Database)"
-

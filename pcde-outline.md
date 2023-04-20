@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T10:12:17.264Z
-modified: 2023-04-20T12:15:06.711Z
+modified: 2023-04-20T15:36:45.996Z
 tags: [pcde,course,outline,overview,data,learn]
 ---
 # PCDE Course Outline
@@ -355,7 +355,7 @@ worse leaking data by an attacker.
 ### Note Links
 
 * [PCDE Module 13 Content][pcde-mod13-zk]
-* [Change Data Capture][cdc-zk]
+* [Change Data Capture][-cdc]
 * [Python][-py]
 * [Python Interaction with OS Shell][py-shell-zk]
 
@@ -377,9 +377,9 @@ worse leaking data by an attacker.
 ### Note Links
 
 * [PCDE Module 14 Content][pcde-mod14-zk]
-* [Change Data Capture][cdc-zk]
+* [Change Data Capture][-cdc]
 * [Java][java-zk]
-* [Debezium][debezium-zk]
+* [Debezium][-debezium]
 * [Python][-py]
 * [Java Spring][java-spring-zk]
 * [Docker][docker-zk]
@@ -432,41 +432,45 @@ Using Advanced Python Programming to Create Web Applications
 
 ### Due Date
 
-* Due Wednesday, April 19, 2023 at 4:29 PM UTC
-  * 5:29 PM CET
-  * 11:29 AM EST
-  * 6:29 PM EAT
+* Due Wednesday, April 26, 2023 at 1629 UTC
+  * 1829 CET
+  * 1929 EAT
+  * 1229 EST
+
+### Goals
+
+1. Describe use cases of location-based applications
+2. Define web development tools for building an application
+3. Identify key components of Mapbox
+4. Build a transit data application
 
 ### Activities
 
 #### Key Activities
 
 * **Knowledge Checks**
-  * Knowledge Check 15.1: Authorization Servers
-  * Knowledge Check 15.2: Relational Databases in Python
-  * Knowledge Check 15.3: Redundant Dictionaries in Python
+  * Knowledge Check 16.1: Location-Based Applications
+  * Knowledge Check 16.2: Mapbox
 * **Discussion**
-  * Discussion 15.1: Applications of Authorization Servers
-* **Project Assignments**
-  * Project 15.1: Project 1: Creating a Books Web Application
-  * Project 15.2: Project 2 Part 1: Creating a Student Grades Database
-  * Project 15.3: Project 2 Part 2: Redundant Dictionaries in Python
+  * Discussion 16.1: Use Cases of Location-Based Applications
+* **Project**
+  * Project 16.1: Build a Transit Data Application
 
 #### Self-Study Activities
 
-* Self-Study Discussion 15.2:
-Thinking Like a Data Scientist:
-Using Advanced Python Programming to Create Web Applications
-* Self-Study Flashcards: Module 15 Flashcards
+* Self-Study Discussion 16.2: Thinking Like a Data Scientist: Transit Data and APIs
+* Self-Study Flashcards: Module 16 Flashcards
 
 ### Notes
 
-* [PCDE Module 15 Content][-pcde-mod15]
-* [PCDE Project 15.1: Creating a Books Web App][-pcde-project-15-1]
-* [PCDE Project 15.2: Creating a Student Grades Database][-pcde-project-15-2]
-* [PCDE Project 15.3: Redundant Dictionaries in Python][-pcde-project-15-3]
-* [Python][-py]
-* [Python: Collections][-py-collections]
+* [PCDE Module 16 Content][-pcde-mod16]
+* [PCDE Project 16: Build a Transit Data Application][-project16]
+* [Mapbox][-mapbox]
+* [MySQL][-mysql]
+* [Maven (Java Build Tool)][-maven]
+* [JavaScript Object Notation (JSON)][-json]
+* [Change Data Capture (CDC)][-cdc]
+* [Debezium][-debezium]
 
 ## References
 
@@ -536,17 +540,24 @@ Using Advanced Python Programming to Create Web Applications
 * [Distributed Databases][dist-db-zk]
 * [Cassandra (Distributed Database)][cassandra-zk]
 * [PCDE Module 13 Content][pcde-mod13-zk]
-* [Change Data Capture][cdc-zk]
+* [Change Data Capture][-cdc]
 * [Python Interaction with OS Shell][py-shell-zk]
 * [PCDE Module 14 Content][pcde-mod14-zk]
 * [Java][java-zk]
-* [Debezium][debezium-zk]
+* [Debezium][-debezium]
 * [Java Spring][java-spring-zk]
 * [Nano Editor][nano-zk]
 * [PCDE Module 15 Course Content][-pcde-mod15]
 * [PCDE Project 15.1: Creating a Books Web App][-pcde-project-15-1]
 * [PCDE Project 15.2: Creating a Student Grades Database][-pcde-project-15-2]
 * [PCDE Project 15.3: Redundant Dictionaries in Python][-pcde-project-15-3]
+* [PCDE Module 16 Content][-pcde-mod16]
+* [PCDE Project 16: Build a Transit Data Application][-project16]
+* [Mapbox][-mapbox]
+* [MySQL][-mysql]
+* [Maven (Java Build Tool)][-maven]
+* [JavaScript Object Notation (JSON)][-json]
+* [Change Data Capture (CDC)][-cdc]
 
 <!-- Hidden Reference Links Below Here -->
 [-pcde-overview]: pcde-course-overview.md "PCDE Course Overview"
@@ -566,6 +577,7 @@ Using Advanced Python Programming to Create Web Applications
 [normal-dist-zk]: ./normal-distribution.md "Normal Distribution"
 [pcde-mod3-content-zk]: ./pcde-module3-content.md "PCDE COurse: Module 3 Content"
 [pcde-module5-content-zk]: ./pcde-module5-content.md "PCDE Course Materials (Module 5)"
+[-mysql]: mysql.md "MySQL"
 [sql-zk]: ./sql.md "SQL Overview"
 [sql-logical-ops-zk]: ./sql-logical-operators.md "Logical Operators in SQL"
 [regex-zk]: ./regex.md "Regular Expressions (RegEx)"
@@ -604,21 +616,26 @@ Using Advanced Python Programming to Create Web Applications
 [oauth2-zk]: ./oaut2.md "OAuth2"
 [pcde-mod12-zk]: ./pcde-module12-content.md "PCDE Course: Module 12 Content"
 [db-types-zk]: ./types-of-database.md "Types of Databases"
-[-db-relational]: relational-databases.md "Relational Databases"
-[doc-db-zk]: ./document-databases.md "Document Databases"
+[-db-relational]: relational-database.md "Relational Databases"
+[doc-db-zk]: ./document-database.md "Document Databases"
 [mongo-py-zk]: ./mongodb-using-python.md "MongoDB Using Python"
 [key-value-db-zk]: ./key-value-database.md "Key-Value Databases"
-[dist-db-zk]: ./distributed-databases.md "Distributed Databases"
+[dist-db-zk]: ./distributed-database.md "Distributed Databases"
 [cassandra-zk]: ./cassandra.md "Cassandra (Distributed Database)"
 [pcde-mod13-zk]: ./pcde-module13-content.md "PCDE Module 13 Content"
-[cdc-zk]: ./change-data-capture.md "Change Data Capture"
+[-cdc]: cdc.md "Change Data Capture (CDC)"
 [py-shell-zk]: ./python-os-shell.md "Python Interaction with OS Shell"
 [pcde-mod14-zk]: ./pcde-module14-content.md "PCDE Course: Module 14 Content"
 [java-zk]: java.md "Java"
-[debezium-zk]: debezium.md "Debezium"
 [java-spring-zk]: ./java-spring.md "Java Spring"
+[-debezium]: debezium.md "Debezium"
 [nano-zk]: nano-editor.md "Nano Editor"
 [-pcde-mod15]: pcde-module15-content.md "PCDE Course: Module 15 Content"
 [-pcde-project-15-1]: pcde-project-15-1.md "PCDE Project 15.1: Creating a Books Web App"
 [-pcde-project-15-2]: pcde-project-15-2.md "PCDE Project 15.2: Creating a Student Grades Database"
 [-pcde-project-15-3]: pcde-project-15-3.md "PCDE Project 15.3: Redundant Dictionaries in Python"
+[-pcde-mod16]: pcde-module16-content.md "PCDE Course: Module 16 Content"
+[-project16]: pcde-project-16.md "PCDE Project 16: Build a Transit Data Application"
+[-mapbox]: mapbox.md "Mapbox"
+[-maven]: maven.md "Maven (Java Build Tool)"
+[-json]: json.md "JavaScript Object Notation (JSON)"

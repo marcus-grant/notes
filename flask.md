@@ -1,9 +1,9 @@
 ---
 created: 2022-11-15T18:08:55.571Z
-modified: 2023-04-13T16:17:55.034Z
-tags: [flask,server,backend,python,http]
+modified: 2023-04-20T14:17:59.738Z
+tags: [flask,server,backend,python,http,api,web,library,framework]
 ---
-# Flask
+# Flask (Python Web Server)
 
 ## What is Flask?
 

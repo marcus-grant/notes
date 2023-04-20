@@ -1,14 +1,25 @@
 ---
 created: 2022-11-15T13:55:04.498Z
-modified: 2023-03-27T11:20:14.156Z
-tags: [data,backend,storage,database,sql,relational]
+modified: 2023-04-20T13:57:38.324Z
+tags: [data,backend,storage,database,mysql,mariadb,postgres,sql,relational,pcde]
 ---
 # Relational Databases
 
 Relational databases models data in the form of tables.
 Notably the tables are expected to have relationships with each other.
 Primary keys indicate unique entries in each table and
-foreign keys indicate relationships to unique entries in other tables it's related to.
+foreign keys indicate relationships to unique entries in
+other tables it's related to.
+
+The way most *relational-databases* are interacted with or **queried** is through
+[SQL (Structured Query Language)][-sql].
+SQL is a domain specific language used to interact with *relational-databases*.
+
+## Relational Database Management Systems
+
+* [MySQL][-mysql]
+* [PostgreSQL][-postgres]
+* [SQLite][-sqlite]
 
 ## Concepts
 
@@ -126,14 +137,14 @@ cnx.close()
 
 ## Example: Library Management System
 
-In [module 12][pcde-mod12-zk] of the PCDE course,
+In [module 12][-pcde-mod12] of the PCDE course,
 there's a discussion about how to design a library management system as a prompt
 for coming up with their own database design.
 In this section, is a good example of different designs.
 
 ## Database Containerization
 
-See [Database Containerization][db-contain-zk] for more details.
+See [Database Containerization][-container] for more details.
 To summarize, containers are basic execution environments that
 are sandboxed and contained within sandboxed portions of an operating system.
 They are very useful for developing, testing and even deploying databases.
@@ -150,9 +161,17 @@ being able to consistently recreate the state of a database is very useful.
 
 ### Note References
 
-* [PCDE Course: Module 12 Materials][pcde-mod12-zk]
-* [Database Containerization][db-contain-zk]
+* [Structured Query Language (SQL)][-sql]
+* [MySQL][-mysql]
+* [PostgreSQL][-postgres]
+* [SQLite][-sqlite]
+* [PCDE Course: Module 12 Materials][-pcde-mod12]
+* [Database Containerization][-container]
 
 <!-- Hidden Reference Links Below Here -->
-[pcde-mod12-zk]: ./pcde-module12-content.md "PCDE Course: Module 12 Materials"
-[db-contain-zk]: ./database-continerization.md "Database Containerization"
+[-sql]: sql.md "Structured Query Language (SQL)"
+[-pcde-mod12]: ./pcde-module12-content.md "PCDE Course: Module 12 Materials"
+[-container]: ./database-continerization.md "Database Containerization"
+[-mysql]: mysql.md "MySQL"
+[-postgres]: postgres.md "PostgreSQL"
+[-sqlite]: sqlite.md "SQLite (Embedded Relational Database)"

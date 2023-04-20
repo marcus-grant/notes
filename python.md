@@ -1,9 +1,9 @@
 ---
 created: 2022-12-05T16:17:20.340Z
-modified: 2023-04-05T07:42:47.513Z
-tags: [python,lang,programming,overview]
+modified: 2023-04-20T14:51:17.617Z
+tags: [python,lang,program,overview,language,software,develop]
 ---
-# Python
+# Python (Programming Language)
 
 ## For Loops
 
