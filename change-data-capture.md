@@ -1,6 +1,6 @@
 ---
 created: 2023-04-03T07:02:50.615Z
-modified: 2023-04-12T14:10:00.773Z
+modified: 2023-04-20T12:55:36.451Z
 tags: [change,data,capture,database,workflow,pcde,module13]
 ---
 # Change Data Capture (CDC)
@@ -415,7 +415,7 @@ To read more about it, read the [Debezium document][debezium-zk].
 * [Debezium][debezium-zk]
 
 <!-- Hidden References -->
-[dbs-zk]: ./databases.md "Types of Databases"
+[dbs-zk]: ./database.md "Types of Databases"
 [rel-db-zk]: ./relational-databases.md "Relational Databases"
 [doc-db-zk]: ./document-databases.md "Document Databases"
 [mongodb-zk]: ./mongodb.md "MongoDB"

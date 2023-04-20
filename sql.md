@@ -1,6 +1,6 @@
 ---
 created: 2022-11-24T16:36:35.662Z
-modified: 2023-01-31T17:19:57.882Z
+modified: 2023-04-20T12:56:22.033Z
 tags: [sql,database,data,backend,overview,pcde,module4,module5]
 ---
 # Overview of SQL
@@ -1348,11 +1348,3 @@ see [Regular Expressions][regex-zk] for more details.
 [sql-clean-zk]: ./sql-cleaning.md "Cleaning Data in SQL"
 [sql-date-zk]: ./sql-date-time.md "Dates & Time in SQL"
 
-### Referenced By
-
-***TODO*** Fill in this section with references to:
-
-* The course outline
-* The module 4 overview
-* database-design.md
-<!-- Hidden Reference Links Below Here -->

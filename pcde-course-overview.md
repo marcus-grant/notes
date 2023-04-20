@@ -1,6 +1,6 @@
 ---
 created: 2022-12-02T09:39:07.160Z
-modified: 2023-04-13T11:15:31.808Z
+modified: 2023-04-20T12:55:24.433Z
 tags: [learning,pcde,data,syllabus,notetaking,productivity,time,mgmt]
 ---
 # PCDE Course Overview
@@ -56,4 +56,4 @@ Below are the online emeritus links to the course outline and calendar.
 [-pcde-career]: ./pcde-career.md "PCDE Career Guidance"
 [-pcde-orientation]: pcde-orientation.md "PCDE Orientation"
 [-py]: python.md "Python"
-[-db]: databases.md "Databases"
+[-db]: database.md "Databases"
