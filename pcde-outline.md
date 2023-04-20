@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T10:12:17.264Z
-modified: 2023-04-18T14:29:49.060Z
+modified: 2023-04-20T12:15:06.711Z
 tags: [pcde,course,outline,overview,data,learn]
 ---
 # PCDE Course Outline
@@ -398,6 +398,37 @@ worse leaking data by an attacker.
 * Identify key elements of Debezium.
 
 ## Module 15: Advanced Python and Web Applications
+
+### Due Date
+
+* Due Wednesday, April 19, 2023 at 4:29 PM UTC
+  * 5:29 PM CET
+  * 11:29 AM EST
+  * 6:29 PM EAT
+
+### Activities
+
+#### Key Activities
+
+* **Knowledge Checks**
+  * Knowledge Check 15.1: Authorization Servers
+  * Knowledge Check 15.2: Relational Databases in Python
+  * Knowledge Check 15.3: Redundant Dictionaries in Python
+* **Discussion**
+  * Discussion 15.1: Applications of Authorization Servers
+* **Project Assignments**
+  * Project 15.1: Project 1: Creating a Books Web Application
+  * Project 15.2: Project 2 Part 1: Creating a Student Grades Database
+  * Project 15.3: Project 2 Part 2: Redundant Dictionaries in Python
+
+#### Self-Study Activities
+
+* Self-Study Discussion 15.2:
+Thinking Like a Data Scientist:
+Using Advanced Python Programming to Create Web Applications
+* Self-Study Flashcards: Module 15 Flashcards
+
+## Module 16: Transit Data & APIs
 
 ### Due Date
 

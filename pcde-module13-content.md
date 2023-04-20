@@ -1,6 +1,6 @@
 ---
 created: 2023-04-03T06:55:40.897Z
-modified: 2023-04-05T16:11:29.808Z
+modified: 2023-04-18T14:48:10.651Z
 tags: [pcde,cdc,change,data,capture,python,containers,module13,relational,database]
 ---
 # PCDE Module 13: Change Data Capture (CDC)
@@ -193,6 +193,78 @@ MongoDB, Cassandra, MySQL. Can this be achieved in Python?
   * `time` and `threading` **(Correct)**
 * Q4: What is the syntax to cancel a timer in Python?
   * `timer.cancel()` **(Correct)**
+
+## Discussion 13.2: Applications of Time Loops
+
+### Discussion Prompt
+
+You have learned how to implement time loops using a timer in Python.
+Time loops can be very useful in automation when
+it comes to performing tasks at regular intervals.
+
+In this discussion, you are encouraged to think of use cases for time loops.
+What are some examples of tasks that can be automated using time loops?
+What are some advantages and disadvantages of using time loops?
+
+In your response, make sure to include the following:
+
+1. First, include a case study example of how CDC can be implemented using time loops.
+For example,
+time loops can be utilized with CDC to regularly check whether
+new employees have been created and, if new employees are created,
+to send notifications to interested parties.
+For your initial discussion post, be sure to include your own original example.
+2. Determine at least one advantage and one disadvantage to using time loops in CDC?
+3. Time loops can be used to simulate regular activities for a system,
+such as database inserts.
+How can that be helpful in developing and testing a new application?
+
+Read the statements posted by your peers.
+Engage with them by responding with thoughtful comments and
+questions to deepen the discussion.
+
+**Suggested Time**: 60 minutes
+
+**Suggested Length**: 200-250 words
+
+This is a required activity and will count toward course completion.
+
+### My Discussion Response
+
+I actually have my own automations that I use time loops for.
+Basically I consider just about any repeatable batch processing job as
+a solid case for any sort of time loop based automations.
+For example backups.
+I have a `Projects` directory in my home directory on my computers.
+Even though I put most of my projects on GitHub and Codeberg,
+I want to ensure backups with timed snapshots are kept in my own servers and
+on cloud backups as well.
+This is a batch processing job and due to the nature of snapshot backups,
+are periodic in nature as well.
+
+This concept extends to CDC as well.
+Your database of record is your source of truth.
+You will want to ensure data warehouse databases such as
+Cassandra are keeping track of timed changes in the source of truth database.
+Not just for the benefits of using data warehouse software for the sake of
+analysis, but also for having backups of the database that can be restored from.
+
+One of the benefits of using timed loops in these CDC scenarios is that
+they give you very predictable points in time where batch processing takes place.
+The detection, processing and propagation of changes can be done at
+a time when the batch processing won't interrupt the normal operations of
+the database systems too much.
+You could also provision the batch processing to run on a separate
+databases that are replicas of the source of truth databases.
+
+The primary disadvantage is that these jobs can consume a lot resources and
+traffic can be predictable enough that it occurs during one of
+these timed events.
+
+Testing is another area where time loops can be very useful.
+You can use time loops to simulate regular activities for a system,
+such as high traffic handling simulations or
+different modes of failure scenarios that can be tested against real systems.
 
 ## References
 
