@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T10:12:17.264Z
-modified: 2023-05-04T14:15:55.624Z
+modified: 2023-05-04T14:34:42.379Z
 tags: [pcde,course,outline,overview,data,learn]
 ---
 # PCDE Course Outline
@@ -430,23 +430,23 @@ Using Advanced Python Programming to Create Web Applications
 
 ## Module 16: Transit Data & APIs
 
-### Due Date
+### Module 16: Due Date
 
 * Due Wednesday, April 26, 2023 at 1629 UTC
   * 1829 CET
   * 1929 EAT
   * 1229 EST
 
-### Goals
+### Module 16: Goals
 
 1. Describe use cases of location-based applications
 2. Define web development tools for building an application
 3. Identify key components of Mapbox
 4. Build a transit data application
 
-### Activities
+### Module 16: Activities
 
-#### Key Activities
+#### Module 16: Key Activities
 
 * **Knowledge Checks**
   * Knowledge Check 16.1: Location-Based Applications
@@ -456,12 +456,12 @@ Using Advanced Python Programming to Create Web Applications
 * **Project**
   * Project 16.1: Build a Transit Data Application
 
-#### Self-Study Activities
+#### Module 16: Self-Study Activities
 
 * Self-Study Discussion 16.2: Thinking Like a Data Scientist: Transit Data and APIs
 * Self-Study Flashcards: Module 16 Flashcards
 
-### Notes
+### Module 16: Related Notes
 
 * [PCDE Module 16 Content][-pcde-mod16]
 * [PCDE Project 16: Build a Transit Data Application][-project16]
@@ -473,6 +473,52 @@ Using Advanced Python Programming to Create Web Applications
 * [Debezium][-debezium]
 * [CSS][-css]
 * [MBTA API][-mbta-api]
+
+## Module 17: Performing ETL Using NiFi
+
+### Module 17: Due Date
+
+* Due Wednesday, May 10, 2023 at 1629 UTC
+  * 1829 CET
+  * 1229 EST
+
+### Module 17: Goals
+
+1. Identify use cases of ETL in data engineering.
+2. Identify basic elements of NiFi.
+3. Identify other Apache ETL tools and discuss their pros & cons.
+4. Use NiFi to create an ETL pipeline.
+
+### Module 17: Activities
+
+#### Module 17: Key Activities
+
+* **Knowledge Checks**
+  * Knowledge Check 17.1: Basics of NiFi
+* **Discussion**
+  * Discussion 17.1: Use Cases of ETL in Data Engineering
+  * Discussion 17.2: Pros and Cons of Apache ETL Tools
+* **Activities**
+  * Activity 17.1: Activity 17.1: Using NiFi to Connect to an Excel Spreadsheet
+  * Activity 17.2: Activity 17.2: Using NiFi to Create a Pipeline in MySQL
+  * Activity 17.3: Activity 17.3: Using NiFi to Create a Pipeline in MongoDB
+  * Activity 17.4: Activity 17.4: Using NiFi to Create a Pipeline in Redis
+  * Activity 17.5: Activity 17.5: Using NiFi to Create a Pipeline in Cassandra
+* **Final Assignment**
+  * Module 17 Final Assignment: Performing ETL Using NiFi
+
+#### Module 17: Self-Study Activities
+
+* Self-Study Drag & Drop Activity 17.2: Using NiFi to Create a Pipeline in
+various databases
+* Self-Study Discussion 17.3: Thinking Like a Data Scientist:
+Performing ETL Using NiFi
+* Self-Study Flashcards: Module 17 Flashcards
+
+### Module 17: Related Notes
+
+* [PCDE Module 17 Content][-pcde-mod17]
+* ***TODO: COPY OVER NOTE LINKS IN MOD17 CONTENT DOC TO HERE***
 
 ## References
 
@@ -562,6 +608,7 @@ Using Advanced Python Programming to Create Web Applications
 * [Change Data Capture (CDC)][-cdc]
 * [CSS][-css]
 * [MBTA API][-mbta-api]
+* [PCDE Module 17 Course Content][-pcde-mod17]
 
 <!-- Hidden Reference Links Below Here -->
 [-pcde-overview]: pcde-course-overview.md "PCDE Course Overview"
@@ -645,3 +692,4 @@ Using Advanced Python Programming to Create Web Applications
 [-json]: json.md "JavaScript Object Notation (JSON)"
 [-css]: css.md "CSS"
 [-mbta-api]: mbta-api.md "MBTA API"
+[-pcde-mod17]: pcde-module17-content.md "PCDE Module 17 Course Content"
