@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T10:12:17.264Z
-modified: 2023-04-20T15:36:45.996Z
+modified: 2023-05-04T14:15:55.624Z
 tags: [pcde,course,outline,overview,data,learn]
 ---
 # PCDE Course Outline
@@ -471,6 +471,8 @@ Using Advanced Python Programming to Create Web Applications
 * [JavaScript Object Notation (JSON)][-json]
 * [Change Data Capture (CDC)][-cdc]
 * [Debezium][-debezium]
+* [CSS][-css]
+* [MBTA API][-mbta-api]
 
 ## References
 
@@ -558,6 +560,8 @@ Using Advanced Python Programming to Create Web Applications
 * [Maven (Java Build Tool)][-maven]
 * [JavaScript Object Notation (JSON)][-json]
 * [Change Data Capture (CDC)][-cdc]
+* [CSS][-css]
+* [MBTA API][-mbta-api]
 
 <!-- Hidden Reference Links Below Here -->
 [-pcde-overview]: pcde-course-overview.md "PCDE Course Overview"
@@ -639,3 +643,5 @@ Using Advanced Python Programming to Create Web Applications
 [-mapbox]: mapbox.md "Mapbox"
 [-maven]: maven.md "Maven (Java Build Tool)"
 [-json]: json.md "JavaScript Object Notation (JSON)"
+[-css]: css.md "CSS"
+[-mbta-api]: mbta-api.md "MBTA API"
