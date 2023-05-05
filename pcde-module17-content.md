@@ -1,6 +1,6 @@
 ---
 created: 2023-05-04T14:21:08.366Z
-modified: 2023-05-04T15:21:19.000Z
+modified: 2023-05-05T08:03:34.080Z
 tags: [pcde,module17,etl,extract,transform,load,data,nifi,database]
 ---
 # PCDE Course Module 17 Content
@@ -35,6 +35,133 @@ demonstrated in this article:
 **Note**: Make sure you have installed the tools you will need for Modules 17-19 in
 the [Course Tools Module][emeritus-course-tools-module] before
 beginning this module.
+
+## Discussion 17.1: Use Cases of ETL in Data Engineering
+
+### Discussion Introduction
+
+As you have learned, ETL stands for the extraction, transformation,
+and loading of data.
+When referring to a data engineering project,
+you are mostly dealing with the following stages in that project:
+data collection, data storage, data transformation, and data consumption.
+Let’s look at each of the stages of the ETL process in detail.
+
+#### Discussion Topic: Data Extraction
+
+This stage includes the extraction and ingestion of
+data from multiple source systems.
+These source systems can be a variety of databases with different data formats.
+Different tools are used to ingest data from these source systems.
+Data engineers must ensure that the data integrity is maintained while
+transferring data from one location to another.
+It is also important to be mindful of the data types while
+ingesting the data to make sure that you don’t lose any data.
+
+#### Discussion Topic: Data Transformation
+
+This is the stage that involves manipulating the data.
+You can perform various operations on the data at this stage,
+such as cleaning the data, transforming the data, and
+applying rules based on business logic (e.g., filtering the data).
+All of the data transformation happens on the destination after
+the data has been successfully ingested.
+Any kind of business requirements and modification of data,
+such as deriving new columns, performing joins, and using aggregate functions,
+is done at this stage.
+It’s always a good practice to keep a copy of the source data as
+it is and create new intermediate tables to perform the operations required for
+the data transformation stage.
+
+#### Discussion Topic: Data Loading
+
+This is the stage where the new data is ready to be used or loaded to
+a new destination, such as a database.
+You can also load the transformed data set to the visualization tools for
+reporting purposes.
+This is the final stage of the ETL process in
+a data engineering pipeline where
+the output data set is loaded or shared to the desired destination.
+
+### Discussion Prompt
+
+Based on this discussion, you have a good understanding of
+how to go about performing ETL operations when
+working on a data engineering project.
+
+To apply what you have learned, consider an ETL project and
+describe the tasks involved in each step for that particular project.
+Key points to consider include:
+
+* Discuss your understanding of the raw data.
+* Explain how you will keep the integrity of the original data.
+* Describe how you will maintain data quality in the transformation phase.
+* Explain how you will load the data with proper formats for all columns.
+
+Discuss how you will achieve each of these priorities based on
+your understanding of the ETL process.
+Elaborate on any other thoughts or considerations you have put in
+place in your ETL project.
+
+Read the statements posted by your peers.
+Engage with them by responding with thoughtful comments and
+questions to deepen the discussion.
+
+**Suggested Time**: 60 minutes
+
+**Suggested Length**: 250-300 words
+
+This is a required activity and will count toward course completion.
+
+#### ETL Discussion: My Response
+
+The context I'm considering for ETL is an e-commerce system.
+An online retailer is going to be looking at customer data from
+their online storefront, CRM system, inventory management system,
+online advertising, and social media.
+All to better manage their inventory, increase sales, improve customer service,
+improve shopping experience, and increase customer retention and make plans.
+
+#### ETL Data Extraction
+
+Some of the data sources to look at for e-commerce are internal.
+Internally you can *extract* data from the web client for the store of its users,
+the inventory management systems.
+Here you can see which items customers place in their carts,
+spend the most time on examining, roughly where in the world they are located,
+account email, and transaction history and inventory at different times.
+There's also external sources,
+such as social media and web based advertising where you can examine interest by
+different kinds of customers and metrics like click through rates.
+
+Here we need to decide on the data we are interested in,
+ideally all of it, but the specifics needs to be decided on and standardized.
+Once we have all the entities and properties defined it becomes easier to
+build all the rest of the ETL pipeline.
+This includes *extract* processes like deciding on when to pull data,
+how to check validity and for new data to avoid duplication, etc.
+
+#### ETL Data Transformation
+
+During transformation, particularly the external data sources need transformation.
+Internally the data systems should already be well defined.
+However some of the data columns might overlap or aggregate with external sources.
+So it's important to standardize data types, representations and the structure of
+the incoming data so all sources become consistent with each other.
+For example, a user ID might need to be associated with
+an internal customer email address along with a social media account.
+Then the data needs to be cleaned as there's always chances for missing data or
+data that can't be parsed into a format that the system needs.
+Other anomalies will need to be carefully monitored.
+
+#### Data Loading
+
+For data loading, the prepared data needs to be adapted to whatever form the
+drivers to the various databases or database systems are.
+In the case of MySQL, columns need to be picked and the appropriate `INSERT INTO` or
+`UPDATE` statements need to be generated and executed.
+The database system might include a CDC system that might need informing of
+the updates to the system as well.
 
 ## References
 
