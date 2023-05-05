@@ -1,6 +1,6 @@
 ---
 created: 2023-05-04T14:35:19.080Z
-modified: 2023-05-05T16:22:11.320Z
+modified: 2023-05-05T17:43:05.795Z
 tags: [nifi,data,etl,extract,transform,load,database,apache,foss,pcde,module17]
 ---
 # Apache NiFi
@@ -211,9 +211,10 @@ We'll define an example using Docker below:
 docker run \
     --name nifi \
     --network nifi \
-    --port 11111:8080 \
-    --detach \
-    apache/nifi:latest
+    -p 8080:8080 \
+    -e NIFI_WEB_HTTP_PORT=8080 \
+    -e NIFI_WEB_HTTP_HOST=0.0.0.0 \
+    -d apache/nifi:latest
 ```
 
 These parameters are:
@@ -221,6 +222,11 @@ These parameters are:
 * `--name nifi`: The name of the container is `nifi`.
 * `--network nifi`: The container is connected to the `nifi` container network.
 * `-p 11111:8080`: The container is mapped to external port `11111` to `8080`.
+* `-e NIFI_WEB_HTTP_PORT=8080`: The NiFi web HTTP port is `8080`.
+  * **NOTE** this seems required in latest versions of NiFi.
+  * Otherwise, the NiFi web UI will not be accessible.
+* `-e NIFI_WEB_HTTP_HOST=0.0.0.0`: The NiFi web HTTP host is the local host.
+  * **NOTE** same as above.
 * `--detach`: The container is detached from the terminal.
   * It will run in the background and we'll interact with it later.
 * `apache/nifi:latest`: The container image to use is `apache/nifi:latest`.
