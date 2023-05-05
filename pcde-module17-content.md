@@ -1,6 +1,6 @@
 ---
 created: 2023-05-04T14:21:08.366Z
-modified: 2023-05-05T08:03:34.080Z
+modified: 2023-05-05T14:39:53.766Z
 tags: [pcde,module17,etl,extract,transform,load,data,nifi,database]
 ---
 # PCDE Course Module 17 Content
@@ -162,6 +162,66 @@ In the case of MySQL, columns need to be picked and the appropriate `INSERT INTO
 `UPDATE` statements need to be generated and executed.
 The database system might include a CDC system that might need informing of
 the updates to the system as well.
+
+## Drag & Drop Activity 17.1: NiFi: An Apache ETL Tool
+
+* Process Group
+  * A process group is a group of NiFi flows, which helps a user manage and
+keep **(flows)** in a **(hierarchical)** order.
+* Flow
+  * A flow is created by **(connecting)** different **(processors)** to
+transfer and modify **(data)**, if required,
+from one data source(s) to another destination data source.
+* Processor
+  * A process is a **(Java module)** that is responsible for
+either fetching data from the sourcing system or storing it in the destination system.
+Other processors are also used to add **(attributes)** or
+change content in `FlowFiles`.
+* FlowFile
+  * A FlowFile is the basic component of NiFi,
+which represents the single object of data from the **(source system)**.
+The NiFi processor makes changes to the FlowFile while it moves from
+the source processor to the destination.
+Different **(events)** like `CREATE`, `CLONE`, `RECEIVE`, etc. are performed on
+a FlowFile by different processors in a flow.
+* Event
+  * Events represent the **(change)** to
+a `FlowFile` while versing through a NiFi *flow*.
+These *events* are tracked in NiFi *repositories*.
+* Connector
+  * A connector links *processors* together and defines the relationship between
+the *processors*, which controls how data flows.
+*Connectors* can also link one *processor* back to itself to create a **(loop)**.
+* Controller
+  * A *controller* records **(connections)** between processes and
+controls the allocation of threads used by all processes.
+
+## Knowledge Check 17.1: Basics of NiFi
+
+* Q1: Which of the following options list all steps of
+a data engineering cycle in the correct order?
+  * Data collection, processing, transformation, consumption **(WRONG)**
+  * Data collection, storage, transformation **(WRONG)**
+  * Data collection, storage, processing and consumption **(Correct)**
+* Q2: Which of the following falls under the process of data collection?
+  * All of the above **(Correct)**
+* Q3: Which of the following functions can be performed using NiFi?
+  * All of the above **(Correct)**
+* Q4: Which of the following can be used to
+create a scalable data engineering pipeline?
+  * NiFi **(Correct)**
+* Q5: What are the components of a `FlowFile`?
+  * Data content and key-value pairs associated with the data **(Correct)**
+* Q6: Which of the following is **not** a feature NiFi?
+  * NiFi works without being connected to any kind of network **(Correct)**
+* Q7: Which of the following can't be achieved by using NiFi?
+  * Complex event processing **(Correct)**
+* Q8: Which of the following functions can be achieved through NiFi?
+  * All of the above **(Correct)**
+* Q9: Which of the following is not a component of the NiFi architecture?
+  * Registries **(Correct)**
+* Q10: What is the term used to represent changes in a `FlowFile`?
+  * Events **(Correct)**
 
 ## References
 

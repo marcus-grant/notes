@@ -128,6 +128,7 @@
         "Moraes",
         "mrmlnc",
         "MSQL",
+        "msword",
         "myclient",
         "mydatabase",
         "mydb",
@@ -144,6 +145,9 @@
         "nifi",
         "nosql",
         "Notetaking",
+        "officedocument",
+        "opendocument",
+        "openxmlformats",
         "pastebin",
         "Pecok",
         "PGSQL",
@@ -171,6 +175,7 @@
         "Seaborn",
         "shorttextfiles",
         "SMALLINT",
+        "spreadsheetml",
         "Sspaeti",
         "Stapko",
         "Stojilkovic",
@@ -193,9 +198,11 @@
         "Waltham",
         "Wecsfa",
         "WITHERSPOON",
+        "wordprocessingml",
         "WORKDIR",
         "xtract",
-        "zettelkasten"
+        "zettelkasten",
+        "zstd"
     ],
     "sqltools.connections": [
         {
