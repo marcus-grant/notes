@@ -1,6 +1,6 @@
 ---
 created: 2023-05-04T14:35:19.080Z
-modified: 2023-05-05T17:43:05.795Z
+modified: 2023-05-07T12:21:54.182Z
 tags: [nifi,data,etl,extract,transform,load,database,apache,foss,pcde,module17]
 ---
 # Apache NiFi
@@ -209,12 +209,11 @@ We'll define an example using Docker below:
 
 ```bash
 docker run \
-    --name nifi \
-    --network nifi \
-    -p 8080:8080 \
-    -e NIFI_WEB_HTTP_PORT=8080 \
-    -e NIFI_WEB_HTTP_HOST=0.0.0.0 \
-    -d apache/nifi:latest
+      --name nifi \
+      --network nifi \
+      --publish 8080:8080 \
+      --env NIFI_WEB_HTTP_PORT=8080 \
+      --detach apache/nifi:latest
 ```
 
 These parameters are:
@@ -258,6 +257,167 @@ These parameters are:
   * It will run in the background and we'll interact with it later.
 * `mysql:8.0`: The container image to use is `mysql:8.0`.
 
+## Initialize a MySQL Database for NiFi ETL
+
+[MySQL databases][-mysql] are some of the more common databases to be used with NiFi.
+Here we'll initialize a MySQL database for use with NiFi using docker and
+some [SQL commands][-sql].
+We'll create an `education` database with a `students` table.
+
+To open the MySQL shell on the terminal in the `mysql` container using this command:
+
+```bash
+docker exec -it mysql mysql -u root -pMyNewPass
+```
+
+Then we'll initialize the `education` database and
+`students` table using the following SQL commands:
+
+```sql
+DROP DATABASE IF EXISTS education;
+CREATE DATABASE IF NOT EXISTS education;
+USE education;
+
+CREATE TABLE `students` (
+  `email` varchar(64) NOT NULL,
+  `name` varchar(64) NOT NULL,
+  `city` varchar(64) NOT NULL,
+  PRIMARY KEY (`email`)
+);
+
+INSERT INTO `students` VALUES('peter@mit.edu','Peter Parker','Cambridge,MA');
+```
+
+This then creates the `education` database and `students` table.
+The `students` table has three columns: `email`, `name`, and `city`.
+Finally, a single row is inserted into the `students` table.
+
+## Add a MySQL Driver to NiFi
+
+To make NiFi work with MySQL,
+we'll need to add a MySQL driver to NiFi.
+This same process can be used to add other drivers to NiFi as well.
+This allows NiFi to directly access the database to read and write data.
+
+The driver is a [Java archive (JAR)][-java] file.
+Since NiFi is written in Java,
+the driver needs to be a JAR file.
+To access the MySQL Java driver,
+go to its [download page][mysql-driver-dl].
+Then download the `mysql-connector-java-8.0.33.jar` file.
+
+>**NOTE**: The version is always going to get updated.
+>Currently the version being used and written about is `8.0.33`.
+>Use whatever the latest version is when you see this version string.
+
+For most linux operating systems and containers,
+you'll want to select the `Platform Independent` option.
+But you could also download a *.deb* for Debian-based systems or
+a *.rpm* for Red Hat-based systems as an example.
+
+After you've downloaded the archive and decompress it,
+find the JAR file and copy it over to the NiFi container.
+To copy it over to the NiFi container,
+use the following command:
+
+```bash
+docker exec -it nifi mkdir -p /opt/nifi/drivers
+docker cp mysql-connector-java-8.0.33.jar nifi:/opt/nifi/drivers/
+```
+
+## Create an ETL Pipeline in NiFi
+
+To start,
+we can start by creating the *Database Connection Pool* within the NiFi web UI.
+To do this,
+there should be a view titled `Operate` with a gear icon representing settings.
+Click that and you should be able to configure a NiFi *Flow*.
+Open the `Controller Settings` tab and
+click the `+` button to add a new controller service.
+Then select the `DBCPConnectionPool` controller service.
+Then Add it it.
+
+To configure this controller service, click on the gear icon for
+the `DBCPConnectionPool` controller service.
+Then click the `Properties` tab.
+Then click the `+` button to add a new property.
+Then add the following properties:
+
+* `Name`: MySQL
+* Properties:
+  * `Connection URL`: `jdbc:mysql://mysql:3306/education`
+    * The `mysql` is the name of the MySQL container or its hostname.
+      * The hostname docker provides defaults to the name of the container.
+    * The `education` is the name of the database we created earlier.
+  * `Database Driver Class Name`: `com.mysql.jdbc.Driver`
+    * This is the name of the MySQL driver Java class.
+  * `Database Driver Location(s)`:
+`/opt/nifi/drivers/mysql-connector-java-8.0.33.jar`
+    * This is the location of the MySQL driver JAR file.
+    * Same as the location we copied the JAR file to earlier.
+  * `Database User`: `root`
+    * The database user to use to connect to the database.
+  * `Password`: `MyNewPass`
+    * The password for the database user specified before.
+
+Verify that the configuration looks something like the below screenshot.
+Then hit the `Apply` button to apply the configuration.
+Then hit the `Enable` icon which is a lightning bolt.
+Just choose the `Service and All Referencing Components` option.
+Then hit the `Apply` button to apply the configuration.
+The `State` listed for the `DBCPConnectionPool` controller service should be `Enabled`.
+
+![NiFi Configure Controller Service Screenshot](2023-05-07T11-51-04Z.webp)
+
+Now we can create a *Processor* to read data from the database.
+To add a *Processor*,
+drag a *processor* block from the top bar of the main NiFi view into the workspace.
+As you drop, an `Add Processor` dialog should appear.
+From there you can select the `ExecuteSQL` processor.
+
+Now we have our first processor.
+Add another, `LogAttribute` and add it to the workspace.
+Then connect from the `ExecuteSQL` processor to the `LogAttribute` processor.
+Only check the `For Relationships` `success` checkbox before adding.
+
+Now we'll go ahead and configure the `ExecuteSQL` processor.
+Start off by setting the option to automatically terminate with `failure`.
+Then move to `Scheduling` and set it to run every `30 sec`.
+Then move to `Properties` and set the following properties:
+
+* `Database Connection Pooling Service`: `MySQL`
+  * This is the name of the controller service we created earlier.
+* `SQL select query`: `SELECT * FROM education.students`
+  * This is the SQL query to run against the database.
+    * This query selects all rows from the `students` table.
+  * It's just normal SQL syntax.
+* `Relationships` tab > `Auto-terminate relationships`: `failure`
+  * This is the relationship to auto-terminate on.
+    * This is the relationship we checked earlier.
+    * This is the relationship that will be used if the query fails.
+
+Now if you apply and start the processor you'll see an item in the queue after
+enabling and starting the *processor*.
+It should look something like the below screenshot.
+
+![NiFi ExecuteSQL Processor Screenshot](2023-05-07T12-14-39Z.webp)
+
+You'll see that the connection has some queued *FlowFiles* within it.
+This is the singular row in the `students` table.
+
+```mermaid
+flowchart LR
+    A[Source] -->|Data| B
+    B[Processor] -->|Connector FlowFile| C
+    C[Processor]
+```
+
+So now we have setup our first basic pipeline as seen in the diagram above.
+A data source is accessed by a *processor*.
+Then the data is connected using a *connector* to another *processor*.
+In that *connector* a *FlowFile* is created with all the data we want.
+Then the next processor deals with or transforms or loads the data within the *FlowFile*.
+
 ## References
 
 ### Web Links
@@ -267,6 +427,7 @@ These parameters are:
 * [Apache NiFi Documentation Overview][apache-nifi-docs-overview]
 * [Apache Software Foundation NiFi Home][apache-nifi-home]
 * [Taylor, David. "Apache NiFi Tutorial (from guru99.com)][taylor-nifi-tutorial]
+* [MySQL Connector/J Download Page][mysql-driver-dl]
 
 <!-- Hidden References -->
 [wiki-nifi]: https://en.wikipedia.org/wiki/Apache_NiFi "Apache NiFi (from Wikipedia, the free encyclopedia)"
@@ -274,6 +435,7 @@ These parameters are:
 [apache-nifi-overview]: https://nifi.apache.org/docs/nifi-docs/html/overview.html "Apache NiFi Overview"
 [apache-nifi-home]: https://nifi.apache.org/ "Apache Software Foundation NiFi Home"
 [taylor-nifi-tutorial]: https://www.guru99.com/apache-nifi-tutorial.html "Apache NiFi Tutorial (from guru99.com)"
+[mysql-driver-dl]: https://dev.mysql.com/downloads/connector/j/ "MySQL Connector/J Download Page"
 
 ### Note Links
 
@@ -284,6 +446,8 @@ These parameters are:
 * [Java][-java]
 * [Containers (Software)][-container]
 * [Docker][-docker]
+* [MySQL][-mysql]
+* [Structured Query Language (SQL)][-sql]
 
 <!-- Hidden References -->
 [-etl]: etl.md "Extract, Transform, Load (ETL)"
@@ -293,3 +457,5 @@ These parameters are:
 [-java]: java.md "Java"
 [-container]: container.md "Containers (Software)"
 [-docker]: docker.md "Docker"
+[-mysql]: mysql.md "MySQL"
+[-sql]: sql.md "Structured Query Language (SQL)"
