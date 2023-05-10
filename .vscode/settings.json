@@ -203,6 +203,7 @@
         "wordprocessingml",
         "WORKDIR",
         "xtract",
+        "Yuste",
         "zettelkasten",
         "zstd"
     ],
@@ -232,6 +233,19 @@
             "database": "education",
             "username": "root",
             "askForPassword": true
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "nifi-usgs",
+            "database": "usgs",
+            "username": "root",
+            "password": "MyNewPass"
         }
     ],
     "gitdoc.enabled": true

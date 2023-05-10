@@ -1,12 +1,12 @@
 ---
 created: 2022-12-05T10:08:05.765Z
-modified: 2023-03-27T11:21:03.607Z
+modified: 2023-05-08T17:16:18.916Z
 tags: [python,mongodb,backend,database,driver,data]
 ---
 # Control MongoDB Using Python
 
 It's possible to create server logic within python directly interacting with
-[MongoDB](document-databases.md) servers.
+[MongoDB](document-database.md) servers.
 First, a driver is needed.
 In python this MongoDB driver package is known as `pymongo`.
 Install it using pip like this:

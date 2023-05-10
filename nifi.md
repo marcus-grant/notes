@@ -1,6 +1,6 @@
 ---
 created: 2023-05-04T14:35:19.080Z
-modified: 2023-05-07T12:21:54.182Z
+modified: 2023-05-07T17:27:46.855Z
 tags: [nifi,data,etl,extract,transform,load,database,apache,foss,pcde,module17]
 ---
 # Apache NiFi
@@ -416,7 +416,8 @@ So now we have setup our first basic pipeline as seen in the diagram above.
 A data source is accessed by a *processor*.
 Then the data is connected using a *connector* to another *processor*.
 In that *connector* a *FlowFile* is created with all the data we want.
-Then the next processor deals with or transforms or loads the data within the *FlowFile*.
+Then the next processor deals with or transforms or loads the data within
+the *FlowFile*.
 
 ## References
 
