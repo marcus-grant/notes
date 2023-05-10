@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T10:12:17.264Z
-modified: 2023-05-04T14:34:42.379Z
+modified: 2023-05-10T19:29:39.236Z
 tags: [pcde,course,outline,overview,data,learn]
 ---
 # PCDE Course Outline
@@ -518,7 +518,59 @@ Performing ETL Using NiFi
 ### Module 17: Related Notes
 
 * [PCDE Module 17 Content][-pcde-mod17]
-* ***TODO: COPY OVER NOTE LINKS IN MOD17 CONTENT DOC TO HERE***
+* [Apache NiFi][-nifi]
+* [Extract, Transform, Load (ETL)][-etl]
+* [MySQL][-mysql]
+* [MacOS (Operating System)][-macos]
+* [Windows (Operating System)][-windows]
+
+## Module 18: Platforms for Handling Big Data
+
+### Module 18: Due Date
+
+* Due Wednesday, May 17, 2023 at 1629 UTC
+  * 1829 CET
+  * 1229 EST
+
+### Module 18: Goals
+
+1. Discuss the importance of big data.
+2. Identify key components of big data.
+3. Identify key components of Hadoop architecture.
+4. Set up Hadoop in a Docker container.
+5. Utilize Hadoop to handle big data.
+6. Identify key components of the Hadoop ecosystem.
+7. Describe applications of Hadoop.
+8. Write a Java program to access the Hadoop database.
+
+### Module 18: Activities
+
+#### Module 18: Key Activities
+
+* **Knowledge Checks**
+  * Knowledge Check 18.1: Big Data and the Architecture of Hadoop
+  * Knowledge Check 18.2: Advanced Hadoop Architecture
+* **Discussion**
+  * Discussion 18.1: The Importance of Big Data
+  * Discussion 18.2: Exploring the Hadoop Ecosystem
+  * Discussion 18.3: Use Cases of Hadoop
+* **Activities**
+  * Activity 18.1: Setting Up Hadoop in a Docker Container
+  * Activity 18.2: Executing the WordCount Program
+* **Final Assignment**
+  * Module 18 Final Assignment: Writing a Java Program to
+Access the Hadoop Database
+
+#### Module 18: Self-Study Activities
+
+* Self-Study Discussion 18.4: Thinking Like a Data Scientist:
+Platforms for Handling Big Data
+* Self-Study Flashcards: Module 18 Flashcards
+
+### Module 18: Related Notes
+
+* [PCDE Module 18 Content][-pcde-mod18]
+* ***TODO*** Add the rest of the notes links in -pcde-mod18 here
 
 ## References
 
@@ -609,6 +661,10 @@ Performing ETL Using NiFi
 * [CSS][-css]
 * [MBTA API][-mbta-api]
 * [PCDE Module 17 Course Content][-pcde-mod17]
+* [Apache NiFi][-nifi]
+* [Extract, Transform, Load (ETL)][-etl]
+* [MacOS (Operating System)][-macos]
+* [Windows (Operating System)][-windows]
 
 <!-- Hidden Reference Links Below Here -->
 [-pcde-overview]: pcde-course-overview.md "PCDE Course Overview"
@@ -693,3 +749,8 @@ Performing ETL Using NiFi
 [-css]: css.md "CSS"
 [-mbta-api]: mbta-api.md "MBTA API"
 [-pcde-mod17]: pcde-module17-content.md "PCDE Module 17 Course Content"
+[-nifi]: nifi.md "Apache NiFi"
+[-etl]: etl "Extract, Transform, Load (ETL)"
+[-macos]: macos.md "MacOS (Operating System)"
+[-windows]: windows.md "Windows (Operating System)"
+[-pcde-mod18]: pcde-module18-content.md "PCDE Course Module 18 Content"
