@@ -1,6 +1,6 @@
 ---
 created: 2023-05-10T19:13:34.917Z
-modified: 2023-05-10T20:13:44.000Z
+modified: 2023-05-11T20:33:01.405Z
 tags: [pcde,module18,big,data,hadoop,docker,java,database,warehouse]
 ---
 # PCDE Course Module 18 Content
@@ -31,6 +31,65 @@ Dr. Sanchez in this module’s videos.
 
 >**Note**: If you can't reach the slide deck,
 >the course archive should have it under the module 18 `extras` folder.
+
+## Discussion 18.1: The Importance of Big Data
+
+### Discussion 18.1 Prompt
+
+You’ve learned how complex big data can become.
+At scale, **the five V’s of big data** don’t allow for
+traditional software to be useful in processing.
+In many cases, handling big data requires the addition of
+whole technology teams for data collection, data storage, data processing,
+and database management.
+Requirements for modern hardware must be met as well.
+This all adds up to a substantial business cost for technology,
+even when there is sometimes unclear direction for
+how the big data will be utilized.
+
+With today’s emerging technologies,
+many large organizations will collect just about
+any data they can legally obtain.
+These organizations will collect, process,
+and store the big data in data warehouses until
+they can decide on a business use later on.
+There are many factors to consider when
+deciding how important the data collection is in the first place.
+In this discussion, you will examine a few of these deciding factors.
+
+In your discussion post,
+choose a large technology organization that interests you.
+Provide detailed responses to the following questions:
+
+* What is the organization?
+How long has it existed?
+Do you see any major change coming for the future of this organization?
+* What big data do you suspect the organization will collect
+(or is currently collecting)?
+* Does the collected data align with the five V’s of big data?
+Provide a justification for how your data represents each of the five V’s:
+  * value
+  * variety
+  * velocity
+  * veracity
+  * volume
+* How much data do you expect is coming in from...?
+  * all users daily
+  * monthly
+  * and annually
+  * How long should the organization you selected keep the data, and why?
+* How can the organization utilize the data to its advantage?
+* Is it practical to collect and store this data? Why or why not?
+
+Read the statements posted by your peers.
+Engage with them by responding with
+thoughtful comments and questions to deepen the discussion.
+
+**Suggested Time:** 60 minutes
+
+**Suggested Length:** 250-300 words
+
+### My Response to Discussion 18.1 Prompt
 
 ## References
 
