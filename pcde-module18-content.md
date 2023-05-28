@@ -1,6 +1,6 @@
 ---
 created: 2023-05-10T19:13:34.917Z
-modified: 2023-05-11T20:33:01.405Z
+modified: 2023-05-16T14:49:48.465Z
 tags: [pcde,module18,big,data,hadoop,docker,java,database,warehouse]
 ---
 # PCDE Course Module 18 Content
@@ -91,6 +91,41 @@ thoughtful comments and questions to deepen the discussion.
 
 ### My Response to Discussion 18.1 Prompt
 
+I chose to examine Google's data collection practices.
+Going from a search engine to a computing services conglomerate,
+their data flows have grown substantially,
+possibly more than any other organization in the world.
+
+## Knowledge Check 18.1: Big Data and the Architecture of Hadoop
+
+* Q1: Which of the following are the three main characteristics of big data?
+  * Variety, value, and veracity **(WRONG)**
+  * Variety, veracity, and volume **(WRONG)**
+  * Velocity, variety, and volume **(Correct)**
+* Q2: What does HDFS stand for?
+  * Hadoop Distributed File System **(Correct)**
+* Q3: What are the stages of a MapReduce process when working with big data?
+  * input, split map, sort, reduce **(Correct)**
+* Q4: What does YARN stand for?
+  * Yet Another Resource Negotiator **(Correct)**
+* Q5: What is the most accurate definition of Hadoop?
+  * Hadoop is an open-source platform for distributed data storage and
+processing of large datasets. **(Correct)**
+* Q6: What does MapReduce do?
+  * Split large amounts of data into smaller chunks for
+efficient data manipulation. **(Correct)**
+* Q7: Which steps take place between the `Map` and `Reduce` tasks?
+  * Combine and Partition **(Correct)**
+* Q8: What is the function of the Reduce task in MapReduce?
+  * Takes the output from the Map as an input,
+then shuffles and sorts the data into a smaller set of tuples **(Correct)**
+* Q9: Which of the following is false about the Combine function in
+the MapReduce framework?
+  * Whether the combine function is performed depends on the complexity of
+the data. **(WRONG)**
+  * Combine is an optional step in the MapReduce framework. **(WRONG)**
+  * The combine function must always be performed. **(Correct)**
+
 ## References
 
 ### Web Links
@@ -102,4 +137,9 @@ thoughtful comments and questions to deepen the discussion.
 
 ### Note Links
 
+* [Big Data][-big-data]
+* [Hadoop][-hadoop]
+
 <!-- Hidden References -->
+[-big-data]: big-data.md "Big Data"
+[-hadoop]: hadoop.md "Hadoop"

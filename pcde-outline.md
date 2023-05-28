@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T10:12:17.264Z
-modified: 2023-05-11T09:28:00.337Z
+modified: 2023-05-28T19:51:12.091Z
 tags: [pcde,course,outline,overview,data,learn]
 ---
 # PCDE Course Outline
@@ -571,6 +571,60 @@ Platforms for Handling Big Data
 
 * [PCDE Module 18 Content][-pcde-mod18]
 * ***TODO*** Add the rest of the notes links in -pcde-mod18 here
+
+### Module 19: TODO
+
+***TODO fill in***
+
+### Module 20: Introduction to Machine Learning
+
+#### Module 20: Due Date
+
+* Due Wednesday, May 31, 2023 at 1629 UTC
+  * 1829 CET
+  * 1229 EST
+
+#### Module 20: Goals
+
+1. Solve advanced mathematical problems.
+2. Describe use cases of linear regression.
+3. Apply gradient descent to reduce error.
+4. Explain the importance of optimization in gradient descent
+5. Describe applications of Bayes Theorem.
+6. Implement spam detection using Python.
+7. Identify use cases for Naive Bayes and Gaussian Naive Bayes theorems.
+8. Implement Naive Bayes theorem using Sci-Kit Learn.
+9. Implement Gaussian Naive Bayes theorem using Sci-Kit Learn.
+
+#### Module 20: Activities
+
+* **Knowledge Checks**
+  * Knowledge Check 20.1: Mathematics Fundamentals
+  * Knowledge Check 20.2: Gradient Descent
+  * Knowledge Check 20.3: Advanced Probability
+* **Discussion**
+  * Discussion 20.1: Use Cases of Linear Regression
+  * Discussion 20.2: The importance of Optimizing Gradients
+  * Discussion 20.3: Applications of Bayes Theorem
+  * Discussion 20.4: Use cases for Naive Bayes and Gaussian Naive Bayes Theorems
+* **Activities**
+  * Activity 20.1: Optimizing Gradient Descent Using Learning Rates
+  * Activity 20.2: Using Python for Spam Detection
+* **Final Assignment**
+  * Module 20 Final Assignment: Implementing Naive Bayes and
+Gaussian Naive Bayes Classifiers
+**Self-Study Activities**
+  * Self-Study Discussion 20.5: Thinking Like a Data Scientist:
+Machine Learning and Advanced Probability
+  * Self-Study Flashcards: Module 20 Flashcards
+
+#### Module 20: Related Notes
+
+* [PCDE Course: Module 20 Content][-pcde-mod20]
+
+<!-- TODO: Below -->
+<!-- Move these references down and delete dupes -->
+[-pcde-mod20]: ./pcde-module20-content.md "PCDE Course: Module 20 Content"
 
 ## References
 
