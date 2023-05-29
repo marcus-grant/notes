@@ -1,6 +1,6 @@
 ---
 created: 2023-05-29T14:32:27.177Z
-modified: 2023-05-29T16:36:20.526Z
+modified: 2023-05-29T17:30:50.387Z
 tags: [computer,science,math,gradient,descent,machine,learning,optimization,pcde,module20]
 ---
 # Gradient Descent
@@ -107,6 +107,76 @@ you only use on training sample.
 Additionally, stochastic gradient descent often converges much more quickly than
 gradient descent, but
 the error function is not a well minimized as in the case of gradient descent.
+
+## Usage in Linear Regression
+
+Now that you have learned about gradient descent,
+you can use it to solve a linear regression problem.
+Basically you have your **dependent variable** $y$ and
+your **independent variable** $x$.
+And you iteratively need to solve for the slope $m$ and
+the intercept $b$ of the line that best fits the data.
+
+Given the data $\bold{Y}$ that
+satisfies the independent and identically distributed *(I.I.D.)* requirement,
+the equation for **ordinary linear regression** is:
+
+$$ \bold{Y} = \bold{w} \cdot \bold{X} + \bold{e} $$
+
+Where:
+
+* $\bold{Y}$ is the matrix of dependent variables
+* $\bold{X}$ is the matrix of independent variables
+* $\bold{w}$ is the matrix of weights, or Regression Coefficients
+* $\bold{e}$ is the matrix of errors
+
+The $\bold{e}$ is there as a matrix of errors because
+the data is not perfectly linear.
+There may be many errors for each data point.
+
+The equation for ordinary linear regression in (**X**, **Y**) space
+*(i.e. in two dimensions)* is:
+
+$$[w_0, w_1] \cdot \begin{bmatrix} 1 & 1 & \ldots & 1
+\\ x_0 & x_1 & \ldots &  x_n \end{bmatrix} =
+[y_0, y_1, \ldots y_n]$$
+
+The predictive model for $y$ can be written as:
+
+$$ \bold{w} \cdot \bold{X} = \bold{Y} $$
+
+You can generate any $y_i$ for any given $x_i$ as follows:
+
+$$ y_i = w_0 + w_1 x_i $$
+
+Essentially we keep looking for adjustments to $w_0$ and $w_1$ until
+we find the best fit for the data,
+as in when the sum of the squares of the errors is minimized.
+
+### Error Function
+
+First we need to decide what the error function is in order to
+be able to minimize it.
+In machine learning the **loss function** is defined.
+In this case,
+at least squares loss function is used.
+The error $\bold{E}$ is defined as:
+
+$$ \bold{E} = \sum |\bold{Y} - \bold{w} \cdot \bold{X}|^2 $$
+
+* $\bold{Y}$ = Actual Data
+* $\bold{w} \cdot \bold{X}$ = Model Prediction
+
+So we see we basically have the model prediction as the dot product of the weights and
+the independent variables.
+We then subtract the actual data from the model prediction and
+square the result.
+What does this look like?
+
+Because it is squared, when we look at different weights on a contour chart we
+see that the error is minimized at the bottom of the bowl.
+So we take the gradient of the error data points and
+find some possible solutions.
 
 ## References
 
