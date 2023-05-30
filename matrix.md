@@ -1,6 +1,6 @@
 ---
 created: 2023-05-29T13:28:45.749Z
-modified: 2023-05-29T14:29:15.000Z
+modified: 2023-05-30T15:45:37.936Z
 tags: []
 ---
 # Matrix
@@ -129,7 +129,7 @@ In this case,
 the number of columns of the leftmost matrix must be equal to
 the number of rows of the rightmost matrix.
 If $\boldsymbol{A}$ is a matrix with dimensions $m \times n$ and
-elements $a_{ij}$ for $i = 1, 2, \ldots, m$ and $j = 1, 2, \ldots, n$ and 
+elements $a_{ij}$ for $i = 1, 2, \ldots, m$ and $j = 1, 2, \ldots, n$ and
 $\boldsymbol{B}$ is a matrix with dimensions $n \times p$ and
 elements $b_{ij}$ for $i = 1, 2, \ldots, n$ and $j = 1, 2, \ldots, p$,
 then the product $\boldsymbol{C} = \boldsymbol{A} \boldsymbol{B}$ is a matrix

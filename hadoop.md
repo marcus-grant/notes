@@ -1,6 +1,6 @@
 ---
 created: 2023-05-16T13:47:24.015Z
-modified: 2023-05-16T15:27:48.938Z
+modified: 2023-05-30T15:44:51.136Z
 tags: [data,process,library,cluster,big,stream,machine,learn,pcde,module18]
 ---
 # Hadoop
@@ -44,7 +44,7 @@ the afforementioned **`map`** and **`reduce`** functions.
     * For example: 500 records to be processed, 500 mappers could be used simultaneously.
     * You could also use a single mapper for any number of records
     * The number of mappers is decided by Hadoop depending on data size and cluster size.
-* The `Reduce task takes the output from the Map as an `input`.
+* The `Reduce` task takes the output from the Map as an `input`.
   * It shuffles and sorts the data *key-value* pairs into smaller sets of *tuples*.
   * Naturally the `Reduce` task **is always performed after mapping is done**.
 

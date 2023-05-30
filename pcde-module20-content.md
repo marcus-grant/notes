@@ -1,6 +1,6 @@
 ---
 created: 2023-05-28T19:46:06.838Z
-modified: 2023-05-29T16:48:27.487Z
+modified: 2023-05-30T19:22:37.695Z
 tags: [pcde,module20,machine,learn,probability,statistics,gradient,descent,bayes,gauss]
 ---
 # PCDE Course: Module 20 Content
@@ -124,6 +124,23 @@ deepen the discussion.
 **Suggested Time**: 60 minutes
 
 **Suggested Length**: 250-300 words
+
+## Knowledge Check 20.2: Gradient Descent
+
+* Q1: In Numpy, how are the weights for a linear regression represented?
+  * They can be either **(WRONG)**
+  * As a row vector **(Correct)**
+* Q2: How can the loss function be defined for linear regression?
+  * Using the least of the mean squared error **(Correct)**
+* Q3: What is the $\eta$ used in the gradient descent of linear regression?
+  * The learning rate **(Correct)**
+* Q4: In the gradient descent example by Dr. Williams,
+what is important to keep in mind to find the optimal $\eta$?
+Select all options
+  * A larger learning rate may result in overstepping across the local minimum
+  * A smaller learning rate may take forever to reach the local minimum
+  * A larger learning rate may overstep across the global minimum
+  * A larger learning rate 
 
 ## References
 
