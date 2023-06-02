@@ -1,6 +1,6 @@
 ---
 created: 2023-05-28T19:46:06.838Z
-modified: 2023-05-30T19:22:37.695Z
+modified: 2023-06-02T19:10:50.702Z
 tags: [pcde,module20,machine,learn,probability,statistics,gradient,descent,bayes,gauss]
 ---
 # PCDE Course: Module 20 Content
@@ -140,7 +140,7 @@ Select all options
   * A larger learning rate may result in overstepping across the local minimum
   * A smaller learning rate may take forever to reach the local minimum
   * A larger learning rate may overstep across the global minimum
-  * A larger learning rate 
+  * A larger learning rate
 
 ## References
 
