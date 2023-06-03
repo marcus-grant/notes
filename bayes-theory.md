@@ -1,7 +1,7 @@
 ---
 created: 2023-05-31T07:34:15.973Z
-modified: 2023-06-02T19:10:54.341Z
-tags: [bayes,theory,math,probability,machine,learn,gradient,descent,inference,classification,pcde,module20]
+modified: 2023-06-03T14:21:06.214Z
+tags: [bayes,theory,math,probability,machine,learn,gradient,descent,inference,classification,naive,pcde,module20]
 ---
 # Bayes Theorem
 
@@ -12,7 +12,7 @@ Used to calculate conditional [probabilities][-prob],
 This includes machine learning.
 Bayes theorem is used to calculate the probability of an event
 occurring given that a related event has already occurred.
-This is called conditional probability, and given two events $A$ & $B$,
+This is called *conditional probability*, and given two events $A$ & $B$,
 it can be expressed by using the notation $P(A|B)$.
 The theory is useful when a series of events exists with
 outcomes that partially depend on the occurrence of another event.
@@ -24,11 +24,27 @@ What is the probability that the coin came from the first bag?
 If you can determine the probability of choosing a quarter,
 then you can calculate the probability the coin you picked came from the first bag.
 
-## Proof of Bayes Theorem
+## Formal Definition of Bayes Theorem
 
 $P(A|B) = \frac{P(B|A)P(A)}{P(B)}$
 
-### Proof of Bayes Theorem - Step 1
+* $P(A|B)$ is the conditional probability of event $A$ occurring given that
+event $B$ has already occurred.
+  * $P(A|B)$ is also called the *posterior probability*.
+* $P(B|A)$ is the *conditional probability* of event $B$ occurring given that
+event $A$ has already occurred.
+  * $P(B|A)$ is also called the *likelihood*.
+    * As in the *likelihood* of event $B$ occurring given that
+    event $A$ has already occurred.
+* $P(A)$ is the *prior probability* of event $A$ occurring.
+  * $P(A)$ is also called the *marginal probability*.
+  * The *prior probability* is the probability of
+  event $A$ occurring without any additional information,
+  * Essentially it is based on *prior* knowledge of the event.
+
+## Proof of Bayes Theorem
+
+### Proof Step 1
 
 Begin by defining the probability of two events, $A$ & $B$,
 happening simultaneously.
@@ -57,7 +73,7 @@ that the ice cream is in stock can be computed by using the following formula:
 
 $$P(A \cap B) = P(A) * P(B|A)$$
 
-### Proof of Bayes Theorem - Step 2
+### Proof Step 2
 
 Similarly to what you learned in Step 1,
 the probability of events $A$ and $B$ happening simultaneously is also
@@ -67,14 +83,14 @@ This is illustrated in the following equation:
 
 $$P(A \cap B) = P(B) * P(A|B)$$
 
-### Proof of Bayes Theorem - Step 3
+### ProofStep 3
 
 Because the left hand sides of Steps 1 & 2 are exactly the same,
 you can also set the right hand sides equal to each other:
 
 $$P(B) * P(A|B) = P(A) * P(B|A)$$
 
-### Proof of Bayes Theorem - Step 4
+### Proof Step 4
 
 Dividing both sides by $P(B)$ yields the following equation:
 
@@ -88,6 +104,8 @@ you can calculate the probability of
 one event occurring given that another event has already occured.
 
 ## Extension of Bayes Theorem
+
+### Explanation of Bayes Extension
 
 In many implementations,
 you may see Bayes Theorem written a bit differently because
@@ -116,11 +134,13 @@ Because $S$ holds all possible outcomes,
 $A$ must belong to the set $S$ that is derived from the first step.
 See the example below ot illustrate this theory:
 
-### Bayes Extension - Step 1
+### Proof of Bayes Extension
+
+#### Step 1 of Bayes Extension Proof
 
 $A = A \cap S$
 
-### Bayes Extension - Step 2
+#### Step 2 of Bayes Extension Proof
 
 For this example, $S$ represents the set all events $E_i$, thus
 
@@ -128,7 +148,7 @@ $$S = E_1 \cup E_2 \cup E_3 \cup ... \cup E_n$$
 
 $$A = A \cup {E_1, E_2, E_3, ... E_n}$$
 
-### Bayes Extension - Step 3
+#### Step 3 of Bayes Extension Proof
 
 Then use the property of distribution to distribute the intersection,
 as shown below:
@@ -136,7 +156,7 @@ as shown below:
 $$A = (A \cup E_1) \cap (A \cup E_2) \cap (A \cup E_3) \cap ...
 (A \cup E_n)$$
 
-### Bayes Extension - Step 4
+#### Step 4 of Bayes Extension Proof
 
 Take the probability of both sides,
 as show by the equation below:
@@ -144,27 +164,27 @@ as show by the equation below:
 $$P(A) = P((A \cup E_1) \cap (A \cup E_2) \cap (A \cup E_3) \cap ...
 (A \cup E_n))$$
 
-### Bayes Extension - Step 5
+#### Step 5 of Bayes Extension Proof
 
 Because $A$ and $E_i$ are disjoint sets,
 you know that $P(A \cup B) = P(A) + P(B)$, thus.
 
 $$P(A) = P(A \cap E_1) + P(A \cap E_2) + P(A \cap E_3) + ... P(A \cap E_n)$$
 
-### Bayes Extension - Step 6
+#### Step 6 of Bayes Extension Proof
 
 According to the multiplication of independent events theorem,
 
 $$P(A) = P(E) * [P(\frac{A}{E_1}) + P(\frac{A}{E_2}) + P(\frac{A}{E_3}) + ...
 P(\frac{A}{E_n})]$$
 
-### Bayes Extension - Step 7
+#### Step 7 of Bayes Extension Proof
 
 Thus you can use the summation to get this:
 
 $$P(A) = P(E) * \sum_{k}^{n} P(E_i) * P(A | E_i)$$
 
-### Bayes Extension - Step 8
+#### Step 8 of Bayes Extension Proof
 
 While this appears differently, you can now derive Bayes to be:
 
@@ -216,11 +236,249 @@ the probability that it was drawn from the first bag is 68.5%.
 This example illustrates how to apply Bayes theorem to
 a real world problem.
 
+## Naive Bayes Theorem
+
+Based on *Bayes Theorem*,
+the **Naive Bayes Theorem** or **(NBT)** is a classification algorithm that
+is primarily used on large datasets.
+*NBT* uses the same algorithm as *Bayes Theorem* to
+attempt to classify a feature in a given dataset.
+*NBT* can often replace more sophisticated classification algorithms because
+it is easier to implement while still providing a high accuracy rate.
+
+*NBT* is considered *naive* because it assumes the presence of
+a particular feature in a class is unrelated to the presence of
+other features.
+An example of an algorithm would be a classification of a tomato:
+it is round, it has a diameter of less than 8cm, and it is red.
+In this example, all three characteristics may be related,
+but NBT does not assume this when calculating probabilities.
+Considering these assumptions, *NBT* is more accurate than you may suppose.
+*NBT* may not be quite as accurate as some more complex classification tools,
+but its easy implementation and
+relatively low computing costs are advantages which
+make *NBT* a viable tool for many applications.
+
+## Formal Definition of Naive Bayes Theorem
+
+The formula for Naive Bayes Theorem is:
+
+$$P(c|x) = \frac{P(x|c)P(c)}{P(x)}$$
+
+Where:
+
+* $P(c|x)$ is the **posterior** probability of the class ($c$, target),
+given the probability of a predictor ($x$, attribute).
+* $P(c)$ is the **prior** probability of the class.
+* $P(x|c)$, also called the **likelihood**.
+  * It's the probability of the predictor given the probability of the class.
+* $P(x)$ is the **prior** probability of the *predictor*.
+
+## Example of Naive Bayes Theorem
+
+The following example includes two weeks' worth of data for
+weather conditions and a football team's schedule.
+The goal is to determine the *likelihood* that
+the football team will play given that it is sunny outside.
+In the dataset, the $3^{rd}$ column, "Played",
+represents whether or not the team played on a given day.
+See the dataset below:
+
+### Example - Frequency of Play Dataset
+
+| Day       | Condition | Played |
+| --------- | --------- | ------ |
+| Monday    | Sunny     | No     |
+| Tuesday   | Rainy     | Yes    |
+| Wednesday | Sunny     | Yes    |
+| Thursday  | Cloudy    | Yes    |
+| Friday    | Sunny     | No     |
+| Saturday  | Rainy     | No     |
+| Sunday    | Rainy     | Yes    |
+| Monday    | Sunny     | Yes    |
+| Tuesday   | Rainy     | No     |
+| Wednesday | Cloudy    | No     |
+| Thursday  | Sunny     | Yes    |
+| Friday    | Sunny     | Yes    |
+| Saturday  | Rainy     | Yes    |
+| Sunday    | Cloudy    | Yes    |
+
+### Solution to Naive Bayes Theorem Example
+
+The first step to solving this problem is to convert this dataset into
+a frequency table.
+When implementing *NBT* in practice,
+this is usually the most computationally expensive step,
+because real-world datasets are much larger than this simple example.
+See the associated Frequency Table below:
+
+| Weather   | Yes | No  | Total Days |
+| --------- | --- | --- | ---------- |
+| Sunny     | 4   | 2   | 6          |
+| Rainy     | 3   | 2   | 5          |
+| Cloudy    | 2   | 1   | 3          |
+| **Total** | *9* | *5* | ***14***   |
+
+Given the data in the frequency table above,
+you can now compute the probability that
+the football team will play if the weather is sunny,
+represented by $P(play|sunny)$, by writing the following equation:
+
+$$P(play|sunny) = \frac{P(sunny|play)P(play)}{P(sunny)}$$
+
+Now it just becomes a matter of populating the *likelihood* probability,
+the *prior* probability of the *class*,
+and the *prior* probability of the *predictor*.
+
+The term $P(sunny|play)$ can be computed by dividing the number of
+sunny days that a match was played, or the *likelihood* of event,
+by the total number of matches played.
+
+$$P(sunny|play) = \frac{\# of sunny matches}{\# of matches} = \frac{4}{9}$$
+
+The probability $P(play)$ is given by
+dividing the total number of sunny days,
+or the *class prior* event count,
+by the total number of days in the dataset.
+The *class prior probability* is the result.
+
+$$P(play) = \frac{\# of sunny days}{\# of total days} = \frac{9}{14}$$
+
+*Finally*, the probability $P(sunny)$ is given by
+dividing the total number of of sunny days,
+or the *predictor prior* event count,
+by the total number of days in the dataset.
+The result is the *predictor prior probability*.
+
+$$P(sunny) = \frac{\# of sunny days}{\# of total days} = \frac{6}{14}$$
+
+Now we plug the numbers into the equation and then solve the problem:
+
+$$P(play|sunny) = \frac{P(sunny|play)P(play)}{P(sunny)} =
+\frac{\frac{4}{9} * \frac{9}{14}}{\frac{6}{14}} = \frac{2}{3} $$
+
+As illustrated in this example,
+there's about a 67% chance that the football team will
+play given the weather is sunny.
+This may seem like a simple solution to a relatively easy question.
+However, in real-world practice,
+these initial datasets will be much more complex,
+often with terabytes of data.
+By performing classification and
+considering conditional probability,
+you can gain insights that are often difficult to achieve with large datasets.
+
+## Naive Bayes Theorem and Multiple Predictors
+
+The example above is a simple example of *NBT*.
+You often want more *predictors* or *features* to
+make more sophisticated predictions.
+One example of this is a spam filter.
+A message can be legitimate or spam predicted on labels $L$ based on
+many words or features $f_1, f_2, ..., f_n$.
+
+$$P(L|features) = \frac{P(features|L)P(L)}{P(features)}$$
+
+Where:
+
+* $P(L|features)$ is the probability of a label given the features.
+  * In this case whether a message is spam or legitimate.
+  * And whether that label is likely given the features or words in the message.
+* $P(features|L)$ is the probability of the features given the label.
+  * In this case, the probability of the words in the message given the label.
+  * This is where we'd count occurrences of words in messages of that label.
+* $P(L)$ is the probability of the label.
+  * This is where we'd count the number of spam and legitimate messages.
+* $P(features)$ is the probability of the features.
+  * This is where we'd consider the probability of
+  these words occurring in any message.
+  * This is more nuanced
+    * We might need to decide whether a message is spam or legitimate
+
+$$\frac{P(L_1)|features}{P(L_2)|features} =
+\frac{P(features|L_1)P(L_1)}{P(features|L_2)P(L_2)}$$
+
+This arises from the fact that $P(features)$ is the same for both labels.
+So we end up with this simplified equation involving both labels.
+
+## Multiple Predictors Example - Spam Filter
+
+So let's examine the driving equation for multiple predictors.
+
+$$\frac{P(N)|features}{P(S)|features} =
+\frac{P(features|N)P(N)}{P(features|S)P(S)}$$
+
+Where:
+
+* $P(N|features)$ is the probability of a message being legitimate given the features.
+* $P(S|features)$ is the probability of a message being spam given the features.
+* $P(features|N)$ is the probability of the features given the message is legitimate.
+* $P(features|S)$ is the probability of the features given the message is spam.
+* $P(N)$ is the probability of a message being legitimate.
+* $P(S)$ is the probability of a message being spam.
+
+Below are some examples that show real-world applications of *NBT*.
+
+Suppose that you are working with a total of 50 emails.
+Suppose further that 30 of those emails are classified as *normal* or $N$,
+Then the remaining 20 emails are classified as *spam* or $S$.
+
+In this scenario, the *prior probability* of a message being *normal* is:
+
+$$P(N) = \frac{30}{50} = 0.6$$
+
+Based on this information,
+it can be assumed that the *prior probability* of a message being *spam* is:
+
+$$P(S) = \frac{20}{50} = 0.4$$
+
+The 30 *normal* messages have been classified as normal due to
+the presence of some words, such as "dear" and "money",
+that are common in normal messages.
+From the data,
+you can observe that the word "dear" appears 30 times and the word "money" appears 5 times.
+Given this data, you can compute the probability that
+an email contains a common "normal" word, such as "dear" or "money",
+given that the email is *normal*.
+
+$$P("dear" | N) = \frac{30}{30} = 1$$
+$$P("money" | N) = \frac{5}{30} = \frac{1}{6}$$
+
+On the other hand, the 20 *spam* messages have been classified as spam due to
+the presence of words such as "password" and "money".
+From the data, you can see that
+the word "password" appears 10 times and the word "money" appears 20 times.
+Given this data, you can compute the probability that
+a message contains a common "spam" word, such as "password" or "money",
+given that the message is *spam*.
+
+$$P("password" | S) = \frac{10}{20} = \frac{1}{2}$$
+$$P("money" | S) = \frac{20}{20} = 1$$
+
+Now suppose that you receive an additional email with the word "money" in it,
+and you want to calculate the probability that
+the new email is *normal*.
+
+By applying the *NBT* formula, you get:
+
+$$\frac{P(N|"money")}{P(S|"money")} =
+\frac{P("money"|N)P(N)}{P("money"|S)P(S)} =
+\frac{\frac{1}{6} * 0.6}{1 * 0.4} = \frac{3}{10} = 0.3$$
+
+Therefore, given your initial data,
+you can conclude that there is a 30% chance that
+a message containing the word "money" is *normal*.
+
 ## References
 
 ### Web Links
 
+* [Wikipedia. 'Bayes Theorem'][wiki-bayes]
+* [Brilliant.org. 'Bayes Theorem & Conditional Probability'][brilliant-bayes]
+
 <!-- Hidden References -->
+[wiki-bayes]: https://en.wikipedia.org/wiki/Bayes%27_theorem "Wikipedia. 'Bayes Theorem'"
+[brilliant-bayes]: https://brilliant.org/wiki/bayes-theorem/ "Brilliant.org. 'Bayes Theorem & Conditional Probability'"
 
 ### Note Links
 
