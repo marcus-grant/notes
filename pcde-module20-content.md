@@ -1,6 +1,6 @@
 ---
 created: 2023-05-28T19:46:06.838Z
-modified: 2023-06-07T14:49:20.015Z
+modified: 2023-06-07T15:57:37.446Z
 tags: [pcde,module20,machine,learn,probability,statistics,gradient,descent,bayes,gauss]
 ---
 # PCDE Course: Module 20 Content
@@ -655,9 +655,11 @@ A city exists in only exactly one province.
 * [Matrix][-matrix]
 * [Gradient Descent][-grad-desc]
 * [Bayes Theory][-bayes]
+* [SciKit-Learn (Python Machine Learning Library)][-sklearn]
 
 <!-- Hidden References -->
 [-prob]: probability.md "Probability"
 [-matrix]: matrix.md "Matrix"
 [-grad-desc]: gradient-descent.md "Gradient Descent"
 [-bayes]: bayes-theory.md "Bayes Theory"
+[-sklearn]: scikit-learn.md "SciKit-Learn (Python Machine Learning Library)"

@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T10:12:17.264Z
-modified: 2023-05-28T19:51:12.091Z
+modified: 2023-06-07T15:58:59.047Z
 tags: [pcde,course,outline,overview,data,learn]
 ---
 # PCDE Course Outline
@@ -621,10 +621,16 @@ Machine Learning and Advanced Probability
 #### Module 20: Related Notes
 
 * [PCDE Course: Module 20 Content][-pcde-mod20]
+* [Matrix][-matrix]
+* [Gradient Descent][-grad-desc]
+* [Bayes Theory][-bayes]
+* [SciKit-Learn (Python Machine Learning Library)][-sklearn]
+
+<!-- Hidden References -->
+
 
 <!-- TODO: Below -->
 <!-- Move these references down and delete dupes -->
-[-pcde-mod20]: ./pcde-module20-content.md "PCDE Course: Module 20 Content"
 
 ## References
 
@@ -719,6 +725,11 @@ Machine Learning and Advanced Probability
 * [Extract, Transform, Load (ETL)][-etl]
 * [MacOS (Operating System)][-macos]
 * [Windows (Operating System)][-windows]
+* [PCDE Course: Module 20 Content][-pcde-mod20]
+* [Matrix][-matrix]
+* [Gradient Descent][-grad-desc]
+* [Bayes Theory][-bayes]
+* [SciKit-Learn (Python Machine Learning Library)][-sklearn]
 
 <!-- Hidden Reference Links Below Here -->
 [-pcde-overview]: pcde-course-overview.md "PCDE Course Overview"
@@ -808,3 +819,8 @@ Machine Learning and Advanced Probability
 [-macos]: macos.md "MacOS (Operating System)"
 [-windows]: windows.md "Windows (Operating System)"
 [-pcde-mod18]: pcde-module18-content.md "PCDE Course Module 18 Content"
+[-pcde-mod20]: ./pcde-module20-content.md "PCDE Course: Module 20 Content"
+[-matrix]: matrix.md "Matrix"
+[-grad-desc]: gradient-descent.md "Gradient Descent"
+[-bayes]: bayes-theory.md "Bayes Theory"
+[-sklearn]: scikit-learn.md "SciKit-Learn (Python Machine Learning Library)"
