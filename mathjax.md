@@ -1,6 +1,6 @@
 ---
 created: 2023-02-23T12:35:15.433Z
-modified: 2023-02-23T13:23:00.421Z
+modified: 2023-06-05T08:56:46.446Z
 tags: [latex,math,mathml,html,markdown,markup,language,typeset,document,academic,publish]
 ---
 # MathJax: LaTeX in Markdown
@@ -68,34 +68,44 @@ $$e^{ -i\pi } + 1 = 0$$
 
 ## Greek Letters
 
-* $\alpha$, $\Alpha$: `\alpha`, `\Alpha` (resp.)
-* $\beta$, $\Beta$: `\beta`, `\Beta` (resp.)
-* $\gamma$, $\Gamma$: `\gamma`, `\Gamma` (resp.)
-* $\delta$, $\Delta$: `\delta`, `\Delta` (resp.)
-* $\epsilon$, $\Epsilon$: `\epsilon`, `\Epsilon` (resp.)
-* $\zeta$, $\Zeta$: `\zeta`, `\Zeta` (resp.)
-* $\eta$, $\Eta$: `\eta`, `\Eta` (resp.)
-* $\theta$, $\Theta$: `\theta`, `\Theta` (resp.)
-* $\iota$, $\Iota$: `\iota`, `\Iota` (resp.)
-* $\kappa$, $\Kappa$: `\kappa`, `\Kappa` (resp.)
-* $\lambda$, $\Lambda$: `\lambda`, `\Lambda` (resp.)
-* $\mu$, $\Mu$: `\mu`, `\Mu` (resp.)
-* $\nu$, $\Nu$: `\nu`, `\Nu` (resp.)
-* $\xi$, $\Xi$: `\xi`, `\Xi` (resp.)
-* $\omicron$, $\Omicron$: `\omicron`, `\Omicron` (resp.)
-* $\pi$, $\Pi$: `\pi`, `\Pi` (resp.)
-* $\rho$, $\Rho$: `\rho`, `\Rho` (resp.)
-* $\sigma$, $\Sigma$: `\sigma`, `\Sigma` (resp.)
-* $\tau$, $\Tau$: `\tau`, `\Tau` (resp.)
-* $\upsilon$, $\Upsilon$: `\upsilon`, `\Upsilon` (resp.)
-* $\phi$, $\Phi$: `\phi`, `\Phi` (resp.)
-* $\chi$, $\Chi$: `\chi`, `\Chi` (resp.)
-* $\psi$, $\Psi$: `\psi`, `\Psi` (resp.)
-* $\omega$, $\Omega$: `\omega`, `\Omega` (resp.)
+| Letter (lower) | Command (lower) | Letter (Upper) | Command (Upper) |
+| :------------- | :-------------- | :------------- | :-------------- |
+| $\alpha$       | `\alpha`        | $A$            | `A`             |
+| $\beta$        | `\beta`         | $B$            | `B`             |
+| $\gamma$       | `\gamma`        | $\Gamma$       | `\Gamma`        |
+| $\delta$       | `\delta`        | $\Delta$       | `\Delta`        |
+| $\epsilon$     | `\epsilon`      | $E$            | `E`             |
+| $\zeta$        | `\zeta`         | $Z$            | `Z`             |
+| $\eta$         | `\eta`          | $H$            | `H`             |
+| $\theta$       | `\theta`        | $\Theta$       | `\Theta`        |
+| $\iota$        | `\iota`         | $I$            | `I`             |
+| $\kappa$       | `\kappa`        | $K$            | `K`             |
+| $\lambda$      | `\lambda`       | $\Lambda$      | `\Lambda`       |
+| $\mu$          | `\mu`           | $M$            | `M`             |
+| $\nu$          | `\nu`           | $N$            | `N`             |
+| $\xi$          | `\xi`           | $\Xi$          | `\Xi`           |
+| $\omicron$     | `\omicron`      | $O$            | `O`             |
+| $\pi$          | `\pi`           | $\Pi$          | `\Pi`           |
+| $\rho$         | `\rho`          | $P$            | `P`             |
+| $\sigma$       | `\sigma`        | $\Sigma$       | `\Sigma`        |
+| $\tau$         | `\tau`          | $T$            | `T`             |
+| $\upsilon$     | `\upsilon`      | $\Upsilon$     | `\Upsilon`      |
+| $\phi$         | `\phi`          | $\Phi$         | `\Phi`          |
+| $\chi$         | `\chi`          | $X$            | `X`             |
+| $\psi$         | `\psi`          | $\Psi$         | `\Psi`          |
+| $\omega$       | `\omega`        | $\Omega$       | `\Omega`        |
+
+>**NOTE**: The uppercase letters in some Greek letters are the same as
+>their Latin counterparts.
+>Because of this the LaTeX command for uppercase Greek letters that
+>are the same as Latin letters are merely those letters in uppercase.
+>When a Greek capital letter is different than its Latin counterpart,
+>you use the same command as the lowercase version, but the first letter capitalized.
 
 ## Miscellaneous
 
 * **Dots** or **Ellipsis** ($\dots$), expressed with `\dots`
+* **Dot operators** ($\cdot$), expressed with `\cdot`
 
 ## Cheat Sheet
 

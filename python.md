@@ -1,6 +1,6 @@
 ---
 created: 2022-12-05T16:17:20.340Z
-modified: 2023-04-20T14:51:17.617Z
+modified: 2023-06-07T14:49:09.223Z
 tags: [python,lang,program,overview,language,software,develop]
 ---
 # Python (Programming Language)
@@ -540,6 +540,16 @@ is a library that adds support for multi-dimensional arrays, matrices and tensor
 NumPy also offers a large collection of high-level mathematical functions,
 particularly in the fields of linear algebra, statistics and scientific computing.
 
+### SciKit-Learn
+
+[SciKit-Learn][-scikit-learn] is a library that
+provides a large collection of machine learning algorithms.
+It is built on top of NumPy, SciPy and matplotlib.
+It's a good library to use for learning machine learning algorithms,
+at least at first, because it has a consistent API for all of its algorithms.
+For simpler and more common algorithms, it's a good idea to use SciKit-Learn as
+a starting point or for analysis or prototyping.
+
 ## Statistics in Python
 
 Python over the years has become *one of* the preferred ways that we analyze data.
@@ -599,6 +609,7 @@ With this the whole task loops every 10 seconds.
 * [Statistics Using Python][stats-py-zk]
 * [OS Shell][shell-zk]
 * [Python Interaction with OS Shell][py-shell-zk]
+* [SciKit-Learn (Python Library)][-scikit-learn]
 
 <!-- Hidden Reference Links Below Here -->
 [zk-numpy]: ./numpy.md "NumPy Library Overview"
@@ -606,6 +617,7 @@ With this the whole task loops every 10 seconds.
 [stats-py-zk]: ./statistics-python.md "Statistics Using Python"
 [py-shell-zk]: ./python-os-shell.md "Python Interaction with OS Shell"
 [shell-zk]: ./os-shell.md "OS Shell"
+[-scikit-learn]: scikit-learn.md "SciKit-Learn (Python Library)"
 
 ### Web/Article References
 

@@ -1,6 +1,6 @@
 ---
 created: 2023-05-31T07:34:15.973Z
-modified: 2023-06-03T14:21:06.214Z
+modified: 2023-06-07T14:51:02.879Z
 tags: [bayes,theory,math,probability,machine,learn,gradient,descent,inference,classification,naive,pcde,module20]
 ---
 # Bayes Theorem
@@ -469,20 +469,267 @@ Therefore, given your initial data,
 you can conclude that there is a 30% chance that
 a message containing the word "money" is *normal*.
 
+### Multiple Predictors
+
+So far we've only discussed some theory of multiple predictors and
+an example using the same form but only one word.
+Let's see what happens when we have multiple words, or *predictors*.
+
+$$
+\frac{P(N|f_1,f_2)}{P(S|f_1,f_2)} =
+\frac{P(f_1,f_2|N)P(N)}{P(f_1,f_2|S)P(S)} =
+\frac{P(f_1|N)P(f_2|N)}{P(f_1|S)P(f_2|S)} \frac{P(N)}{P(S)}
+$$
+
+The possibly millions of words being accounted for $f_i$,
+are drawn from an **independent identically distributed** (**IID**) distribution.
+So if they are independent then we can just multiply the probabilities together.
+
+>**Note:** Naive Bayes assumes that all the features are independent of each other.
+>This means we can just multiply the features together.
+
+Because we assume all the features are independent,
+we can rewrite the equation as:
+
+$$
+\frac{P(N|f_1,f_2, \dots, f_n)}{P(S|f_1,f_2, \dots, f_n)} =
+\frac{\prod_i{P(f_i|N)P(N)}}{\prod_i{P(f_i|S)P(S)}}
+$$
+
+Because we're multiplying a lot of normalized probabilities,
+*(i.e. probabilities that are between 0 and 1)*,
+there can be an *underflow* problem.
+That is the product of all these probabilities can be so small that
+the computer can't represent it or
+that it's so small that it's not useful.
+We fix this by taking the *log* of the probabilities.
+
+$$
+\log_e(a \cdot b) = \log_e(a) + \log_e(b)
+$$
+$$\therefore$$
+$$
+P(N|f_1, f_2, \dots, f_n) =
+\sum_i{\log_e(P(f_i|N))} + \log_e(P(N))
+$$
+
+## Confusion Matrix
+
+### What is a Confusion Matrix?
+
+A confusion matrix is a graphical representation that
+is used to summarize the performance of a classification algorithm.
+In fact,
+only looking at the accuracy score of an algorithm might be misleading if
+there are an unequal number of observations or more than two classes in the dataset.
+
+For this reason,
+using a confusion matrix can give a better idea of
+how a classification model is performing.
+
+A confusion matrix is visually represented as a table with two rows and columns that
+contains the combinations of predicted and actual values possible.
+Below is a diagram of a confusion matrix.
+
+![Confusion Matrix](2023-06-05T13-59-17Z.svg)
+
+In the confusion matrix above, `TP` stands for *true positive*,
+`TN` stands for *true negative*,
+`FP` stands for *false positive*, and
+`FN` stands for *false negative*.
+
+Using the spam message example from earlier,
+
+* `TP` is the number of messages that were correctly classified as spam.
+* `TN` or *true negative* is the messages correctly classified as normal.
+* `FP` or *false positive* is the messages incorrectly classified as spam.
+  * As in it was a legitimate message, but was identified as spam.
+* `FN` or *false negative* is the messages incorrectly classified as normal.
+  * As in it was a spam message, but was identified as legitimate.
+
+## Gaussian Naive Bayes
+
+### What is a Gaussian Distribution?
+
+This has been covered in the [Gaussian Distribution][-gauss-dist] document,
+for more details read it.
+**Gaussian distribution**,
+also known as a **normal distribution**,
+is a useful way to calculate probability.
+In order to apply a normal distribution to *Bayes Theorem*,
+you must calculate the *Gaussian distribution* for each feature in each class.
+This can be done easily once the *class* feature's mean and variance are calculated.
+The height, weight, and foot size dataset below
+will be used to demonstrate mean and variance calculations.
+
+### Gaussian Naive Bayes Example Data
+
+| Sex    | Height | Weight | Foot Size |
+| ------ | ------ | ------ | --------- |
+| Male   | 6      | 180    | 12        |
+| Male   | 5.92   | 190    | 11        |
+| Male   | 5.58   | 170    | 12        |
+| Male   | 5.91   | 165    | 10        |
+| Female | 5.0    | 100    | 6         |
+| Female | 5.5    | 150    | 8         |
+| Female | 5.42   | 130    | 7         |
+| Female | 5.75   | 150    | 9         |
+
+### Gaussian Naive Bayes Example Data Mean and Variance
+
+#### Gaussian Naive Bayes Example Data Mean
+
+Given a dataset with $n$ entries $x_i$ for $i = 1, 2, \dots, n$,
+the mean $\mu$ can be calculated by taking the sum of all the entries and
+dividing by the number of entries.
+
+$$
+\mu = \frac{\sum_{i=1}^{n}{x_i}}{n}
+$$
+
+The table below shows the means for each feature:
+
+| Sex    | $\mu_h$ | $\mu_w$ | $\mu_{fs}$ |
+| ------ | ------- | ------- | ---------- |
+| Male   | 5.85    | 176.25  | 11.25      |
+| Female | 5.42    | 132.50  | 7.5        |
+
+#### Gaussian Naive Bayes Example Data Variance
+
+Given a dataset with $n$ entries $x_i$ for $i = 1, 2, \dots, n$,
+and the mean $\mu$,
+the variance $\sigma$ can be calculated like so:
+
+$$
+\sigma = \frac{\sum_{i=1}^{n}(x_i - \mu)^2}{n - 1}
+$$
+
+>**Note:** The denominator is $n - 1$ instead of $n$ because
+>the mean is calculated from the dataset and
+>the variance is calculated from the mean.
+>This is a statistical adjustment called [Bessel's correction][wiki-bessel].
+
+To demonstrate,
+we'll calculate the variance of weight in males:
+
+$$
+\sigma_w = \frac{\sum_{i=1}^{n}(x_{w_i} - \mu_w)^2}{n - 1}
+= \frac{(180 - 176.25)^2 + (190 - 176.25)^2 + (170 - 176.25)^2 + (165 - 176.25)^2}{4 - 1}
+= 122.92
+$$
+
+The table below shows the variances for each feature:
+
+| Sex    | $\sigma_h$ | $\sigma_w$ | $\sigma_{fs}$ |
+| ------ | ---------- | ---------- | ------------- |
+| Male   | 0.035      | 122.92     | 0.917         |
+| Female | 0.097      | 558.33     | 1.667         |
+
+### Creating the Gaussian Normal Distribution
+
+Using the previous section's example and calculations for mean and variance,
+we can now create the Gaussian normal distribution for each feature.
+This can be done in many ways.
+For example,
+in [Python][-py] we can use `scikit-learn`'s `GaussianNB` class.
+To better illustrate the underlying mathematics,
+for now you will use a web based [interactive normal distribution tool][normal-dist-applet]
+
+Plugging in the normal distribution values for each characteristic's mean and variance,
+you will see the expected curves.
+Next you can plug in some values for each characteristic and
+see how much of the curve is covered by the values.
+
+#### Case Study of Gaussian Naive Bayes
+
+Let's take the height of `5.8`, weight of `185`, foot size of `11` and
+calculate the **Gaussian Naive Bayes** for the odds of that person being `male`.
+
+When do the math on those normal distributions by any means,
+the answer for the probability of each feature for a male is:
+
+* $P(h=5.8) = 0.077$
+* $P(w=185) = 0.47$
+* $P(fs=11) = 0.39$
+
+To find the probability that this particular person is male,
+use the following equation.
+
+$$
+P(male) = 0.5 \cdot (\log(0.077) + \log(0.47) \cdot \log(0.39)) = -1.51
+$$
+
+A key step in the above equation is to multiply by 0.50 because
+there's an initial 50% probability that a person is male.
+
+Then,
+do the same for all data representing female height, weight and foot size.
+
+* $P(h=5.8) = 0.00004$
+* $P(w=185) = 0.46$
+* $P(w=11) = 0.01787$
+
+Because $P(male)$ is greater than $P(female)$,
+you can now classify the person who fits the sample data values as
+being likely to represent a male.
+
+Gaussian Naive Bayes theorem is currently used in countless applications.
+
+### Further Reading on Naive Bayes Theorem
+
+* Learning how to manage probability distributions in machine learning
+  * [Gentle Introduction to Maximum a Posteriori (MAP) for Machine Learning][mlmastery-map19]
+
+## Smoothing
+
+### Laplace Smoothing
+
+TODO: write some notes here on laplace smoothing
+
+### Further Reading on Laplace Smoothing
+
+* [Kandala. 2023. From Zero to Hero: Laplace Smoothing for Naive Bayes Classifiers][kandala-smooth-nb]
+
+## Implementation
+
+### Python Implementation
+
+One way to quickly and easily implement Naive Bayes in Python is to
+use the [SciKit-Learn][-sklearn] library.
+It's great for analysis and prototyping and
+might even be sophisticated and generalized enough for
+some more basic production applications.
+
 ## References
 
 ### Web Links
 
 * [Wikipedia. 'Bayes Theorem'][wiki-bayes]
 * [Brilliant.org. 'Bayes Theorem & Conditional Probability'][brilliant-bayes]
+* [MachineLearningMastery.com 'Gentle Introduction to Maximum a Posteriori (MAP) for Machine Learning'][mlmastery-map19]
+* [Wikipedia. 'Bessel Correction'. From 2023-06-05][wiki-bessel]
+* [Normal Distribution Interactive Tool][normal-dist-applet]
+* [Gamal. Bassant. 2023-12-17. Medium. 'Naive Bayes Algorithm'][gamal-naive-bayes]
+* [Kandala. Anupama. Medium. 'From Zero to Hero: Laplace Smoothing for Naive Bayes Classifiers' 2023][kandala-smooth-nb]
 
 <!-- Hidden References -->
 [wiki-bayes]: https://en.wikipedia.org/wiki/Bayes%27_theorem "Wikipedia. 'Bayes Theorem'"
 [brilliant-bayes]: https://brilliant.org/wiki/bayes-theorem/ "Brilliant.org. 'Bayes Theorem & Conditional Probability'"
+[mlmastery-map19]: https://machinelearningmastery.com/maximum-a-posteriori-estimation/ "MachineLearningMastery.com 'Gentle Introduction to Maximum a Posteriori (MAP) for Machine Learning'"
+[wiki-bessel]: https://en.wikipedia.org/wiki/Bessel%27s_correction "Wikipedia. 'Bessel Correction'. From 2023-06-05"
+[normal-dist-applet]: https://homepage.divms.uiowa.edu/~mbognar/applets/normal.html "Normal Distribution Interactive Tool"
+[gamal-naive-bayes]: https://medium.com/analytics-vidhya/naïve-bayes-algorithm-5bf31e9032a2 "Gamal. Bassant. 2023-12-17. Medium. 'Naive Bayes Algorithm'"
+[kandala-smooth-nb]: https://anupamakandala1111.medium.com/from-zero-to-hero-laplace-additive-smoothing-for-naive-bayes-classifier-40828d35c6a7 "Kandala. Anupama. Medium. 'From Zero to Hero: Laplace Smoothing for Naive Bayes Classifiers'"
 
 ### Note Links
 
 * [Probability Theory][-prob]
+* [Gaussian Distribution][-gauss-dist]
+* [Python][-py]
+* [SciKit-Learn][-sklearn]
 
 <!-- Hidden References -->
 [-prob]: probability.md "Probability Theory"
+[-gauss-dist]: normal-distribution.md "Gaussian Distribution"
+[-py]: python.md "Python"
+[-sklearn]: scikit-learn.md "SciKit-Learn"

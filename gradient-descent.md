@@ -1,6 +1,6 @@
 ---
 created: 2023-05-29T14:32:27.177Z
-modified: 2023-05-30T15:46:09.479Z
+modified: 2023-06-07T11:45:04.228Z
 tags: [computer,science,math,gradient,descent,machine,learning,optimization,pcde,module20]
 ---
 # Gradient Descent
@@ -83,7 +83,7 @@ Choosing an appropriate learning rate is fundamental to machine learning.
 It determines whether and how fast you can reach the bottom of the hill or
 (the local minimum of the function).
 
-## Gradient Descent vs. Stochastic Gradient Descent
+## Stochastic Gradient Descent
 
 Another variation of
 the gradient descent algorithm is called **stochastic gradient descent**.
@@ -107,6 +107,10 @@ you only use on training sample.
 Additionally, stochastic gradient descent often converges much more quickly than
 gradient descent, but
 the error function is not a well minimized as in the case of gradient descent.
+
+### Stochastic Gradient Descent - Further Reading
+
+* [Wikipedia. Stochastic Gradient Descent][wiki-sgd]
 
 ## Usage in Linear Regression
 
@@ -338,7 +342,10 @@ def plot_contour(f, x1bound, x2bound, resolution, ax):
 
 ### Web Links
 
+* [Wikipedia. 'Stochastic Gradient Descent' 2023-06-07][wiki-sgd]
+
 <!-- Hidden References -->
+[wiki-sgd]: https://en.wikipedia.org/wiki/Stochastic_gradient_descent "Wikipedia. 'Stochastic Gradient Descent' 2023-06-07"
 
 ### Note Links
 
