@@ -1,6 +1,6 @@
 ---
 created: 2023-03-06T15:20:44.030Z
-modified: 2023-04-11T19:22:48.979Z
+modified: 2023-06-08T08:27:48.029Z
 tags: [container,docker,podman,virtual,cluster,devops,pcde,computer,pcde,module10]
 ---
 # Containers: Software Containerization
@@ -68,6 +68,16 @@ In docker, this is done with the `--network` flag.
 For more docker-specific networking information,
 see [Docker: Networking][docker-net-zk].
 
+## Use Cases
+
+### Database Containerization
+
+There are some good use cases for containerizing a database.
+With some caveats that are worth noting,
+namely storage performance and greater difficulty in managing the database with
+respect to backups, migrations, and logging.
+For more info, read [Database Containerization][-db-cont].
+
 ## References
 
 ### Web Links
@@ -79,8 +89,10 @@ see [Docker: Networking][docker-net-zk].
 * [Docker][docker-zk]
 * [Operating System][os-zk]
 * [Docker: Networking][docker-net-zk]
+* [Database Containerization][-db-cont]
 
 <!-- Hidden References -->
 [docker-zk]: ./docker.md "Docker"
 [os-zk]: ./os.md "Operating System"
 [docker-net-zk]: ./docker.md#docker-networking "Docker: Networking"
+[-db-cont]: database-containerization.md "Database Containerization"

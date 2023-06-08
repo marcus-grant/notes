@@ -1,6 +1,6 @@
 ---
 created: 2023-05-04T14:21:08.366Z
-modified: 2023-05-05T14:39:53.766Z
+modified: 2023-06-08T18:05:17.791Z
 tags: [pcde,module17,etl,extract,transform,load,data,nifi,database]
 ---
 # PCDE Course Module 17 Content
@@ -223,28 +223,124 @@ create a scalable data engineering pipeline?
 * Q10: What is the term used to represent changes in a `FlowFile`?
   * Events **(Correct)**
 
+## Discussion 17.2: Pros and Cons of Apache ETL Tools
+
+### Discussion 17.2: Instructions
+
+There are a variety of different ETL tools available on the market.
+It is critical to choose the proper ETL tool for the organization that
+you are working with.
+The Apache Software Foundation is one of
+the most popular open-source web server software organizations,
+and they have developed numerous ETL tools that can benefit organizations.
+
+For this discussion, you will focus on one Apache ETL tool of your choice.
+All of the ETL tools provided by Apache are open source,
+so your choice of tool depends on your use case.
+It is important to understand the type of data you will be handling,
+whether you will require stream or batch processing,
+and any other relevant details related to your project.
+
+In your discussion post,
+you will identify an existing Apache ETL tool and
+provide a detailed explanation for each of
+the following questions related to that tool:
+
+* What Apache ETL tool did you choose, and why?
+* What security and privacy risks exist with using open-source tools?
+* What are the possible integration issues, if any,
+  with respect to database support for your chosen tool?
+* Does the tool provide visualization of what worked and what failed?
+* Does the tool help you to better understand the utilization of your data?
+* What built-in data integrity and validation methods are available in
+  your chosen tool?
+  Are there any other methods that you think should be added to this tool?
+
+Read the statements posted by your peers.
+Engage with them by responding with thoughtful comments and
+questions to deepen the discussion.
+
+**Suggested Time**: 60 minutes
+**Suggested Length**: 200-250 words
+
+### Discussion 17.2: Response
+
+#### What Apache ETL tool did you choose, and why?
+
+I choose [Apache Airflow][apache-airflow] because I noticed that
+it uses Python to define workflows and task schedules as
+part of the ETL process.
+This appeals to me due to the language.
+
+#### What security and privacy risks exist with using open-source tools?
+
+The main risk is that the source code is available to anyone.
+Which is also its main benefit.
+More eyes on the code means more bugs are found and fixed.
+But it also means that anyone can find and exploit bugs in the code.
+So zero day exploits might be more common,
+but the responsiveness to security patches tends to be faster.
+
+#### What are the possible integration issues, if any, with respect to databases?
+
+It seems that Airflow supports all the most popular relational databases;
+PostgreSQL, MySQL, SQLite, and Microsoft SQL Server.
+They don't however seem to support any NoSQL databases via connectors.
+This might be because [Airflow uses SQLAlchemy][airflow-sqlalchemy].
+
+#### Does the tool provide visualization of what worked and what failed?
+
+Yes, it has a web interface that shows the status of all the tasks in a workflow.
+It uses a data structure known as [Directed Acyclic Graphs][altexsoft-airflow].
+Essentially a graph where all nodes have a unified direction and
+don't loop back on themselves.
+This is visualized in the UI as different tasks for nodes and
+the edges between them as the dependencies.
+The colors of the nodes indicate the status of the task.
+
+#### Does the tool help you to better understand the utilization of your data?
+
+To an extent.
+It seems great at setting up pipelines and
+coordinating and scheduling them.
+It seems less stellar at visualizing the data itself.
+
+#### Links
+
+* [Apache Airflow airflow.apache.org][apache-airflow]
+* [Airflow Docs: Setup a Database Backend][airflow-sqlalchemy]
+  * [https://airflow.apache.org/docs/apache-airflow/stable/howto/set-up-database.html][airflow-sqlalchemy]
+* [Apache Airflow: Pros and Cons of the ETL-Orchestrator][altexsoft-airflow]
+  * [https://www.altexsoft.com/blog/datascience/apache-airflow-pros-and-cons-of-the-etl-orchestrator/][altexsoft-airflow]
+
 ## References
 
 ### Web Links
 
 * [Run MySQL & phpMyAdmin Locally Using Docker][mysql-phpmyadmin-docker]
 * [Emeritus Course Tools Module][emeritus-course-tools-module]
+* [Apache Airflow][apache-airflow]
+* [Airflow Docs: Setup a Database Backend][airflow-sqlalchemy]
+* [Apache Airflow: Pros and Cons of the ETL-Orchestrator][altexsoft-airflow]
 
 <!-- Hidden References -->
 [mysql-phpmyadmin-docker]: https://migueldoctor.medium.com/run-mysql-phpmyadmin-locally-in-3-steps-using-docker-74eb735fa1fc "Run MySQL & phpMyAdmin Locally Using Docker"
 [emeritus-course-tools-module]: https://emeritus.instructure.com/courses/103/modules "Emeritus Course Tools Module"
+[apache-airflow]: https://airflow.apache.org/ "Apache Airflow"
+[airflow-sqlalchemy]: https://airflow.apache.org/docs/apache-airflow/stable/howto/set-up-database.html "Airflow Docs: Setup a Database Backend"
+[altexsoft-airflow]: https://www.altexsoft.com/blog/apache-airflow-pros-cons/ "Apache Airflow: Pros and Cons of the ETL-Orchestrator"
 
 ### Note Links
 
-* [Apache NiFi][-nifi]
+* [NiFi (ETL Pipeline Software by Apache)][-nifi]
 * [Extract, Transform, Load (ETL)][-etl]
 * [MySQL][-mysql]
 * [MacOS (Operating System)][-macos]
 * [Windows (Operating System)][-windows]
 
 <!-- Hidden References -->
-[-nifi]: nifi.md "Apache NiFi"
-[-etl]: etl "Extract, Transform, Load (ETL)"
+[-nifi]: nifi.md "NiFi (ETL Pipeline Software by Apache)"
+[-etl]: etl.md "Extract, Transform, Load (ETL)"
 [-mysql]: mysql.md "MySQL"
 [-macos]: macos.md "MacOS (Operating System)"
 [-windows]: windows.md "Windows (Operating System)"

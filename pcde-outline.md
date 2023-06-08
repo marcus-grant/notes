@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T10:12:17.264Z
-modified: 2023-06-07T15:58:59.047Z
+modified: 2023-06-08T18:18:29.988Z
 tags: [pcde,course,outline,overview,data,learn]
 ---
 # PCDE Course Outline
@@ -518,7 +518,7 @@ Performing ETL Using NiFi
 ### Module 17: Related Notes
 
 * [PCDE Module 17 Content][-pcde-mod17]
-* [Apache NiFi][-nifi]
+* [NiFi (ETL Pipeline Software by Apache)][-nifi]
 * [Extract, Transform, Load (ETL)][-etl]
 * [MySQL][-mysql]
 * [MacOS (Operating System)][-macos]
@@ -625,12 +625,6 @@ Machine Learning and Advanced Probability
 * [Gradient Descent][-grad-desc]
 * [Bayes Theory][-bayes]
 * [SciKit-Learn (Python Machine Learning Library)][-sklearn]
-
-<!-- Hidden References -->
-
-
-<!-- TODO: Below -->
-<!-- Move these references down and delete dupes -->
 
 ## References
 
@@ -814,8 +808,8 @@ Machine Learning and Advanced Probability
 [-css]: css.md "CSS"
 [-mbta-api]: mbta-api.md "MBTA API"
 [-pcde-mod17]: pcde-module17-content.md "PCDE Module 17 Course Content"
-[-nifi]: nifi.md "Apache NiFi"
-[-etl]: etl "Extract, Transform, Load (ETL)"
+[-etl]: etl.md "Extract Transform Load (Data Pipeline / Process)"
+[-nifi]: nifi.md "NiFi (ETL Pipeline Software by Apache)"
 [-macos]: macos.md "MacOS (Operating System)"
 [-windows]: windows.md "Windows (Operating System)"
 [-pcde-mod18]: pcde-module18-content.md "PCDE Course Module 18 Content"

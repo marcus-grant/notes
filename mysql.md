@@ -1,6 +1,6 @@
 ---
 created: 2023-04-11T15:30:04.963Z
-modified: 2023-04-20T13:01:52.239Z
+modified: 2023-06-08T17:43:45.835Z
 tags: [mysql,mariadb,sql,relational,database,data,relational-database,pcde]
 ---
 # MySQL / MariaDB
@@ -59,6 +59,14 @@ The string types are:
 * `ENUM` - A string object that has only one value from a predefined list of values.
 * `SET` - A string object that can have 0 or more values from a predefined list of values.
 
+## MySQL Clients
+
+### PHPMyAdmin
+
+[PHPMyAdmin][-pma] is a web-based MySQL client.
+You can do most of the things you can do with the MySQL command line client,
+but in a web browser based GUI.
+
 ## References
 
 ### Web Links
@@ -78,11 +86,18 @@ The string types are:
 
 ### Note Links
 
+* [Types of Databases][db-types-zk]
+* [Relational Databases][rel-db-zk]
+* [Structured Query Language (SQL)][sql-zk]
+* [Free and Open Source Software (FOSS)][foss-zk]
+* [PHPMyAdmin (MySQL Client)][-pma]
+
 <!-- Hidden References -->
-[db-types-zk]: ./types-of-database.md "Types of Databases"
-[rel-db-zk]: ./relational-database.md "Relational Databases"
-[sql-zk]: ./sql.md "Structured Query Language (SQL)"
-[foss-zk]: ./FOSS.md "Free and Open Source Software (FOSS)"
+[db-types-zk]: types-of-database.md "Types of Databases"
+[rel-db-zk]: relational-database.md "Relational Databases"
+[sql-zk]: sql.md "Structured Query Language (SQL)"
+[foss-zk]: FOSS.md "Free and Open Source Software (FOSS)"
+[-pma]: phpmyadmin.md "PHPMyAdmin (MySQL Client)"
 
 ## Footnotes
 
