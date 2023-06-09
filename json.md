@@ -1,9 +1,11 @@
 ---
 created: 2023-02-17T15:53:44.732Z
-modified: 2023-02-17T15:59:20.456Z
+modified: 2023-06-09T11:58:25.421Z
 tags: [json,data,markup,language,serial,format,human,readable]
 ---
 # JSON: JavaScript Object Notation
+
+## Introduction
 
 [Wikipedia states it as...][json-wiki]
 
@@ -16,6 +18,11 @@ tags: [json,data,markup,language,serial,format,human,readable]
 >It is a common data format with diverse uses in electronic data interchange,
 >including that of web applications with servers." (Wikipedia, the free encyclopedia)
 
+## Basics
+
+**JSON** is a text-based data format that is human-readable.
+It's also known as a [markup language][-lang].
+
 ## References
 
 ### Web Links
@@ -27,4 +34,7 @@ tags: [json,data,markup,language,serial,format,human,readable]
 
 ### Note Links
 
+* [Programming Language][-lang]
+
 <!-- Hidden References -->
+[-lang]: programming-language.md "Programming Language"

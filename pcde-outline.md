@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T10:12:17.264Z
-modified: 2023-06-08T18:18:29.988Z
+modified: 2023-06-08T18:26:56.767Z
 tags: [pcde,course,outline,overview,data,learn]
 ---
 # PCDE Course Outline
@@ -626,6 +626,48 @@ Machine Learning and Advanced Probability
 * [Bayes Theory][-bayes]
 * [SciKit-Learn (Python Machine Learning Library)][-sklearn]
 
+### Module 21: Introduction to Reinforcement Learning and Deep Neural Networks
+
+#### Module 21: Due Date
+
+* Due Wednesday, June 14, 2023 at 1629 UTC
+  * 1829 CET
+  * 1229 EST
+
+#### Module 21: Goals
+
+1. Discuss applications of machine learning algorithms.
+2. Implement k-means using Scikit-learn.
+3. Identify key components of the k-means algorithm.
+4. Discuss use cases for reinforcement learning.
+5. Implement the Quality matrix and the Bellman equation.
+6. Implement the fundamental steps of reinforcement learning.
+7. Identify key components of reinforcement learning and deep neural networks.
+
+#### Module 21: Activities
+
+* **Knowledge Checks**
+  * Knowledge Check 21.1: The K-Means Algorithm and Machine Learning Algorithms
+  * Knowledge Check 21.2: Reinforcement Learning and Deep Neural Networks
+* **Discussion**
+  * Discussion 21.1: Applications of Machine Learning Algorithms
+  * Discussion 21.2: Use Cases for Reinforcement Learning
+* **Activities**
+  * Try-It Activity 21.1: Experimenting with Reinforcement Learning
+  * Activity 21.1: Reinforcement Learning Activity
+  * Codio Coding Activity 21.1: Coding K-Means Using Scikit-Learn
+* **Final Assignment**
+  * Module 21 Final Assignment: Implementing the K-Means Algorithm and
+    Reinforcement Learning Algorithm
+**Self-Study Activities**
+  * Self-Study Discussion 21.3: Thinking Like a Data Scientist:
+    Reinforcement Learning and Deep Neural Networks
+
+#### Module 21: Related Notes
+
+* [PCDE Course: Module 21 Content][-pcde-mod21]
+<!-- TODO: Add notes list from pcde-mod21 doc here -->
+
 ## References
 
 ### Notes References
@@ -724,6 +766,7 @@ Machine Learning and Advanced Probability
 * [Gradient Descent][-grad-desc]
 * [Bayes Theory][-bayes]
 * [SciKit-Learn (Python Machine Learning Library)][-sklearn]
+* [PCDE Course: Module 21 Content][-pcde-mod21]
 
 <!-- Hidden Reference Links Below Here -->
 [-pcde-overview]: pcde-course-overview.md "PCDE Course Overview"
@@ -818,3 +861,4 @@ Machine Learning and Advanced Probability
 [-grad-desc]: gradient-descent.md "Gradient Descent"
 [-bayes]: bayes-theory.md "Bayes Theory"
 [-sklearn]: scikit-learn.md "SciKit-Learn (Python Machine Learning Library)"
+[-pcde-mod21]: pcde-module21-content.md "PCDE Course Module 21 Content"

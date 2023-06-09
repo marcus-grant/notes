@@ -1,9 +1,12 @@
 ---
 created: 2022-12-05T16:17:20.340Z
-modified: 2023-06-07T14:49:09.223Z
+modified: 2023-06-09T12:04:18.116Z
 tags: [python,lang,program,overview,language,software,develop]
 ---
 # Python (Programming Language)
+
+**Python** is an interpreted, high-level, object-oriented, general-purpose
+[programming language][-lang].
 
 ## For Loops
 
@@ -604,6 +607,7 @@ With this the whole task loops every 10 seconds.
 
 ### Note References
 
+* [Programming Language][-lang]
 * [NumPy Library Overview][zk-numpy]
 * [Python args and kwargs: Demystified][real-py-args-kwargs]
 * [Statistics Using Python][stats-py-zk]
@@ -612,6 +616,7 @@ With this the whole task loops every 10 seconds.
 * [SciKit-Learn (Python Library)][-scikit-learn]
 
 <!-- Hidden Reference Links Below Here -->
+[-lang]: programming-language.md "Programming Language"
 [zk-numpy]: ./numpy.md "NumPy Library Overview"
 [real-py-args-kwargs]: https://realpython.com/python-kwargs-and-args/#conclusion "Python args and kwargs: Demystified"
 [stats-py-zk]: ./statistics-python.md "Statistics Using Python"

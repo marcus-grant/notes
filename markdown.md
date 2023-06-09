@@ -1,6 +1,6 @@
 ---
 created: 2023-02-06T13:48:03.342Z
-modified: 2023-02-06T14:48:13.309Z
+modified: 2023-06-09T12:01:32.395Z
 tags: [markdown,markup,language,write,rich,text,md,pcde,module7]
 ---
 # Markdown
@@ -10,7 +10,7 @@ tags: [markdown,markup,language,write,rich,text,md,pcde,module7]
 Web pages contain documents that are annotated & formatted to
 provide content that is visually appealing to help the reader connect with
 the information on the web page.
-Markup language offers the capability of adding features to the text,
+A [markup language][-lang] offers the capability of adding features to the text,
 such as headings, images, lists, and links to the other content,
 that make the text more appealing and easier to read.
 
@@ -20,14 +20,14 @@ Below is a series of examples of how to write Markdown syntax.
 Note that for some examples,
 you are also provided with the equivalent HTML tags.
 This is because markdown is meant to
-have syntax that is a subset of [HTML][html-zk].
+have syntax that is a subset of [HTML][-html].
 So some *markdown* syntax will
-have directly corresponding [HTML][html-zk] syntax.
+have directly corresponding [HTML][-html] syntax.
 
 ### Headings
 
 Using the hash-sign or `#` repeated 1 to 6 times consecutively corresponds to
-an [HTML][html-zk] `<h1>` to `<h6>` tag,
+an [HTML][-html] `<h1>` to `<h6>` tag,
 depending on the number of hash-marks are strung together.
 
 ```markdown
@@ -39,7 +39,7 @@ depending on the number of hash-marks are strung together.
 ###### Heading Level 6
 ```
 
-The above markdown snippet will get transformed to the below [html][html-zk].
+The above markdown snippet will get transformed to the below [html][-html].
 
 ```html
 <h1>Heading Level 1<h1>
@@ -72,7 +72,7 @@ This will produce the below blockquotes.
 >Combined emphasis with ***asterisks*** and ***underscores***.
 >Strike-through uses two tildes. ~~Scratch this.~~
 
-Which also corresponds of course to some [html syntax like below][html-zk]:
+Which also corresponds of course to some [html syntax like below][-html]:
 
 ```html
 Emphasis, aka italics, with <i>asterisks</i> or <i>underscores</i>.
@@ -357,7 +357,7 @@ Quote break.
 
 ### Inline HTML
 
-You can also use raw [HTML][html-zk] in your Markdown,
+You can also use raw [HTML][-html] in your Markdown,
 and it'll mostly work pretty well.
 
 ```html
@@ -436,7 +436,9 @@ Or, in pure Markdown, but losing the image sizing and border:
 
 ### Note Links
 
-* [HTML: HyperText Markup Language][html-zk]
+* [HTML: HyperText Markup Language][-html]
+* [Programming Language][-lang]
 
 <!-- Hidden References -->
-[html-zk]: ./html.md "HTML: HyperText Markup Language"
+[-html]: ./html.md "HTML: HyperText Markup Language"
+[-lang]: programming-language.md "Programming Language"

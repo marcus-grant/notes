@@ -1,12 +1,14 @@
 ---
 created: 2023-03-07T10:42:01.610Z
-modified: 2023-03-07T10:55:17.607Z
+modified: 2023-06-09T11:59:52.801Z
 tags: [yaml,markup,data,serial,configuration,language,computer,software,pcde]
 ---
 # YAML (YAML Ain't Markup Language)
 
 ## Introduction
 
+**YAML** or **Yaml Ain't Markup Language** is a data serialization language
+and ironically, a [data markup language][-lang].
 According to [Wikipedia][yaml-wiki]:
 
 >**YAML** (/ˈjæməl/) is a human-readable data-serialization language.
@@ -53,7 +55,9 @@ avoid datatype ambiguity
 
 * [Python][py-zk]
 * [JSON (JavaScript Object Notation)][json-zk]
+* [Programming Language][-lang]
 
 <!-- Hidden References -->
 [py-zk]: ./python.md "Python"
 [json-zk]: ./json.md "JSON (JavaScript Object Notation)"
+[-lang]: programming-language.md "Programming Language"

@@ -1,6 +1,6 @@
 ---
 created: 2023-01-27T17:07:36.074Z
-modified: 2023-04-03T13:24:19.617Z
+modified: 2023-06-09T11:43:12.643Z
 tags: [unix,linux,terminal,cli,tui,gui,desktop,graphics,overview,computers]
 ---
 # Shell (Computers)

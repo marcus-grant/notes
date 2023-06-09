@@ -1,6 +1,6 @@
 ---
 created: 2023-04-05T16:14:49.295Z
-modified: 2023-04-12T14:27:56.726Z
+modified: 2023-06-09T12:13:29.321Z
 tags: [java,program,language,overview,object,orientation,pcde,module14]
 ---
 # Java
@@ -10,10 +10,10 @@ tags: [java,program,language,overview,object,orientation,pcde,module14]
 
 ## What Is Java?
 
-Java is a *class*-based, *object*-oriented programming language that
+Java is a *class*-based, *object*-oriented [programming language][-lang] that
 is designed to have as few platform dependencies as possible.
 
-An important concept to understand is that Java, unlike [Python][py-zk],
+An important concept to understand is that Java, unlike [Python][-py],
 which is only interpreted, is a compiled language.
 Typically, a compiler's main functionality is to convert high-level language to
 low-level language that can be understood by the machine.
@@ -345,7 +345,7 @@ So the **import** statement becomes `import University.Person`.
 ## Java Containers
 
 Setting up a java development environment can be quite a pain.
-Fortunately java [containers][container-zk] can really help simplify things.
+Fortunately java [containers][-container] can really help simplify things.
 There's tons of lightweight java containers available.
 These days, unless specific reasons exist usually due to enterprise needs,
 the [OpenJava](#java-containers) stack is the best choice.
@@ -354,8 +354,8 @@ Here is a link to the [official OpenJDK container][openjdk-docker-reg].
 It is a highly stripped down linux environment within the container,
 so you will likely want to add some tools to it.
 Maybe a text editor to edit code or configuration files in
-the [shell of the container][shell-zk].
-This could include the [nano editor][nano-zk] or [vim editor][neovim-zk].
+the [shell of the container][-shell].
+This could include the [nano editor][-nano] or [vim editor][-neovim].
 Edit the container's `Dockerfile` to add the tools you need.
 
 ```dockerfile
@@ -384,15 +384,17 @@ docker run -it -rm --name openjdk11 openjdk:11-jdk-slim
 
 ### Note Links
 
-* [Containers (Software)][container-zk]
-* [Nano Editor][nano-zk]
-* [Neovim Editor][neovim-zk]
-* [Shell (OS)][shell-zk]
-* [Python][py-zk]
+* [Programming Language][-lang]
+* [Containers (Software)][-container]
+* [Nano Editor][-nano]
+* [Neovim Editor][-neovim]
+* [Shell (OS)][-shell]
+* [Python][-py]
 
 <!-- Hidden References -->
-[container-zk]: container.md "Container (Software)"
-[shell-zk]: os-shell.md "Shell (OS)" "Shell (OS)"
-[nano-zk]: nano-editor.md "Nano Editor"
-[neovim-zk]: neovim.md "Neovim Editor"
-[py-zk]: python.md "Python"
+[-lang]: programming-language.md "Programming Language"
+[-container]: container.md "Container (Software)"
+[-shell]: os-shell.md "Shell (OS)" "Shell (OS)"
+[-shell]: nano-editor.md "Nano Editor"
+[-neovim]: neovim.md "Neovim Editor"
+[-py]: python.md "Python"

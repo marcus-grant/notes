@@ -1,9 +1,14 @@
 ---
 created: 2022-12-10T13:30:28.835Z
-modified: 2023-02-03T09:46:54.899Z
+modified: 2023-06-09T12:10:03.971Z
 tags: [rust,lang,software,dev,overview]
 ---
 # Rust
+
+## Introduction
+
+**Rust** is a compiled, statically typed, multi-paradigm
+systems [programming language][-lang].
 
 ## Learning Resources
 
@@ -21,7 +26,7 @@ tags: [rust,lang,software,dev,overview]
 
 ## Collections
 
-Hello World!
+***TODO** fill in
 
 ## Iteration
 
@@ -64,7 +69,10 @@ since it's found and `unwrap`ed it can access the name `Karen`.
 
 ### Note References
 
+* [Programming Language][-lang]
+
 <!-- Hidden References -->
+[-lang]: programming-language.md "Programming Language"
 
 ### Web References
 

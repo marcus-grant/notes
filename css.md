@@ -1,11 +1,11 @@
 ---
 created: 2023-04-21T07:22:21.630Z
-modified: 2023-04-21T08:22:34.000Z
+modified: 2023-06-09T12:14:51.914Z
 tags: [css,html,web,style,frontend,client,software,language,pcde,module16]
 ---
 # Cascading Style Sheets (CSS)
 
->**Cascading Style Sheets** (**CSS**) is a style sheet language used for
+>**Cascading Style Sheets** (**CSS**) is a style sheet [language][-lang] used for
 >describing the presentation of a document written in
 >a markup language such as [HTML][-html] or XML
 >(including XML dialects such as SVG, MathML or XHTML).
@@ -25,6 +25,11 @@ tags: [css,html,web,style,frontend,client,software,language,pcde,module16]
 
 ### Note Links
 
+* [Programming Language][-lang]
+* [HyperText Markup Language (HTML)][-html]
+* [JavaScript (Programming Language)][-js]
+
 <!-- Hidden References -->
+[-lang]: programming-language.md "Programming Language"
 [-html]: html.md "HyperText Markup Language (HTML)"
 [-js]: javascript.md "JavaScript"

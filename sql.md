@@ -1,13 +1,21 @@
 ---
 created: 2022-11-24T16:36:35.662Z
-modified: 2023-04-20T12:56:22.033Z
+modified: 2023-06-09T12:08:03.206Z
 tags: [sql,database,data,backend,overview,pcde,module4,module5]
 ---
-# Overview of SQL
-
-This is an overview of the **S**tructured **Q**uery **L**anguage or **SQL**.
+# SQL (Structured Query Language)
 
 ## Preamble
+
+### Introduction
+
+**S**tructured **Q**uery **L**anguage or **SQL** is
+a [domain specific programming langauge][-lang] around
+using [relational-dabtabases][-rel-db] to store and retrieve data.
+
+### Introduction
+
+
 
 ### Learning Sample Database
 
@@ -1325,6 +1333,8 @@ see [Regular Expressions][regex-zk] for more details.
 
 ### Note Links
 
+* [Programming Language][-lang]
+* [Relational Database][-rel-db]
 * [Professional Certification in Data Engineering Course Overview][pcde-overview-zk]
 * [Example Database (from PCDE Notes Module 4 Materials)][pcde-mod4-ex-db-zk]
 * [Database Design][db-design-zk]
@@ -1337,6 +1347,8 @@ see [Regular Expressions][regex-zk] for more details.
 * [Dates & Time in SQL][sql-date-zk]
 
 <!-- Hidden Reference Links Below Here -->
+[-lang]: programming-language.md "Programming Language"
+[-rel-db]: relational-database.md "Relational Databases"
 [pcde-overview-zk]: ./pcde-course-overview.md "Professional Certification in Data Engineering Course Overview"
 [pcde-mod4-ex-db-zk]: ./pcde-module4-content.md#Example-Education-Database "Example Database (from PCDE Notes Module 4 Materials)"
 [db-design-zk]: ./database-design.md "Database Design"
