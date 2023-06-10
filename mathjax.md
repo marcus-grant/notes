@@ -1,6 +1,6 @@
 ---
 created: 2023-02-23T12:35:15.433Z
-modified: 2023-06-05T08:56:46.446Z
+modified: 2023-06-09T14:28:06.770Z
 tags: [latex,math,mathml,html,markdown,markup,language,typeset,document,academic,publish]
 ---
 # MathJax: LaTeX in Markdown
@@ -101,6 +101,15 @@ $$e^{ -i\pi } + 1 = 0$$
 >are the same as Latin letters are merely those letters in uppercase.
 >When a Greek capital letter is different than its Latin counterpart,
 >you use the same command as the lowercase version, but the first letter capitalized.
+
+## Accents and Diacritical Marks
+
+* **Hat** or **Circumflex** ($\hat{a}$), expressed with `\hat{a}`
+* **Wide Hat** or **Caret** ($\widehat{abc}$), expressed with `\widehat{abc}`
+* **Bar** or **Overline** ($\bar{a}$), expressed with `\bar{a}`
+* **Overline** or **Overbar** ($\overline{abc}$), expressed with `\overline{abc}`
+* **Vector** or **Arrow** ($\vec{a}$), expressed with `\vec{a}`
+* **Dot** or **Overdot** ($\dot{a}$), expressed with `\dot{a}`
 
 ## Miscellaneous
 

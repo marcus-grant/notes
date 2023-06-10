@@ -1,11 +1,11 @@
 ---
 created: 2023-06-09T09:19:55.391Z
-modified: 2023-06-09T10:50:51.661Z
+modified: 2023-06-09T13:32:36.043Z
 tags: [mathematics,science,probability,algebra,calculus,geometry,statistics,graph,set,computation,knowledge]
 ---
 # Mathematics
 
->**Mathematics** is an area of [knowledge][-epistem] that
+>**Mathematics** is an area of [knowledge][-know] that
 >includes the topics of numbers,
 >formulas and related structures, shapes and the spaces in which
 >they are contained, and quantities and their changes.
@@ -96,11 +96,11 @@ It includes topics of:
 
 ### Note Links
 
-* [Epistemology][-epistem]
+* [Knowledge][-know]
 * [Probability][-prob]
 * [Calculus][-calc]
 
 <!-- Hidden References -->
-[-epistem]: epistemology.md "Epistemology"
+[-know]: knowledge.md "Epistemology"
 [-prob]: probability.md "Probability"
 [-calc]: calculus.md "Calculus"

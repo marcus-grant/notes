@@ -1,6 +1,6 @@
 ---
 created: 2023-05-11T18:08:47.350Z
-modified: 2023-06-09T12:39:17.762Z
+modified: 2023-06-09T15:15:27.831Z
 tags: [machine,learning,statistics,math,data,science,gradient,descent]
 ---
 # Machine Learning
@@ -54,6 +54,25 @@ learning how these outcomes were generated.
 [Reinforcement learning][-rl] is a type of **unsupervised learning** algorithm.
 Reinforcement learning focuses on optimizing the path to a desired solution.
 
+## Neural Network
+
+[Neural Networks][-nn] are a type of **supervised learning** algorithm that
+is used across the data engineering and science fields.
+Inspired by biological neurons and complex pathways between neurons in the brain,
+neural networks are incredibly receptive to errors in the training data.
+Typically,
+neural networks are made out of a dense web of interconnected neurons in which
+each neuron takes a set of values (real-world inputs) and outputs a decision.
+
+## K-Means Clustering
+
+[K-Means Clustering][-kmean] is a method of [vector][-matrix] quantization,
+originally from signal processing, that aims to partition $n$ observations into
+$k$ clusters in which each observation belongs to the cluster with the nearest mean,
+serving as a prototype of the cluster.
+Clustering is a method of **unsupervised learning** and a common technique for
+[statistical][-stats] data analysis used in many fields.
+
 ## References
 
 ### Web Links
@@ -70,6 +89,10 @@ Reinforcement learning focuses on optimizing the path to a desired solution.
 * [Mathematics][-math]
 * [Algorithm][-algo]
 * [Reinforcement Learning][-rl]
+* [Neural Network][-nn]
+* [K-Means Clustering][-kmean]
+* [Matrix][-matrix]
+* [Statistics][-stats]
 
 <!-- Hidden References -->
 [-cs]: computer-science.md "Computer Science"
@@ -77,3 +100,7 @@ Reinforcement learning focuses on optimizing the path to a desired solution.
 [-math]: math.md "Mathematics"
 [-algo]: algorithm.md "Algorithm"
 [-rl]: reinforcement-learning.md "Reinforcement Learning (Machine Learning)"
+[-nn]: neural-network.md "Neural Network (Machine Learning)"
+[-kmean]: k-means-cluster.md "K-Means Clustering (Machine Learning)"
+[-matrix]: matrix.md "Matrix"
+[-stats]: statistics.md "Statistics"

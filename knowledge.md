@@ -1,14 +1,11 @@
 ---
 created: 2023-06-09T09:56:45.127Z
-modified: 2023-06-09T10:57:00.000Z
+modified: 2023-06-09T13:31:13.077Z
 tags: [epistemology,knowledge,philosophy,belief,truth,justification,skill,thought,awareness]
 ---
-# Epistemology
+# Knowledge
 
 ## Introduction
-
-**Epistemology** is the branch of philosophy concerned with
-**knowledge** and **belief**.
 
 >**Knowledge** is a form of awareness or familiarity.
 >It is often understood as awareness of facts or as practical skills,
@@ -23,6 +20,10 @@ tags: [epistemology,knowledge,philosophy,belief,truth,justification,skill,though
 >how to understand it, and whether something else besides it is needed.
 >
 >-- [Wikipedia. 'Knowledge'. 2023-06-09][wiki-knowledge]
+
+**Epistemology** is the branch of philosophy concerned with
+**knowledge** and **belief**.
+So epistemology is the study of the nature of **knowledge**.
 
 ## References
 

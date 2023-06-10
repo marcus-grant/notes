@@ -1,6 +1,6 @@
 ---
 created: 2023-02-17T14:51:40.995Z
-modified: 2023-06-09T12:23:27.331Z
+modified: 2023-06-09T13:37:20.990Z
 tags: [data,structure,computer,science,program]
 ---
 # Data Structure
@@ -13,7 +13,7 @@ a computer so that it can be used effectively.
 >management, and storage format that enables efficient access and modification. 
 >More precisely, a data structure is a collection of data values,
 >the relationships among them,
->and the functions or operations that can be applied to the data.
+>and the functions or operations that can be applied to the [data][-data].
 
 ## Data Frames
 
@@ -40,9 +40,11 @@ implementing a data frame as its primary structure.
 
 ### Note Links
 
+* [Data][-data]
 * [Computer Science][-cs]
 * [Pandas: Python Data Analysis Library][pandas-zk]
 
 <!-- Hidden References -->
+[-data]: data.md "Data"
 [-cs]: computer-science.md "Computer Science"
 [pandas-zk]: ./pandas.md "Pandas: Python Data Analysis Library"

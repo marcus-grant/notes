@@ -1,7 +1,7 @@
 ---
 created: 2023-06-08T18:21:43.240Z
-modified: 2023-06-09T09:14:08.581Z
-tags: [pcde,module21,neural,network,reinforcement,learn,data,python]
+modified: 2023-06-09T15:06:51.359Z
+tags: [pcde,module21,neural,network,reinforcement,learn,data,python,index]
 ---
 # PCDE Course Module 21 Content
 
@@ -37,6 +37,12 @@ you will practice coding a reinforcement learning algorithm.
 ### Note Links
 
 * [Machine Learning][-ml]
+* [Reinforcement Learning][-rl]
+* [Neural Network][-nn]
+* [K-Means Clustering][-kmean]
 
 <!-- Hidden References -->
 [-ml]: machine-learning.md "Machine Learning"
+[-rl]: reinforcement-learning.md "Reinforcement Learning"
+[-nn]: neural-network.md "Neural Network"
+[-kmean]: k-means-cluster.md "K-Means Clustering"
