@@ -1,6 +1,6 @@
 ---
 created: 2023-05-11T18:08:47.350Z
-modified: 2023-06-09T15:15:27.831Z
+modified: 2023-06-11T11:56:47.061Z
 tags: [machine,learning,statistics,math,data,science,gradient,descent]
 ---
 # Machine Learning
@@ -73,6 +73,17 @@ serving as a prototype of the cluster.
 Clustering is a method of **unsupervised learning** and a common technique for
 [statistical][-stats] data analysis used in many fields.
 
+## Confusion Matrix
+
+A [confusion matrix][-confusion] is a table or matrix that
+allows analysis of the accuracy of an ML algorithm in
+more nuanced ways than simply scoring overall accuracy as a single ratio.
+The table lays out on each axis all possible classifications of the data.
+Then *usually* the horizontal axis represents the predicted values and
+the vertical axis represents the actual values.
+Then each cell represents the frequency of the predicted values against
+their actual values as given by the data.
+
 ## References
 
 ### Web Links
@@ -93,6 +104,7 @@ Clustering is a method of **unsupervised learning** and a common technique for
 * [K-Means Clustering][-kmean]
 * [Matrix][-matrix]
 * [Statistics][-stats]
+* [Confusion Matrix (Machine Learning)][-confusion]
 
 <!-- Hidden References -->
 [-cs]: computer-science.md "Computer Science"
@@ -104,3 +116,4 @@ Clustering is a method of **unsupervised learning** and a common technique for
 [-kmean]: k-means-cluster.md "K-Means Clustering (Machine Learning)"
 [-matrix]: matrix.md "Matrix"
 [-stats]: statistics.md "Statistics"
+[-confusion]: confusion-matrix.md "Confusion Matrix (Machine Learning)"

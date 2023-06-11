@@ -1,6 +1,6 @@
 ---
 created: 2023-05-31T07:34:15.973Z
-modified: 2023-06-07T14:51:02.879Z
+modified: 2023-06-11T12:04:25.949Z
 tags: [bayes,theory,math,probability,machine,learn,gradient,descent,inference,classification,naive,pcde,module20]
 ---
 # Bayes Theorem
@@ -23,6 +23,13 @@ You randomly select a coin out of a random bag, and it's a quarter.
 What is the probability that the coin came from the first bag?
 If you can determine the probability of choosing a quarter,
 then you can calculate the probability the coin you picked came from the first bag.
+
+When used properly,
+Bayes theorem is effectively a [machine learning][-ml] [algorithm][-algo].
+It can be used to calculate the probability of an event occurring given
+that another event has already occurred.
+And *priori* features in data can be used to create a model that
+predicts the *posteriori* probability of an event occurring.
 
 ## Formal Definition of Bayes Theorem
 
@@ -517,7 +524,7 @@ $$
 
 ### What is a Confusion Matrix?
 
-A confusion matrix is a graphical representation that
+A [confusion matrix][-confusion] is a graphical representation that
 is used to summarize the performance of a classification algorithm.
 In fact,
 only looking at the accuracy score of an algorithm might be misleading if
@@ -724,12 +731,18 @@ some more basic production applications.
 ### Note Links
 
 * [Probability Theory][-prob]
+* [Machine Learning][-ml]
+* [Algorithm][-algo]
+* [Confusion Matrix][-confusion]
 * [Gaussian Distribution][-gauss-dist]
 * [Python][-py]
 * [SciKit-Learn][-sklearn]
 
 <!-- Hidden References -->
 [-prob]: probability.md "Probability Theory"
+[-algo]: algorithm.md "Algorithm"
+[-ml]: machine-learning.md "Machine Learning"
+[-confusion]: confusion-matrix.md "Confusion Matrix"
 [-gauss-dist]: normal-distribution.md "Gaussian Distribution"
 [-py]: python.md "Python"
 [-sklearn]: scikit-learn.md "SciKit-Learn"

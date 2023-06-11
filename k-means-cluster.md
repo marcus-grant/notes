@@ -1,6 +1,6 @@
 ---
 created: 2023-06-09T13:38:50.707Z
-modified: 2023-06-10T17:47:23.165Z
+modified: 2023-06-11T11:49:20.284Z
 tags: [k-mean,cluster,statistics,math,data,analysis,science,machine,learn,pcde,module21]
 ---
 # K-Means Cluster
@@ -340,7 +340,7 @@ It's accurate enough to be useful,
 but not accurate enough to be reliable,
 which is the height of user frustration.
 
-We can also evaluate the model using a confusion matrix.
+We can also evaluate the model using a [confusion matrix][-confused].
 That can be setup using the `sklearn.metrics` module's
 `confusion_matrix` function.
 Then using `seaborn`'s `heatmap` function,
@@ -392,6 +392,7 @@ this dataset after clustering.
 * [Python][-py]
 * [SciKit-Learn][-sklearn]
 * [Matplotlib][-plt]
+* [Confusion Matrix (Machine Learning)][-confused]
 
 <!-- Hidden References -->
 [-matrix]: matrix.md "Matrix"
@@ -401,3 +402,4 @@ this dataset after clustering.
 [-py]: python.md "Python"
 [-sklearn]: scikit-learn.md "SciKit-Learn"
 [-plt]: matplotlib.md "Matplotlib"
+[-confused]: confusion-matrix.md "Confusion Matrix (Machine Learning)"
