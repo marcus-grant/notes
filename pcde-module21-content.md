@@ -1,6 +1,6 @@
 ---
 created: 2023-06-08T18:21:43.240Z
-modified: 2023-06-11T14:08:22.601Z
+modified: 2023-06-11T17:04:20.396Z
 tags: [pcde,module21,neural,network,reinforcement,learn,data,python,index]
 ---
 # PCDE Course Module 21 Content
@@ -60,11 +60,64 @@ you will practice coding a reinforcement learning algorithm.
 * Q10: Which of the following 2-step processes is used in k-means?
   * expectation-maximization **(correct)**
 
+## Discussion 21.2: Use Cases for Reinforcement Learning
+
+***TODO***
+
+## Activity 21.1: Reinforcement Learning Activity
+
+### Introduction for Activity 21.1
+
+In this activity,
+you will explore how implementing an algorithm using
+reinforcement learning can improve the performance of your results.
+In particular,
+you will work with a Python implementation that
+simulates the movements of a self-driving cab to
+calculate how many steps it takes to pick up and drop off a passenger at
+the correct locations.
+
+You will consider the implementations of
+this problem with and without reinforcement learning,
+and you will be asked to compare the performance, results, and penalties of
+the algorithms.
+
+### Instructions for Activity 21.1
+
+1. In a Terminal window, run the following command to
+   install the Python gym library.
+   `python3 -m pip install cmake 'gymnasium[atari]' scipy`
+2. Download the [Activity_21.1][-pcde-act21-1] folder and
+   open it using your local instance of Jupyter Notebook.
+   There are seven questions throughout the Jupyter Notebook for this activity.
+   Some questions will require you to modify code,
+   and others will require open-ended written responses.
+3. Read the instructions and modify the code that is provided in
+   the related cells for questions 1, 2, 3, and 5.
+4. Read the instructions and complete the open-ended questions for
+   questions 4, 6, and 7.
+   Below each cell that contains a question,
+   you will see a Markdown cell in which you can answer that question.
+   Responses should fully answer the question that is provided,
+   and each response should be approximately two to three sentences.
+
+### Further Reading for OpenAI Gym (Module Used)
+
+* [OpenAI Gym Home][oai-gym-home]
+* [Open AI Gym (Gymnasium) Documentation Home][oai-gym]
+
 ## References
 
 ### Web Links
 
+* [Activity 21.1 Starter Archive (Placeholder)][-pcde-act21-1]
+* [OpenAI Gym Home][oai-gym-home]
+* [Open AI Gym (Gymnasium) Documentation Home][oai-gym]
+
 <!-- Hidden References -->
+[-pcde-act21-1]: https://gist.github.com/marcus-grant/f78e89bed3856ffff2793589ebc8a06e "Activity 21.1 Starter Archive (Placeholder)"
+[oai-gym]: https://www.gymlibrary.dev/ "Open AI Gym (Gymnasium) Documentation Home"
+[oai-gym-home]: https://openai.com/research/openai-gym-beta "OpenAI Gym Home"
 
 ### Note Links
 
