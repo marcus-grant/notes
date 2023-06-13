@@ -1,6 +1,6 @@
 ---
 created: 2022-12-02T14:58:00.723Z
-modified: 2023-03-07T10:38:21.987Z
+modified: 2023-06-13T15:18:19.486Z
 tags: [cli,terminal,unix,linux,shell,computers,software,compsci,productivity,devops]
 ---
 # Command Line Interfaces (CLI) Overview
@@ -23,6 +23,10 @@ Terminal emulators, are actually a software program that
 emulates hardware terminals of old.
 Now terminals are normally just applications that give
 a *CLI* to an operating system's [shell][shell-wiki].
+These typically come with **command interpreters** that
+provide a scripting language to automate tasks.
+Some common ones include [BASH (Bourne Again Shell)][-bash] and
+[ZSH (Z shell)][-zsh].
 
 ## File Management
 
@@ -56,6 +60,10 @@ These are all part of the [GNU CoreUtil][coreutils-zk] suite of tools.
 ### Note Links
 
 * [GNU CoreUtil][coreutils-zk]
+* [BASH (Bourne Again Shell)][-bash]
+* [ZSH (Z shell)][-zsh]
 
 <!-- Hidden Reference Links Below Here -->
 [coreutils-zk]: ./coreutils.md "GNU CoreUtil"
+[-bash]: ./bash.md "BASH (Bourne Again Shell)"
+[-zsh]: ./zsh.md "ZSH (Z shell)"

@@ -1,6 +1,6 @@
 ---
 created: 2023-06-09T11:22:25.991Z
-modified: 2023-06-09T12:31:05.000Z
+modified: 2023-06-13T15:25:11.022Z
 tags: [program,language,computer,science,software,develop,index]
 ---
 # Programming Language
@@ -35,6 +35,7 @@ languages that are designed to be used in a command-line interface or
 to script an [operating system][-os] [shell][-shell].
 
 * [Bash][-bash]
+* [ZSH][-zsh]
 
 ### Compiled Languages
 
@@ -88,6 +89,7 @@ data with metadata.
 * [Operating System][-os]
 * [Shell (Operating System)][-shell]
 * [BASH (Bourne Again SHell)][-bash]
+* [ZSH (Z Shell)][-zsh]
 * [Rust (Programming Language)][-rust]
 * [Java (Programming Language)][-java]
 * [JavaScript (Programming Language)][-js]
@@ -106,6 +108,7 @@ data with metadata.
 [-os]: os.md "Operating System"
 [-shell]: os-shell.md "Shell"
 [-bash]: bash.md "BASH (Bourne Again SHell)"
+[-zsh]: zsh.md "ZSH (Z shell)"
 [-rust]: rust.md "Rust (Programming Language)"
 [-java]: java.md "Java (Programming Language)"
 [-js]: javascript.md "JavaScript (Programming Language)"

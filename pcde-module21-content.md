@@ -1,6 +1,6 @@
 ---
 created: 2023-06-08T18:21:43.240Z
-modified: 2023-06-11T17:04:20.396Z
+modified: 2023-06-11T17:37:50.107Z
 tags: [pcde,module21,neural,network,reinforcement,learn,data,python,index]
 ---
 # PCDE Course Module 21 Content
@@ -100,6 +100,36 @@ the algorithms.
    you will see a Markdown cell in which you can answer that question.
    Responses should fully answer the question that is provided,
    and each response should be approximately two to three sentences.
+
+### Submission Instructions for Activity 21.1
+
+Your submission for this activity should be a Jupyter Notebook that
+includes your completed code and your open-ended responses:
+
+1. Update the code cell by completing the print statement by
+    calling the `observation_space` method to
+    print the number of states in your environment.
+2. Update the code cell by completing the code to encode the position of
+    your agent and the pickup and drop-off locations in your environment.
+    Then, run the code to generate a number that corresponds to a state between
+    0 and 499.
+3. Update the code cell by filling in the ellipsis with
+    the state generated in the code cell for Step 2.
+4. Explain the condition that will make the infinite `while` loop end.
+5. Update the code cell by defining a Quality matrix with all zero entries and
+    dimensions of 500 x 6.
+    Then, assign this matrix to the `q_table` variable.
+6. Describe the main difference between the implementation in Part3 and
+    the one that was proposed in Part 2.
+    Explain which equation is used to
+    train the algorithm and fill the entries of the Quality matrix.
+7. Compare the performances of the two approaches presented in this activity.
+    Which one performed better?
+    Include the number of steps taken each time the algorithm ran and
+    the penalties that were incurred.
+
+> **Note**: Part 1 = Steps 1-3, Part 2 = Step 4, Part 3 = Steps 5-7.
+
 
 ### Further Reading for OpenAI Gym (Module Used)
 

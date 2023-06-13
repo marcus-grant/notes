@@ -1,6 +1,6 @@
 ---
 created: 2022-12-05T16:17:20.340Z
-modified: 2023-06-09T12:04:18.116Z
+modified: 2023-06-13T14:49:59.931Z
 tags: [python,lang,program,overview,language,software,develop]
 ---
 # Python (Programming Language)
@@ -512,6 +512,23 @@ reusable collection of code made for specific tasks.
 It's possible to download such libraries using pip and
 incorporating this code for your purposes.
 
+### Installing Libraries
+
+Although libraries can be manually downloaded and installed,
+usually somewhere in the path: `C:\Python\Lib\site-packages`,
+or `/usr/local/lib/python3.7/site-packages`,
+and replacing the version number with the version of Python you're using.
+This is an arduous process and error prone.
+Better to use [pip][-pip].
+
+```bash
+pip install numpy
+```
+
+This will take care of all the dependency management and
+install the library in the correct location.
+See the [pip notes][-pip] for more information.
+
 ### How to Import Libraries
 
 Generally, libraries get imported at the beginning of a piece of code.
@@ -603,6 +620,42 @@ The `timed_event_loop` function is called every 5 seconds.
 Before that `task1` and `task2` are called who total 5 seconds of sleep time.
 With this the whole task loops every 10 seconds.
 
+## Managing Python Environments
+
+### Virtual Environments
+
+Due to python often needing specific versions of libraries,
+it's often a good idea to use a virtual environment.
+These isolate your system's python installation from
+the python installation in the virtual environment.
+This can be really important in developing and deploying Python projects.
+
+#### VEnv
+
+The [venv][-venv] module is a built-in module that allows us to
+create virtual environments.
+Those virtual environments can be activated and deactivated in
+your [operating system shell][shell-zk].
+Then you can treat all python operations including
+running the interpreter itself and installing libraries as if
+the *venv* was the system python installation.
+
+### Using Different Python Interpreters
+
+To use a different version of the python interpreter,
+including different forks of python like Cython, Pyodide, etc.,
+you need a way to manage what python interpreter is used and
+to install the one you need.
+This is where [python version management][-py-version] comes in.
+
+## Anaconda
+
+**Anaconda** is a distribution of Python that
+comes with a lot of the most popular libraries for data science.
+It also comes with a package manager called `conda` that
+allows you to install libraries and manage environments.
+See the [Anaconda Python and Conda notes][-conda] for more information.
+
 ## References
 
 ### Note References
@@ -612,8 +665,12 @@ With this the whole task loops every 10 seconds.
 * [Python args and kwargs: Demystified][real-py-args-kwargs]
 * [Statistics Using Python][stats-py-zk]
 * [OS Shell][shell-zk]
+* [Python Package Installer (pip)][-pip]
+* [Virtual Environments (Python VENV)][-venv]
 * [Python Interaction with OS Shell][py-shell-zk]
 * [SciKit-Learn (Python Library)][-scikit-learn]
+* [Python Version Management][-py-version]
+* [Anaconda Python and Conda notes][-conda]
 
 <!-- Hidden Reference Links Below Here -->
 [-lang]: programming-language.md "Programming Language"
@@ -621,8 +678,12 @@ With this the whole task loops every 10 seconds.
 [real-py-args-kwargs]: https://realpython.com/python-kwargs-and-args/#conclusion "Python args and kwargs: Demystified"
 [stats-py-zk]: ./statistics-python.md "Statistics Using Python"
 [py-shell-zk]: ./python-os-shell.md "Python Interaction with OS Shell"
+[-pip]: pip.md "Python Package Installer (pip)"
+[-venv]: venv.md "Virtual Environments (Python VENV)"
 [shell-zk]: ./os-shell.md "OS Shell"
 [-scikit-learn]: scikit-learn.md "SciKit-Learn (Python Library)"
+[-py-version]: ./python-version.md "Python Version Management"
+[-conda]: ./python-anaconda.md "Anaconda Python and Conda notes"
 
 ### Web/Article References
 

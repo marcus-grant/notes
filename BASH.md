@@ -1,9 +1,23 @@
 ---
 tags: [bash,langs,devops,terminal]
 created: 2022-11-01T16:15:34.247Z
-modified: 2023-04-20T14:53:01.002Z
+modified: 2023-06-13T15:26:06.142Z
 ---
 # BASH (Bourne Again SHell)
+
+## Introduction
+
+**BASH** is the default [command interpreter][-cli] for most Linux distributions.
+According to [Wikipedia][wiki-bash]...
+
+>**Bash** is a [Unix shell][-shell] and command [language][-lang] written by
+>Brian Fox for the GNU Project as a [free software replacement][-foss] for
+>the Bourne shell.
+>First released in 1989, it has been used as the default login shell for
+>most Linux distributions.
+>Bash was one of the first programs Linus Torvalds ported to Linux, alongside GCC.
+>
+>-- [Wikipedia (2023)][wiki-bash]
 
 ## Ranges
 
@@ -52,11 +66,22 @@ for file in *.jpg; do echo $file; done
 
 ### Web References
 
+* [Wikipedia. "Bash (Unix shell)". Accessed 2023-04-20][wiki-bash]
+
 <!-- Hidden References -->
+[wiki-bash]: https://en.wikipedia.org/wiki/Bash_(Unix_shell) "Wikipedia. 'Bash (Unix shell)'"
 
 ### Note References
 
+* [Command Line Interface][-cli]
+* [Shell (Operating System)][-shell]
+* [Programming Language][-lang]
+* [FOSS (Free and Open Source Software)][-foss]
 * [Python (Programming Language)][-py]
 
 <!-- Hidden References -->
+[-cli]: cli.md "Command Line Interface"
+[-shell]: os-shell.md "Shell (Operating System)"
+[-lang]: programming-language.md "Programming Language"
+[-foss]: foss.md "FOSS (Free and Open Source Software)"
 [-py]: python.md "Python (Programming Language)"
