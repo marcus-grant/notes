@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T10:12:17.264Z
-modified: 2023-06-14T18:17:01.780Z
+modified: 2023-06-14T19:00:44.704Z
 tags: [pcde,course,outline,overview,data,learn]
 ---
 # PCDE Course Outline
@@ -673,6 +673,56 @@ Machine Learning and Advanced Probability
 * [K-Means Clustering][-kmean]
 * [Confusion Matrix (Machine Learning)][-confusion]
 
+### Module 22: Processing and Streaming Big Data
+
+#### Module 22: Due Date
+
+* Due Wednesday, June 21, 2023 at 1629 UTC
+  * 1829 CET
+  * 1229 EST
+
+#### Module 22: Goals
+
+1. Compare applications of the Parquet and
+   Feather formats for reading and writing big data.
+2. Run parallel operations in DASK.
+3. Discuss use cases for parallel computing.
+4. Identify key concepts of DASK and parallel computing.
+5. Discuss use cases of web sockets.
+6. Stream data through web sockets.
+
+#### Module 22: Activities
+
+* **Knowledge Checks**
+  * Knowledge Check 22.1: DASK and Parallel Computing
+* **Discussion**
+  * Discussion 22.1: Use Cases for Parallel Computing
+  * Discussion 22.2: Use Cases for Web Sockets
+* **Activities**
+  * Activity 22.1: Using DASK to Create Multiple Files in Parallel
+  * Activity 22.2: Using DASK to Read and Analyze Multiple Files in Parallel
+  * Activity 22.3: Simulating Parallel Processing
+  * Activity 22.4: Streaming Web Sockets
+* **Try-It Activities**
+  * Try-It Activity 22.1: Reading Big Data
+  * Try-It Activity 22.2: Running Parallel Operations in DASK
+* **Final Assignment**
+  * Final Assignment 22.1: Part 1:
+    Parallel Computing with Pandas, NumPy, and DASK
+  * Final Assignment 22.1: Part 2:
+    Streaming Data Using Web Sockets
+**Self-Study Activities**
+  * Self-Study Drag & Drop Activity 22.1:
+    Parallel Computing and Web Sockets
+  * Self-Study Discussion 22.3: Thinking Like a Data Scientist:
+    Processing and Streaming Big Data
+  * Self-Study Flashcards: Module 22 Flashcards
+
+#### Module 22: Related Notes
+
+* [PCDE Course: Module 22 Content][-pcde-mod22]
+* ***TODO:*** Add notes for Module 22
+
 ## References
 
 ### Notes References
@@ -778,6 +828,7 @@ Machine Learning and Advanced Probability
 * [TensorFlow][-tflow]
 * [K-Means Clustering][-kmean]
 * [Confusion Matrix (Machine Learning)][-confusion]
+* [PCDE Course: Module 22 Content][-pcde-mod22]
 
 <!-- Hidden Reference Links Below Here -->
 [-pcde-overview]: pcde-course-overview.md "PCDE Course Overview"
@@ -879,3 +930,4 @@ Machine Learning and Advanced Probability
 [-tflow]: tensorflow.md "TensorFlow"
 [-kmean]: k-means-cluster.md "K-Means Clustering"
 [-confusion]: confusion-matrix.md "Confusion Matrix (Machine Learning)"
+[-pcde-mod22]: pcde-module22-content.md "PCDE Course Module 22 Content"

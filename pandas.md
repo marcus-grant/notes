@@ -1,6 +1,6 @@
 ---
 created: 2023-02-17T14:42:48.640Z
-modified: 2023-02-20T15:14:17.463Z
+modified: 2023-06-14T20:18:26.752Z
 tags: [pandas,python,data,analysis,dataframe,data,frame,library,structure,table,sql,pcde,module3]
 ---
 # Pandas: Python Data Analysis Library
@@ -292,13 +292,13 @@ This can be achieved by using the `head()` function, like this:
 df.head()
 ```
 
-|     | Unnamed: 0 | country     | beer_servings | spirit_servings | wine_servings | *    | continent |
-| --- | ---------- | ----------- | ------------- | --------------- | ------------- | ---- | --------- |
-| 0   | 0          | Afghanistan | 0             | 0               | 0             | 0.0  | Asia      |
-| 1   | 1          | Albania     | 89            | 132             | 54            | 4.9  | Europe    |
-| 2   | 2          | Algeria     | 25            | 0               | 14            | 0.7  | Africa    |
-| 3   | 3          | Andorra     | 245           | 138             | 312           | 12.4 | Europe    |
-| 4   | 4          | Angola      | 217           | 57              | 45            | 5.9  | Africa    |
+|     | Unnamed: 0 | country | beer_servings | spirit_servings | wine_servings | *    | continent |
+| --- | ---------- | ------- | ------------- | --------------- | ------------- | ---- | --------- |
+| 0   | 0          | Afghan  | 0             | 0               | 0             | 0.0  | Asia      |
+| 1   | 1          | Albania | 89            | 132             | 54            | 4.9  | Europe    |
+| 2   | 2          | Algeria | 25            | 0               | 14            | 0.7  | Africa    |
+| 3   | 3          | Andorra | 245           | 138             | 312           | 12.4 | Europe    |
+| 4   | 4          | Angola  | 217           | 57              | 45            | 5.9  | Africa    |
 
 \* *total_litres_of_pure_alcohol*
 
@@ -337,14 +337,13 @@ The object data type is used for columns that
 pandas doesn’t recognize as any other specific type.
 It means that all of the values in the column are strings.
 
-
-
 ### Create a DataFrame
 
 #### Using Lists
 
 Let's jump right into an example.
-It's possible to create a `DataFrame` object from [random data via NumPy][np-zk].
+It's possible to create a `DataFrame` object from
+[random data via NumPy][numpy-zk].
 Then to give the columns names,
 it's possible to pass a list of column names to the `columns` parameter.
 
@@ -451,11 +450,11 @@ the order of the values matches the order in all the other lists.
 
 The resulting *dataframe* is this nice table:
 
-|     | Name | Email        | Course |
-| --- | ---- | ------------ | ------ |
-| 0   | john | john@mit.edu | 1      |
-| 1   | jane | jane@mit.edu | 2      |
-| 2   | joe  | joe@mit.edu  | 3      |
+|     | Name | Email          | Course |
+| --- | ---- | -------------- | ------ |
+| 0   | john | `john@mit.edu` | 1      |
+| 1   | jane | `jane@mit.edu` | 2      |
+| 2   | joe  | `joe@mit.edu`  | 3      |
 
 >**Note:** The order of the keys in the dictionary is not guaranteed.
 >So the order of the columns in the resulting *dataframe* is not guaranteed.
@@ -817,10 +816,10 @@ df5
 
 which results in this table:
 
-|     | student_id | name   | last_name |
-| --- | ---------- | ------ | --------- |
-| 0   | S3333      | Mary   | NaN       |
-| 1   | S4444      | Jane   | NaN       |
+|     | student_id | name | last_name |
+| --- | ---------- | ---- | --------- |
+| 0   | S3333      | Mary | NaN       |
+| 1   | S4444      | Jane | NaN       |
 
 #### Right Join
 
@@ -842,6 +841,39 @@ which results in this table:
 | 0   | S1234      | Daniel | Smith     |
 | 1   | S4321      | John   | Doe       |
 
+## Reading and Writing Big Data
+
+### Parquet
+
+To read and write large amounts of data, [CSV][-csv] files might
+not be efficient enough.
+This is where Apache's [Parquet][-parquet] file format comes in.
+The main difference between traditional storage and the type of
+storage offered by the Parquet format resides in the way that
+data is processed and stored.
+Parquet stores data by column,
+thus the term columnar storage format, rather than by row.
+This offers far more efficient access to data because
+having the the data stored in columns keeps the data of te same type together,
+thus reducing the querying time.
+
+Pandas has built-in support for reading and writing Parquet files with
+heavily optimized C code for chunking and memory and I/O optimization.
+For more information about how to use Parquet files with Pandas,
+read the [parquet notes][-parquet].
+
+### Feather
+
+Another columnar file format that is supported by Pandas is **Feather**.
+Feather is a fast, lightweight, and easy-to-use binary file format for
+fast access and large data storage and manipulation.
+Unlike Parquet, Feather is not designed for long-term storage and
+isn't compressed.
+This and its in-memory storage allows it to perform much better than
+Parquet for some tasks.
+
+For more information about how to use Pandas with Feather files,
+read the [notes about Apache Feather][-feather].
 
 ## References
 
@@ -893,6 +925,9 @@ which results in this table:
 * [HTML: HyperText Markup Language][html-zk]
 * [ISO 8601 Date & Time Format Standard][iso8601-zk]
 * [SQL][sql-zk]
+* [CSV (Comma Separated Values)][-csv]
+* [Parquet (Apache Columnar File Format)][-parquet]
+* [Feather (Apache Arrow Columnar File Format)][-feather]
 
 <!-- Hidden References -->
 [py-zk]: ./python.md "Python Programming Language"
@@ -902,3 +937,6 @@ which results in this table:
 [html-zk]: ./html.md "HTML: HyperText Markup Language"
 [iso8601-zk]: ./.pcde/mod3/iso8601.md "ISO 8601 Date & Time Format Standard"
 [sql-zk]: ./sql.md "SQL"
+[-csv]: csv.md "CSV (Comma Separated Values)"
+[-parquet]: parquet.md "Parquet (Apache Big Data Format)"
+[-feather]: apache-feather.md "Feather (Apache Arrow Columnar File Format)"
