@@ -1,6 +1,6 @@
 ---
 created: 2022-12-05T16:17:20.340Z
-modified: 2023-06-13T14:49:59.931Z
+modified: 2023-06-14T15:24:19.989Z
 tags: [python,lang,program,overview,language,software,develop]
 ---
 # Python (Programming Language)
@@ -620,6 +620,15 @@ The `timed_event_loop` function is called every 5 seconds.
 Before that `task1` and `task2` are called who total 5 seconds of sleep time.
 With this the whole task loops every 10 seconds.
 
+## Jupyter Notebooks
+
+[Jupyter Notebooks][-jnb] are a great way to
+interact with Python and other languages.
+Especially in an exploratory capacity.
+It allows you to run code in a cell-by-cell basis.
+And to quickly see the results of that code,
+including graphs and other visualizations.
+
 ## Managing Python Environments
 
 ### Virtual Environments
@@ -669,6 +678,7 @@ See the [Anaconda Python and Conda notes][-conda] for more information.
 * [Virtual Environments (Python VENV)][-venv]
 * [Python Interaction with OS Shell][py-shell-zk]
 * [SciKit-Learn (Python Library)][-scikit-learn]
+* [Jupyter Notebooks][-jnb]
 * [Python Version Management][-py-version]
 * [Anaconda Python and Conda notes][-conda]
 
@@ -682,6 +692,7 @@ See the [Anaconda Python and Conda notes][-conda] for more information.
 [-venv]: venv.md "Virtual Environments (Python VENV)"
 [shell-zk]: ./os-shell.md "OS Shell"
 [-scikit-learn]: scikit-learn.md "SciKit-Learn (Python Library)"
+[-jnb]: jupyter.md "Jupyter Notebooks"
 [-py-version]: ./python-version.md "Python Version Management"
 [-conda]: ./python-anaconda.md "Anaconda Python and Conda notes"
 

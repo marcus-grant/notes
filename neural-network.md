@@ -1,6 +1,6 @@
 ---
 created: 2023-06-09T12:52:26.223Z
-modified: 2023-06-09T13:52:30.000Z
+modified: 2023-06-14T18:16:47.561Z
 tags: [neuron,network,machine,learn,algorithm,data,pcde,module21]
 ---
 # Neural Network
@@ -29,13 +29,52 @@ Or as [Wikipedia - Neural Network][wiki-nn] puts it:
 Because neural networks are based on biological neurons,
 maybe it's worth comparing artificial vs. biological neurons.
 
-### Components of Neural Networks
+## Basics
 
-#### Biological Components
+Deep neural networks consists of a network or circuit of
+artificial neurons *(nodes)* that are used to solve complex machine learning problems.
+
+There are three conceptual layers of neurons in a neural network:
+
+* Input layer
+* Hidden layer
+* Output layer
+
+Each neuron from one layer is connected to
+all the neurons in the next layer.
+See the image below,
+which depicts the interconnections between the layers of a neural network.
+
+![simple neural network diagram with basic layers](2023-06-14-17-07-32.png)
+
+The number of neurons in each layer is arbitrary and
+will depend on the problem that is being solved.
+A connection between neurons
+(represented by the arrows between layers) is called an **activation**.
+
+The input layer passes initial data to the hidden layer,
+where the data is multiplied by the weights of that hidden layer.
+In the case of multiple hidden layers,
+this may be repeated several times.
+Hidden layers are located between the input and output layers and
+exist to extract and filter through features identified by the input layer.
+These features are then sent to the output layer based on
+the mathematical function performed within the hidden layers.
+The output layer consists of the final result of a deep neural network.
+
+Deep neural networks may have more than one hidden layer.
+See the image below, which shows the multiple hidden layers within
+a deep neural network.
+
+![deep neural network diagram with multiple hidden layers](2023-06-14-17-11-42.png)
+
+## Comparison to Biological Neural Networks
+
+### Biological Components
 
 Biological neural networks are composed of axons, dendrites, and synapses.
 
-#### Artificial Components
+### Artificial Components
 
 Artificial neural networks are composed of *nodes*,
 inputs, outputs, weights and biases.
@@ -104,16 +143,30 @@ Neural networks by their nature also require some level of data dependency.
 This is why sometimes it's hard to split neural network training into
 several computing nodes to share the load.
 
-## Neural Network Use Cases
+## Applications of Deep Neural Networks in Machine Learning
 
-* Visual interpretation
-* Image generation
-* Speech recognition
-* Audio generation
-* Robot control
-* Image enhancement
-* Audio enhancement
-* Identification and prediction of trends
+There are several applications of deep neural networks in ML,
+including speech recognition and image recognition.
+Next, you will learn how to create a neural network to recognize images of
+handwritten digits.
+
+The picture below represents an image of a number that
+needs to be fed through a deep neural network so that
+it can be recognized as the number four.
+
+![neural network sample image of handwritten number 4](2023-06-14-17-14-28.png)
+
+[Tensorflow][-tf]
+
+## TODO
+
+* [ ] Section on Input Layer
+* [ ] Section on Hidden Layer
+* [ ] Section on Output Layer
+* [ ] Section on Activation Functions
+* [ ] Section on Forward Propagation
+* [ ] Section on Backward Propagation
+* [ ] Section on Weight Updates
 
 ## References
 
@@ -128,7 +181,9 @@ several computing nodes to share the load.
 
 * [Machine Learning][-ml]
 * [Matrix][-matrix]
+* [Tensorflow][-tf]
 
 <!-- Hidden References -->
 [-ml]: machine-learning.md "Machine Learning"
 [-matrix]: matrix.md "Matrix"
+[-tf]: tensorflow.md "Tensorflow"

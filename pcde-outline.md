@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T10:12:17.264Z
-modified: 2023-06-08T18:26:56.767Z
+modified: 2023-06-14T18:17:01.780Z
 tags: [pcde,course,outline,overview,data,learn]
 ---
 # PCDE Course Outline
@@ -666,7 +666,12 @@ Machine Learning and Advanced Probability
 #### Module 21: Related Notes
 
 * [PCDE Course: Module 21 Content][-pcde-mod21]
-<!-- TODO: Add notes list from pcde-mod21 doc here -->
+* [Machine Learning][-ml]
+* [Reinforcement Learning][-rl]
+* [Neural Network][-nn]
+* [TensorFlow][-tflow]
+* [K-Means Clustering][-kmean]
+* [Confusion Matrix (Machine Learning)][-confusion]
 
 ## References
 
@@ -767,6 +772,12 @@ Machine Learning and Advanced Probability
 * [Bayes Theory][-bayes]
 * [SciKit-Learn (Python Machine Learning Library)][-sklearn]
 * [PCDE Course: Module 21 Content][-pcde-mod21]
+* [Machine Learning][-ml]
+* [Reinforcement Learning][-rl]
+* [Neural Network][-nn]
+* [TensorFlow][-tflow]
+* [K-Means Clustering][-kmean]
+* [Confusion Matrix (Machine Learning)][-confusion]
 
 <!-- Hidden Reference Links Below Here -->
 [-pcde-overview]: pcde-course-overview.md "PCDE Course Overview"
@@ -862,3 +873,9 @@ Machine Learning and Advanced Probability
 [-bayes]: bayes-theory.md "Bayes Theory"
 [-sklearn]: scikit-learn.md "SciKit-Learn (Python Machine Learning Library)"
 [-pcde-mod21]: pcde-module21-content.md "PCDE Course Module 21 Content"
+[-ml]: machine-learning.md "Machine Learning"
+[-rl]: reinforcement-learning.md "Reinforcement Learning"
+[-nn]: neural-network.md "Neural Network"
+[-tflow]: tensorflow.md "TensorFlow"
+[-kmean]: k-means-cluster.md "K-Means Clustering"
+[-confusion]: confusion-matrix.md "Confusion Matrix (Machine Learning)"
