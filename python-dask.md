@@ -1,6 +1,6 @@
 ---
 created: 2023-06-14T19:02:24.887Z
-modified: 2023-06-15T15:32:40.437Z
+modified: 2023-06-15T19:18:07.539Z
 tags: [dask,python,parallel,process,software,library,computer,data,pcde,module22]
 ---
 # DASK (Python Multiprocessing Library)
@@ -127,7 +127,7 @@ To do so, annotate the *function* with `@Delayed`,
 which indicates to DASK that you wish for this *function* to
 be run at a specific desired time.
 
-### Example Parallel Task: Summation
+### Example Parallel Task
 
 Consider you're writing a part of a program that needs to compute this sum:
 
@@ -218,6 +218,42 @@ DASK calculates the numerator and denominator in parallel to save time.
 This is one of many powerful advantages of using DASK for parallel computing.
 
 Here is a copy of the [Colab Notebook][dask-basic-colab-nb] used for this example.
+
+## Example: Multiple Parallel Files
+
+Here we'll take advantage of DASKs multiprocessing capabilities to
+process many files in parallel.
+
+```python
+import dask
+import os
+import datetime
+
+if not os.path.exists('data'):
+    os.mkdir('data')
+
+def name(i):
+    return str(datetime.date(2000, 1, 1) + 1 * datetime.timedelta(days=i))
+
+df = dask.datasets.timeseries()
+df.to_csv('data/*.csv', name_function=name)
+```
+
+This will create a directory called `data` and
+create a CSV file for each day in the year 2000.
+Each file will contain a single day of data.
+The files will be named `2000-01-01.csv`, `2000-01-02.csv`, etc.
+
+When running this code in a debugger there should be a set of
+ThreadPools and ProcessPools created, equal to
+the number of cores on the system.
+Each file will be written in parallel.
+Even the fastest drives won't be able to keep up with this,
+so each thread pool will be forced to compute a few files and
+then wait for the disk to catch up before continuing.
+
+>**NOTE:** This will create at least 500MB of data.
+>**Don't forget** to delete the data directory when you're done.
 
 ## References
 

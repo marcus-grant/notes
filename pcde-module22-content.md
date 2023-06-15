@@ -1,6 +1,6 @@
 ---
 created: 2023-06-14T18:56:46.442Z
-modified: 2023-06-15T14:12:48.604Z
+modified: 2023-06-15T19:49:07.661Z
 tags: [pcde,module22,data,big,science,sql,python,dask,feather,parquet]
 ---
 # PCDE Course Module 22 Content
@@ -165,12 +165,72 @@ a lot of wrapper libraries for Python and R already exist to
 perform analysis on the JSON data with all its nested structures and
 particularly named keys.
 
+## Activity 22.1: Using DASK to Create Multiple Files in Parallel
+
+## Introduction to Activity 22.1
+
+In this activity, you will practice defining a pandas dataframe and
+then writing the contents to files in parallel by using the DASK library.
+
+## Instructions for Activity 22.1
+
+To complete this activity, follow these steps:
+
+1. In a Terminal window, run this command,
+   `pip install dask` to install the DASK library locally.
+    Provide a screenshot to show that you successfully installed DASK.
+2. Download the [Activity 22_1.py][pcde-act-22-1-dl] file and open it using VS Code.
+    Provide a screenshot to show that you opened the file correctly.
+3. In the `Activity 22_1.py` file, use the pandas DataFrame function to
+    create a dataframe with two columns.
+    The first column, odd_num, will contain, as entries,
+    all the odd numbers between 1 and 10.
+    The second column, even_num, will contain, as entries,
+    all the even numbers between 1 and 10.
+    Assign this dataframe to the pandas_df variable.
+    Provide a screenshot to
+    show that you created the pandas_df dataframe correctly.
+4. In the `Activity 22_1.py` file, set the npartitions argument inside
+    the from_pandas function equal to 2.
+    Provide a screenshot to show that you set the `npartitions` argument equal to 2.
+5. Run and debug your code in VS Code.
+    Provide a screenshot to show that you ran the code without any errors.
+6. In a Terminal window, navigate to the `activity22.1` folder.
+    List the files inside of the `activity22.1` folder.
+    Provide a screenshot to show that the `0.part` and
+    `1.part` files are present inside of the `activity22.1` folder.
+7. In a Terminal window, use the `cat` command to visualize the contents of
+    the `0.part` and `1.part` files.
+    Provide two screenshots. The first screenshot should show the contents of
+    the `0.part` file. The second screenshot should show the contents of
+    the `1.part file`.
+
+You have now completed this activity and
+practiced defining a pandas dataframe and writing the contents to
+files in parallel by using the DASK library.
+
+### Activity 22.1 Deliverable
+
+Your submission for this activity should be a Word document that
+includes the following screenshots, each labeled for the corresponding step:
+
+1. Provide a screenshot to show that you successfully installed DASK.
+2. Provide a screenshot to show that you opened the file correctly.
+3. Provide a screenshot to show that you create the `pandas_df` dataframe correctly.
+4. Provide a screenshot to show that you set the `npartitions` argument equal to 2.
+5. Provide a screenshot to show that you ran the code without any errors.
+6. Provide a screenshot to show that the `0.part` and
+    `1.part` files are present inside of the `activity22.1` folder.
+7. Provide two screenshots. The first to show the contents of the `0.part` file.
+    The second to show the contents of the `1.part` file.
+
 ## References
 
 ### Web Links
 
 * [PCDE Emeritus Try-It Activity 22.1 Download][try-it-22-1]
 * [Archive.org][archive]
+* [PCDE Activity 22.1 Download][pcde-act-22-1-dl]
 
 <!-- Hidden References -->
 **TODO**: Add this archive to your own archive for reliable access.
@@ -178,6 +238,7 @@ particularly named keys.
 
 [try-it-22-1]: https://classroom.emeritus.org/courses/1412/files/1004624/download "PCDE Try-It Activity 22.1 Download"
 [archive]: https://archive.org/ "Archive.org"
+[pcde-act-22-1-dl]: https://classroom.emeritus.org/courses/1412/files/1004651/download "PCDE Activity 22.1 Download"
 
 ### Note Links
 
