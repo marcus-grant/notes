@@ -1,6 +1,6 @@
 ---
 created: 2023-06-09T11:22:25.991Z
-modified: 2023-06-13T15:25:11.022Z
+modified: 2023-06-15T12:38:00.767Z
 tags: [program,language,computer,science,software,develop,index]
 ---
 # Programming Language
@@ -70,6 +70,11 @@ data with metadata.
 * [Markdown][-md]
 * [YAML][-yaml]
 * [JSON][-json]
+
+### Parallel Computing Languages
+
+**Parallel computing languages** are languages that are designed to
+facilitate parallel computing.
 
 ## References
 

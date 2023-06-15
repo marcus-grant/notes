@@ -1,6 +1,6 @@
 ---
 created: 2023-06-14T18:56:46.442Z
-modified: 2023-06-14T20:35:16.964Z
+modified: 2023-06-15T11:25:34.039Z
 tags: [pcde,module22,data,big,science,sql,python,dask,feather,parquet]
 ---
 # PCDE Course Module 22 Content
@@ -72,14 +72,19 @@ In your discussion post, respond to each of the questions below:
 
 ## My Response
 
+
+
 ## References
 
 ### Web Links
 
+* [PCDE Emeritus Try-It Activity 22.1 Download][try-it-22-1]
+
 <!-- Hidden References -->
 **TODO**: Add this archive to your own archive for reliable access.
 ***TODO***: Then add this archive to a permalink short-link.
-[try-it-22-1]: https://classroom.emeritus.org/courses/1412/files/1004624/download
+
+[try-it-22-1]: https://classroom.emeritus.org/courses/1412/files/1004624/download "PCDE Try-It Activity 22.1 Download"
 
 ### Note Links
 

@@ -1,6 +1,6 @@
 ---
 created: 2023-06-14T19:15:50.472Z
-modified: 2023-06-14T20:15:53.000Z
+modified: 2023-06-15T12:03:48.940Z
 tags: [computer,architecture,structure,design,instruction,logic,digital]
 ---
 # Computer Architecture
@@ -16,6 +16,10 @@ tags: [computer,architecture,structure,design,instruction,logic,digital]
 >micro-architecture design, logic design, and implementation.
 >
 >--[Wikipedia (2023)][wiki-comp-arch]
+
+### Central Processing Unit (CPU)
+
+The core of any computer architecture is the **central processing unit** CPU.
 
 ## References
 
