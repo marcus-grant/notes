@@ -1,6 +1,6 @@
 ---
 created: 2023-06-14T19:07:50.003Z
-modified: 2023-06-15T12:49:10.896Z
+modified: 2023-06-15T15:09:35.964Z
 tags: [parallel,computer,software,data,science,process,pcde,module22]
 ---
 # Parallel Computing
@@ -301,9 +301,13 @@ can be calculated simultaneously with little or no dependency on each other.
 * [Computer Architecture: Central Processing Unit (CPU)][-comp-arch-cpu]
 * [Programming Languages][-lang]
 * [Programming Languages: Parallel Programming Languages][-lang-para]
+* [Graphical Processing Unit (GPU)][-gpu]
+* [Matrix (Mathematics)][-mat]
 
 <!-- Hidden References -->
 [-comp-arch]: computer-architecture.md "Computer Architecture"
 [-comp-arch-cpu]: computer-architecture.md#central-processing-unit-cpu "Computer Architecture: Central Processing Unit (CPU)"
 [-lang]: programming-language.md "Programming Languages"
 [-lang-para]: programming-language.md#parallel-computing-languages "Programming Languages: Parallel Programming Languages"
+[-gpu]: gpu.md "Graphical Processing Unit (GPU)"
+[-mat]: matrix.md "Matrix (Mathematics)"

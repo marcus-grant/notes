@@ -1,6 +1,6 @@
 ---
 created: 2023-06-14T18:56:46.442Z
-modified: 2023-06-15T11:25:34.039Z
+modified: 2023-06-15T14:12:48.604Z
 tags: [pcde,module22,data,big,science,sql,python,dask,feather,parquet]
 ---
 # PCDE Course Module 22 Content
@@ -70,21 +70,114 @@ In your discussion post, respond to each of the questions below:
 **Suggested Time**: 75 minutes
 **Suggested Length**: 250~300 words
 
-## My Response
+### My Response
 
+#### Which format seems to be more efficient when writing data?
 
+I wrote the lorem and random numbers dataframe created in the notebook to
+both the Parquet and Feather formats.
+On my machine, an Apple Silicon M1 Mac, the feather format was faster.
+
+Here's the output of the `%%time` magic command for the Parquet write:
+
+```text
+CPU times: user 2.19 s, sys: 170 ms, total: 2.36 s
+Wall time: 2.42 s
+```
+
+And here's the feather write:
+
+```text
+CPU times: user 1.46 s, sys: 172 ms, total: 1.63 s
+Wall time: 1.29 s
+```
+
+As you can see, the feather write was faster by 1.13 seconds.
+A speedup of about 46.7%.
+
+#### Which format seems to be more efficient when reading data?
+
+With the parquet and feather files written, I could then test the read speed.
+Doing largely the same thing except using the `read_parquet` and
+`read_feather` functions of pandas on two different file formats,
+I got the following results.
+
+Here's the parquet read:
+
+```text
+CPU times: user 1.82 s, sys: 573 ms, total: 2.4 s
+Wall time: 2.9 s
+```
+
+And the feather read:
+
+```text
+CPU times: user 1.6 s, sys: 769 ms, total: 2.37 s
+Wall time: 2.44 s
+```
+
+As you can see, the feather read was faster by 0.46 seconds.
+A speedup of about 15.9%.
+The difference isn't as great here,
+which I imagine is due to the fact that the reading is more limited by
+the speed of the disk than the data formatting and processing being done in RAM.
+
+#### What are the main differences between the Parquet and Feather formats?
+
+While both formats aim to improve the performance of data file formats by
+storing data in a columnar format,
+the Parquet format is more intended for broader ecosystems and for
+longer term storage.
+As such it has more compatibility built in and
+crucially as it's designed for archives, it uses compression.
+This will make the files slower to read and write,
+but smaller to store.
+Whereas the Feather format is designed for speed,
+so it stores the data in a binary format without compression.
+Binary formats don't use any kind of text encoding,
+it's just raw bits arranged in a particular way, particularly to
+optimize for the CPU's cache.
+It also uses in-memory operations to speed up the reading and writing.
+This makes it great for more *warm* or *ephemeral* data than Parquet.
+Consider it a tier between raw databases and Parquet's colder archival tier.
+
+#### Select a Publicly Available Large Dataset: Reddit Comment Archives
+
+I chose to try and download some of the reddit archives on [archive.org][archive].
+Since the Reddit API is being heavily charged per use starting this week,
+I thought it'd be topical to try and download some of the archives.
+I got a history of a subreddit from 2005 to earlier in the year.
+Compressed with Zstandard, the archive is 180MB.
+Uncompressed, it's 631MB as a collection of JSON files.
+
+Due to it being the responses to Reddit's once public API,
+it makes sense to store it in the JSON format as
+that's the format the response is already in.
+To store it for long term archival,
+and distribution to other researchers,
+it may make sense to use Parquet.
+
+Parquet is great for distribution because it already comes compressed and
+is significantly smaller than raw JSON and much faster to process.
+The only reason it might not be used to archive reddit today is that
+it's a relatively new format and
+a lot of wrapper libraries for Python and R already exist to
+perform analysis on the JSON data with all its nested structures and
+particularly named keys.
 
 ## References
 
 ### Web Links
 
 * [PCDE Emeritus Try-It Activity 22.1 Download][try-it-22-1]
+* [Archive.org][archive]
 
 <!-- Hidden References -->
 **TODO**: Add this archive to your own archive for reliable access.
 ***TODO***: Then add this archive to a permalink short-link.
 
 [try-it-22-1]: https://classroom.emeritus.org/courses/1412/files/1004624/download "PCDE Try-It Activity 22.1 Download"
+[archive]: https://archive.org/ "Archive.org"
 
 ### Note Links
 

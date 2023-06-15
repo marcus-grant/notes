@@ -1,6 +1,6 @@
 ---
 created: 2023-06-14T19:59:50.677Z
-modified: 2023-06-14T20:59:53.000Z
+modified: 2023-06-15T12:59:40.125Z
 tags: [feather,apache,file,format,data,storage,column,data,pcde,module22]
 ---
 # Feather (Apache Columnar Storage Format)
@@ -73,6 +73,7 @@ use the `to_feather()` method:
 ```python
 import pandas as pd
 df = pd.DataFrame(data={'col1': ['a', 'b'], 'col2': ['c', 'd']})
+df.to_feather('data.ftr')
 ```
 
 This method takes a single argument, the path to the file to write to,
