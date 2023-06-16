@@ -1,6 +1,6 @@
 ---
 created: 2023-06-14T18:56:46.442Z
-modified: 2023-06-15T19:49:07.661Z
+modified: 2023-06-16T15:50:19.733Z
 tags: [pcde,module22,data,big,science,sql,python,dask,feather,parquet]
 ---
 # PCDE Course Module 22 Content
@@ -224,6 +224,227 @@ includes the following screenshots, each labeled for the corresponding step:
 7. Provide two screenshots. The first to show the contents of the `0.part` file.
     The second to show the contents of the `1.part` file.
 
+## Activity 22.2: Using DASK to Read and Analyze Multiple Files in Parallel
+
+### Activity 22.2 Introduction
+
+In this activity, you will practice reading multiple files in parallel using DASK.
+A common task for data engineers is reading and processing large numbers of files.
+These files can come from many sources.
+Some files may contain data that needs to be preprocessed and then added to a database.
+In other cases,
+large files may need to be scanned and
+transformed before being sent to another application.
+Regardless of the application,
+reading and analyzing files is a time-intensive and thus relatively slow task.
+In order to speed up this process, it is desirable to read files in parallel.
+DASK provides a simple and easy to implement solution for
+parallel processing and parallel read operations.
+
+### Activity 22.2 Instructions
+
+#### Activity 22.2 Steps 1
+
+First, create a folder titled `Activity_22.2`.
+Download the [`GenerateFilesWithDask.py`][pcde-act22-2-dl] file to this folder.
+Provide a screenshot to show the `GenerateFilesWithDask.py` file in the folder.
+
+#### Activity 22.2 Steps 2
+
+Run the `GenerateFilesWithDask.py` file.
+This should create a `/data` folder with some large files.
+Provide a screenshot to show that the `/data` folder was created.
+
+#### Activity 22.2 Steps 3
+
+Navigate out of the `/data` folder, within the Activity_22.2 folder,
+and create a new Python file called `Activity22-2.py`.
+Provide a screenshot to show the `Activity22-2.py` file is in
+the `Activity_22.2` folder.
+
+#### Activity 22.2 Steps 4
+
+In the `Activity22-2.py` file,
+import the necessary DASK libraries using the command below:
+
+```python
+import dask.dataframe as ddf
+from dask import delayed
+```
+
+Provide a screenshot to show that
+the correct DASK libraries have been imported into the `Activity22-2.py` file.
+
+#### Activity 22.2 Steps 5
+
+Use a wildcard to read all of the files generated in the `/data` folder.
+A wildcard is a designated symbol or character which
+helps pattern match specific words.
+In this case, the `*` symbol directs the CSV reader to grab all files as long as
+the beginning starts with `data/2000` and ends with `.csv`.
+Add the following command to read all of the CSV files:
+
+```python
+df = ddf.read_csv("data/2000*.csv")
+Then, display the data that you just read into the DASK dataframe using the commands below:
+
+df.compute()
+print(df.head())
+```
+
+Run the `GenerateFilesWithDask.py` Python file.
+Provide a screenshot to show the head of the DASK dataframe and display that
+the DASK dataframe correctly displays the first five rows.
+
+#### Activity 22.2 Steps 6
+
+Next, process the data by calculating and displaying the mean of
+the x column using the code below:
+
+```python
+mean = df['x'].mean().compute()
+print(f'mean: {mean}')
+```
+
+After you have entered the above code, run the file.
+Provide a screenshot of your Terminal window to show the output after
+you have printed the computed mean of the dataframe.
+
+#### Activity 22.2 Steps 7
+
+Compute the number of columns in the dataframe using the code below:
+
+```python
+cols = len(df.columns)
+print(f'columns: {cols}')
+```
+
+After you have entered the code above,
+run the `GenerateFilesWithDask.py` Python file again.
+Provide a screenshot of your Terminal window to
+show the number of columns in the dataframe.
+
+#### Activity 22.2 Steps 8
+
+Compute the number of rows in the dataframe using the code below:
+
+```python
+rows = len(df.index)
+print(f'rows:{rows}')
+```
+
+After you have entered the code above,
+run the `GenerateFilesWithDask.py` Python file again.
+Provide a screenshot of your Terminal window to
+show the number of rows in the dataframe.
+
+## Activity 22.3: Simulating Parallel Processing
+
+### Activity 22.3 Introduction
+
+In this activity,
+you will simulate running parallel operations in DASK across multiple machines.
+
+### Activity 22.3 Instructions
+
+To complete this activity, follow these steps:
+
+#### Activity 22.3 Step 1
+
+In a Terminal window, run the command below to install the DASK library locally:
+
+```sh
+pip install dask
+```
+
+Provide a screenshot to show that you successfully installed DASK.
+
+#### Activity 22.3 Step 2
+
+Depending on what operating system you are using,
+open the Anaconda Prompt (for Windows) or the Terminal (for Mac) and
+run the `dask-scheduler`.
+Provide a screenshot to show that you successfully ran the `dask-scheduler`.
+
+#### Activity 22.3 Step 3
+
+Take note of the address of the for the `dask-scheduler`.
+Open two additional Anaconda command prompts and start two `dask-worker` processes.
+Pass the address of the `dask-scheduler` to each of
+the `dask-worker` processes when you run them.
+Provide two screenshots to show that you successfully started both of
+the `dask-worker` processes by passing the correct address to the `dask-scheduler`.
+
+#### Activity 22.3 Step 4
+
+Create a Jupyter Notebook to simulate a client program that
+has complex computation.
+Add the following code to your Jupyter Notebook to
+import the required DASK libraries:
+
+```python
+import dask.array as da
+from dask.distributed import Client
+```
+
+Provide a screenshot to show that you created a Jupyter Notebook and
+successfully imported the DASK libraries.
+
+#### Activity 22.3 Step 5
+
+Complete the following code to
+create a 50,000 by 50,000 matrix of random numbers in DASK.
+Compute the mean and assign the value to the y variable:
+
+```python
+x = da.random.random((50000, 50000))
+y = da.exp(x).????
+```
+
+Provide a screenshot to show that you successfully executed the command to
+create a matrix, compute the mean, and assign the value to the `y` variable.
+
+#### Activity 22.3 Step 6
+
+Now create a DASK `client` that passes the address of your `dask-scheduler`.
+Call the `compute` function on the `y` variable to instruct DASK to
+execute the command:
+
+```python
+client = Client("????????")
+y.??
+```
+
+Provide a screenshot to show that
+you successfully computed your calculations using DASK using the `compute` function.
+
+You have completed this activity and
+practiced simulating running complex operations across
+multiple machines using DASK.
+
+### Activity 22.3 Submission Instructions
+
+Your submission for this activity should be a Word document that
+includes the following screenshots,
+each labeled for the step that the screenshot represents:
+
+1. Provide a screenshot to show that you successfully installed DASK.
+2. Provide a screenshot to show that you successfully ran the `dask-scheduler`.
+3. Provide two screenshots to show that you successfully started both of
+    the `dask-worker` processes by passing the correct address to
+    the `dask-scheduler`.
+4. Provide a screenshot to show that you created a Jupyter Notebook and
+    successfully imported the DASK libraries.
+5. Provide a screenshot to show that you successfully executed the command to
+    create a matrix, compute the mean, and assign the value to the `y` variable.
+6. Provide a screenshot to show that
+    you successfully computed your calculations using DASK using the `compute` function.
+
+### Activity 22.3 Additional Information
+
+* **Estimated Time**: 45 minutes
+* This is a required activity and counts towards your course grade.
+
 ## References
 
 ### Web Links
@@ -231,6 +452,7 @@ includes the following screenshots, each labeled for the corresponding step:
 * [PCDE Emeritus Try-It Activity 22.1 Download][try-it-22-1]
 * [Archive.org][archive]
 * [PCDE Activity 22.1 Download][pcde-act-22-1-dl]
+* [Activity 22.2 Download][pcde-act22-2-dl]
 
 <!-- Hidden References -->
 **TODO**: Add this archive to your own archive for reliable access.
@@ -239,6 +461,7 @@ includes the following screenshots, each labeled for the corresponding step:
 [try-it-22-1]: https://classroom.emeritus.org/courses/1412/files/1004624/download "PCDE Try-It Activity 22.1 Download"
 [archive]: https://archive.org/ "Archive.org"
 [pcde-act-22-1-dl]: https://classroom.emeritus.org/courses/1412/files/1004651/download "PCDE Activity 22.1 Download"
+[pcde-act22-2-dl]: https://classroom.emeritus.org/courses/1412/files/1004592/download "Activity 22.2 Download"
 
 ### Note Links
 
