@@ -1,6 +1,6 @@
 ---
 created: 2023-06-14T18:56:46.442Z
-modified: 2023-06-16T15:50:19.733Z
+modified: 2023-06-18T14:30:44.250Z
 tags: [pcde,module22,data,big,science,sql,python,dask,feather,parquet]
 ---
 # PCDE Course Module 22 Content
@@ -444,6 +444,24 @@ each labeled for the step that the screenshot represents:
 
 * **Estimated Time**: 45 minutes
 * This is a required activity and counts towards your course grade.
+
+## Discussion 22.1: Use Cases for Parallel Computing
+
+### Discussion 22.1 Introduction
+
+Nvidia is the premier organization that designs and
+produces graphic processing units (GPUs).
+Since Nvidia introduced GPUs that could process general application data in
+parallel in 2006, the practice of parallel computing has expanded to
+all levels of the data engineering industry (Gossett 2020).
+GPUs are ideal for parallel computing,
+as they have large shared memory busses and multiple cores.
+Now that this technology has taken off and become widely available,
+here are a few interesting ways in which parallel computing is being used today:
+
+#### Discussion 22.1 Implementations of Parallel Computing
+
+
 
 ## References
 
