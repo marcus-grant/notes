@@ -1,6 +1,6 @@
 ---
 created: 2023-06-14T18:56:46.442Z
-modified: 2023-06-18T17:17:01.459Z
+modified: 2023-06-18T20:05:00.023Z
 tags: [pcde,module22,data,big,science,sql,python,dask,feather,parquet]
 ---
 # PCDE Course Module 22 Content
@@ -551,6 +551,47 @@ deepen the discussion.
 * Q12: What does the `dask-scheduler` command do?
   * It manages the memory distribution across `dask-workers` **(wrong)**.
   * It manages all dask tasks **(correct)**.
+
+## Discussion 22.2: Use Cases of Web Sockets
+
+### Discussion 22.2 Introduction
+
+As you continue to learn about data streaming platforms,
+you will build on your understanding of how web sockets are useful for
+maintaining a steady connection between the client and the server.
+Web sockets enable instant data exchange and
+are supported by all modern browsers.
+You can begin using web sockets immediately in your web applications.
+
+This discussion will help you determine whether or
+not web sockets would be useful for a particular project scenario.
+The key questions to consider when assessing the use of web sockets are:
+
+* Would the application involve multiple users communicating?
+* Would the application alignment with the server-side data that's
+  constantly changing?
+
+### Discussion 22.2 Instructions
+
+For your discussion post, choose any two project scenarios from
+the list below and explain why you might need to use web sockets for that
+specific application type.
+Be sure to address the two questions above in each scenario that you analyze.
+See the project scenarios below:
+
+1. Social Feeds
+2. Multiplayer Games
+3. Collaborative Editing / Coding
+4. Click-stream Data
+5. Live Stock Market
+6. Location Based Applications
+
+Read the statements posted by your peers.
+Engage with them by responding with thoughtful comments and questions to
+deepen the discussion.
+
+**Suggested Time:** 60 minutes
+**Suggested Length:** 250 words
 
 ## References
 
