@@ -1,6 +1,6 @@
 ---
 created: 2023-06-14T18:56:46.442Z
-modified: 2023-06-18T14:30:44.250Z
+modified: 2023-06-18T15:31:58.026Z
 tags: [pcde,module22,data,big,science,sql,python,dask,feather,parquet]
 ---
 # PCDE Course Module 22 Content
@@ -147,7 +147,7 @@ I chose to try and download some of the reddit archives on [archive.org][archive
 Since the Reddit API is being heavily charged per use starting this week,
 I thought it'd be topical to try and download some of the archives.
 I got a history of a subreddit from 2005 to earlier in the year.
-Compressed with Zstandard, the archive is 180MB.
+Compressed with Z-standard, the archive is 180MB.
 Uncompressed, it's 631MB as a collection of JSON files.
 
 Due to it being the responses to Reddit's once public API,
@@ -453,15 +453,64 @@ Nvidia is the premier organization that designs and
 produces graphic processing units (GPUs).
 Since Nvidia introduced GPUs that could process general application data in
 parallel in 2006, the practice of parallel computing has expanded to
-all levels of the data engineering industry (Gossett 2020).
+all levels of the data engineering industry [(Gossett 2020)][gossett20].
 GPUs are ideal for parallel computing,
 as they have large shared memory busses and multiple cores.
 Now that this technology has taken off and become widely available,
 here are a few interesting ways in which parallel computing is being used today:
 
-#### Discussion 22.1 Implementations of Parallel Computing
+### Discussion 22.1 Implementations of Parallel Computing
 
+#### Parallel Computing in Banking
 
+Today, large banks use tens of thousands of cutting edge GPUs to
+process credit scores, perform risk modeling, and detect fraud.
+By processing this data in parallel using GPUs vs. CPUs,
+banks have reported savings of up to 80% and have improved risk calculations by
+40% [(Gossett 2020)][gossett20].
+GPUs are also used within the crypt-mining industry.
+
+#### Parallel Computing in the Automotive Industry
+
+The intricate,
+complex systems of modern automobiles require hundreds of computers to drive a car.
+Today, cars must process information in real time to
+successfully run advanced technologies, such as lane-keeping assistant and
+adaptive cruise control [(Gossett 2020)][gossett20].
+The instantaneous output of these computers is made possible by parallel computing.
+Not only is the technology in automobile design reliant on parallel computing,
+but modern race car drivers also use complex simulation software,
+which is only made possible through the speed of parallel computing [(Gossett 2020)][gossett20].
+
+#### Parallel Computing in the Medical Industry
+
+The processing power of parallel computing also
+allows for advances in medical research.
+Acellera is a London-based organization that
+applies parallel computing architecture to
+run simulations of molecular dynamics to aid in drug discovery. [(Gossett 2020)][gossett20]
+
+### Discussion 22.1 Instructions
+
+In this discussion post, you will consider the examples above and
+research other ways that parallel computing is used across different industries.
+In your discussion post, respond to the following prompts:
+
+* Identify two different implementations of parallel computing that
+* have led or could lead to innovation in a specific field.
+* What are some challenges of each of these implementations?
+* Could the use of parallel computing in these instances potentially lead to
+* the development or discovery of entirely new technologies?
+* If the examples you have selected are new technologies,
+  what are some of the limitations or challenges that
+  prevented their development previously?
+* If the examples you have selected are existing technologies,
+  how is the use of parallel computing changing the way that
+  the product is developed or used?
+
+Read the statements posted by your peers.
+Engage with them by responding with thoughtful comments and questions to
+deepen the discussion.
 
 ## References
 
@@ -471,6 +520,7 @@ here are a few interesting ways in which parallel computing is being used today:
 * [Archive.org][archive]
 * [PCDE Activity 22.1 Download][pcde-act-22-1-dl]
 * [Activity 22.2 Download][pcde-act22-2-dl]
+* [Gossett, Stephen. '9 Parallel Processing Examples & Applications'. 2020-01-22][gossett20]
 
 <!-- Hidden References -->
 **TODO**: Add this archive to your own archive for reliable access.
@@ -480,6 +530,7 @@ here are a few interesting ways in which parallel computing is being used today:
 [archive]: https://archive.org/ "Archive.org"
 [pcde-act-22-1-dl]: https://classroom.emeritus.org/courses/1412/files/1004651/download "PCDE Activity 22.1 Download"
 [pcde-act22-2-dl]: https://classroom.emeritus.org/courses/1412/files/1004592/download "Activity 22.2 Download"
+[gossett20]: https://builtin.com/hardware/parallel-processing-example "Gossett, Stephen. '9 Parallel Processing Examples & Applications'. 2020-01-22"
 
 ### Note Links
 
