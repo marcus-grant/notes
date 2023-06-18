@@ -1,6 +1,6 @@
 ---
 created: 2023-03-06T10:43:49.354Z
-modified: 2023-03-07T10:38:21.990Z
+modified: 2023-06-18T17:46:54.200Z
 tags: [network,computer,protocol,ip,http,ssh,ftp,webdav,pcde,module10]
 ---
 # Computer Networks
@@ -37,7 +37,7 @@ A subnet is a logical division of an IP network.
 
 ### HTTP
 
-[HTTP][] is by far the most used application layer protocol on the Internet.
+[HTTP][-http] is by far the most used application layer protocol on the Internet.
 
 ## References
 
@@ -50,4 +50,7 @@ A subnet is a logical division of an IP network.
 
 ### Note Links
 
+* [HyperText Transfer Protocol][-http]
+
 <!-- Hidden References -->
+[-http]: http.md "HyperText Transfer Protocol"

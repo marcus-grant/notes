@@ -1,6 +1,6 @@
 ---
 created: 2023-06-14T18:56:46.442Z
-modified: 2023-06-18T15:31:58.026Z
+modified: 2023-06-18T17:17:01.459Z
 tags: [pcde,module22,data,big,science,sql,python,dask,feather,parquet]
 ---
 # PCDE Course Module 22 Content
@@ -512,6 +512,46 @@ Read the statements posted by your peers.
 Engage with them by responding with thoughtful comments and questions to
 deepen the discussion.
 
+### My Response
+
+***TODO:*** Add my response here.
+
+## Knowledge Check 22.1: DASK and Parallel Computing
+
+* Q1: Which of the following is correct about DASK?
+  * DASK allows multiple tasks to run in parallel **(correct)**.
+* Q2: Which of the following optinos is correct about threads?
+  * All the answer options are correct **(correct)**.
+* Q3: Which of the following libraries from DASK can be used for
+  parallel computing?
+  * `delayed` **(correct)**.
+* Q4: Which of the following statements can be used to create a DASK dataframe?
+  * `datasets.timeseries()`
+  * `dask.timeseries()`
+  * `dask.datasets.timeseries()` **(correct)**.
+  * `dask.datasets.time()`
+* Q5: Which of the following pandas libraries can be used to
+  create 100 files in parallel?
+  * DASK **(correct)**.
+* Q6: Which of the Python statements can be used to import DASK dataframes?
+  * `import dask.dataframe` **(correct)**.
+* Q7: Which of the following DASK functions are for distributed computing w/ DASK?
+  * `dask-scheduler` and `dask-worker` **(correct)**.
+* Q8: Which Python statements import a DASK client to a Python workspace in
+  a distributed processing environment?
+  * `from dask.distributed import Client` **(correct)**.
+* Q9: What is the meaning of thread in parallel computing?
+  * single pipeline that is responsible for processing a specific smaller task in
+    order to solve a larger problem. **(correct)**.
+* Q10: Which of the following are the levels of parallel computing?
+  * Bit-level, instruction-level, data-level, task-level **(wrong)**.
+  * Instruction level and task level **(correct)**.
+* Q11: Given a task, `a`, which DASK command is used for task visualization?
+  * `a.visualize()` **(correct)**.
+* Q12: What does the `dask-scheduler` command do?
+  * It manages the memory distribution across `dask-workers` **(wrong)**.
+  * It manages all dask tasks **(correct)**.
+
 ## References
 
 ### Web Links
@@ -538,9 +578,11 @@ deepen the discussion.
 * [Parquet (Apache Columnar Storage Format)][-parquet]
 * [Feather (Apache Columnar Storage Format)][-feather]
 * [DASK (Python Multiprocessing Library)][-dask]
+* [Web Sockets][-web-sock]
 
 <!-- Hidden References -->
 [-pd]: pandas.md "Pandas (Python Dataframe Library)"
 [-parquet]: parquet.md "Parquet (Apache Columnar Storage Format)"
 [-feather]: apache-feather.md "Feather (Apache Columnar Storage Format)"
 [-dask]: python-dask.md "DASK (Python Multiprocessing Library)"
+[-web-sock]: web-sockets.md "Web Sockets"
