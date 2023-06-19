@@ -1,6 +1,6 @@
 ---
 created: 2023-06-14T18:56:46.442Z
-modified: 2023-06-18T20:05:00.023Z
+modified: 2023-06-19T08:49:46.940Z
 tags: [pcde,module22,data,big,science,sql,python,dask,feather,parquet]
 ---
 # PCDE Course Module 22 Content
@@ -593,6 +593,93 @@ deepen the discussion.
 **Suggested Time:** 60 minutes
 **Suggested Length:** 250 words
 
+## Activity 22.4: Streaming Web Sockets
+
+### Activity 22.4 Introduction
+
+In this module, you learned about streaming data implementation strategies and
+how web sockets are beneficial in implementing live data connection apps.
+
+In this activity,
+you will implement web socket communication by using the Python sockets library.
+Through the steps of this activity,
+you will execute packet transfer from server to
+client to help you better understand how packets can be created by
+putting the message length as a header.
+
+### Activity 22.4 Instructions
+
+#### Activity 22.4 Step 1
+
+Download and extract the Python code from
+the [johntango Streaming GitHub repository][gh-act-22-4] to your local machine.
+Provide a screenshot to show that you have successfully downloaded and
+extracted the johntango Streaming GitHub repository on your local machine.
+
+#### Activity 22.4 Step 2
+
+Open the `streamServer.py` file in VS Code.
+Provide a screenshot to show that
+you successfully opened the `streamServer.py` file in VS Code.
+
+#### Activity 22.4 Step 3
+
+To start a web socket server, execute the `python streamServer.py` command from
+the Terminal window in VS Code.
+This will not print anything until the client connects to the server.
+Provide a screenshot to show that you successfully opened the command prompt in
+the `streamServer.py` folder and
+ran the `python streamServer.py` command without errors.
+
+#### Activity 22.4 Step 4
+
+To start a web socket client,
+open a new command line interface in the VS Code Terminal and
+execute the `python streamClientEx1.py` command from the Terminal.
+This will establish a connection with the server and
+receive packets from the server.
+Provide a screenshot to show that you successfully opened the command prompt in
+the `streamClientEx1.py` folder, ran the `python streamClientEx1.py` command,
+and received the message from the server.
+
+#### Activity 22.4 Step 5
+
+Review the server console that indicates that
+the connection has been established and shows that
+packets are being sent to the client.
+Provide a screenshot to show that after running the client packets that
+are being sent to the client.
+Provide a screenshot to show that after running the client code,
+you can view the sent messages output over the server CLI.
+
+#### Activity 22.4 Step 6
+
+To review another client communication,
+open a new command line interface in the VS Code Terminal and
+execute the `python streamClient01Soln.py` command from the Terminal.
+This will establish another connection with
+the server and receive packets from the server.
+Provide a screenshot to show that you successfully opened the command prompt in
+the `streamClient01Soln.py` file, ran the `python streamClient01Soln.py` command,
+and can view the received message from the server.
+
+#### Activity 22.4 Step 7
+
+Open the `streamclient01Soln.py` file.
+Add a debugging checkpoint at line 13 and run the code to debug it.
+Provide a screenshot to show that you successfully opened the client code in
+the `streamClient01Soln.py` folder and added a debugging checkpoint at line 13.
+
+#### Activity 22.4 Step 8
+
+The previous step will establish a connection with
+the server and receive packets from the server.
+The variables listed in the left panel in VS Code when debugging your code show that
+the value of the Python `msg` variable is "`'29    The ti'`".
+Provide a screenshot to show that you were able to
+run the client code in debugging mode and see that
+the value of the Python `msg` variable is "`'29    The ti'`" in VS Code.
+
 ## References
 
 ### Web Links
@@ -602,6 +689,7 @@ deepen the discussion.
 * [PCDE Activity 22.1 Download][pcde-act-22-1-dl]
 * [Activity 22.2 Download][pcde-act22-2-dl]
 * [Gossett, Stephen. '9 Parallel Processing Examples & Applications'. 2020-01-22][gossett20]
+* [Activity 22.4: Web Socket Streaming Download][gh-act-22-4]
 
 <!-- Hidden References -->
 **TODO**: Add this archive to your own archive for reliable access.
@@ -612,6 +700,7 @@ deepen the discussion.
 [pcde-act-22-1-dl]: https://classroom.emeritus.org/courses/1412/files/1004651/download "PCDE Activity 22.1 Download"
 [pcde-act22-2-dl]: https://classroom.emeritus.org/courses/1412/files/1004592/download "Activity 22.2 Download"
 [gossett20]: https://builtin.com/hardware/parallel-processing-example "Gossett, Stephen. '9 Parallel Processing Examples & Applications'. 2020-01-22"
+[gh-act-22-4]: https://github.com/johntango/Streaming "Activity 22.4: Web Socket Streaming Download"
 
 ### Note Links
 
