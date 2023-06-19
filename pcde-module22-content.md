@@ -1,6 +1,6 @@
 ---
 created: 2023-06-14T18:56:46.442Z
-modified: 2023-06-19T08:49:46.940Z
+modified: 2023-06-19T15:00:14.692Z
 tags: [pcde,module22,data,big,science,sql,python,dask,feather,parquet]
 ---
 # PCDE Course Module 22 Content
@@ -680,6 +680,90 @@ Provide a screenshot to show that you were able to
 run the client code in debugging mode and see that
 the value of the Python `msg` variable is "`'29    The ti'`" in VS Code.
 
+## Final Assignment 22
+
+### Part 1: Parallel Computing with Pandas, NumPy, and DASK
+
+#### 22.1: Introduction
+
+The final assignment for this module is divided into two parts.
+
+In Part 1 of the final assignment, you will compare the performance of the pandas,
+NumPy, and DASK libraries when performing calculations.
+In the first section, you will be working with NumPy and DASK arrays to
+analyze which library is faster.
+In the next section, you will make the same comparison working with
+pandas and DASK dataframes.
+
+Part 1 of the final assignment is worth 60 points.
+
+#### 22.1: Instructions
+
+##### Step 1
+
+Download the [Assignment 22.1][pcde-assignment-22-1-dl] folder and
+open it using your local instance of Jupyter Notebook.
+There are 14 questions throughout the Jupyter Notebook for this activity.
+Some questions will require you to modify code,
+and others will require open-ended written responses.
+
+##### Step 2
+
+Read the instructions and modify the code that
+is provided in the related cells for the following questions:
+
+* a: Part 1: 1, 2, 4, 5, 6, 8, 9
+* b: Part 2: 11, 13
+
+##### Step 3
+
+Read the instructions and complete the open-ended questions for
+questions 3, 7, 10, 12, and 14.
+Below each cell that contains a question,
+you will see a Markdown cell in which you can aswer that question.
+Responses should fully answer the question that is provided,
+and each response should be approximately two or three sentences.
+
+### 22.1: Submission
+
+Your submission for this activity should be a Jupyter Notebook that
+includes your completed code and your open-ended responses:
+
+#### Part1: Numpy vs. DASK
+
+1. Update the code cell by filling in the ellipsis to
+    create a two-dimensional NumPy array, `arr`, with entries from
+    1 to 1,000 and dimensions 2,000 by 2,000.
+2. Update the code cell by setting the value of the `chunks` argument to
+    be equal to a tuple with elements equal to 250 and 250 to
+    divide the NumPy array into smaller chunks, each with dimensions 250 by 250.
+3. Describe your observations from the result that prints from
+    running the code provided.
+    State the size of each chunk and
+    how many chunks the NumPy array is divided into.
+4. Update the code cell by calling the `npartitions` method on the DASK array to
+    print the number of partitions to the screen.
+5. Update the code cell by setting the `axis` argument equal to
+    0 to sum over the rows.
+6. Update the code cell by calling the correct DASK function to
+    visualize how each row is summed.
+7. Explain your observations of the graph produced by the code provided.
+8. Update the code cell by calling the `numpy_arr_chk()` function and
+    assigning the result to the `num_time` variable.
+9. Update the code cell by calling the `dask_arr_chk()` function and
+      assigning the result to the `dask_time` variable.
+10. Describe which library performs better,
+    NumPy or DASK, and explain your reasoning.
+11. Update the code cell by completing the code to
+    read the same dataset using DASK with the DASK `read_csv()` function.
+12. Describe which dataframe takes longer, pandas or DASK,
+    and explain your reasoning.
+13. Update the code cell by setting the `npartition` argument inside of
+    the `from_pandas` function equal to 2 and run the code cell to
+    compare the `df_pandas_big` and `df_dask_big` dataframes.
+14. Describe which library takes less time to run, pandas or DASK,
+    and explain your reasoning.
+
 ## References
 
 ### Web Links
@@ -690,6 +774,7 @@ the value of the Python `msg` variable is "`'29    The ti'`" in VS Code.
 * [Activity 22.2 Download][pcde-act22-2-dl]
 * [Gossett, Stephen. '9 Parallel Processing Examples & Applications'. 2020-01-22][gossett20]
 * [Activity 22.4: Web Socket Streaming Download][gh-act-22-4]
+* [PCDE Course Assignment 22.1 Download][pcde-assignment-22-1-dl]
 
 <!-- Hidden References -->
 **TODO**: Add this archive to your own archive for reliable access.
@@ -701,6 +786,7 @@ the value of the Python `msg` variable is "`'29    The ti'`" in VS Code.
 [pcde-act22-2-dl]: https://classroom.emeritus.org/courses/1412/files/1004592/download "Activity 22.2 Download"
 [gossett20]: https://builtin.com/hardware/parallel-processing-example "Gossett, Stephen. '9 Parallel Processing Examples & Applications'. 2020-01-22"
 [gh-act-22-4]: https://github.com/johntango/Streaming "Activity 22.4: Web Socket Streaming Download"
+[pcde-assignment-22-1-dl]: https://classroom.emeritus.org/courses/1412/files/1004594/download "PCDE Course Assignment 22.1 Download"
 
 ### Note Links
 

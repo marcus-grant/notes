@@ -1,6 +1,6 @@
 ---
 created: 2022-12-05T16:17:20.340Z
-modified: 2023-06-14T15:24:19.989Z
+modified: 2023-06-19T14:25:48.352Z
 tags: [python,lang,program,overview,language,software,develop]
 ---
 # Python (Programming Language)
@@ -570,6 +570,12 @@ at least at first, because it has a consistent API for all of its algorithms.
 For simpler and more common algorithms, it's a good idea to use SciKit-Learn as
 a starting point or for analysis or prototyping.
 
+### Web Sockets
+
+A popular and well maintained library for dealing with [WebSocket][-ws]s,
+the real-time HTTP based network protocol,
+is the [websocket library][-py-ws].
+
 ## Statistics in Python
 
 Python over the years has become *one of* the preferred ways that we analyze data.
@@ -665,6 +671,27 @@ It also comes with a package manager called `conda` that
 allows you to install libraries and manage environments.
 See the [Anaconda Python and Conda notes][-conda] for more information.
 
+## Concurrency
+
+### Asynchronous Programming
+
+[Asynchronous programming][-async] is when you have a program that
+can do multiple things at once.
+Python's standard library now has [asyncio][-asyncio] to
+provide both asynchronous and concurrent programming paradigms to python.
+
+## Multiprocessing
+
+Multiprocessing can be considered any kind of [parallel-computing][-parallel].
+That is, instead of sequentially performing every step in a program,
+either split the operations up and run them on multiple threads on a single CPU or
+on multiple sperate computers.
+Python has a few libraries and related workflows that allows
+saving energy and time on computation by
+splitting the workload into parallel operations.
+
+* [DASK][-dask]
+
 ## References
 
 ### Note References
@@ -681,6 +708,12 @@ See the [Anaconda Python and Conda notes][-conda] for more information.
 * [Jupyter Notebooks][-jnb]
 * [Python Version Management][-py-version]
 * [Anaconda Python and Conda notes][-conda]
+* [WebSocket][-ws]
+* [Python WebSocket][-py-ws]
+* [Asynchronous Programming][-async]
+* [Asyncio (Python Asynchronous Programming Library)][-asyncio]
+* [Parallel Computing][-parallel]
+* [DASK (Python Parallel Computation Library)][-dask]
 
 <!-- Hidden Reference Links Below Here -->
 [-lang]: programming-language.md "Programming Language"
@@ -695,6 +728,12 @@ See the [Anaconda Python and Conda notes][-conda] for more information.
 [-jnb]: jupyter.md "Jupyter Notebooks"
 [-py-version]: ./python-version.md "Python Version Management"
 [-conda]: ./python-anaconda.md "Anaconda Python and Conda notes"
+[-ws]: web-socket.md "WebSocket"
+[-py-ws]: python-web-socket.md "Python WebSocket"
+[-async]: async.md "Asynchronous Programming"
+[-asyncio]: asyncio.md "Asyncio (Python Asynchronous Programming Library)"
+[-parallel]: parallel-computing.md "Parallel Computing"
+[-dask]: python-dask.md "DASK (Python Parallel Computation Library)"
 
 ### Web/Article References
 

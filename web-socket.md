@@ -1,6 +1,6 @@
 ---
 created: 2023-06-18T17:16:03.177Z
-modified: 2023-06-19T12:42:26.771Z
+modified: 2023-06-19T14:37:05.644Z
 tags: [web,socket,protocol,communication,network,http,client,server,pcde,module22]
 ---
 # Web Sockets
@@ -134,99 +134,17 @@ then the web socket connection can be stopped and closed.
 Now you have an understanding of web sockets and
 how they differ from HTTP protocol.
 
-## Python Examples
+## Implementation of WebSocket
 
->**TODO**: This should be split into its own document and linked to from here
+Web sockets can be implemented in most common programming languages and
+network communication ecosystems.
+In these sections are some examples in different programming ecosystems.
 
-We can implement WebSocket *servers* and *clients* in Python using
-the `websockets` library.
+### Python WebSocket
 
-### Install Python Sockets
-
-```bash
-pip install websockets
-```
-
-### Python WebSocket Server
-
-Using the `socket` module,
-a server can be created where the server will listen for
-incoming connections from clients.
-The incoming connections will establish long-lived connections between
-the *client* and the *server* through a socket.
-
-Then the server establishes an indefinite loop to
-keep sending updates to the client.
-
-```python
-# ws-stream-server.py
-import socket
-import time
-HEADER = 10
-
-ws = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-ws.bind((socket.gethostname(), 9092))
-ws.listen(5)
-
-while True:
-    (clientsocket, address) = ws.accept()
-    print(f"Connect from {address} established")
-
-    msg = "Hello From Server- You are Connected"
-    msg = f"{len(msg):<{HEADER}}"+msg
-
-    #clientsocket.send(bytes(msg, 'utf-8'))
-# start pushing messages every 3 seconds
-    for i in range(20):
-        time.sleep(0)
-        msg = f"The time is {time.time()}"
-        msg = f'{len(msg):<{HEADER}}' + msg  # what is this doing?
-        clientsocket.send(bytes(msg, 'utf-8'))
-        print(msg)
-
-```
-
-### Python WebSocket Client
-
-*Incomplete god-awful lecture*.
-
-```python
-# ws-stream-client.py
-import socket
-HEADER = 10
-
-ws = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-ws.connect((socket.gethostname(), 9092))
-
-while True:
-    full_msg = ''
-    new_msg = True
-    while True:
-        msg = ws.recv(16).decode('utf-8')
-        #print(f"got: {msg}")
-        if new_msg:
-            # get length from Header
-            tmp_msg = full_msg + msg
-            msg_len = int(tmp_msg[:HEADER])
-            new_msg = False
-
-        full_msg += msg
-        if len(full_msg) >= msg_len + HEADER:
-            total_msg_len = msg_len + HEADER
-            print(f"M:{full_msg[0:total_msg_len]}")
-            next = full_msg[total_msg_len:]
-            full_msg = next
-            new_msg = True
-```
-
-Note how this message handling allows for messages to be split up for
-exceeding the allowed number of characters per message.
-This is done by examining the length of the message and if the whole thing is
-contained by the incoming `msg` buffer.
-If it is not, it appends `full_msg` with the incoming `msg` on
-the next iteration of the loop.
-These sorts of chunking of data is going to be necessary to
-manage the messages being sent.
+[Python][-py] has a commonly used library `websocket` which
+implements the WebSockets protocol.
+See the [linked document for details on implementation][-py-sock].
 
 ## References
 
@@ -249,9 +167,13 @@ manage the messages being sent.
 * [Transmission Control Protocol (TCP)][-tcp]
 * [Internet Protocol (IP)][-ip]
 * [HyperText Transfer Protocol (HTTP)][-http]
+* [Python][-py]
+* [Python Web Socket][-py-sock]
 
 <!-- Hidden References -->
 [-cl-srv]: client-server.md "Client Server Architecture"
 [-tcp]: transmission-control-protocol.md "Transmission Control Protocol (TCP)"
 [-ip]: internet-protocol.md "Internet Protocol (IP)"
 [-http]: http.md "HyperText Transfer Protocol (HTTP)"
+[-py]: python.md "Python"
+[-py-sock]: python-web-socket.md "Python Web Socket"
