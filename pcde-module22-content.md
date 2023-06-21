@@ -1,6 +1,6 @@
 ---
 created: 2023-06-14T18:56:46.442Z
-modified: 2023-06-19T15:00:14.692Z
+modified: 2023-06-21T16:18:35.393Z
 tags: [pcde,module22,data,big,science,sql,python,dask,feather,parquet]
 ---
 # PCDE Course Module 22 Content
@@ -164,6 +164,103 @@ it's a relatively new format and
 a lot of wrapper libraries for Python and R already exist to
 perform analysis on the JSON data with all its nested structures and
 particularly named keys.
+
+## Try-It Activity 22.2: Running Parallel Operations in DASK
+
+### Introduction to Try-It Activity 22.2
+
+The DASK library in Python takes advantage of the multiple cores available in
+modern computers to run threads in parallel.
+In this try-it activity,
+you will practice using Python’s DASK library to run threads in parallel.
+
+This try-it activity will help you to analyze the performance gains realized by
+running threads in parallel.
+First, you will run functions sequentially.
+Then, you will run the same functions in parallel.
+Finally, you will compare the performance in both cases.
+
+### Instructions for Try-It Activity 22.2
+
+#### Try-It Activity 22.2 Step 1
+
+Download the [Try-It Activity 22.2][try-it-22-2-dl] Jupyter Notebook folder.
+
+#### Try-It Activity 22.2 Step 2
+
+Open the command prompt with admin privileges and run the following commands to
+install both the DASK and Graphviz libraries in the same terminal window.
+
+```sh
+pip install dask
+pip install graphviz
+jupyter notebook
+```
+
+#### Try-It Activity 22.2 Step 3
+
+Once you have your local instance of Jupyter Notebook open,
+navigate to the Try_It_Activity_22.2 folder.
+There are nine questions in the notebook.
+
+#### Try-It Activity 22.2 Step 4
+
+Read the instructions and modify the code that is provided in
+the related cells for each question
+
+### Try-It Activity 22.2 Discussion Prompt
+
+Now that you have some practice using Python’s DASK library to
+run threads in parallel, discuss your experience with your peers.
+In your discussion post, respond to each of the questions below:
+
+* Do you observe any time differences between running threads sequentially and
+  in parallel?
+* Are there any performance gains when running threads in parallel?
+  If so, describe those benefits in detail.
+* Parallelization is an important technique for dealing with
+  very large volumes of data.
+  Why do you think it is necessary to implement parallel operations when
+  working with large data files?
+
+**Suggested Time**: 60 minutes
+
+**Suggested Length**: 250-300 words
+
+This is a required activity and counts toward course completion.
+
+### Try-It Activity 22.2: My Response
+
+#### Do you observe any time differences between running threads sequentially and in parallel?
+
+Yes, there are time differences between running threads sequentially and in parallel.
+Assuming that parts of the total computation can be performed in parallel,
+that is that the operations are independent from one another,
+then you can split the task up and perform it on many threads or
+even separate computers entirely.
+
+#### Are there any performance gains when running threads in parallel?
+
+Depending on how independent each mathematical operation is,
+whether intermediate results can be computed independently of each other,
+you could potentially scale close to linearly by making a workload parallel.
+If you look up Amdahl's law however you see that
+most computation doesn't scale linearly when parallel.
+Due to the fact that most computation does have some kind of dependency on
+previous states, at some point you get diminishing returns when adding threads.
+
+#### Importance of Parallelization for Large Datasets
+
+When working with large datasets,
+it's important to parallelize the computation because
+otherwise it can take far too long to perform computation for it to be useful.
+Datasets today can be far too large to even fit into the memory space that
+modern RAM offers, and even if it could would take too long to compute single thread.
+Efficiency can also be increased with parallelization.
+A lot of CPU architectures have an ideal operating clock-rate in terms of
+performing computation using the least amount of energy.
+Operating within that range and splitting the workload to more CPU cores can
+actually increase efficiency.
 
 ## Activity 22.1: Using DASK to Create Multiple Files in Parallel
 
@@ -512,15 +609,82 @@ Read the statements posted by your peers.
 Engage with them by responding with thoughtful comments and questions to
 deepen the discussion.
 
-### My Response
+### Discussion 22.1: My Response
 
-***TODO:*** Add my response here.
+#### Examples of Parallel Computing that Led to Innovation
+
+Similar to how the medical industry has used parallel computation and
+machine learning algorithms to
+experiment in simulated environments different kinds of biochemical interactions,
+the metallurgy industry has done the same to develop new composite materials that
+have beneficial properties.
+Those sorts of simulations and synthetic experiments would take far too long to
+execute on single threaded execution.
+
+Another example is the use of parallel computing in
+the development of new kinds of batteries.
+The exact electrochemical physics of battery technology is highly complex and
+finding the exact kinds of geometries, cathode materials, anode materials,
+and nano-structures within the battery leaves a state space of
+unimaginable numbers of configurations.
+While highly trained scientists can make good hypotheses of what to experiment on,
+the minute details are extremely hard to predict and
+that experimental process can again be accelerated through simulations before
+it gets verified in real world experiments.
+This has led to improvements in the capacity of batteries that are in use today.
+
+#### Challenges of these Implementations
+
+Both my examples involve synthetic experiments run in simulators.
+The main challenge in these sorts of
+uses of parallel computing is the accuracy of the simulations.
+These simulations need to be as close to our real world physics as possible to
+be useful.
+That often involves going well beyond the typical 2nd order differential equations
+that most undergraduate courses will teach about physical phenomena.
+This increases computational complexity and thus requires more computing power.
+So while the complexity of coding these simulations is still there,
+at least the computation time can be reduced by parallelizing the workload.
+
+#### Parallel Computing Leading to New Technologies
+
+I think my two examples demonstrate this quite well.
+Especially when machine learning is involved.
+Machine learning algorithms are naive about the physics involved,
+it just has an objective function to optimize.
+This means that our own human biases aren't as involved in the experimental process and
+a whole new set of unique solutions to physical problems can be quickly experimented and
+validated in the real world.
+
+#### Previous Problems
+
+The previous issues with discovering new composites and battery chemistries was that
+without synthetic experiments involving physics simulations was that
+experimentation takes a lot of effort to set up.
+It's also likely the experiment only tests a small range of possibilities each time.
+Running simulations in parallel can greatly accelerate the process and
+afterwards the best virtual experiments can then be taken to the real world for validation.
+
+
+#### How is Parallel Computing Changing the Way these Products are Developed
+
+As I've already explained,
+the experimental phase of developing products like composites or
+batteries can now be accelerated.
+Checking hypotheses can be accelerated.
+Designing experiments can be accelerated.
+The experiments can even be avoided and let simulations run them and
+once promising simulated experiments have been found,
+then take the effort to validate it in the real world through real experiments.
+All this means is that research and development in the physical sciences can
+go much faster,
+assuming the simulations are accurate enough.
 
 ## Knowledge Check 22.1: DASK and Parallel Computing
 
 * Q1: Which of the following is correct about DASK?
   * DASK allows multiple tasks to run in parallel **(correct)**.
-* Q2: Which of the following optinos is correct about threads?
+* Q2: Which of the following options is correct about threads?
   * All the answer options are correct **(correct)**.
 * Q3: Which of the following libraries from DASK can be used for
   parallel computing?
@@ -592,6 +756,39 @@ deepen the discussion.
 
 **Suggested Time:** 60 minutes
 **Suggested Length:** 250 words
+
+### Discussion 22.2 Response
+
+#### Multiplayer Games
+
+Web sockets would be useful for multiplayer games because
+of the real-time nature of how game clients need to interact in a shared environment. 
+Many if not most online games have a lot of real-time synchronization between
+the game clients and the game server.
+Sometimes games can be asynchronous and changes can be waited on,
+but a lot of the time the simulation stops making sense when there isn't
+a clear causality for everyone's interactions in the game.
+This means that actions in-game,
+need to update a centralized instance of the game in
+a central server as quick as possible.
+Web sockets help this problem by making communications immediate.
+There's no need to wait for responses,
+you just immediately send data over the open, long-lived connection to the server.
+
+#### Live Stock Market
+
+Web sockets help with live stock markets as well.
+When stock trading,
+a lot of data gets produced very quickly.
+Sending the data to a stock trading client immediately through an open connection
+is very important.
+Not only does it improve the user experience,
+it makes the servers serving the data more efficient.
+It means it doesn't have to constantly leave thousands of connections paused to
+await responses.
+With web sockets an open connection is maintained and
+as soon the server has up-to-date data on a stock a user is viewing,
+it immediately sends it.
 
 ## Activity 22.4: Streaming Web Sockets
 
@@ -720,7 +917,7 @@ is provided in the related cells for the following questions:
 Read the instructions and complete the open-ended questions for
 questions 3, 7, 10, 12, and 14.
 Below each cell that contains a question,
-you will see a Markdown cell in which you can aswer that question.
+you will see a Markdown cell in which you can answer that question.
 Responses should fully answer the question that is provided,
 and each response should be approximately two or three sentences.
 
@@ -770,6 +967,7 @@ includes your completed code and your open-ended responses:
 
 * [PCDE Emeritus Try-It Activity 22.1 Download][try-it-22-1]
 * [Archive.org][archive]
+* [PCDE Try-It Activity 22.2 Download][try-it-22-2-dl]
 * [PCDE Activity 22.1 Download][pcde-act-22-1-dl]
 * [Activity 22.2 Download][pcde-act22-2-dl]
 * [Gossett, Stephen. '9 Parallel Processing Examples & Applications'. 2020-01-22][gossett20]
@@ -782,6 +980,7 @@ includes your completed code and your open-ended responses:
 
 [try-it-22-1]: https://classroom.emeritus.org/courses/1412/files/1004624/download "PCDE Try-It Activity 22.1 Download"
 [archive]: https://archive.org/ "Archive.org"
+[try-it-22-2-dl]: https://classroom.emeritus.org/courses/1412/files/1004602/download "PCDE Try-It Activity 22.2 Download"
 [pcde-act-22-1-dl]: https://classroom.emeritus.org/courses/1412/files/1004651/download "PCDE Activity 22.1 Download"
 [pcde-act22-2-dl]: https://classroom.emeritus.org/courses/1412/files/1004592/download "Activity 22.2 Download"
 [gossett20]: https://builtin.com/hardware/parallel-processing-example "Gossett, Stephen. '9 Parallel Processing Examples & Applications'. 2020-01-22"
@@ -795,6 +994,7 @@ includes your completed code and your open-ended responses:
 * [Feather (Apache Columnar Storage Format)][-feather]
 * [DASK (Python Multiprocessing Library)][-dask]
 * [Web Sockets][-web-sock]
+* [Web Sockets in Python][-py-ws]
 
 <!-- Hidden References -->
 [-pd]: pandas.md "Pandas (Python Dataframe Library)"
@@ -802,3 +1002,4 @@ includes your completed code and your open-ended responses:
 [-feather]: apache-feather.md "Feather (Apache Columnar Storage Format)"
 [-dask]: python-dask.md "DASK (Python Multiprocessing Library)"
 [-web-sock]: web-sockets.md "Web Sockets"
+[-py-ws]: ./python-web-socket.md "Web Sockets in Python"

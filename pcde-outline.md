@@ -721,7 +721,12 @@ Machine Learning and Advanced Probability
 #### Module 22: Related Notes
 
 * [PCDE Course: Module 22 Content][-pcde-mod22]
-* ***TODO:*** Add notes for Module 22
+* [Pandas (Python Dataframe Library)][-pd]
+* [Parquet (Apache Columnar Storage Format)][-parquet]
+* [Feather (Apache Columnar Storage Format)][-feather]
+* [DASK (Python Multiprocessing Library)][-dask]
+* [Web Sockets][-web-sock]
+* [Web Sockets in Python][-py-ws]
 
 ## References
 
@@ -829,6 +834,11 @@ Machine Learning and Advanced Probability
 * [K-Means Clustering][-kmean]
 * [Confusion Matrix (Machine Learning)][-confusion]
 * [PCDE Course: Module 22 Content][-pcde-mod22]
+* [Parquet (Apache Columnar Storage Format)][-parquet]
+* [Feather (Apache Columnar Storage Format)][-feather]
+* [DASK (Python Multiprocessing Library)][-dask]
+* [Web Sockets][-web-sock]
+* [Web Sockets in Python][-py-ws]
 
 <!-- Hidden Reference Links Below Here -->
 [-pcde-overview]: pcde-course-overview.md "PCDE Course Overview"
@@ -931,3 +941,8 @@ Machine Learning and Advanced Probability
 [-kmean]: k-means-cluster.md "K-Means Clustering"
 [-confusion]: confusion-matrix.md "Confusion Matrix (Machine Learning)"
 [-pcde-mod22]: pcde-module22-content.md "PCDE Course Module 22 Content"
+[-parquet]: parquet.md "Parquet (Apache Columnar Storage Format)"
+[-feather]: apache-feather.md "Feather (Apache Columnar Storage Format)"
+[-dask]: python-dask.md "DASK (Python Multiprocessing Library)"
+[-web-sock]: web-sockets.md "Web Sockets"
+[-py-ws]: ./python-web-socket.md "Web Sockets in Python"
