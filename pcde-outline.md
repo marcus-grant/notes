@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T10:12:17.264Z
-modified: 2023-06-21T16:24:15.009Z
+modified: 2023-06-21T16:31:59.913Z
 tags: [pcde,course,outline,overview,data,learn]
 ---
 # PCDE Course Outline
@@ -728,6 +728,42 @@ Machine Learning and Advanced Probability
 * [Web Sockets][-web-sock]
 * [Web Sockets in Python][-py-ws]
 
+### Module 23: Creating a Data Pipeline
+
+#### Module 23: Due Date
+
+* Due Wednesday, June 28, 2023 at 1629 UTC
+  * 1829 CET
+  * 1229 EST
+
+#### Module 23: Goals
+
+1. Discuss use cases for JavaScript.
+2. Identify key concepts related to visualization, unstructured data, and Javascript.
+3. Implement Python tools to visualize word frequency data.
+4. Implement JavaScript tools to visualize word frequency data.
+5. Create a sense-making data pipeline.
+
+#### Module 23: Activities
+
+* **Knowledge Checks**
+  * Knowledge Check 23.1: Visualization, Unstructured Data and Javascript
+* **Discussion**
+  * Discussion 23.1: Use Cases for Javascript
+* **Try-It Activities**
+  * Try-It Activity 23.1: Visualizing Word Frequency Data
+* **Project**
+  * Project 23.1: Creating a sense-making data pipeline
+**Self-Study Activities**
+  * Self-Study Discussion 23.2: Thinking Like a Data Scientist:
+    Creating a Data Pipeline
+  * Self-Study Flashcards: Module 23 Flashcards
+
+#### Module 22: Related Notes
+
+* [PCDE Course: Module 23 Content][-pcde-mod23-content]
+***TODO add note list from content doc***
+
 ## References
 
 ### Notes References
@@ -839,6 +875,7 @@ Machine Learning and Advanced Probability
 * [DASK (Python Multiprocessing Library)][-dask]
 * [Web Sockets][-web-sock]
 * [Web Sockets in Python][-py-ws]
+* [PCDE Course Module 23 Content][-pcde-mod23-content]
 
 <!-- Hidden Reference Links Below Here -->
 [-pcde-overview]: pcde-course-overview.md "PCDE Course Overview"
@@ -946,3 +983,4 @@ Machine Learning and Advanced Probability
 [-dask]: python-dask.md "DASK (Python Multiprocessing Library)"
 [-web-sock]: web-sockets.md "Web Sockets"
 [-py-ws]: ./python-web-socket.md "Web Sockets in Python"
+[-pcde-mod23-content]: pcde-module23-content.md "PCDE Course Module 23 Content"
