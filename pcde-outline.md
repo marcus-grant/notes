@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T10:12:17.264Z
-modified: 2023-06-21T16:22:54.997Z
+modified: 2023-06-21T16:24:15.009Z
 tags: [pcde,course,outline,overview,data,learn]
 ---
 # PCDE Course Outline
@@ -98,7 +98,7 @@ For an overview of the course, see the [PCDE Course Overview][-pcde-overview].
 ### Note Links
 
 * [PCDE Course: Module 3 Content][pcde-mod3-content-zk]
-* [Pandas: Python Data Analysis Library][pandas-zk]
+* [Pandas: Python Data Analysis Library][-pd]
 
 ## Module 4: Databases & Intro to SQL
 
@@ -746,7 +746,7 @@ Machine Learning and Advanced Probability
 * [Matplotlib: Python Plotting Library][matplotlib-zk]
 * [Normal Distribution][normal-dist-zk]
 * [PCDE COurse: Module 3 Content][pcde-mod3-content-zk]
-* [Pandas: Python Dataframes & Data Manipulation][pandas-zk]
+* [Pandas: Python Dataframes & Data Manipulation][-pd]
 * [PCDE Course Materials (Module 5)][pcde-module5-content-zk]
 * [SQL Overview][sql-zk]
 * [Logical Operators in SQL][sql-logical-ops-zk]
@@ -851,7 +851,7 @@ Machine Learning and Advanced Probability
 [pcde-mod2-content-zk]: ./pcde-module2-content.md "PCDE Course: Module 2 Content"
 [-py]: python.md "Python"
 [-py-collections]: python-collections.md "Python Collections"
-[pandas-zk]: ./pandas.md "Pandas: Python Dataframes & Data Manipulation"
+[-pd]: ./pandas.md "Pandas: Python Dataframes & Data Manipulation"
 [zk-probs]: ./probability.md "Mathematical Probability Overview"
 [numpy-zk]: ./numpy.md "NumPy: Numerical Python Library"
 [matplotlib-zk]: ./matplotlib.md "Matplotlib: Python Plotting Library"

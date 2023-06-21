@@ -1,6 +1,6 @@
 ---
 created: 2023-06-14T18:56:46.442Z
-modified: 2023-06-21T16:18:35.393Z
+modified: 2023-06-21T16:24:46.394Z
 tags: [pcde,module22,data,big,science,sql,python,dask,feather,parquet]
 ---
 # PCDE Course Module 22 Content
@@ -665,7 +665,6 @@ It's also likely the experiment only tests a small range of possibilities each t
 Running simulations in parallel can greatly accelerate the process and
 afterwards the best virtual experiments can then be taken to the real world for validation.
 
-
 #### How is Parallel Computing Changing the Way these Products are Developed
 
 As I've already explained,
@@ -762,7 +761,7 @@ deepen the discussion.
 #### Multiplayer Games
 
 Web sockets would be useful for multiplayer games because
-of the real-time nature of how game clients need to interact in a shared environment. 
+of the real-time nature of how game clients need to interact in a shared environment.
 Many if not most online games have a lot of real-time synchronization between
 the game clients and the game server.
 Sometimes games can be asynchronous and changes can be waited on,
