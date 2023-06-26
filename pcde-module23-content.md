@@ -1,6 +1,6 @@
 ---
 created: 2023-06-21T16:32:04.292Z
-modified: 2023-06-26T11:10:58.217Z
+modified: 2023-06-26T15:24:02.494Z
 tags: [pcde,data,javascript,pipeline,visual,graphic]
 ---
 # PCDE Course Module 23 Content
@@ -75,6 +75,7 @@ Finally, visualize the data using word frequency representations.
 * [Python][-py]
 * [URL-Lib (Python StdLib)][-py-url]
 * [HyperText Markup Language (HTML)][-html]
+* [Exploratory Data Analysis (EDA, Data Science)][-eda]
 
 <!-- Hidden References -->
 [-pcde-proj-23-1]: pcde-project-23-1.md "PCDE Course Project 23.1"
@@ -83,3 +84,4 @@ Finally, visualize the data using word frequency representations.
 [-py]: python.md "Python"
 [-py-url]: python-urllib.md "URL-Lib (Python StdLib)"
 [-html]: html.md "HyperText Markup Language (HTML)"
+[-eda]: ./exploratory-data-analysis.md "Exploratory Data Analysis (EDA, Data Science)"
