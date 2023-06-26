@@ -1,6 +1,6 @@
 ---
 created: 2023-06-21T16:32:04.292Z
-modified: 2023-06-21T17:32:07.000Z
+modified: 2023-06-26T11:10:58.217Z
 tags: [pcde,data,javascript,pipeline,visual,graphic]
 ---
 # PCDE Course Module 23 Content
@@ -28,15 +28,58 @@ use the D3 library to create a visualization of word frequency data.
 Note: Make sure you have installed the tools you will need for Modules 23-24 in
 the Course Tools Module before beginning this module.
 
+## Lecture 23.2: Sense-making Using Course Catalog Data
+
+***TODO:*** consider turning the sense-making pipeline into a document
+
+Sense-making is something that we're always doing.
+We're always trying to make sense of the world.
+And in this project we're going to be doing precisely that with data.
+And we'll be looking at data from MIT's course catalog.
+During that process we'll try to *sense-make* from the data within
+the online course catalog,
+we're going to learn this process to
+create a [sense-making data pipeline][-sense-pipe].
+
+MIT's course catalog exists on this address
+[https://student.mit.edu/catalog/index.cgi][mit-catalog].
+To explore the data, a good start might be to use [cURL][-curl].
+
+```sh
+curl http://student.mit.edu/catalog/index.cgi
+```
+
+Then we get some HTML back that acts as an index to the catalog.
+We should be able to collect those and crawl deeper into the site map.
+For that though we should probably use [Python][-py] or another scripting language.
+Specifically, we're going to use [Python's Standard Library URL-Lib][-py-url].
+Then we'll parse the response which is an [HTML document][-html].
+Then we'll extract the necessary data.
+Then we'll create a sense-making data pipeline.
+Finally, visualize the data using word frequency representations.
+
 ## References
 
 ### Web Links
 
+* [MIT Course Catalog Index][mit-catalog]
+
 <!-- Hidden References -->
+[mit-catalog]: https://student.mit.edu/catalog/index.cgi "MIT Course Catalog Index"
 
 ### Note Links
 
 * [PCDE Course Project 23.1][-pcde-proj-23-1]
+* [cURL (C HTTP Client)][-curl]
+* [Sense-Making Pipelines][-sense-pipe]
+* [Python][-py]
+* [URL-Lib (Python StdLib)][-py-url]
+* [HyperText Markup Language (HTML)][-html]
 
 <!-- Hidden References -->
 [-pcde-proj-23-1]: pcde-project-23-1.md "PCDE Course Project 23.1"
+[-curl]: curl.md "cURL (C HTTP Client)"
+[-sense-pipe]: sense-making-pipeline.md "Sense-Making Pipelines"
+[-py]: python.md "Python"
+[-py-url]: python-urllib.md "URL-Lib (Python StdLib)"
+[-html]: html.md "HyperText Markup Language (HTML)"

@@ -1,6 +1,6 @@
 ---
 created: 2023-06-09T11:22:25.991Z
-modified: 2023-06-15T12:38:00.767Z
+modified: 2023-06-26T15:11:27.737Z
 tags: [program,language,computer,science,software,develop,index]
 ---
 # Programming Language
@@ -70,6 +70,7 @@ data with metadata.
 * [Markdown][-md]
 * [YAML][-yaml]
 * [JSON][-json]
+* [XML][-xml]
 
 ### Parallel Computing Languages
 
@@ -106,6 +107,7 @@ facilitate parallel computing.
 * [Markdown (Markup Language)][-md]
 * [YAML (Markup Language)][-yaml]
 * [JSON (Markup Language)][-json]
+* [XML (Markup Language)][-xml]
 
 <!-- Hidden References -->
 [-cs]: computer-science.md "Computer Science"
@@ -125,3 +127,4 @@ facilitate parallel computing.
 [-md]: markdown.md "Markdown (Markup Language)"
 [-yaml]: yaml.md "YAML (Markup Language)"
 [-json]: json.md "JSON (Markup Language)"
+[-xml]: xml.md "XML (Markup Language)"

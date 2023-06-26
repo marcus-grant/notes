@@ -1,6 +1,6 @@
 ---
 created: 2022-12-05T16:17:20.340Z
-modified: 2023-06-19T14:25:48.352Z
+modified: 2023-06-26T15:04:26.795Z
 tags: [python,lang,program,overview,language,software,develop]
 ---
 # Python (Programming Language)
@@ -502,6 +502,48 @@ print(f"ans5a: {ans5a}\nans5b: {ans5b}")
 
 For more information check out [this handy guide][type-check-guide-rp]
 
+## Python Standard Library (StdLib)
+
+One of the benefits of Python is that it has always been planned to
+be a *"Batteries Included"* scripting ecosystem.
+That is it comes included with a diverse range of libraries that
+make it easier to start programming a wide array of programs with
+significantly less effort than having to reinvent the wheel of
+common programming tasks every time you start a new project.
+As the Python Foundation states:
+
+>Python’s standard library is very extensive,
+>offering a wide range of facilities as indicated by
+>the long table of contents listed below.
+>The library contains built-in modules (written in C) that
+>provide access to system functionality such as file I/O that
+>would otherwise be inaccessible to Python programmers,
+>as well as modules written in Python that provide standardized solutions for
+>many problems that occur in everyday programming.
+>Some of these modules are explicitly designed to encourage and
+>enhance the portability of Python programs by
+>abstracting away platform-specifics into platform-neutral APIs.
+>
+>-- [Python Software Foundation (2023)][py-docs-stdlib]
+
+The standard library is very rich,
+to the point of making it hard to keep track of all the possibilities.
+Here are some of the most useful ones.
+
+### Internet Protocols
+
+These modules implement [internet protocols][-tcp-ip] and support for
+related communication and networking protocols.
+
+#### HTTP
+
+Here there are [HTTP (HyperText Transfer Protocol)][-http] handling libraries.
+Most of these libraries depend on the [`socket`][-py-sock] module.
+
+* [Socket][-py-sock]
+* [URLLib][-py-url]
+* [HTTP][-py-http]
+
 ## Common Libraries
 
 One of the best things about Python is not just it's large and
@@ -575,6 +617,12 @@ a starting point or for analysis or prototyping.
 A popular and well maintained library for dealing with [WebSocket][-ws]s,
 the real-time HTTP based network protocol,
 is the [websocket library][-py-ws].
+
+### Workflow Automation
+
+* [Apache Airflow][-py-airflow]
+  * A UI and Automation server that allows easy setup of
+    composable data pipelines and automation workflows.
 
 ## Statistics in Python
 
@@ -708,7 +756,13 @@ splitting the workload into parallel operations.
 * [Jupyter Notebooks][-jnb]
 * [Python Version Management][-py-version]
 * [Anaconda Python and Conda notes][-conda]
+* [Internet Protocol Suite (TCP/IP)][-tcp-ip]
+* [HTTP (HyperText Transfer Protocol)][-http]
+* [Socket (Python StdLib)][-py-sock]
+* [URLLib (Python StdLib)][-py-url]
+* [HTTP (Python StdLib)][-py-http]
 * [WebSocket][-ws]
+* [Apache Airflow (Python Workflow Automation Platform)][-py-airflow]
 * [Python WebSocket][-py-ws]
 * [Asynchronous Programming][-async]
 * [Asyncio (Python Asynchronous Programming Library)][-asyncio]
@@ -728,8 +782,14 @@ splitting the workload into parallel operations.
 [-jnb]: jupyter.md "Jupyter Notebooks"
 [-py-version]: ./python-version.md "Python Version Management"
 [-conda]: ./python-anaconda.md "Anaconda Python and Conda notes"
+[-tcp-ip]: internet-protocol-suite.md "Internet Protocol Suite (TCP/IP)"
+[-http]: http.md "HTTP (HyperText Transfer Protocol)"
+[-py-sock]: python-socket.md "Socket (Python StdLib)"
+[-py-url]: python-urllib.md "URLLib (Python StdLib)"
+[-py-http]: python-http.md "HTTP (Python StdLib)"
 [-ws]: web-socket.md "WebSocket"
 [-py-ws]: python-web-socket.md "Python WebSocket"
+[-py-airflow]: python-airflow.md "Apache Airflow (Python Workflow Automation Platform)"
 [-async]: async.md "Asynchronous Programming"
 [-asyncio]: asyncio.md "Asyncio (Python Asynchronous Programming Library)"
 [-parallel]: parallel-computing.md "Parallel Computing"
@@ -739,7 +799,9 @@ splitting the workload into parallel operations.
 
 * [Advent of Code 2022, day 4][aoc22-day4]
 * [Python Type Checking Guide (from RealPython by Geir Arne Hjelle)][type-check-guide-rp]
+* [Python Software Foundation. docs.python.org/3/library/. "The Python Standard Library". Accessed 2023-06-26][py-docs-stdlib]
 
 <!-- Hidden References -->
 [aoc22-day4]: https://adventofcode.com/2022/day/4 "Advent of Code 2022, day 4"
 [type-check-guide-rp]: https://realpython.com/python-type-checking/ "Python Type Checking Guide (from RealPython by Geir Arne Hjelle)"
+[py-docs-stdlib]: https://docs.python.org/3/library/index.html "Python Software Foundation. The Python Standard Library"

@@ -1,6 +1,6 @@
 ---
 created: 2023-06-19T13:27:17.983Z
-modified: 2023-06-19T14:36:37.793Z
+modified: 2023-06-26T09:32:13.901Z
 tags: [web,socket,python,network,communication,protocol,pcde,module22]
 ---
 # Web Sockets in Python
@@ -38,7 +38,7 @@ pip install websockets
 
 ### Python WebSocket Server
 
-Using the `socket` module,
+Using the [`socket` module][-py-sock],
 a server can be created where the server will listen for
 incoming connections from clients.
 The incoming connections will establish long-lived connections between
@@ -130,11 +130,13 @@ manage the messages being sent.
 
 * [WebSocket][-ws]
 * [Python][-py]
+* [Socket (Python StdLib)][-py-sock]
 * [Asyncio (Python Asynchronous Library)][-asyncio]
 * [Python Package Installer (PIP)][-pip]
 
 <!-- Hidden References -->
 [-ws]: web-socket.md "WebSocket"
 [-py]: python.md "Python"
+[-py-sock]: python-socket.md "Socket (Python StdLib)"
 [-asyncio]: asyncio.md "Asyncio (Python Asynchronous Library)"
 [-pip]: pip.md "Python Package Installer (PIP)"

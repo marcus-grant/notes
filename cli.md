@@ -1,6 +1,6 @@
 ---
 created: 2022-12-02T14:58:00.723Z
-modified: 2023-06-13T15:18:19.486Z
+modified: 2023-06-26T14:50:22.781Z
 tags: [cli,terminal,unix,linux,shell,computers,software,compsci,productivity,devops]
 ---
 # Command Line Interfaces (CLI) Overview
@@ -27,6 +27,7 @@ These typically come with **command interpreters** that
 provide a scripting language to automate tasks.
 Some common ones include [BASH (Bourne Again Shell)][-bash] and
 [ZSH (Z shell)][-zsh].
+User input is typicall handled via a [Computer Keyboard][-keyboard].
 
 ## File Management
 
@@ -62,8 +63,10 @@ These are all part of the [GNU CoreUtil][coreutils-zk] suite of tools.
 * [GNU CoreUtil][coreutils-zk]
 * [BASH (Bourne Again Shell)][-bash]
 * [ZSH (Z shell)][-zsh]
+* [Keyboard (Computer)][-keyboard]
 
 <!-- Hidden Reference Links Below Here -->
 [coreutils-zk]: ./coreutils.md "GNU CoreUtil"
 [-bash]: ./bash.md "BASH (Bourne Again Shell)"
 [-zsh]: ./zsh.md "ZSH (Z shell)"
+[-keyboard]: computer-keyboard.md "Keyboard (Computer)"

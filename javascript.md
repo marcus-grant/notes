@@ -1,6 +1,6 @@
 ---
 created: 2023-01-26T13:02:04.293Z
-modified: 2023-06-09T12:02:48.947Z
+modified: 2023-06-26T12:56:07.428Z
 tags: [javascript,overview,language,software]
 ---
 # Javascript
@@ -28,7 +28,21 @@ Jest is perhaps the most common testing library for the
 Javascript & Typescript ecosystems.
 *More detailed information can be found in the [jest page][jest-zk].*
 
+## Common Modules
+
+### Data Visualization
+
+#### D3
+
+[D3, a.k.a. Data Driven Documents][-d3] is a Javascript library for
+bespoke data visualization.
+It lets you create custom dynamic visualizations with unparalleled flexibility.
+
 ## References
+
+### Web Links
+
+<!-- Hidden Reference Links Below Here -->
 
 ### Note Links
 
@@ -36,17 +50,11 @@ Javascript & Typescript ecosystems.
 * [Jest][jest-zk]
 * [TypeScript][-ts]
 * [Programming Language][-lang]
+* [D3.js][-d3]
 
 <!-- Hidden Reference Links Below Here -->
 [js-node-zk]: ./javascript.md#NodeJS "Javascript: NodeJS"
 [jest-zk]: ./jest.md "Jest"
 [-ts]: typescript.md "TypeScript"
 [-lang]: programming-language.md "Programming Language"
-
-### Referenced By
-
-<!-- Hidden Reference Links Below Here -->
-
-### Web Links
-
-<!-- Hidden Reference Links Below Here -->
+[-d3]: d3.md "D3.js - Javascript Data Visualization Library"
