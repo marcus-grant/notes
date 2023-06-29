@@ -1,6 +1,6 @@
 ---
 created: 2023-06-21T16:32:04.292Z
-modified: 2023-06-28T14:48:39.593Z
+modified: 2023-06-28T17:10:45.204Z
 tags: [pcde,data,javascript,pipeline,visual,graphic]
 ---
 # PCDE Course Module 23 Content
@@ -173,7 +173,7 @@ Sticking within the React ecosystem, which is likely the most popular way to
 develop web apps to date,
 there are three general ways to create web apps using this ecosystem.
 
-First is the *Single Page Applicaiton*, which is what the original React library is used for.
+First is the *Single Page Application*, which is what the original React library is used for.
 These are applications that reside entirely in your browser.
 API calls to access data is done from the browser to an API server.
 Any manner of front-end application can be made from it.
@@ -197,6 +197,49 @@ This combines the benefits of both SPAs and SSGs.
 You get the faster load times and SEO of SSGs and
 the added responsiveness of a fully client side SPA. 
 
+#### Which Types of Interactive Behaviors can be Developed to Enhance Websites Using Javascript?
+
+Pretty much any kind of user interaction possible on a browser can be done using javascript.
+It has to, as I said,
+the only way to interact with the DOM on a browser is through Javascript.
+That means javascript is used with every feature a browser has.
+This includes, but is completely non-exhaustive:
+
+* Changing the HTML on side dynamically.
+* Input device interaction including keyboard, mouse, and even game controllers.
+* Calling graphics engines to render 2D and 3D graphics
+* Using push notifications
+* Requesting and parsing the responses to web servers
+* Animations that aren't possible with CSS alone
+
+#### Other Use-cases
+
+I thought I'd point out one library I've had my eye on as
+I'm a Javascript developer trying to branch out in data engineering.
+This library is Danfo.js,
+which is essentially Pandas, but in Javascript,
+as in it does data manipulation using dataframes.
+
+I've always thought Javascript could make a good data science language.
+That's because like python it's a highly expressive language,
+but what I like more about it is that functions are more expressive.
+You can use callback functions, function chaining, enclosures, anonymous functions,
+higher order functions in way you can't in python.
+This makes expressing math in my opinion a bit cleaner than in Python.
+
+Javascript also can be coupled with WASM, WebASseMbly,
+which is a byte code runtime kind of like Java but run in the browser.
+This means code can run much faster in the browser when made in
+compiled languages like Rust.
+So like how numpy speeds up data analysis in Python,
+there could be Javascript libraries like numpy that leverage WASM using rust.
+It also means this faster code could be run solely on the browser,
+making data science on jupyter notebook much more convenient.
+
+Danfo is an example of how Javascript could potentially evolve to
+be more useful in the data science world.
+The problem right now is that the ecosystem just cannot mach Python in this use case.
+Hopefully some day that will change.
 
 
 ## References

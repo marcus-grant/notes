@@ -1,20 +1,22 @@
 ---
 created: 2022-12-05T14:22:49.623Z
-modified: 2023-03-27T11:20:35.338Z
-tags: [document,database,nosql,mongodb,backend,data,pcde,module12]
+modified: 2023-06-29T12:41:24.265Z
+tags: [document,database,nosql,mongodb,firebase,backend,data,pcde,module12]
 ---
 # Document Databases
 
-These are databases that use documents as
+These are [databases][-db] that use documents as
 the main organizing unit of the datastore.
 NoSQL as it's known is a schema-less way to
 store data in documents and collections.
 
-## What is MongoDB?
+## MongoDB
+
+>**Note:** See [MongoDB][-mongo] notes for more details.
 
 MongoDB is a NoSQL database,
 which means that the data is not modeled in
-the tabular relationships used inrelational databases.
+the tabular relationships used in relational databases.
 MongoDB is a *document*-oriented database that
 stores information in several *document collections*.
 
@@ -41,9 +43,18 @@ MongoDB is a widely used open source *document* database.
 In fact, you will be taking advantage of *containers* to
 run MongoDB in order to install it and the run it on your machine.
 
+## Firebase
+
+>**Note:** See [Firebase][-firebase] notes for more details.
+
+Firebase is an application platform that
+simplifies significant amounts of backend application service development.
+This includes common backend logic like security authentication and authorization.
+[Database management][-db] using its NoSQL Document Database Management System.
+
 ## The Data Structure
 
-Ultimately the data structure of MongoDB is a [JSON document][json-zk].
+Ultimately the data structure of MongoDB is a [JSON document][-json].
 
 ## Creating a Database Using MongoDB
 
@@ -57,9 +68,13 @@ For more details check out the [MongoDB Using Python](mongodb-using-python.md).
 
 ### Note References
 
-* [JSON][json-zk]
-* [MongoDB Using Python][mongodb-py-zk]
+* [Database][-db]
+* [JSON][-json]
+* [MongoDB (NoSQL Document Database)][-mongo]
+* [Firebase][-firebase]
 
 <!-- Hidden Reference Links Below Here -->
-[json-zk]: ./json.md "JSON"
-[mongodb-py-zk]: ./mongodb-using-python.md "MongoDB Using Python"
+[-db]: database.md "Database"
+[-json]: ./json.md "JSON"
+[-mongo]: mongodb.md "MongoDB (NoSQL Document Database)"
+[-firebase]: firebase.md "Firebase"

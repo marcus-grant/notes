@@ -1,6 +1,6 @@
 ---
 created: 2023-03-06T10:43:49.354Z
-modified: 2023-06-18T17:46:54.200Z
+modified: 2023-06-29T13:36:36.861Z
 tags: [network,computer,protocol,ip,http,ssh,ftp,webdav,pcde,module10]
 ---
 # Computer Networks
@@ -17,6 +17,8 @@ According to [Wikipedia][computer-nets-wiki]:
 
 ## Internet Protocol (IP)
 
+>**Note:** Read more at [Internet Protocol Suite (TCP/IP)][-tcp-ip]
+
 The Internet Protocol (IP) is the principal communications protocol being used on
 the Internet.
 As part of the OSI model, IP is the network layer protocol,
@@ -29,15 +31,54 @@ NAT or Network Address Translation is used to translate the IP address of an
 internal network to an external IP address, which expands the number of
 available IP addresses on the Internet.
 
-### Subnets
-
-A subnet is a logical division of an IP network.
-
 ## Application Layer Protocols
 
 ### HTTP
 
 [HTTP][-http] is by far the most used application layer protocol on the Internet.
+
+### Publish-Subscribe Pattern
+
+>**Note:** See the [Publish Subscribe Pattern][-pub-sub] for more details.
+
+In software architecture, publish–subscribe is a messaging pattern where
+senders of messages, called publishers, do not program the messages to
+be sent directly to specific receivers, called subscribers,
+but instead categorize published messages into classes without
+knowledge of which subscribers, if any, there may be.
+Similarly, subscribers express interest in one or more classes and only
+receive messages that are of interest, without knowledge of which publishers,
+if any, there are.
+
+One of the benefits of the *publish/subscribe* model vs.
+the *request/response* model of HTTP and REST,
+is that it doesn't rely on a reliable connection.
+Clients can connect and disconnect randomly and
+the queue of the broker will manage flushing of the queue by
+delivering the message when it can.
+
+### Message Queue
+
+>**Note:** See the [Message Queue Pattern Notes][-mq] for more details.
+
+In computer science, **message queues** and
+mailboxes are software-engineering components typically used for
+inter-process communication (IPC),
+or for inter-thread communication within the same process.
+They use a queue for messaging – the passing of control or of content.
+Group communication systems provide similar kinds of functionality.
+
+### Message Queue Implementations
+
+Here are some of the dominant Message Queue implementations:
+
+* [MQTT][-mqtt]
+
+### Message Queues and Internet of Things
+
+The [Internet of Things][-iot] takes these kinds of message queuing networks and
+applies it to create vast networks of low power and simpler devices to
+communicate with each other and traditional servers.
 
 ## References
 
@@ -51,6 +92,16 @@ A subnet is a logical division of an IP network.
 ### Note Links
 
 * [HyperText Transfer Protocol][-http]
+* [Internet Protocol Suite (TCP/IP)][-tcp-ip]
+* [Publish Subscribe Pattern][-pub-sub]
+* [Message Queue][-mq]
+* [Message Queue Telemetry Transport][-mqtt]
+* [Internet of Things (IoT)][-iot]
 
 <!-- Hidden References -->
 [-http]: http.md "HyperText Transfer Protocol"
+[-tcp-ip]: internet-protocol-suite.md "Internet Protocol Suite (TCP/IP)"
+[-pub-sub]: publish-subscribe.md "Publish Subscribe Pattern"
+[-mq]: message-queue.md "Message Queue"
+[-mqtt]: mqtt.md "Message Queue Telemetry Transport"
+[-iot]: iot.md "Internet of Things (IoT)"

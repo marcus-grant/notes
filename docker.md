@@ -1,6 +1,6 @@
 ---
 created: 2023-03-06T15:36:53.072Z
-modified: 2023-04-11T19:19:16.193Z
+modified: 2023-06-29T10:58:11.383Z
 tags: [docker,container,devops,virtual,computer,pcde,module10]
 ---
 # Docker
@@ -98,6 +98,9 @@ they can all communicate to each other based off of named networks.
 
 ## Docker-Compose
 
+>**Note:** To learn more about docker-compose,
+>read it in the [Container Compose File Formats][-cont-comp].
+
 The `docker-compose` utility is used to manage multiple containers together.
 Very often we need to run multiple containers together to make an application work.
 And they need very specific configurations to work together,
@@ -166,6 +169,7 @@ will be available at `http://localhost:3000`.
 * [Tar (Tape Archive)][tar-zk]
 * [HTTP: Hypertext Transfer Protocol][http-zk]
 * [YAML (YAML Ain't another Markup Language)][yaml-zk]
+* [Container Compose File Format][-cont-comp]
 
 <!-- Hidden References -->
 [container-zk]: ./container.md "Software Containers"
@@ -173,3 +177,4 @@ will be available at `http://localhost:3000`.
 [tar-zk]: ./tar.md "Tar (Tape Archive)"
 [http-zk]: ./http.md "HTTP: Hypertext Transfer Protocol"
 [yaml-zk]: ./yaml.md "YAML (YAML Ain't another Markup Language)"
+[-cont-comp]: container-compose.md "Container Compose File Format"

@@ -1,6 +1,6 @@
 ---
 created: 2022-12-05T16:17:20.340Z
-modified: 2023-06-26T15:04:26.795Z
+modified: 2023-06-29T09:32:49.599Z
 tags: [python,lang,program,overview,language,software,develop]
 ---
 # Python (Programming Language)
@@ -612,11 +612,19 @@ at least at first, because it has a consistent API for all of its algorithms.
 For simpler and more common algorithms, it's a good idea to use SciKit-Learn as
 a starting point or for analysis or prototyping.
 
-### Web Sockets
+### Networks & Communication
+
+#### Web Sockets
 
 A popular and well maintained library for dealing with [WebSocket][-ws]s,
 the real-time HTTP based network protocol,
 is the [websocket library][-py-ws].
+
+#### MQTT
+
+The [Paho library][-paho] implements the [MQTT protocol][-mqtt] to
+connect to a MQTT broker.
+This includes *publish* and *subscription* connections.
 
 ### Workflow Automation
 
@@ -762,6 +770,8 @@ splitting the workload into parallel operations.
 * [URLLib (Python StdLib)][-py-url]
 * [HTTP (Python StdLib)][-py-http]
 * [WebSocket][-ws]
+* [Paho (Python MQTT Library)][-paho]
+* [Message Queue Telemetry Transfer Protocol (MQTT)][-mqtt]
 * [Apache Airflow (Python Workflow Automation Platform)][-py-airflow]
 * [Python WebSocket][-py-ws]
 * [Asynchronous Programming][-async]
@@ -789,6 +799,8 @@ splitting the workload into parallel operations.
 [-py-http]: python-http.md "HTTP (Python StdLib)"
 [-ws]: web-socket.md "WebSocket"
 [-py-ws]: python-web-socket.md "Python WebSocket"
+[-paho]: python-paho.md "Paho (Python MQTT Library)"
+[-mqtt]: mqtt.md "Message Queue Telemetry Transfer Protocol (MQTT)"
 [-py-airflow]: python-airflow.md "Apache Airflow (Python Workflow Automation Platform)"
 [-async]: async.md "Asynchronous Programming"
 [-asyncio]: asyncio.md "Asyncio (Python Asynchronous Programming Library)"

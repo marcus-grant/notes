@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T10:12:17.264Z
-modified: 2023-06-21T16:31:59.913Z
+modified: 2023-06-28T18:11:06.960Z
 tags: [pcde,course,outline,overview,data,learn]
 ---
 # PCDE Course Outline
@@ -576,15 +576,15 @@ Platforms for Handling Big Data
 
 ***TODO fill in***
 
-### Module 20: Introduction to Machine Learning
+## Module 20: Introduction to Machine Learning
 
-#### Module 20: Due Date
+### Module 20: Due Date
 
 * Due Wednesday, May 31, 2023 at 1629 UTC
   * 1829 CET
   * 1229 EST
 
-#### Module 20: Goals
+### Module 20: Goals
 
 1. Solve advanced mathematical problems.
 2. Describe use cases of linear regression.
@@ -596,7 +596,7 @@ Platforms for Handling Big Data
 8. Implement Naive Bayes theorem using Sci-Kit Learn.
 9. Implement Gaussian Naive Bayes theorem using Sci-Kit Learn.
 
-#### Module 20: Activities
+### Module 20: Activities
 
 * **Knowledge Checks**
   * Knowledge Check 20.1: Mathematics Fundamentals
@@ -618,7 +618,7 @@ Gaussian Naive Bayes Classifiers
 Machine Learning and Advanced Probability
   * Self-Study Flashcards: Module 20 Flashcards
 
-#### Module 20: Related Notes
+### Module 20: Related Notes
 
 * [PCDE Course: Module 20 Content][-pcde-mod20]
 * [Matrix][-matrix]
@@ -626,15 +626,15 @@ Machine Learning and Advanced Probability
 * [Bayes Theory][-bayes]
 * [SciKit-Learn (Python Machine Learning Library)][-sklearn]
 
-### Module 21: Introduction to Reinforcement Learning and Deep Neural Networks
+## Module 21: Introduction to Reinforcement Learning and Deep Neural Networks
 
-#### Module 21: Due Date
+### Module 21: Due Date
 
 * Due Wednesday, June 14, 2023 at 1629 UTC
   * 1829 CET
   * 1229 EST
 
-#### Module 21: Goals
+### Module 21: Goals
 
 1. Discuss applications of machine learning algorithms.
 2. Implement k-means using Scikit-learn.
@@ -644,7 +644,7 @@ Machine Learning and Advanced Probability
 6. Implement the fundamental steps of reinforcement learning.
 7. Identify key components of reinforcement learning and deep neural networks.
 
-#### Module 21: Activities
+### Module 21: Activities
 
 * **Knowledge Checks**
   * Knowledge Check 21.1: The K-Means Algorithm and Machine Learning Algorithms
@@ -663,7 +663,7 @@ Machine Learning and Advanced Probability
   * Self-Study Discussion 21.3: Thinking Like a Data Scientist:
     Reinforcement Learning and Deep Neural Networks
 
-#### Module 21: Related Notes
+### Module 21: Related Notes
 
 * [PCDE Course: Module 21 Content][-pcde-mod21]
 * [Machine Learning][-ml]
@@ -673,15 +673,15 @@ Machine Learning and Advanced Probability
 * [K-Means Clustering][-kmean]
 * [Confusion Matrix (Machine Learning)][-confusion]
 
-### Module 22: Processing and Streaming Big Data
+## Module 22: Processing and Streaming Big Data
 
-#### Module 22: Due Date
+### Module 22: Due Date
 
 * Due Wednesday, June 21, 2023 at 1629 UTC
   * 1829 CET
   * 1229 EST
 
-#### Module 22: Goals
+### Module 22: Goals
 
 1. Compare applications of the Parquet and
    Feather formats for reading and writing big data.
@@ -691,7 +691,7 @@ Machine Learning and Advanced Probability
 5. Discuss use cases of web sockets.
 6. Stream data through web sockets.
 
-#### Module 22: Activities
+### Module 22: Activities
 
 * **Knowledge Checks**
   * Knowledge Check 22.1: DASK and Parallel Computing
@@ -718,7 +718,7 @@ Machine Learning and Advanced Probability
     Processing and Streaming Big Data
   * Self-Study Flashcards: Module 22 Flashcards
 
-#### Module 22: Related Notes
+### Module 22: Related Notes
 
 * [PCDE Course: Module 22 Content][-pcde-mod22]
 * [Pandas (Python Dataframe Library)][-pd]
@@ -728,15 +728,15 @@ Machine Learning and Advanced Probability
 * [Web Sockets][-web-sock]
 * [Web Sockets in Python][-py-ws]
 
-### Module 23: Creating a Data Pipeline
+## Module 23: Creating a Data Pipeline
 
-#### Module 23: Due Date
+### Module 23: Due Date
 
 * Due Wednesday, June 28, 2023 at 1629 UTC
   * 1829 CET
   * 1229 EST
 
-#### Module 23: Goals
+### Module 23: Goals
 
 1. Discuss use cases for JavaScript.
 2. Identify key concepts related to visualization, unstructured data, and Javascript.
@@ -744,7 +744,7 @@ Machine Learning and Advanced Probability
 4. Implement JavaScript tools to visualize word frequency data.
 5. Create a sense-making data pipeline.
 
-#### Module 23: Activities
+### Module 23: Activities
 
 * **Knowledge Checks**
   * Knowledge Check 23.1: Visualization, Unstructured Data and Javascript
@@ -759,10 +759,63 @@ Machine Learning and Advanced Probability
     Creating a Data Pipeline
   * Self-Study Flashcards: Module 23 Flashcards
 
-#### Module 22: Related Notes
+### Module 23: Related Notes
 
 * [PCDE Course: Module 23 Content][-pcde-mod23-content]
-***TODO add note list from content doc***
+* [PCDE Course Project 23.1][-pcde-proj-23-1]
+* [cURL (C HTTP Client)][-curl]
+* [Sense-Making Pipelines][-sense-pipe]
+* [Python][-py]
+* [URL-Lib (Python StdLib)][-py-url]
+* [HyperText Markup Language (HTML)][-html]
+* [Exploratory Data Analysis (EDA, Data Science)][-eda]
+* [Javascript][-js]
+
+## Module 24: Handling Big Data with Mosquito, ThingsBoard and Kafka
+
+### Module 24: Due Date
+
+* Due Wednesday, July 5, 2023 at 1629 UTC
+  * 1829 CET
+  * 1229 EST
+
+### Module 23: Goals
+
+1. Identify key concepts related to Mosquito.
+2. Discuss use cases for Mosquito.
+3. Stream live data to ThingsBoard.
+4. Identify key concepts related to ThingsBoard.
+5. Analyze live streaming data using ThingsBoard.
+6. Discuss use cases for ThingsBoard.
+7. Identify key concepts related to Kafka.
+8. Discuss use cases for Kafka.
+9. Construct a web server using Kafka.
+
+### Module 24: Activities
+
+* **Knowledge Checks**
+  * Knowledge Check 24.1: Mosquito
+  * Knowledge Check 24.2: ThingsBoard
+  * Knowledge Check 24.3: Kafka
+* **Discussion**
+  * Discussion 24.1: Use Cases for Mosquito
+  * Discussion 24.2: Use Cases for ThingsBoard
+  * Discussion 24.3: Use Cases for Kafka
+* **Project**
+  * Project 24.1: Streaming Live Data to ThingsBoard
+  * Project 24.2: Analyzing Streaming Live Data Using ThingsBoard
+  * Project 24.3: Constructing a Web Server Using Kafka
+**Self-Study Activities**
+  * Self-Study Discussion 23.2: Thinking Like a Data Scientist:
+    Handling Big Data with Mosquito, ThingsBoard and Kafka
+  * Self-Study Flashcards: Module 24 Flashcards
+
+### Module 24: Related Notes
+
+* [PCDE Course: Module 24 Content][-pcde-mod24-content]
+
+>**TODO:** Fill in course content's note links here
+
 
 ## References
 
@@ -876,6 +929,16 @@ Machine Learning and Advanced Probability
 * [Web Sockets][-web-sock]
 * [Web Sockets in Python][-py-ws]
 * [PCDE Course Module 23 Content][-pcde-mod23-content]
+* [PCDE Course Project 23.1][-pcde-proj-23-1]
+* [cURL (C HTTP Client)][-curl]
+* [Sense-Making Pipelines][-sense-pipe]
+* [URL-Lib (Python StdLib)][-py-url]
+* [HyperText Markup Language (HTML)][-html]
+* [Exploratory Data Analysis (EDA, Data Science)][-eda]
+* [Javascript][-js]
+* [PCDE Course: Module 24 Content][-pcde-mod24-content]
+
+<!-- Hidden References -->
 
 <!-- Hidden Reference Links Below Here -->
 [-pcde-overview]: pcde-course-overview.md "PCDE Course Overview"
@@ -984,3 +1047,11 @@ Machine Learning and Advanced Probability
 [-web-sock]: web-sockets.md "Web Sockets"
 [-py-ws]: ./python-web-socket.md "Web Sockets in Python"
 [-pcde-mod23-content]: pcde-module23-content.md "PCDE Course Module 23 Content"
+[-pcde-proj-23-1]: pcde-project-23-1.md "PCDE Course Project 23.1"
+[-curl]: curl.md "cURL (C HTTP Client)"
+[-sense-pipe]: sense-making-pipeline.md "Sense-Making Pipelines"
+[-py-url]: python-urllib.md "URL-Lib (Python StdLib)"
+[-html]: html.md "HyperText Markup Language (HTML)"
+[-eda]: ./exploratory-data-analysis.md "Exploratory Data Analysis (EDA, Data Science)"
+[-js]: javascript.md "Javascript"
+[-pcde-mod24-content]: pcde-module24-content.md "PCDE Course: Module 24 Content"
