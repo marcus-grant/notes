@@ -1,6 +1,6 @@
 ---
 created: 2023-06-29T12:29:17.594Z
-modified: 2023-06-29T13:29:21.000Z
+modified: 2023-06-30T20:04:55.700Z
 tags: [firebase,database,document,platform,develop,server,data,realtime,pcde]
 ---
 # Firebase
@@ -38,6 +38,14 @@ obviously go to the page first, then follow these UI prompts.
     `test-mode` *(allow public read/write for 30 days)*
 11. Once the database is created, it should show a `Realtime Database` dashboard for
     the newly created database.
+
+## Create Alarms from Realtime Data
+
+1. Go to realtime database
+2. Create another datastream or document in the document database
+3. Name it
+4. Copy the link to the client sending the data
+5. Paste the link to whatever API is requesting or publishing to firebase.
 
 ## References
 

@@ -1,6 +1,6 @@
 ---
 created: 2023-06-28T18:11:09.866Z
-modified: 2023-06-29T13:06:02.131Z
+modified: 2023-06-30T20:12:37.856Z
 tags: [pcde,module24,kafka,thingsboard,mosquitto,kafka,big,data]
 ---
 # PCDE Course Module 24 Content
@@ -219,6 +219,28 @@ transmit to a broker with many rooms to penetrate a wireless signal.
 Power companies piping into these automations are going to deal with
 a veritable flood of intermittent data where each
 MQTT broker can "act as a network concentrator" (IBM 2022).
+
+## Knowledge Check 24.2: ThingsBoard
+
+* Q1: What is a device in ThingsBoard?
+  * an abstract component that records and transmits the telemetry data **(Correct)**.
+* Q2: Which of the following are ThingsBoard components?
+  * all the above **(Correct)**.
+* Q3: What is the use of an alarm in ThingsBoard?
+  * to monitor and notify users or clients when data reaches thresholds **(Correct)**.
+* Q4: Which of the following needs to be set up in ThingsBoard to
+  facilitate streaming data to devices?
+  * root rule chain **(Correct)**.
+* Q5: What is ThingsBoard?
+  * Open Source IoT platform for data collection, processing, visualization and
+    device management **(Correct)**.
+* Q6: Which of the following functionalities can be found in the ThingsBoard Interface?
+  * Rule management **(Correct)**.
+* Q7: To configure ThingsBoard to receive telemetry data from one device.
+  How many log nodes are required to setup in the Root Rule Chain?
+  * 2 **(Correct)**.
+* Q8: What is a rule chain?
+  * a A logical group of rule nodes and their relations **(Correct)**.
 
 ## References
 

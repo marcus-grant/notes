@@ -1,6 +1,6 @@
 ---
 created: 2023-06-29T13:06:26.545Z
-modified: 2023-06-29T14:39:43.607Z
+modified: 2023-06-30T20:04:58.240Z
 tags: [internet,thing,embedded,system,sensor,actuator,thingsboard,data,network,mqtt,stream,pcde,module24]
 ---
 # ThingsBoard (IoT Platform)
@@ -140,6 +140,89 @@ the default password is `sysadmin`.
 For more info on the demo users,
 see the [ThingsBoard Documentation on Demo Users][tb-docs-demo].
 
+## Alarms
+
+Imagine an IoT device, such as a thermostat,
+that sends temperature data to ThingsBoard.
+Ideally, you would like to monitor your data so that
+if the temperature gets too high or low, a notification is sent.
+To achieve this, ThingsBoard provides the option to
+set *alarms* to monitor data and notify users or *clients* when
+the data reaches a certain threshold.
+
+### Create Alarms
+
+The easiest way to create an *alarm* in ThingsBoard is by
+creating a custom rule chain that is able to trigger or clear *alarms* based on data.
+To set up an *alarm* rule chain, navigate to Rule chains on
+the left menu of the ThingsBoard home page.
+Add a new rule by selecting the plus (`+`) icon in the top-right and
+selecting `Create new rule chain`.
+
+![thingsboard rule chain create new](2023-06-30-21-28-38.png)
+
+Name this rule chain `Alarms`, then select `Add` on the bottom right of
+the dialog window opened for adding the Rule Chain.
+
+![add rule chain dialog screenshot](2023-06-30-21-30-22.png)
+
+Open the *Alarms* rule chain.
+Add a `script` *node* and name it `TempThreshold`.
+Notice this *node* allows to modify or add [Javascript code][-js] to
+trigger the *alarm* when data reaches a certain value.
+The default value triggers the *alarm* when the temperature is greater than 20.
+This value can be modified as needed.
+Select `Add` to add the `TempThreshold` *node* to the Rule Engine.
+
+![add rule node script dialog screenshot](2023-06-30-21-34-19.png)
+
+The rule chain will come with an `Input` *node* automatically set up.
+Connect the `Input` and the `TempThreshold` *nodes*.
+This will allow the *Alarms* rule chain to receive input data from *devices*.
+
+![alarms rule chain workspace screenshot](2023-06-30-21-36-06.png)
+
+Add a `clear alarm` *node* and name it `ClearAlarm`.
+Modify the default Javascript code:
+
+```javascript
+var details  = {};
+if (metadata.prevAlarmDetails) {
+  details = JSON.parse(metadata.prevAlarmDetails);
+} return details;
+```
+
+Select `Add` to add the `ClearAlarm` *node* to your Rule Engine.
+
+![add rule node - clear alarm screenshot javascript](2023-06-30-21-38-20.png)
+
+Connect the `TempThreshold` & `ClearAlarm` *nodes* * add `True` as the link label.
+
+![connect TempThreshold and ClearAlarm nodes screenshot](2023-06-30-21-41-06.png)
+
+Add a `create alarm` *node* and name it `CreateAlarm`.
+Modify the default Javascript code:
+
+```javascript
+var details = {};
+if (metadata.prevAlarmDetails) {
+  details = JSON.parse(metadata.prevAlarmDetails);
+} return details;
+```
+
+Select `Add` to add the `CreateAlarm` node to the rule Engine
+
+![add rule node create alarm javascript screenshot](2023-06-30-21-45-20.png)
+
+Connect the `TempThreshold` and `CreateAlarm` *nodes*,
+and add `False` as the link label.
+
+![alarm rule chain connect TempThreshold to CreateAlarm](2023-06-30-21-46-19.png)
+
+Now the rule chain this has created is ready to be added to the Root Rule Chain.
+Crucially it should be done using the typical `Save Timeseries`,
+followed by this newly added alarm chain.
+
 ## References
 
 ### Web Links
@@ -162,6 +245,7 @@ see the [ThingsBoard Documentation on Demo Users][tb-docs-demo].
 * [Container (Software)][-container]
 * [Docker (Container Runtime)][-docker]
 * [Container Compose File Format][-cont-comp]
+* [Javascript][-js]
 
 <!-- Hidden References -->
 [-foss]: foss.md "Free Open-Source Software (FOSS)"
@@ -169,3 +253,4 @@ see the [ThingsBoard Documentation on Demo Users][tb-docs-demo].
 [-container]: container.md "Container (Software)"
 [-docker]: docker.md "Docker (Container Runtime)"
 [-cont-comp]: container-compose.md "Container Compose File Format"
+[-js]: javascript.md "Javascript"
