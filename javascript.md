@@ -1,6 +1,6 @@
 ---
 created: 2023-01-26T13:02:04.293Z
-modified: 2023-06-26T12:56:07.428Z
+modified: 2023-07-03T15:40:27.617Z
 tags: [javascript,overview,language,software]
 ---
 # Javascript
@@ -11,6 +11,8 @@ It has also in recent years become a prime player in backend servers,
 thanks to [NodeJS][js-node-zk].
 
 ## NodeJS
+
+>**Note:** See [Node.JS][-node] for more information.
 
 NodeJS is the most common server runtime for javascript to
 run javascript outside the browser.
@@ -47,6 +49,7 @@ It lets you create custom dynamic visualizations with unparalleled flexibility.
 ### Note Links
 
 * [Javascript: NodeJS][js-node-zk]
+* [Node JS (Javascript Runtime)][-node]
 * [Jest][jest-zk]
 * [TypeScript][-ts]
 * [Programming Language][-lang]
@@ -58,3 +61,4 @@ It lets you create custom dynamic visualizations with unparalleled flexibility.
 [-ts]: typescript.md "TypeScript"
 [-lang]: programming-language.md "Programming Language"
 [-d3]: d3.md "D3.js - Javascript Data Visualization Library"
+[-node]: nodejs.md "Node JS (Javascript Runtime)"

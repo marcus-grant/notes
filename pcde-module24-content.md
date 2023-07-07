@@ -1,6 +1,6 @@
 ---
 created: 2023-06-28T18:11:09.866Z
-modified: 2023-06-30T20:12:37.856Z
+modified: 2023-07-07T07:08:04.973Z
 tags: [pcde,module24,kafka,thingsboard,mosquitto,kafka,big,data]
 ---
 # PCDE Course Module 24 Content
@@ -8,7 +8,7 @@ tags: [pcde,module24,kafka,thingsboard,mosquitto,kafka,big,data]
 ## Introduction
 
 In this module, you will learn about three different tools that can be used to
-handle big data: [Mosquitto][-mosq], ThingsBoard, and Kafka.
+handle big data: [Mosquitto][-mosq], ThingsBoard, and [Kafka][-kafka].
 
 In the first section, you will learn how to use Mosquitto and
 the [Message Queuing Telemetry Transport (MQTT)][-mqtt] protocol to
@@ -242,6 +242,88 @@ MQTT broker can "act as a network concentrator" (IBM 2022).
 * Q8: What is a rule chain?
   * a A logical group of rule nodes and their relations **(Correct)**.
 
+## Discussion 24.2: Use Cases for ThingsBoard
+
+### Discussion 24.2: Introduction
+
+ThingsBoard is a robust platform that interacts with IoT devices and
+the data that they produce.
+ThingsBoard is device-based, meaning that it’s able to
+analyze telemetry data derived from devices, applications, or sensors.
+Therefore, ThingsBoard can be used in many applications,
+ranging from industry applications to environment monitoring or smart working.
+These use cases are described in greater detail below:
+
+* **Smart Farming**
+  * Thingsboard has a smart farming component that can easily embed into IoT solutions.
+  * This particular dashboard allows users to monitor and control aeration inside silos.
+  * [(ThingsBoard Authors 2022)][tb-smart-farm]
+* **Environment Monitoring**
+  * ThingsBoard can also be used in environment monitoring applications such as:
+    * Air quality monitoring
+    * Weather monitoring in countries or continents
+    * Seismology monitoring and control
+    * Noise level monitoring and control
+  * [(ThingsBoard Authors 2022)][tb-env-mon]
+* **Smart Working**
+  * ThingsBoard has applications in smart working as well.
+  * For example:
+    * energy management
+    * control of access and logins
+    * tracking occupancy of meetings
+  * [(ThingsBoard Authors 2022)][tb-smart-work]
+
+### Discussion 24.2: Instructions
+
+For this discussion, research other use cases of ThingsBoard or dive deeper into
+the applications listed above.
+In your discussion post, respond to the following prompts:
+
+* Explain why ThingsBoard would be a good choice to use for your selected application.
+* Determine if any ThingsBoard alarms should be included and
+  describe how they would improve your application.
+* Finally, consider which particular widgets could be used to
+  enhance the analysis of your data.
+  Explain which widgets you selected and describe what they would do.
+
+Read the statements posted by your peers. Engage with them by responding with
+thoughtful comments and questions to deepen the discussion.
+
+### Discussion 24.2: Submission
+
+I chose the smart working environment use case.
+
+#### Explain why THingsBoard would be a good choice
+
+Thingsboard is great for smart work environments because
+it can broker streaming data from many IoT devices at irregular intervals and
+apply complex logic to them both in code but also in more user friendly UIs.
+This enables management of this logic and data by people who don't necessarily know
+how to code while still providing complex functionality.
+
+#### Determine if any alarms should be used
+
+Security comes to mind first.
+There could be a time of the day or night in this case where
+any sensors detecting motion within a work environment past allowed work hours is
+interpreted as a break in.
+This could be an alarm that notifies the right people at that workplace of
+a potential security concern.
+But also simpler tasks like thermostat functionality could come with
+an alarm that notifies an office manager that something might be wrong with
+it if temperatures are increasing despite the AC system being set to cool to a temperature.
+
+#### What Widgets
+
+One of the big operational costs of a workplace are electricity bills.
+There could be various widgets for sensors that report hourly, daily, monthly, etc.
+electricity consumption for different parts of the workplace.
+Those widgets could then be used to determine how to best lower those costs.
+
+
+
+
+
 ## References
 
 ### Web Links
@@ -251,6 +333,9 @@ MQTT broker can "act as a network concentrator" (IBM 2022).
 * [HiveMQ. "Car-Sharing Application Relies on HiveMQ for Reliable Connectivity". HiveMQ. 2022.][bmw]
 * [IBM Corporation. "Telemetry Use Case: Home Energy Monitoring and Control". IBM. 17 Feb. 2022.][ibm-home]
 * [IBM Corporation. "Telemetry Use Case: Home Patient Monitoring". IBM. 17 Feb. 2022][ibm-health]
+* [ThingsBoard Authors. "Smart Farming and Smart Agriculture Solutions". ThingsBoard. 2022][tb-smart-farm]
+* [ThingsBoard Authors. "Environment Monitoring Solutions". ThingsBoard 2022][tb-env-mon]
+* [ThingsBoard Authors. "Smart Office Solutions". ThingsBoard. 2022][tb-smart-work]
 
 <!-- Hidden References -->
 [vw]: https://www.emqx.com/en/blog/emqx-in-volkswagen-iov "EMQ Helps SAIC Volkswagen Building IoV Platform"
@@ -258,6 +343,9 @@ MQTT broker can "act as a network concentrator" (IBM 2022).
 [bmw]: https://www.hivemq.com/case-studies/bmw-mobility-services/ "Car-Sharing Application Relies on HiveMQ for Reliable Connectivity"
 [ibm-home]: https://www.ibm.com/docs/en/ibm-mq/8.0?topic=cases-telemetry-use-case-home-energy-monitoring-control "Telemetry Use Case: Home Energy Monitoring and Control"
 [ibm-health]: https://www.ibm.com/docs/en/ibm-mq/8.0?topic=cases-telemetry-use-case-home-patient-monitoring "Telemetry Use Case: Home Patient Monitoring"
+[tb-smart-farm]: https://thingsboard.io/smart-farming/ "Smart Farming and Smart Agriculture Solutions"
+[tb-env-mon]: https://thingsboard.io/use-cases/environment-monitoring/ "ThingsBoard Environment Monitor Solution"
+[tb-smart-work]: https://thingsboard.io/use-cases/smart-office/ "Smart Office Solutions"
 
 ### Note Links
 
@@ -269,6 +357,8 @@ MQTT broker can "act as a network concentrator" (IBM 2022).
 * [Paho (Python MQTT Library)][-paho]
 * [Firebase][-firebase]
 * [Thingsboard (IoT Platform)][-thingsboard]
+* [Kafka][-kafka]
+* [Node.JS (Javascript Runtime)][-node]
 
 <!-- Hidden References -->
 [pcde-proj-24-1]: pcde-project-24-1.md "PCDE Project 24.1"
@@ -279,3 +369,5 @@ MQTT broker can "act as a network concentrator" (IBM 2022).
 [-paho]: python-paho.md "Paho (Python MQTT Library)"
 [-firebase]: firebase.md "Firebase"
 [-thingsboard]: thingsboard.md "Thingsboard (IoT Platform)"
+[-kafka]: kafka.md "Kafka"
+[-node]: nodejs.md "Node.JS (Javascript Runtime)"

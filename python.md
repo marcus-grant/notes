@@ -1,6 +1,6 @@
 ---
 created: 2022-12-05T16:17:20.340Z
-modified: 2023-06-29T09:32:49.599Z
+modified: 2023-07-07T10:06:38.001Z
 tags: [python,lang,program,overview,language,software,develop]
 ---
 # Python (Programming Language)
@@ -626,6 +626,12 @@ The [Paho library][-paho] implements the [MQTT protocol][-mqtt] to
 connect to a MQTT broker.
 This includes *publish* and *subscription* connections.
 
+### Data Pipelines
+
+* [Apache Spark][-spark]
+  * A streaming data pipelining platform
+  * [PySpark][-pyspark] provides API access within python.
+
 ### Workflow Automation
 
 * [Apache Airflow][-py-airflow]
@@ -772,6 +778,8 @@ splitting the workload into parallel operations.
 * [WebSocket][-ws]
 * [Paho (Python MQTT Library)][-paho]
 * [Message Queue Telemetry Transfer Protocol (MQTT)][-mqtt]
+* [Spark (by Apache)][-spark]
+* [PySpark (Python Spark Library)][-pyspark]
 * [Apache Airflow (Python Workflow Automation Platform)][-py-airflow]
 * [Python WebSocket][-py-ws]
 * [Asynchronous Programming][-async]
@@ -801,7 +809,9 @@ splitting the workload into parallel operations.
 [-py-ws]: python-web-socket.md "Python WebSocket"
 [-paho]: python-paho.md "Paho (Python MQTT Library)"
 [-mqtt]: mqtt.md "Message Queue Telemetry Transfer Protocol (MQTT)"
+[-spark]: spark.md "Spark (by Apache)"
 [-py-airflow]: python-airflow.md "Apache Airflow (Python Workflow Automation Platform)"
+[-pyspark]: python-spark.md "PySpark (Python Spark Library)"
 [-async]: async.md "Asynchronous Programming"
 [-asyncio]: asyncio.md "Asyncio (Python Asynchronous Programming Library)"
 [-parallel]: parallel-computing.md "Parallel Computing"

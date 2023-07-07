@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T10:12:17.264Z
-modified: 2023-06-28T18:11:06.960Z
+modified: 2023-07-07T07:16:53.716Z
 tags: [pcde,course,outline,overview,data,learn]
 ---
 # PCDE Course Outline
@@ -815,7 +815,6 @@ Machine Learning and Advanced Probability
 * [PCDE Course: Module 24 Content][-pcde-mod24-content]
 
 >**TODO:** Fill in course content's note links here
-
 
 ## References
 

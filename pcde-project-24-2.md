@@ -1,6 +1,6 @@
 ---
 created: 2023-06-28T18:19:30.607Z
-modified: 2023-06-30T20:45:09.595Z
+modified: 2023-07-03T09:10:19.611Z
 tags: [pcde,module24,project,stream,firebase,realtime,database,alert]
 ---
 # PCDE Project 24.2: Analyzing Live Streaming Data Using ThingsBoard
@@ -113,6 +113,7 @@ you connected the `CreateAlarm` and `AlarmToFirebase` nodes with
 a `Created` link label.
 
 ### Step 9
+
 Add another `rule chain` node to the `CreateAndClearAlarms` rule chain.
 Title this node `TempToFirebase` and select `TempToFirebase` as the rule chain.
 Select `Add` to add the `TempToFirebase` node to your Rule Engine.
