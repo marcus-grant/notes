@@ -1,6 +1,6 @@
 ---
 created: 2023-06-26T13:29:12.766Z
-modified: 2023-06-26T15:21:08.010Z
+modified: 2023-07-10T16:01:15.093Z
 tags: [apache,python,workflow,pipeline,automation,data,schedule,pcde,module23]
 ---
 # Airflow (Apache Python Platform for Automation Workflows)
@@ -33,6 +33,55 @@ tags: [apache,python,workflow,pipeline,automation,data,schedule,pcde,module23]
 >include a lot of the links relevant from the PCDE outline therein.
 >Note that this document mentions it and should be linked as such.
 
+## Basics
+
+### Workflows as Code
+
+The main characteristic of Airflow workflows is that all
+workflows are defined in Python code.
+*"Workflows as code"* serves several purposes:
+
+* **Dynamic**: Airflow pipelines are configured as python code,
+  allowing for dynamic pipeline generation.
+* **Extensible**: The Airflow framework contains operators to connect with
+  numerous technologies.
+  All Airflow components are extensible to easily adjust to your environment.
+* **Flexible**: Workflow parameterization is built-in leveraging the
+  [Jinja templating engine][-jinja].
+
+### Directed Acyclic Graphs (DAG)
+
+To demonstrate a **DAG** let's examine the below code.
+
+```python
+from datetime import datetime
+
+from airflow import DAG
+from airflow.decorators import task
+from airflow.operators.bash import BashOperator
+
+# A DAG represents a workflow, a collection of tasks
+with DAG(dag_id="demo", start_date=datetime(2022, 1, 1), schedule="0 0 * * *") as dag:
+
+    # Tasks are represented as operators
+    hello = BashOperator(task_id="hello", bash_command="echo hello")
+
+    @task()
+    def airflow():
+        print("airflow")
+
+    # Set dependencies between tasks
+    hello >> airflow()
+```
+
+* A **DAG** named `demo`,
+  starting on 2022-01-01 and running once day.
+* A **DAG** is airflow's representation of a workflow.
+* Two tasks, a `BashOperator` running a Bash script and
+  a Python function defined using the `@task` decorator.
+* `>>` between the tasks defines dependency and controls in which
+  order the tasks will be executed.
+
 ## References
 
 ### Web Links
@@ -47,8 +96,10 @@ tags: [apache,python,workflow,pipeline,automation,data,schedule,pcde,module23]
 * [Graphical User Interface (GUI)][-gui]
 * [Python][-py]
 * [eXtensible Markup Language (XML)][-xml]
+* [Jinja Templating Engine][-jinja]
 
 <!-- Hidden References -->
 [-gui]: gui.md "Graphical User Interface (GUI)"
 [-py]: python.md "Python"
 [-xml]: xml.md "eXtensible Markup Language (XML)"
+[-jinja]: jinja.md "Jinja Templating Engine"

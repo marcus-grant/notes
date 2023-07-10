@@ -1,6 +1,6 @@
 ---
 created: 2022-12-05T16:17:20.340Z
-modified: 2023-07-07T10:06:38.001Z
+modified: 2023-07-10T15:53:01.252Z
 tags: [python,lang,program,overview,language,software,develop]
 ---
 # Python (Programming Language)
@@ -810,7 +810,7 @@ splitting the workload into parallel operations.
 [-paho]: python-paho.md "Paho (Python MQTT Library)"
 [-mqtt]: mqtt.md "Message Queue Telemetry Transfer Protocol (MQTT)"
 [-spark]: spark.md "Spark (by Apache)"
-[-py-airflow]: python-airflow.md "Apache Airflow (Python Workflow Automation Platform)"
+[-py-airflow]: airflow-workflow.md "Apache Airflow (Python Workflow Automation Platform)"
 [-pyspark]: python-spark.md "PySpark (Python Spark Library)"
 [-async]: async.md "Asynchronous Programming"
 [-asyncio]: asyncio.md "Asyncio (Python Asynchronous Programming Library)"

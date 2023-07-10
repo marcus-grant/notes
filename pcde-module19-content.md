@@ -1,6 +1,6 @@
 ---
 created: 2023-05-21T11:44:19.838Z
-modified: 2023-07-07T14:21:52.388Z
+modified: 2023-07-10T15:53:17.519Z
 tags: [pcde,module19,data,spark]
 ---
 # PCDE Course Module 19 Content
@@ -118,6 +118,111 @@ gets read and written quickly but don't necessarily need to
 make it to the database immediately.
 Things like session management, cookies, search caches, etc.
 
+## Discussion 19.2: Use Cases for Spark
+
+### Discussion 19.2: Introduction
+
+As described in this section,
+a popular data engineering tool for handling big data is Apache Spark.
+In this discussion,
+you will be challenged to identify a use case to solve problems related to
+big data and explain why Apache Spark is the recommended software to
+solve such problems.
+
+Below are some examples to guide your response to this discussion:
+
+#### Case Study 1: Customer Churn Analysis
+
+Churn analysis is used to predict the likelihood that
+a customer will discontinue using a service or product (DataFlair 2022).
+Naturally,
+organizations in the retail and communications sectors need to be able to
+predict churn because the analysis might inform what to
+change in their services or products.
+This could prevent customers from
+discontinuing a service and switching to a competing service.
+
+Consider an organization that provides a call center analysis service.
+In this case,
+call log and transactional data is used (DataFlair 2022).
+Call center data can be used in combination with transactional data with
+the goals of reducing customer churn, increasing sales quotas,
+and reducing the occurrence of fraud (DataFlair 2022).
+
+Apache Spark offers an opportunity to examine data about
+customer interactions so that the organization can measure and
+improve their objective of providing a consistent and
+rewarding customer experience.
+
+#### Case Study 2: Big Data Solution for IoT Pet Trackers
+
+Suppose that a US organization provides a service that allows pet owners to
+monitor their pets’ locations through wearable trackers that
+are managed via a mobile application (ScienceSoft USA Corporation 2022).
+
+As you can imagine, given how attached owners are to their pets,
+it is anticipated that the service will have many subscribers.
+Furthermore,
+suppose that the organization wants to provide a big data solution that
+would allow the users to always be up to date about their pets’ locations and
+receive real-time notifications about incidents or changes to
+their pets’ whereabouts (ScienceSoft USA Corporation 2022).
+
+A possible solution would be to send owners not only the locations of
+their pets but also audio and video clips so that
+the customers can get a better sense of their pets’ locations
+(ScienceSoft USA Corporation 2022).
+
+Since the data is collected constantly and in real time,
+it will proliferate rapidly.
+Therefore, the organization needs to come up with
+a fast solution to efficiently store this data.
+Apache Spark provides a solution that is able to quickly group data and
+transfer it to a data warehouse.
+
+### Discussion 19.2: Instructions
+
+For your discussion post, please elaborate on the following prompts:
+
+1. Identify a use case of a service or an application that deals with big data.
+2. Describe the service and
+    why you think Apache Spark is the optimal solution for handling the data.
+3. Provide and elaborate on
+    at least three reasons why Apache Spark would be the best solution for
+    handling the big data for your chosen use case.
+
+Read the statements posted by your peers.
+Engage with them by responding with thoughtful comments and
+questions to deepen the discussion.
+
+### Discussion 19.2: Submission
+
+Since I used a Voi scooter today I thought
+I'd consider a potential big data architecture for them.
+They are an electric scooter rental company.
+In cities they manage a fleet of electric scooters that aside from repairs and
+recharging are left outside in allowed parking spaces.
+Then an app unlocks them and charges based on time used.
+With hundreds and probably thousands of scooters with realtime location data and
+status updates on several scooters a lot of data gets managed.
+
+#### Realtime Data Streaming
+
+Apache Spark is a good solution for this because it offers streaming data processing.
+This means that a lot of real-time data can be processed in real-time as
+it comes into the system.
+If Spark isn't fast enough, then you just need to add more worker nodes to
+the platform to increase its throughput.
+Location-based data can be immediately processed as it comes in
+to the forms that make most sense for the automation services of Voi.
+
+#### Faster Analytics
+
+It also provides a great ecosystem for performing analytics on all the data in
+a much faster workflow than a lot of other systems like Hadoop.
+There's even support for Python and
+many of its analytics modules, even providing a pandas-like dataframe class.
+
 ## References
 
 ### Web Links
@@ -135,6 +240,6 @@ Things like session management, cookies, search caches, etc.
 <!-- Hidden References -->
 [-pyspark]: python-spark.md "PySpark (Python Spark Library)"
 [-spark]: spark.md "Spark"
-[-airflow]: airflow.md "Airflow (Data Workflow and Scheduling)"
+[-airflow]: airflow-workflow.md "Airflow (Data Workflow and Scheduling)"
 [-docker]: docker.md "Docker (Container Runtime)"
 [-container]: container.md "Software Containers"
