@@ -1,6 +1,6 @@
 ---
 created: 2023-06-21T16:35:08.034Z
-modified: 2023-07-10T15:52:59.769Z
+modified: 2023-07-11T13:20:37.162Z
 tags: [pcde,python,javascript,data,project,d3,graphic,visual,pipeline]
 ---
 # PCDE Project 23.1: Creating a Sense-Making Data Pipeline
@@ -520,4 +520,4 @@ the D3 library and the modified example code.
 [-js]: javascript.md "Javascript"
 [-d3]: d3.md "Data Driven Documents (D3, a Javascript Library)"
 [-docker]: docker.md "Docker"
-[-py-airflow]: airflow-workflow.md "Python Airflow"
+[-py-airflow]: airflow-apache.md "Python Airflow"

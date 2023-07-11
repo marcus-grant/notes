@@ -1,6 +1,6 @@
 ---
 created: 2023-05-21T11:44:19.838Z
-modified: 2023-07-10T15:53:17.519Z
+modified: 2023-07-11T14:17:45.446Z
 tags: [pcde,module19,data,spark]
 ---
 # PCDE Course Module 19 Content
@@ -93,7 +93,7 @@ However, some servers might be cut off from the federation by one server,
 meaning those posts aren't shown.
 Same with users, you control what users and content you want to see.
 
-#### Identify two issues that could arise when scaling the application.
+#### Identify two issues that could arise when scaling the application
 
 One issue is the amount of data that needs to be stored and
 the amount of data that needs to be transferred between servers.
@@ -240,6 +240,6 @@ many of its analytics modules, even providing a pandas-like dataframe class.
 <!-- Hidden References -->
 [-pyspark]: python-spark.md "PySpark (Python Spark Library)"
 [-spark]: spark.md "Spark"
-[-airflow]: airflow-workflow.md "Airflow (Data Workflow and Scheduling)"
+[-airflow]: airflow-apache.md "Airflow (Data Workflow and Scheduling)"
 [-docker]: docker.md "Docker (Container Runtime)"
 [-container]: container.md "Software Containers"

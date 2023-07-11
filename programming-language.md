@@ -1,6 +1,6 @@
 ---
 created: 2023-06-09T11:22:25.991Z
-modified: 2023-06-26T15:11:27.737Z
+modified: 2023-07-11T14:15:18.773Z
 tags: [program,language,computer,science,software,develop,index]
 ---
 # Programming Language
@@ -28,7 +28,7 @@ So machine code instructions appear in a form of human understandable text.
 Assembly languages use an *assembler* to convert instructions,
 relocatable memory addresses and operands into machine code.
 
-### Command Line Interface (CLI) Languages
+### Shell Scripting Languages
 
 [Command-line interface][-cli] (**CLI**) languages *a.k.a. batch languages* are
 languages that are designed to be used in a command-line interface or

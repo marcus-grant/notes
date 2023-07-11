@@ -1,6 +1,6 @@
 ---
 created: 2023-05-21T16:11:29.960Z
-modified: 2023-07-07T16:01:28.703Z
+modified: 2023-07-11T13:16:36.234Z
 tags: [spark,data,analysis,query,database,pcde,module19]
 ---
 # Spark
@@ -123,6 +123,7 @@ the goal is to utilize Spark when applications become larger and require more re
 * [Structured Query Language (SQL)][-sql]
 * [Machine Learning][-ml]
 * [Container Compose File Format][-cont-comp]
+* [Hadoop (Apache Data Lake Platform)][-hadoop]
 
 <!-- Hidden References -->
 [-big-data]: big-data.md "Big Data"
@@ -134,3 +135,4 @@ the goal is to utilize Spark when applications become larger and require more re
 [-sql]: sql.md "Structured Query Language (SQL)"
 [-ml]: machine-learning.md "Machine Learning"
 [-cont-comp]: container-compose.md "Container Compose File Format"
+[-hadoop]: hadoop.md "Hadoop (Apache Data Lake Platform)"
