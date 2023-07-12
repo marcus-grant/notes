@@ -1,6 +1,6 @@
 ---
 created: 2023-06-28T18:11:09.866Z
-modified: 2023-07-07T07:08:04.973Z
+modified: 2023-07-12T15:46:39.239Z
 tags: [pcde,module24,kafka,thingsboard,mosquitto,kafka,big,data]
 ---
 # PCDE Course Module 24 Content
@@ -320,7 +320,99 @@ There could be various widgets for sensors that report hourly, daily, monthly, e
 electricity consumption for different parts of the workplace.
 Those widgets could then be used to determine how to best lower those costs.
 
+## Discussion 24.3: Use Cases for Kafka
 
+### Discussion 24.3: Introduction
+
+Kafka is used to create live streaming data pipelines and applications.
+As you continue to learn about data streaming platforms,
+you will build on your understanding of how Kafka is useful for
+maintaining a steady messaging queue of data when the volume of data is massive.
+
+This discussion will help you determine whether or not Kafka would be useful for
+a particular project scenario.
+Some project scenarios in which Kafka can be useful are:
+
+#### Discussion 24.3: Project Scenarios
+
+* Financial Domain: Kafka is used for fraud detection at
+  [ING Bank][kafka-case-ing].
+* Stock Market: The Pan-European stock exchange uses Kafka to
+  power its [event-driven trading platform][kafka-case-trading].
+* Location Sharing Applications:
+  The [Real Time Locating System (RLTS)][kafka-case-rlts] uses Kafka to
+  track transportation and logistics data to
+  track the location of assets or people in real time.
+* Web Traffic Tracking: Kafka can be used to track clicks, likes,
+  and views on platforms such as Twitter, Amazon, and Google.
+  For example,
+  Kafka can be used to collect [web application metrics][kafka-case-web-metric]
+  and to [analyze website visitors][kafka-case-web-visit] in real time.
+* Business Applications: Kafka enables organizations to
+  process live streams of large volumes of data to manage modern workloads.
+  This [real time processing of massive data streams][kafka-case-rt-big-data]
+  helps a variety of organizations to manage their businesses.
+  Kafka is used by organizations in a variety of sectors including:
+  [Audi, BMW, Disney, Generali, Paypal, Tesla, Unity][kafka-case-big-co]
+  Walmart, William Hill and more Links to an external site.” (Waehner 2020).
+
+### Discussion 24.3: Instructions
+
+The key questions to consider when assessing whether or
+not to use Kafka for a specific project are:
+
+* Will the application transfer or create gigabytes of data on a daily basis?
+* Do you think a simple message queue could easily handle the data or
+  communication packets created by those utilizing the application?
+
+For your discussion post,
+choose any two project scenarios from the list above or
+research your own use case examples.
+Explain a case in which you would use Kafka and
+a case in which this tool might not be the best choice.
+Be sure to address the two questions above in both scenarios that you analyze.
+
+Read the statements posted by your peers.
+Engage with them by responding with thoughtful comments and
+questions to deepen the discussion.
+
+### Discussion 24.3: Submission
+
+Kafka seemingly is capable of Gigabyte per seconds and up of data transfers.
+It's hard to know just how much it is capable of because it would take so many nodes
+to test where parallelism is limited.
+It is however a complex way to implement MQTT based pipelines,
+so it's important to determine if it's overkill for the application.
+The two use cases I chose are that of collecting and distributing web metrics and
+analyzing website visitation.
+
+#### Kafka in Web App Metrics Cases
+
+The lightweight MQTT protocol and the intermittent nature of
+web applications and their collection of various usage metrics,
+makes Kafka great at collecting extremely numerous streams of usage metrics.
+Seemingly, even some of the most popular sites on the internet like YouTube or
+Facebook might not overload a large enough Kafka cluster when collecting user
+interface metrics.
+However, if it's a web app with less traffic, this could easily be overkill.
+User metrics during a web app is likely no more than
+a few hundred bytes of data per second in intermittent bursts and
+a single Mosquitto message queue and through personal testing Mosquitto is at least
+capable of hundreds of megabytes a second,
+meaning about a million simultaneous users should be possible.
+
+#### Kafka in Website Visitation Analysis
+
+Kafka is great for analyzing website visitation because
+of its scalability and the lightweight protocol of MQTT.
+It's easy to imagine a Kafka cluster that can handle the data of
+many millions of site visit counters embedded in CDN servers or
+javascript scripts counting visits.
+It's very similar to collecting metrics to web applications and very likely if
+you're collecting web app metrics you're also collecting visit metrics as well.
+Since it's much simpler data to transmit, even with trackers embedded,
+it's unlikely unless you're in the top 500 of visited sites that you need something
+like Kafka for visit metrics by itself.
 
 
 
@@ -336,6 +428,13 @@ Those widgets could then be used to determine how to best lower those costs.
 * [ThingsBoard Authors. "Smart Farming and Smart Agriculture Solutions". ThingsBoard. 2022][tb-smart-farm]
 * [ThingsBoard Authors. "Environment Monitoring Solutions". ThingsBoard 2022][tb-env-mon]
 * [ThingsBoard Authors. "Smart Office Solutions". ThingsBoard. 2022][tb-smart-work]
+* [Timuri, Timor and Richard Bras. "The Evolution of Kafka at ING Bank". Confluent. 2018][kafka-case-ing]
+* [Confluent, Inc. "Pan-European Stock Exchange Relies on Confluent to Power Event Driven Trading Platform. Confluent. 2020][kafka-case-trading]
+* [Daza, Lucio. "Using Kafka for Collecting Web Application Metrics in Your Cloud Data Lake". Towards Data Science. 3 June 2020][kafka-case-web-metric]
+* [Hashemian, Vahid. "Real-Time Website Visitor Analysis with Apache Kafka". IBM. 11 Jan. 2018][kafka-case-web-visit]
+* [Kwong, Dennis, Jac Noel, Jason Stark, Meritte Stidston, and Juan Fernandez. "Enabling Real-Time Processing of Massive Data Streams". Intel. 21 Aug. 2020][kafka-case-rt-big-data]
+* [Waehner, Kai. "Real-Life Use Cases & Architectures for Event Streaming with Apache Kafka". SlideShare. 12 Oct. 2020][kafka-case-big-co]
+* [Waehner, Kai. "Real Time Locating System (RLTS) with Apache Kafka for Transportation and Logistics". Kai Waehner. 7 Jan. 2021.][kafka-case-rlts]
 
 <!-- Hidden References -->
 [vw]: https://www.emqx.com/en/blog/emqx-in-volkswagen-iov "EMQ Helps SAIC Volkswagen Building IoV Platform"
@@ -346,6 +445,13 @@ Those widgets could then be used to determine how to best lower those costs.
 [tb-smart-farm]: https://thingsboard.io/smart-farming/ "Smart Farming and Smart Agriculture Solutions"
 [tb-env-mon]: https://thingsboard.io/use-cases/environment-monitoring/ "ThingsBoard Environment Monitor Solution"
 [tb-smart-work]: https://thingsboard.io/use-cases/smart-office/ "Smart Office Solutions"
+[kafka-case-ing]: https://www.confluent.io/kafka-summit-london18/the-evolution-of-kafka-at-ing-bank/ "Kafka at ING"
+[kafka-case-trading]: https://assets.confluent.io/m/2d66dbb4330b91a6/original/20190425-CS-Euronext.pdf "Kafka at Pan-European Stock Exchange"
+[kafka-case-web-metric]: https://towardsdatascience.com/using-kafka-for-collecting-web-application-metrics-in-your-cloud-data-lake-b97004b2ce31 "Kafka for Web Metrics"
+[kafka-case-web-visit]: https://developer.ibm.com/tutorials/realtime-visitor-analysis-with-kafka/ "Kafka for Realtime Visitor Analysis"
+[kafka-case-rt-big-data]: https://www.intel.com/content/dam/www/public/us/en/documents/pdf/enabling-real-time-processing-of-massive-data-streams.pdf "Kafka Enabling Real-Time Processing of Massive Data Streams"
+[kafka-case-big-co]: https://www.slideshare.net/KaiWaehner/reallife-use-cases-architectures-for-event-streaming-with-apache-kafka "Kafka Use Cases for Live Event Streaming"
+[kafka-case-rlts]: https://www.kai-waehner.de/blog/2021/01/07/real-time-locating-system-rtls-apache-kafka-asset-tracking-transportation-logistics/ "Kafka RLTS"
 
 ### Note Links
 

@@ -1,6 +1,6 @@
 ---
 created: 2023-05-10T19:13:34.917Z
-modified: 2023-05-16T14:49:48.465Z
+modified: 2023-07-12T19:24:44.269Z
 tags: [pcde,module18,big,data,hadoop,docker,java,database,warehouse]
 ---
 # PCDE Course Module 18 Content
@@ -96,6 +96,32 @@ Going from a search engine to a computing services conglomerate,
 their data flows have grown substantially,
 possibly more than any other organization in the world.
 
+Hadoop has actually been a part of Google's indexing service for a while.
+Actually, since the beginning, Google were the initial developers of
+the technology before it was open sourced.
+They needed highly distributed data stores to hold and query all the data ingested by
+their web scrapers to then be turned into indexes that speed up the results of
+every Google search request.
+
+So what they needed was a system to hold and organize all
+this scraped data with the 5 Vs in mind.
+
+* Value - Google is a search engine, most sites they search provide some value.
+* Variety - The whole internet represents a whole lot of variety of data.
+* Velocity - Having the whole internet with its constantly changing sites and
+  new ones coming online, there's a whole lot of data changing constantly.
+* Veracity - Indexing sites you need to make sure that the topics searched return
+  the most relevant possible results.
+* Volume - To store all of this, incredible amounts of storage is needed.
+
+With all those factors in mind, likely 100s of Terabytes are stored in Google's
+Hadoop clusters dedicated to scraping.
+They also would need to store a lot of the sites that come in through
+the scrapers as you never known when you need to alter the pipelines through
+backfilling processes.
+You also never know when you need to
+improve the indexes by picking up new features of the dataset.
+
 ## Knowledge Check 18.1: Big Data and the Architecture of Hadoop
 
 * Q1: Which of the following are the three main characteristics of big data?
@@ -125,6 +151,60 @@ the MapReduce framework?
 the data. **(WRONG)**
   * Combine is an optional step in the MapReduce framework. **(WRONG)**
   * The combine function must always be performed. **(Correct)**
+
+## Discussion 18.2: Exploring the Hadoop Ecosystem
+
+Big Data systems have evolved immensely over the years,
+even to the point where what we actually consider "Big Data" has changed.
+This change has necessitated whole new systems to manage the massive flows of
+data and processing and analyzing it.
+
+The Hadoop Ecosystem is likely still the most common way to
+build big data systems of various kinds.
+Its broad ecosystem means that it is flexible enough to fit in
+many different kinds of use cases.
+
+With that in mind I'll start by going through Spark.
+Spark is a processing and analytics engine for among other things,
+the Hadoop backend.
+Its in-memory design means that
+when performing analysis or data processing on it,
+it is much faster than just natively in Hadoop with MapReduce.
+While speeding up analytics and processing,
+Spark also integrates with Hadoop's HDFS so it still has
+the massively scalable and highly available storage backend.
+
+Spark also comes with other component integrations like
+SparkSQL that allows native processing of SQL queries.
+MLlib makes Spark better at handling machine learning processes. 
+And sometimes Machine Learning workloads need graph-based data structures to
+be used effectively, which is where GraphX comes into play.
+
+## Discussion 18.3: Use Cases of Hadoop
+
+In the Medicine and Healthcare industry,
+generation and utilization of big data is becoming increasingly important.
+Even with some healthcare systems having really outdated information systems.
+Wearables, electronic health records, imaging technologies, genetic sequencing all
+produce vast amounts of data for even one patient.
+
+Medical Information Mart for Intensive Care III or MIMIC-III for short is an
+example of using data for analytics for medical.
+One might not think of immediate emergency care as a typical use case for
+data in medicine,
+but having an anonymized data set of over 60 000 ICU patients has saved lives.
+It includes information about anonymous patient demographics, timestamped vital signs,
+laboratory measurements, lab results, medications, etc.
+
+Hadoop is well constructed for this sort of application,
+storing this sort of large and detailed datasets for medical applications including
+local copies of the MIMIC-III dataset along with other vital ICU data.
+HDFS can comfortably handle it with its scalability and high availability.
+MapReduce can easily perform the on the fly queries and processing required to
+make use of when trying to determine the best course of action in emergency treatment.
+Also being medical data, HIPAA compliance is extremely important and
+Hadoop offers a lot of authentication and authorization and encryption features to comply.
+And Hadoop also offers structured, semi-structured and unstructured data organization.
 
 ## References
 

@@ -1,6 +1,6 @@
 ---
 created: 2023-04-05T16:14:49.295Z
-modified: 2023-06-09T12:13:29.321Z
+modified: 2023-07-12T11:07:58.215Z
 tags: [java,program,language,overview,object,orientation,pcde,module14]
 ---
 # Java
@@ -394,7 +394,7 @@ docker run -it -rm --name openjdk11 openjdk:11-jdk-slim
 <!-- Hidden References -->
 [-lang]: programming-language.md "Programming Language"
 [-container]: container.md "Container (Software)"
-[-shell]: os-shell.md "Shell (OS)" "Shell (OS)"
-[-shell]: nano-editor.md "Nano Editor"
+[-shell]: os-shell.md "Shell (OS)"
+[-nano]: nano-editor.md "Nano Editor"
 [-neovim]: neovim.md "Neovim Editor"
 [-py]: python.md "Python"

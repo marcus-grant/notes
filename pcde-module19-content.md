@@ -1,6 +1,6 @@
 ---
 created: 2023-05-21T11:44:19.838Z
-modified: 2023-07-11T14:17:45.446Z
+modified: 2023-07-11T19:48:01.116Z
 tags: [pcde,module19,data,spark]
 ---
 # PCDE Course Module 19 Content
@@ -223,11 +223,111 @@ a much faster workflow than a lot of other systems like Hadoop.
 There's even support for Python and
 many of its analytics modules, even providing a pandas-like dataframe class.
 
+## Discussion 19.3: Use Cases for Airflow
+
+### Discussion 19.3: Introduction
+
+As described in this section,
+Apache Airflow is a popular open-source data engineering tool to write,
+schedule, and manage workflows.
+In this discussion,
+you will be challenged to identify a use case to solve problems related to
+big data and explain why Apache Airflow is the recommended software to
+solve such problems.
+
+Below are some example use cases to guide your response to this discussion:
+
+#### Case Study 1: Big Fish Games ETL Frameworks
+
+Prior to implementing Apache Airflow, Big Fish Games,
+a game development and publishing organization,
+described several issues that were encountered when
+using other ETL workflow orchestration tools,
+including a lack of a web UI for monitoring workflow,
+additional work needed for maintenance,
+and an inability to handle failed jobs and
+late data arrival (The Apache Software Foundation 2022).
+
+After implementing Apache Airflow,
+Big Fish Games experienced better control of workflows and
+the ability to monitor tasks through a web-based UI.
+The detailed logs provided by Apache Airflow, its flexibility,
+integration with other tools,
+and support for backfilling data have freed analysts and developers to
+focus on analyses rather than building and
+troubleshooting ETL frameworks (The Apache Software Foundation 2022).
+
+#### Case Study 2: Airbnb Automation
+
+Airbnb originally developed the Airflow platform in response to
+their expanding data volume, speed, and complexity.
+They subsequently chose to open source and share their creation with
+the larger data engineering community (Beauchemin 2015).
+Airflow was Airbnb’s response to the rapid evolution of mission-critical,
+complex networks of computation jobs requiring scheduling,
+new methods of data processing,
+and tight integration with other systems (Beauchemin 2015).
+No other existing tool could meet the needs that Airbnb employees defined,
+so they set out to build a tool that could.
+When they finished, they chose
+"to give back to the open-source community that we rely so heavily upon" by
+open sourcing it through the Apache Software Foundation (Beauchemin 2015).
+
+### Discussion 19.3: Instructions
+
+For your discussion post, please elaborate on the following prompts:
+
+* Identify a use case of a service or an application that
+  deals with big data workflows.
+* Describe the service and
+  why you think Apache Airflow is the optimal solution for
+  handling the data workflows.
+* Provide and elaborate on at least three reasons why
+  Apache Airflow would be the best solution for
+  handling the big data workflows for your chosen use case.
+
+Read the statements posted by your peers.
+Engage with them by responding with thoughtful comments and
+questions to deepen the discussion.
+
+### Discussion 19.3: Submission
+
+Use Case Web Scraping Data Pipelines.
+
+Airflow being a scheduler of data pipelines coded in Python and
+with a reasonably broad reach within the wider data engineer ecosystem,
+it seems like setting up periodic web scraping pipelines are a good use case.
+
+What this would do is collect periodic data from the open web through an
+automated browser, (Selenium), that runs with Python.
+An example of this could be quarterly and annual financial reports on
+publicly traded companies.
+
+Python has BeautifulSoup and Selenium,
+this means Airflow DAGs can directly be involved in tasks associated with
+downloading webpages, render them through selenium if they involve a lot of
+Javascript and then scrape them with BeautifulSoup's parsers.
+Airflow can run all the code itself at scheduled intervals and
+send the data to whatever backend you'd like, for example Spark or a SQL database.
+
+Other features of Airflow make it attractive in this use case.
+A lot of these sites will rate-limit to prevent excessive scraping,
+intervals within Airflow DAG arguments means they can be scheduled to
+scrape slowly and steadily in batches to eventually grab all the sites desired.
+Also,
+scraping involves a lot of imperfect parsing of unstructured HTML which
+means backfilling poorly parsed or changing web sites means is as painless as possible.
+
 ## References
 
 ### Web Links
 
+* [The Apache Software Foundation. “Use Cases. Big Fish Games.” The Apache Software Foundation. 2022.][airflow-case-big-fish]
+* [Beauchemin, Maxime. "Airflow: A Workflow Management Platform". Medium. 2015.][airflow-case-airbnb]
+
 <!-- Hidden References -->
+[airflow-case-big-fish]: https://airflow.apache.org/use-cases/big-fish-games "Airflow. Case Study: Big Fish Games"
+[airflow-case-airbnb]: https://medium.com/airbnb-engineering/airflow-a-workflow-management-platform-46318b977fd8 "Airflow Case Study: Airbnb"
 
 ### Note Links
 
