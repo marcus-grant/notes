@@ -1,6 +1,6 @@
 ---
 created: 2023-05-10T19:13:34.917Z
-modified: 2023-07-12T19:24:44.269Z
+modified: 2023-07-14T14:39:49.711Z
 tags: [pcde,module18,big,data,hadoop,docker,java,database,warehouse]
 ---
 # PCDE Course Module 18 Content
@@ -8,9 +8,9 @@ tags: [pcde,module18,big,data,hadoop,docker,java,database,warehouse]
 ## Introduction
 
 In this module,
-you will learn about the importance of big data and the components that
-must be considered when working with big data.
-You will be introduced to Hadoop,
+you will learn about the importance of [big data][-big-data] and
+the components that must be considered when working with big data.
+You will be introduced to [Hadoop][-hadoop],
 an open-source software platform for
 distributed storage and distributed processing for big data.
 You will learn about the architecture of Hadoop,

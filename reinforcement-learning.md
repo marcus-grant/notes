@@ -1,6 +1,6 @@
 ---
 created: 2023-06-09T12:37:50.353Z
-modified: 2023-06-11T16:36:20.824Z
+modified: 2023-07-14T15:07:03.192Z
 tags: [reinforcement,learn,machine,data,algorithm,computer,science,probability,pcde,module21]
 ---
 # Reinforcement Learning (Machine Learning)
@@ -134,6 +134,7 @@ The above equation has some variables that need to be defined:
 ## Bellman Equation
 
 ***TODO:*** This needs to be explained better.
+Use this [Wikipedia: Bellman Equation][wiki-bellman]
 
 ## Implementing Q-Learning
 
@@ -249,7 +250,7 @@ def get_optimal_route(start_location, end_location):
 
     # We don't know about the exact number of iterations
     # needed to reach to the final location hence while loop will be a good choice
-    # for iteratiing
+    # for iterating
 
     while(next_location != end_location):
         # Fetch the starting state
@@ -278,9 +279,11 @@ print(get_optimal_route('L2', 'L5'))
 ### Web Links
 
 * [Wikipedia.org. 'Reinforcement Learning' Accessed 2023-06-09][wiki-rl]
+* [Wikipedia.org. 'Bellman Equation'. Accessed 2023-07-14][wiki-bellman]
 
 <!-- Hidden References -->
 [wiki-rl]: https://en.wikipedia.org/wiki/Reinforcement_learning "Wikipedia.org. 'Reinforcement Learning' Accessed 2023-06-09"
+[wiki-bellman]: https://en.wikipedia.org/wiki/Bellman_equation "Wikipedia.org. 'Bellman Equation' Accessed 2023-07-14"
 
 ### Note Links
 

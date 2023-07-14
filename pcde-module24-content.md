@@ -1,6 +1,6 @@
 ---
 created: 2023-06-28T18:11:09.866Z
-modified: 2023-07-12T15:46:39.239Z
+modified: 2023-07-14T16:07:32.384Z
 tags: [pcde,module24,kafka,thingsboard,mosquitto,kafka,big,data]
 ---
 # PCDE Course Module 24 Content
@@ -413,8 +413,6 @@ you're collecting web app metrics you're also collecting visit metrics as well.
 Since it's much simpler data to transmit, even with trackers embedded,
 it's unlikely unless you're in the top 500 of visited sites that you need something
 like Kafka for visit metrics by itself.
-
-
 
 ## References
 

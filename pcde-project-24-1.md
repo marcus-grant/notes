@@ -1,6 +1,6 @@
 ---
 created: 2023-06-28T18:19:23.173Z
-modified: 2023-06-30T19:13:34.308Z
+modified: 2023-07-14T15:52:06.068Z
 tags: [pcde,module24,project,mosquitto,thingsboard,firebase,mqtt,protocol,sensor,data,database]
 ---
 # Project 24.1: Streaming Live Data to ThingsBoard
@@ -184,7 +184,7 @@ client = mqtt.Client()
 # Set access token
 client.username_pw_set(ACCESS_TOKEN)
 
-# Connect to ThingsBoard using default MQTT port and 60 seconds keepalive interval
+# Connect to ThingsBoard using default MQTT port and 60 seconds keep-alive interval
 client.connect(THINGSBOARD_HOST, PORT, 60)
 client.loop_start()
 
@@ -208,7 +208,7 @@ client.disconnect()
 
 Open the `TBPublish.py` file in VS Code.
 
-See the text below, which depicts the required folders and files: 
+See the text below, which depicts the required folders and files:
 
 ```txt
 Project_24_MQTT

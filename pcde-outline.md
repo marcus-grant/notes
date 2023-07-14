@@ -1,6 +1,6 @@
 ---
 created: 2023-04-13T10:12:17.264Z
-modified: 2023-07-07T07:16:53.716Z
+modified: 2023-07-14T16:07:21.739Z
 tags: [pcde,course,outline,overview,data,learn]
 ---
 # PCDE Course Outline
@@ -570,11 +570,59 @@ Platforms for Handling Big Data
 ### Module 18: Related Notes
 
 * [PCDE Module 18 Content][-pcde-mod18]
-* ***TODO*** Add the rest of the notes links in -pcde-mod18 here
+* [Big Data][-big-data]
+* [Hadoop][-hadoop]
 
-### Module 19: TODO
+## Module 19: Processing Big Data with Spark and Airflow
 
-***TODO fill in***
+### Module 19: Due Date
+
+* Due Wednesday, May 14, 2023 at 1629 UTC
+  * 1829 CET
+  * 1229 EST
+
+### Module 19: Goals
+
+1. Describe how scalable solutions address challenges of big data.
+2. Use Docker to create and manipulate Spark images and containers.
+3. Use PySpark to query data.
+4. Identify key components of Spark and Airflow.
+5. Identify use cases for Spark and Airflow.
+6. Create a workflow in Airflow.
+
+### Module 19: Activities
+
+#### Module 19: Key Activities
+
+* **Knowledge Checks**
+  * Knowledge Check 19.1: Spark
+  * Knowledge Check 19.2: Airflow
+* **Discussion**
+  * Discussion 19.1: Addressing Challenges of Big Data with Scalable Solutions
+  * Discussion 19.2: Use Cases for Spark
+  * Discussion 19.3: Use Cases for Airflow
+* **Activities**
+  * Activity 19.1: Creating Spark Docker Images and Containers
+  * Activity 19.2: Loading Data into a Spark Docker Container
+  * Activity 19.3: Using PySpark to Query Data
+  * Activity 19.4: Creating a Workflow in Airflow
+* **Final Assignment**
+  * Module 19 Final Assignment: Processing Big Data with Spark and Airflow
+
+#### Module 19: Self-Study Activities
+
+* Self-Study Discussion 19.4: Thinking Like a Data Scientist:
+Processing Big Data with Spark and Airflow
+* Self-Study Flashcards: Module 19 Flashcards
+
+### Module 19: Related Notes
+
+* [PCDE Module 19 Content][-pcde-mod19]
+* [Spark][-spark]
+* [Airflow (Data Workflow and Scheduling)][-airflow]
+* [Docker (Container Runtime)][-docker]
+* [PySpark (Python Spark Library)][-pyspark]
+* [Containers (Software)][-container]
 
 ## Module 20: Introduction to Machine Learning
 
@@ -813,8 +861,16 @@ Machine Learning and Advanced Probability
 ### Module 24: Related Notes
 
 * [PCDE Course: Module 24 Content][-pcde-mod24-content]
-
->**TODO:** Fill in course content's note links here
+* [PCDE Project 24.1][pcde-proj-24-1]
+* [PCDE Project 24.2][pcde-proj-24-2]
+* [PCDE Project 24.3][pcde-proj-24-3]
+* [Message Queue Telemetry Transport (MQTT)][-mqtt]
+* [Mosquitto (MQTT Broker)][-mosq]
+* [Paho (Python MQTT Library)][-paho]
+* [Firebase][-firebase]
+* [Thingsboard (IoT Platform)][-thingsboard]
+* [Kafka][-kafka]
+* [Node.JS (Javascript Runtime)][-node]
 
 ## References
 
@@ -906,6 +962,14 @@ Machine Learning and Advanced Probability
 * [MBTA API][-mbta-api]
 * [PCDE Module 17 Course Content][-pcde-mod17]
 * [Apache NiFi][-nifi]
+* [PCDE Module 18 Content][-pcde-mod18]
+* [Big Data][-big-data]
+* [Hadoop][-hadoop]
+* [Spark][-spark]
+* [Airflow (Data Workflow and Scheduling)][-airflow]
+* [Docker (Container Runtime)][-docker]
+* [PySpark (Python Spark Library)][-pyspark]
+* [Containers (Software)][-container]
 * [Extract, Transform, Load (ETL)][-etl]
 * [MacOS (Operating System)][-macos]
 * [Windows (Operating System)][-windows]
@@ -936,8 +1000,16 @@ Machine Learning and Advanced Probability
 * [Exploratory Data Analysis (EDA, Data Science)][-eda]
 * [Javascript][-js]
 * [PCDE Course: Module 24 Content][-pcde-mod24-content]
-
-<!-- Hidden References -->
+* [PCDE Project 24.1][pcde-proj-24-1]
+* [PCDE Project 24.2][pcde-proj-24-2]
+* [PCDE Project 24.3][pcde-proj-24-3]
+* [Message Queue Telemetry Transport (MQTT)][-mqtt]
+* [Mosquitto (MQTT Broker)][-mosq]
+* [Paho (Python MQTT Library)][-paho]
+* [Firebase][-firebase]
+* [Thingsboard (IoT Platform)][-thingsboard]
+* [Kafka][-kafka]
+* [Node.JS (Javascript Runtime)][-node]
 
 <!-- Hidden Reference Links Below Here -->
 [-pcde-overview]: pcde-course-overview.md "PCDE Course Overview"
@@ -1027,6 +1099,14 @@ Machine Learning and Advanced Probability
 [-macos]: macos.md "MacOS (Operating System)"
 [-windows]: windows.md "Windows (Operating System)"
 [-pcde-mod18]: pcde-module18-content.md "PCDE Course Module 18 Content"
+[-big-data]: big-data.md "Big Data"
+[-hadoop]: hadoop.md "Hadoop"
+[-pcde-mod19]: pcde-module19-content.md "PCDE Course Module 19 Content"
+[-pyspark]: python-spark.md "PySpark (Python Spark Library)"
+[-spark]: spark.md "Spark"
+[-airflow]: airflow-apache.md "Airflow (Data Workflow and Scheduling)"
+[-docker]: docker.md "Docker (Container Runtime)"
+[-container]: container.md "Software Containers"
 [-pcde-mod20]: ./pcde-module20-content.md "PCDE Course: Module 20 Content"
 [-matrix]: matrix.md "Matrix"
 [-grad-desc]: gradient-descent.md "Gradient Descent"
@@ -1054,3 +1134,13 @@ Machine Learning and Advanced Probability
 [-eda]: ./exploratory-data-analysis.md "Exploratory Data Analysis (EDA, Data Science)"
 [-js]: javascript.md "Javascript"
 [-pcde-mod24-content]: pcde-module24-content.md "PCDE Course: Module 24 Content"
+[pcde-proj-24-1]: pcde-project-24-1.md "PCDE Project 24.1"
+[pcde-proj-24-2]: pcde-project-24-2.md "PCDE Project 24.2"
+[pcde-proj-24-3]: pcde-project-24-3.md "PCDE Project 24.3"
+[-mqtt]: mqtt.md "Message Queue Telemetry Transport (MQTT)"
+[-mosq]: mosquitto.md "Mosquitto (MQTT Broker)"
+[-paho]: python-paho.md "Paho (Python MQTT Library)"
+[-firebase]: firebase.md "Firebase"
+[-thingsboard]: thingsboard.md "Thingsboard (IoT Platform)"
+[-kafka]: kafka.md "Kafka"
+[-node]: nodejs.md "Node.JS (Javascript Runtime)"

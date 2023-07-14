@@ -1,6 +1,6 @@
 ---
 created: 2023-05-29T14:32:27.177Z
-modified: 2023-06-07T11:45:04.228Z
+modified: 2023-07-13T15:51:03.885Z
 tags: [computer,science,math,gradient,descent,machine,learning,optimization,pcde,module20]
 ---
 # Gradient Descent
@@ -18,9 +18,7 @@ we can find the rates of changes of different functions at a given point.
 In other words, the derivative always points in the direction of the steepest
 rate of change or the steepest descent.
 
-***TODO***
-Include the image of the parabola equation with the explanation given in
-[Mini lesson 20.2](https://classroom.emeritus.org/courses/1412/pages/mini-lesson-20-dot-2-introduction-to-gradient-descent-40-00?module_item_id=623982).
+![gradient of a quadratic equation](gradient-parabola.png)
 
 A gradient behaves in the exact same way as a derivative but for multi-valued funcitons.
 As an example, consider the function $f(x, y) = x^2 + y^2$.

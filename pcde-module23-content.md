@@ -1,6 +1,6 @@
 ---
 created: 2023-06-21T16:32:04.292Z
-modified: 2023-06-28T17:10:45.204Z
+modified: 2023-07-14T15:48:03.517Z
 tags: [pcde,data,javascript,pipeline,visual,graphic]
 ---
 # PCDE Course Module 23 Content
@@ -11,15 +11,15 @@ In this module,
 you will be working on another project that you can add to your portfolio.
 In the first section, you will be introduced to Project 23.1,
 in which you will create a sense-making data pipeline.
-In the next section, you will learn about visualization, unstructured data,
-and JavaScript.
+In the next section, you will learn about [visualization][-viz], unstructured data,
+and [JavaScript][-js].
 First, you will learn how unstructured data differs from structured data.
 Next, you will learn how JavaScript can be used for web development and
 will research specific use cases for JavaScript.
 You will also learn how the document object model (DOM) and
 HTML tags can be used to enhance web pages.
 Finally,
-you will practice visualization using the Data-Driven Documents (D3) library to
+you will practice visualization using the [Data-Driven Documents (D3)][-d3] library to
 visualize word frequency data.
 In Project 23.1,
 you will perform data analysis on unstructured MIT course catalog data and
@@ -60,7 +60,7 @@ Finally, visualize the data using word frequency representations.
 
 All this is covered in the [PCDE Course Project 23.1][-pcde-proj-23-1] note.
 
-## Knowledge Check 23.1: Visualization, Unstructured Data, and Javascript.
+## Knowledge Check 23.1: Visualization, Unstructured Data, and Javascript
 
 * Q1: What is unstructured data?
   * Unstructured data is data that does not come with a predefined structure and
@@ -195,7 +195,7 @@ the resulting HTML, CSS, and reduced javascript is sent directly to
 the browser.
 This combines the benefits of both SPAs and SSGs.
 You get the faster load times and SEO of SSGs and
-the added responsiveness of a fully client side SPA. 
+the added responsiveness of a fully client side SPA.
 
 #### Which Types of Interactive Behaviors can be Developed to Enhance Websites Using Javascript?
 
@@ -241,6 +241,93 @@ be more useful in the data science world.
 The problem right now is that the ecosystem just cannot mach Python in this use case.
 Hopefully some day that will change.
 
+## Try-It Activity 23.1: Visualizing Word Frequency Data
+
+### Try-It Activity 23.1: Introduction
+
+In this try-it activity, you will begin by installing two Python libraries:
+notebookJS and NLTK.
+Then, you will use them to implement word frequency counting and visualization,
+first in Python and then in JavaScript.
+
+You will begin the activity by loading text data.
+Next, you will use the NLTK library to reformat the text data.
+To reformat your data,
+you will begin by splitting the sentences into single words,
+or tokens, and removing any punctuation (for example, commas or periods) from
+your data.
+
+Next,
+you will use the Python pandas library to create a bar plot that
+displays the frequency of the seven most common words in your data.
+
+Finally, you will use the JavaScript D3 library to create a radial bar chart and
+plot the frequency of the seven most common words in
+your data on a polar coordinate system.
+
+### Try-It Activity 23.1: Instructions
+
+In a Terminal window,
+run the commands below to install the notebookJS and NLTK libraries:
+
+```sh
+pip install notebookjs
+pip install nltk
+```
+
+The notebookJS library is used to enable the execution of
+JavaScript code in a Jupyter Notebook.
+
+The NLTK library is a popular NLP library used to
+perform operations on text data.
+Download the Try-It Activity 23.1 folder and open it using
+your own local instance of Jupyter Notebook.
+Run each code cell. Observe the code and the results.
+
+Now that you have learned how to plot word frequency using the pandas and
+the D3 libraries, describe your observations.
+In your discussion post, use what you observed in the try-it activity,
+and respond to each of the question prompts below:
+
+* How did the NLTK library help you to generate the top seven word counts?
+* What is the difference between a pandas bar chart and
+  a JavaScript radial bar chart?
+* Would you prefer using the D3 or the pandas library to
+  create visualizations of word frequency? Why?
+* Research some available JavaScript libraries, and list at least three that
+  you would like to use for future visualization projects.
+  Explain why you selected these libraries,
+  and describe how you would like to use them.
+
+Read the statements posted by your peers.
+Engage with them by responding with thoughtful comments and
+questions to deepen the discussion.
+
+### Try-It Activity 23.1: Submission
+
+NLTK helps generate the top seven word counts primarily through
+convenience functions when it comes to text processing.
+Tokenizing the text as a first step creates easy methods to process it.
+First by removing punctuation and later by converting to lowercase to
+make sure all case-variations of words are treated the same.
+Then using the `FreqDist` function it's easy to get the word frequency.
+
+Pandas' bar chart and Javascript radial chart are different in their visual form.
+The pandas bar chart shows data as one rectangle of varying heights.
+The radial one represents using a circular layout where bars radiate from
+the center point.
+
+When choosing between D3 or pandas for visualization,
+really it's a matter of what the visualizations will be used for.
+D3 offers much more capability to make interactive charts than even Matplotlib.
+So essentially something that will primarily be shown on the web, D3 is ideal.
+If you need more static charts that might need to be copied into documents,
+then python visualizations are probably simpler to use.
+
+Some other javascript visualization libraries to choose from are:
+
+* Three.js: This is likely the most popular 3D visualization library in Javascript.
+* Chart.js: Can be thought of as a simpler and more templated version of D3.
 
 ## References
 
@@ -267,6 +354,8 @@ Hopefully some day that will change.
 * [HyperText Markup Language (HTML)][-html]
 * [Exploratory Data Analysis (EDA, Data Science)][-eda]
 * [Javascript][-js]
+* [D3.js][-d3]
+* [Data Visualization][-viz]
 
 <!-- Hidden References -->
 [-pcde-proj-23-1]: pcde-project-23-1.md "PCDE Course Project 23.1"
@@ -277,3 +366,5 @@ Hopefully some day that will change.
 [-html]: html.md "HyperText Markup Language (HTML)"
 [-eda]: ./exploratory-data-analysis.md "Exploratory Data Analysis (EDA, Data Science)"
 [-js]: javascript.md "Javascript"
+[-d3]: d3.md "D3.js"
+[-viz]: data-visualization.md "Data Visualization"

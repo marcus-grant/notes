@@ -1,6 +1,6 @@
 ---
 created: 2022-12-21T16:15:18.232Z
-modified: 2023-05-29T14:09:53.173Z
+modified: 2023-07-14T09:17:30.356Z
 tags: [math,pcde,statistics,probability,overview]
 ---
 # Probability
@@ -63,6 +63,20 @@ this experiment can be summarized as follows:
 | Probability | 1/6 | 1/6 | 1/6 | 1/6 | 1/6 | 1/6 |
 
 As you'll see next, *probability density functions* can be discrete or continuous.
+
+## Bayes Theorem
+
+>**Note:** See [Bayes Theorem][-bayes] for more information.
+
+A major topic in probability is that of *conditional probability* which
+can neatly be calculated using **Bayes Theorem**.
+*Conditional probability* is the chance of some event occurring given another
+event.
+If $A$ & $B$ the *conditional* probability of $A$ given $B$ is denoted by
+$P(A|B)$ and Bayes Theorem states one can solve for
+the conditional probability of $A$ given $B$ with the below formula.
+
+$$P(A|B) = \frac{P(A) P(B|A)}{P(B)}$$
 
 ## Probability Distributions
 
@@ -221,10 +235,12 @@ The parameter $N$ is the number of observations and is a common notation.
 
 * [Normal Distribution][normal-dist-zk]
 * [Normal Distribution: T-Distribution][normal-dist-t-zk]
+* [Bayes Theory][-bayes]
 
 <!-- Hidden Reference Links Below Here -->
 [normal-dist-zk]: ./normal-distribution.md "Normal Distribution"
 [normal-dist-t-zk]: ./normal-distribution.md#T-Distribution "Normal Distribution: T-Distribution"
+[-bayes]: bayes-theory.md "Bayes Theory"
 
 ### Referenced By
 

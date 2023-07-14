@@ -1,7 +1,7 @@
 ---
 created: 2023-05-29T13:28:45.749Z
-modified: 2023-05-30T15:45:37.936Z
-tags: []
+modified: 2023-07-13T15:49:35.942Z
+tags: [math,matrix,vector,linear,algebra,tensor]
 ---
 # Matrix
 

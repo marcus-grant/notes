@@ -1,6 +1,6 @@
 ---
 created: 2023-05-31T07:34:15.973Z
-modified: 2023-06-11T12:04:25.949Z
+modified: 2023-07-14T12:33:41.514Z
 tags: [bayes,theory,math,probability,machine,learn,gradient,descent,inference,classification,naive,pcde,module20]
 ---
 # Bayes Theorem
@@ -522,6 +522,8 @@ $$
 
 ## Confusion Matrix
 
+>**Note:** For more information, read [Confusion Matrix][-confusion].
+
 ### What is a Confusion Matrix?
 
 A [confusion matrix][-confusion] is a graphical representation that
@@ -638,7 +640,7 @@ Using the previous section's example and calculations for mean and variance,
 we can now create the Gaussian normal distribution for each feature.
 This can be done in many ways.
 For example,
-in [Python][-py] we can use `scikit-learn`'s `GaussianNB` class.
+in [Python][-py] we can use [`scikit-learn`][-sklearn]'s `GaussianNB` class.
 To better illustrate the underlying mathematics,
 for now you will use a web based [interactive normal distribution tool][normal-dist-applet]
 
