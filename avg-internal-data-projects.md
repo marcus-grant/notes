@@ -1,6 +1,6 @@
 ---
 created: 2023-08-07T10:41:14.762Z
-modified: 2023-08-09T15:29:07.370Z
+modified: 2023-08-18T13:30:04.153Z
 tags: [work,avg,project,data,pipeline,learn,system]
 ---
 # AVG: Internal Data Projects Planning
@@ -72,6 +72,26 @@ This document collects some of the proposals for AVG's internal data projects.
 * SQL
 * MongoDB
 * Low-Code implementations
+
+## Kickoff Meeting (2023-08-18)
+
+### Kickoff Meeting Notes
+
+* I need to get on-boarded on Box API
+* We need to consider management of roles based authentication across
+  Box, Teams and Azure
+* IaM is a big part of this project and needs to be considered when
+  choosing databases and designing roles-based authorization
+* We need to find the best database to deploy,
+  probably an Azure managed SQL service
+
+### Kickoff Meeting Call to Action
+
+* Come up with GANTT chart and planned process for the whole thing
+* Come up with plan for weekly/daily expectations of devs
+* Come up with plan to collaborate with Gobi through debugger
+* Have Matti get you onboarded on Box API
+* Setup up offsite meeting
 
 <!-- ## References
 
