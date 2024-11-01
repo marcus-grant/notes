@@ -119,7 +119,7 @@ BASE32("fooba")  = "MZXW6YTB"
 BASE32("foobar") = "MZXW6YTBOI======"
 ```
 
-There last base32 character,
+There the last base32 character,
 before the padding character in each example,
 will have some bits on the least significant side zeroed out as
 there's no data to encode.
@@ -130,9 +130,9 @@ the last non-padding character of the 40-bit block.
 
 Doing out the `foobar` example in binary helps explain this better:
 
-
 ```plaintext
-Input String:  'f'      'o'      'o'      'b'       'a'       'r'
+Comments:   |--------------- 5 byte block ---------------|- remain -|- pad... -|
+In String:    'f'      'o'      'o'      'b'       'a'       'r'
 UTF-8 byte: 01100110  01101111 01101111 01100010  01100001  01110010 ________...
 Splits:     |   |\    / |   |\    |\    | \  \ \    |\    \ |   |\  \ #pad starts
 UTF-8 5bit: 01100 11001 10111 10110 11110 11000 10011 00001 01110 010=00 continue
@@ -157,7 +157,8 @@ that means we have 32 bits of padding to add with
 The information shared by those pads is that out of an integer collection of
 40 bit blocks, which is what Base32 encodes,
 this many `=` characters hold no information.
-
+This also guarantees that explicitly padded base32 encoded strings will
+always contain a multiple of 8 characters since each character is 5 bits.
 
 References
 ----------
@@ -165,7 +166,9 @@ References
 - [RFC4648][rfc4648]
 - ["Base32 Encoding Explained by Chmolowski, Piotr (2023-12-17)"][b32-exp-piotr]
   - Fantastic explanation of the mechanics, one of few describing padding
+- [UTF-8][-utf8]
 
 <!-- Hidden References -->
 [rfc4648]: https://tools.ietf.org/html/rfc4648 "RFC 4648 - The Base16, Base32, and Base64 Data Encodings"
 [b32-exp-piotr]: https://ptrchm.com/posts/base32-explained/ "Base32 Encoding Explained by Chmolowski, Piotr (2023-12-17)"
+[-utf8]: ./unicode.md
