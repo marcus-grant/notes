@@ -43,6 +43,7 @@ Testing will be done later to verify this.
 
 ### Idea: Code Length
 
+#### Old Idea: Base62
 To keep the short code as short as possible while still permitting for collisions,
 a variable truncation of a hash will be performed.
 After the content has been hashed,
@@ -51,6 +52,13 @@ then the index in the database will store the full base62 encoded hash.
 The shortest unique code will be determined by starting at a minimum length of 4.
 Then every time a 4 symbol code is entered into a query and a 5, 6 or seven length code exists,
 the oldest code will be used.
+
+#### New Idea: Base32
+
+To keep the variable still short,
+but a lot safer whether or not it gets used in
+URL strings or case-insensitive environments,
+[Base32][-b32] is the decided encoding scheme.
 
 #### Code Length: Example
 
@@ -73,6 +81,8 @@ That will be the canonical entry for the `abcd` short code.
 Then the canonical entry for `abcde` will be `abcdefg1`, using the same rules.
 And for `abcdef` it will be `abcdefg2`.
 And so on...
+
+For more info go to [this ChatGPT conversation](https://chatgpt.com/share/67212abe-4908-8005-b858-51c2faffc1ee)
 
 ## Design
 
@@ -111,4 +121,10 @@ It is in the quadrillions even after taking on
 the 10 bit padding that seems to be recommended for uniqueness guarantees.
 *Please cite*.
 
+References
+----------
 
+- [Base32][-b32]
+
+<!-- Hidden References -->
+[-b32]: ./base32.md "Base32 Encoding Explained by Zakki, Kun (2024-10-24)"
