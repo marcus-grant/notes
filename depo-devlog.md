@@ -58,7 +58,7 @@ the oldest code will be used.
 To keep the variable still short,
 but a lot safer whether or not it gets used in
 URL strings or case-insensitive environments,
-[Base32][-b32] is the decided encoding scheme.
+[Base32][-base-32] is the decided encoding scheme.
 
 #### Code Length: Example
 
@@ -124,7 +124,7 @@ the 10 bit padding that seems to be recommended for uniqueness guarantees.
 References
 ----------
 
-- [Base32][-b32]
+- [Base32][-base-32]
 
 <!-- Hidden References -->
-[-b32]: ./base32.md "Base32 Encoding Explained by Zakki, Kun (2024-10-24)"
+[-base-32]: ./base32.md "Base32 Encoding Explained by Zakki, Kun (2024-10-24)"
